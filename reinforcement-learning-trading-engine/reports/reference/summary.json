@@ -1,0 +1,194 @@
+[
+  {
+    "scenario": "base",
+    "policy": "q_learning",
+    "folds": 5,
+    "mean_return": -0.014271298831903478,
+    "return_ci95": [
+      -0.03713814628712897,
+      0.007757776682933782
+    ],
+    "mean_excess_buy_hold": 0.023797916237219295,
+    "excess_ci95": [
+      -0.05154564092665441,
+      0.099141473401093
+    ],
+    "worst_drawdown": 0.0602198443470886
+  },
+  {
+    "scenario": "base",
+    "policy": "cash",
+    "folds": 5,
+    "mean_return": 0.0,
+    "return_ci95": [
+      0.0,
+      0.0
+    ],
+    "mean_excess_buy_hold": 0.038069215069122773,
+    "excess_ci95": [
+      -0.05082106605117818,
+      0.12695949618942373
+    ],
+    "worst_drawdown": 0.0
+  },
+  {
+    "scenario": "base",
+    "policy": "buy_hold",
+    "folds": 5,
+    "mean_return": -0.038069215069122773,
+    "return_ci95": [
+      -0.12695949618942373,
+      0.05082106605117818
+    ],
+    "mean_excess_buy_hold": 0.0,
+    "excess_ci95": [
+      0.0,
+      0.0
+    ],
+    "worst_drawdown": 0.17826322212339551
+  },
+  {
+    "scenario": "base",
+    "policy": "random",
+    "folds": 5,
+    "mean_return": -0.030205284208462867,
+    "return_ci95": [
+      -0.07447166794991886,
+      0.011726313589892045
+    ],
+    "mean_excess_buy_hold": 0.007863930860659906,
+    "excess_ci95": [
+      -0.04066670103061678,
+      0.05482261418260594
+    ],
+    "worst_drawdown": 0.1093922022178978
+  },
+  {
+    "scenario": "double_cost",
+    "policy": "q_learning",
+    "folds": 5,
+    "mean_return": -0.020557914466430426,
+    "return_ci95": [
+      -0.04558558558564667,
+      0.0021421643917503897
+    ],
+    "mean_excess_buy_hold": 0.018183998684984947,
+    "excess_ci95": [
+      -0.05650450857403526,
+      0.09287250594400516
+    ],
+    "worst_drawdown": 0.06938465629885182
+  },
+  {
+    "scenario": "double_cost",
+    "policy": "cash",
+    "folds": 5,
+    "mean_return": 0.0,
+    "return_ci95": [
+      0.0,
+      0.0
+    ],
+    "mean_excess_buy_hold": 0.038741913151415376,
+    "excess_ci95": [
+      -0.05008620515781761,
+      0.12757003146064835
+    ],
+    "worst_drawdown": 0.0
+  },
+  {
+    "scenario": "double_cost",
+    "policy": "buy_hold",
+    "folds": 5,
+    "mean_return": -0.038741913151415376,
+    "return_ci95": [
+      -0.12757003146064835,
+      0.05008620515781761
+    ],
+    "mean_excess_buy_hold": 0.0,
+    "excess_ci95": [
+      0.0,
+      0.0
+    ],
+    "worst_drawdown": 0.17826322212339563
+  },
+  {
+    "scenario": "double_cost",
+    "policy": "random",
+    "folds": 5,
+    "mean_return": -0.04341770133962153,
+    "return_ci95": [
+      -0.08781714594335896,
+      -0.0019384862483974308
+    ],
+    "mean_excess_buy_hold": -0.004675788188206154,
+    "excess_ci95": [
+      -0.054386200388984875,
+      0.042673115029802734
+    ],
+    "worst_drawdown": 0.12177614295072037
+  },
+  {
+    "scenario": "selloff_thin_auction",
+    "policy": "q_learning",
+    "folds": 5,
+    "mean_return": -0.02194433952483401,
+    "return_ci95": [
+      -0.0372928873780443,
+      -0.006595791671623719
+    ],
+    "mean_excess_buy_hold": 0.12512477195558297,
+    "excess_ci95": [
+      0.04611724339937462,
+      0.20513209414626393
+    ],
+    "worst_drawdown": 0.047809968179755025
+  },
+  {
+    "scenario": "selloff_thin_auction",
+    "policy": "cash",
+    "folds": 5,
+    "mean_return": 0.0,
+    "return_ci95": [
+      0.0,
+      0.0
+    ],
+    "mean_excess_buy_hold": 0.14706911148041696,
+    "excess_ci95": [
+      0.06831604393912513,
+      0.2258221790217088
+    ],
+    "worst_drawdown": 0.0
+  },
+  {
+    "scenario": "selloff_thin_auction",
+    "policy": "buy_hold",
+    "folds": 5,
+    "mean_return": -0.14706911148041696,
+    "return_ci95": [
+      -0.2258221790217088,
+      -0.06831604393912513
+    ],
+    "mean_excess_buy_hold": 0.0,
+    "excess_ci95": [
+      0.0,
+      0.0
+    ],
+    "worst_drawdown": 0.2691236669372239
+  },
+  {
+    "scenario": "selloff_thin_auction",
+    "policy": "random",
+    "folds": 5,
+    "mean_return": -0.08681142368564707,
+    "return_ci95": [
+      -0.12861595450231836,
+      -0.04500689286897579
+    ],
+    "mean_excess_buy_hold": 0.0602576877947699,
+    "excess_ci95": [
+      0.021218956401407207,
+      0.09929641918813259
+    ],
+    "worst_drawdown": 0.1616864521055289
+  }
+]

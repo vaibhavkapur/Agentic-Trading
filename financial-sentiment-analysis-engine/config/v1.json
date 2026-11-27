@@ -1,0 +1,19 @@
+{
+  "schema_version": "sentiment.v1",
+  "corpus_version": "desk-notes.v1",
+  "train_until": "2025-03-01T00:00:00Z",
+  "calibrate_until": "2025-04-01T00:00:00Z",
+  "test_until": "2025-06-01T00:00:00Z",
+  "window_hours": 24,
+  "minimum_confidence": 0.48,
+  "temperature_grid": [0.5, 0.75, 1.0, 1.25, 1.5, 2.0, 3.0],
+  "issuers": {
+    "NVL": ["Novalume", "NVL", "Pioneer"],
+    "HBR": ["Harborloom", "HBR", "Pioneer"],
+    "KST": ["Kestrelite", "KST"]
+  },
+  "positive": ["beat", "beats", "exceeded", "grew", "growth", "raised", "gain", "gains", "improved", "expanded", "surplus", "recovery", "won", "record", "stronger", "upgraded", "rose"],
+  "negative": ["miss", "missed", "fell", "cut", "loss", "losses", "weaker", "declined", "shortfall", "contracted", "downgraded", "default", "deteriorated", "slump", "lost"],
+  "uncertainty": ["unconfirmed", "unclear", "rumor", "rumour", "unverified", "may", "might", "speculation", "undetermined"],
+  "sarcasm": ["yeah right", "what a triumph", "so much for", "just brilliant"]
+}

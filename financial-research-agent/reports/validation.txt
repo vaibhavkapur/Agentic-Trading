@@ -1,0 +1,242 @@
+test_analyst_workflow (tests.integration.test_http.Api) ... ok
+test_reject_abstention_and_invalid_request (tests.integration.test_http.Api) ... ok
+test_weak_or_identical_credentials (tests.integration.test_http.Api) ... ok
+test_cli_from_outside_checkout (tests.integration.test_storage.Storage) ... ok
+test_entitlement_digest_path (tests.integration.test_storage.Storage) ... ok
+test_idempotent_and_reopened (tests.integration.test_storage.Storage) ... ok
+test_manifest_atomic_on_failure (tests.integration.test_storage.Storage) ... ok
+test_replacement_can_withdraw_metric (tests.integration.test_storage.Storage) ... ok
+test_review_race (tests.integration.test_storage.Storage) ... ok
+test_changed_evidence_at_review (tests.scenarios.test_evidence.Evidence) ... ok
+test_conflicting_facts (tests.scenarios.test_evidence.Evidence) ... ok
+test_corrupt_source_or_index (tests.scenarios.test_evidence.Evidence) ... ok
+test_missing_source (tests.scenarios.test_evidence.Evidence) ... ok
+test_prompt_injection_and_price_target (tests.scenarios.test_evidence.Evidence) ... ok
+test_restated_filing (tests.scenarios.test_evidence.Evidence) ... ok
+test_stale (tests.scenarios.test_evidence.Evidence) ... ok
+test_unit_currency_errors (tests.scenarios.test_evidence.Evidence) ... ok
+test_wrong_issuer (tests.scenarios.test_evidence.Evidence) ... ok
+test_dates (tests.unit.test_contracts.Contracts) ... ok
+test_parser_decimal_and_share_count (tests.unit.test_contracts.Contracts) ... ok
+test_request_schema (tests.unit.test_contracts.Contracts) ... ok
+test_resolver (tests.unit.test_contracts.Contracts) ... ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 0.179s
+
+OK
+{
+  "python": "3.9.6",
+  "sqlite": "3.51.0",
+  "system": "Darwin arm64",
+  "cases": 12,
+  "passed": 12,
+  "median_ms": 0.326,
+  "min_ms": 0.263,
+  "max_ms": 0.504,
+  "results": [
+    {
+      "case": "published but unavailable",
+      "as_of": "2025-02-02T11:59:59Z",
+      "expected": "missing_evidence",
+      "actual": "missing_evidence",
+      "observed": [],
+      "passages_verified": true,
+      "repeat_id_equal": true,
+      "passed": true,
+      "latency_ms": 0.504
+    },
+    {
+      "case": "original on arrival",
+      "as_of": "2025-02-02T12:00:00Z",
+      "expected": "supported",
+      "actual": "supported",
+      "observed": [
+        [
+          "alder-annual-v1",
+          3,
+          "120000000",
+          "money",
+          "USD"
+        ]
+      ],
+      "passages_verified": true,
+      "repeat_id_equal": true,
+      "passed": true,
+      "latency_ms": 0.387
+    },
+    {
+      "case": "issuer isolation",
+      "as_of": "2025-02-11T00:00:00Z",
+      "expected": "supported",
+      "actual": "supported",
+      "observed": [
+        [
+          "birch-annual-v1",
+          3,
+          "80000000",
+          "money",
+          "EUR"
+        ]
+      ],
+      "passages_verified": true,
+      "repeat_id_equal": true,
+      "passed": true,
+      "latency_ms": 0.319
+    },
+    {
+      "case": "unreported income",
+      "as_of": "2025-02-12T00:00:00Z",
+      "expected": "missing_evidence",
+      "actual": "missing_evidence",
+      "observed": [],
+      "passages_verified": true,
+      "repeat_id_equal": true,
+      "passed": true,
+      "latency_ms": 0.279
+    },
+    {
+      "case": "revision in transit",
+      "as_of": "2025-03-04T11:59:59Z",
+      "expected": "supported",
+      "actual": "supported",
+      "observed": [
+        [
+          "alder-annual-v1",
+          4,
+          "9500000",
+          "money",
+          "USD"
+        ]
+      ],
+      "passages_verified": true,
+      "repeat_id_equal": true,
+      "passed": true,
+      "latency_ms": 0.358
+    },
+    {
+      "case": "restatement on arrival",
+      "as_of": "2025-03-04T12:00:00Z",
+      "expected": "supported",
+      "actual": "supported",
+      "observed": [
+        [
+          "alder-annual-v2",
+          4,
+          "118000000",
+          "money",
+          "USD"
+        ]
+      ],
+      "passages_verified": true,
+      "repeat_id_equal": true,
+      "passed": true,
+      "latency_ms": 0.315
+    },
+    {
+      "case": "share count",
+      "as_of": "2025-03-05T12:00:00Z",
+      "expected": "supported",
+      "actual": "supported",
+      "observed": [
+        [
+          "alder-annual-v2",
+          6,
+          "12000000",
+          "shares",
+          null
+        ]
+      ],
+      "passages_verified": true,
+      "repeat_id_equal": true,
+      "passed": true,
+      "latency_ms": 0.333
+    },
+    {
+      "case": "macro before retrieval",
+      "as_of": "2025-03-13T11:59:59Z",
+      "expected": "missing_evidence",
+      "actual": "missing_evidence",
+      "observed": [],
+      "passages_verified": true,
+      "repeat_id_equal": true,
+      "passed": true,
+      "latency_ms": 0.278
+    },
+    {
+      "case": "macro decision",
+      "as_of": "2025-03-13T12:00:00Z",
+      "expected": "supported",
+      "actual": "supported",
+      "observed": [
+        [
+          "north-rate-v1",
+          3,
+          "3.25",
+          "percent",
+          null
+        ]
+      ],
+      "passages_verified": true,
+      "repeat_id_equal": true,
+      "passed": true,
+      "latency_ms": 0.313
+    },
+    {
+      "case": "independent disagreement",
+      "as_of": "2025-04-01T12:00:00Z",
+      "expected": "conflicting_evidence",
+      "actual": "conflicting_evidence",
+      "observed": [
+        [
+          "alder-annual-v2",
+          4,
+          "118000000",
+          "money",
+          "USD"
+        ],
+        [
+          "alder-news-v1",
+          3,
+          "119000000",
+          "money",
+          "USD"
+        ]
+      ],
+      "passages_verified": true,
+      "repeat_id_equal": true,
+      "passed": true,
+      "latency_ms": 0.353
+    },
+    {
+      "case": "price target",
+      "as_of": "2025-04-01T12:00:00Z",
+      "expected": "unsupported_question",
+      "actual": "unsupported_question",
+      "observed": [],
+      "passages_verified": true,
+      "repeat_id_equal": true,
+      "passed": true,
+      "latency_ms": 0.263
+    },
+    {
+      "case": "stale income",
+      "as_of": "2026-05-01T12:00:00Z",
+      "expected": "stale_evidence",
+      "actual": "stale_evidence",
+      "observed": [
+        [
+          "alder-annual-v2",
+          5,
+          "8750000",
+          "money",
+          "USD"
+        ]
+      ],
+      "passages_verified": true,
+      "repeat_id_equal": true,
+      "passed": true,
+      "latency_ms": 0.363
+    }
+  ]
+}

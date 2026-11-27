@@ -1,0 +1,243 @@
+[
+  {
+    "id": "dev-before-publication",
+    "split": "development",
+    "as_of": "2024-02-09T12:00:00Z",
+    "query": "What was Aster Grid's revenue in FY2023?",
+    "filters": {},
+    "groups": [
+      "researchers"
+    ],
+    "relevant": [],
+    "expected": "abstained"
+  },
+  {
+    "id": "dev-annual-revenue",
+    "split": "development",
+    "as_of": "2024-02-12T12:00:00Z",
+    "query": "What was Aster Grid's revenue in FY2023?",
+    "filters": {},
+    "groups": [
+      "researchers"
+    ],
+    "relevant": [
+      {
+        "doc_id": "aster-23",
+        "version": 1,
+        "passage": "Aster Grid reported FY2023 revenue of USD 94 million."
+      }
+    ],
+    "expected": "answered"
+  },
+  {
+    "id": "not-yet-available",
+    "split": "holdout",
+    "as_of": "2025-02-09T12:00:00Z",
+    "query": "What was Aster Grid's revenue in FY2024?",
+    "filters": {},
+    "groups": [
+      "researchers"
+    ],
+    "relevant": [],
+    "expected": "abstained"
+  },
+  {
+    "id": "original-filing",
+    "split": "holdout",
+    "as_of": "2025-02-11T12:00:00Z",
+    "query": "What was Aster Grid's revenue in FY2024?",
+    "filters": {},
+    "groups": [
+      "researchers"
+    ],
+    "relevant": [
+      {
+        "doc_id": "aster-24",
+        "version": 1,
+        "passage": "Aster Grid reported FY2024 revenue of USD 110 million."
+      }
+    ],
+    "expected": "answered"
+  },
+  {
+    "id": "restricted-memo",
+    "split": "holdout",
+    "as_of": "2025-02-14T12:00:00Z",
+    "query": "What was Aster Grid's capital expenditure in FY2024?",
+    "filters": {},
+    "groups": [
+      "researchers"
+    ],
+    "relevant": [],
+    "expected": "abstained"
+  },
+  {
+    "id": "entitled-memo",
+    "split": "holdout",
+    "as_of": "2025-02-14T12:00:00Z",
+    "query": "What was Aster Grid's capital expenditure in FY2024?",
+    "filters": {},
+    "groups": [
+      "portfolio"
+    ],
+    "relevant": [
+      {
+        "doc_id": "aster-private",
+        "version": 1,
+        "passage": "Aster Grid reported FY2024 capital expenditure of USD 19 million."
+      }
+    ],
+    "expected": "answered"
+  },
+  {
+    "id": "hostile-research",
+    "split": "holdout",
+    "as_of": "2025-02-16T12:00:00Z",
+    "query": "What was Aster Grid's net income in FY2024?",
+    "filters": {
+      "doc_id": "tampered-note"
+    },
+    "groups": [
+      "researchers"
+    ],
+    "relevant": [],
+    "expected": "abstained"
+  },
+  {
+    "id": "second-issuer",
+    "split": "holdout",
+    "as_of": "2025-02-18T12:00:00Z",
+    "query": "What was Bramble Works's operating cash flow in FY2024?",
+    "filters": {},
+    "groups": [
+      "researchers"
+    ],
+    "relevant": [
+      {
+        "doc_id": "bramble-24",
+        "version": 1,
+        "passage": "Bramble Works reported FY2024 operating cash flow of EUR 7 million."
+      }
+    ],
+    "expected": "answered"
+  },
+  {
+    "id": "cross-tenant",
+    "split": "holdout",
+    "as_of": "2025-02-19T12:00:00Z",
+    "query": "What was Aster Grid's operating income in FY2024?",
+    "filters": {},
+    "groups": [
+      "researchers"
+    ],
+    "relevant": [],
+    "expected": "abstained"
+  },
+  {
+    "id": "delayed-restatement",
+    "split": "holdout",
+    "as_of": "2025-02-28T12:00:00Z",
+    "query": "What was Aster Grid's revenue in FY2024?",
+    "filters": {
+      "kind": "filing"
+    },
+    "groups": [
+      "researchers"
+    ],
+    "relevant": [
+      {
+        "doc_id": "aster-24",
+        "version": 1,
+        "passage": "Aster Grid reported FY2024 revenue of USD 110 million."
+      }
+    ],
+    "expected": "answered"
+  },
+  {
+    "id": "restated-filing",
+    "split": "holdout",
+    "as_of": "2025-03-05T12:00:00Z",
+    "query": "What was Aster Grid's revenue in FY2024?",
+    "filters": {
+      "kind": "filing"
+    },
+    "groups": [
+      "researchers"
+    ],
+    "relevant": [
+      {
+        "doc_id": "aster-24",
+        "version": 2,
+        "passage": "Aster Grid reported FY2024 revenue of USD 112 million."
+      }
+    ],
+    "expected": "answered"
+  },
+  {
+    "id": "compare-sources",
+    "split": "holdout",
+    "as_of": "2025-03-05T12:00:00Z",
+    "query": "Compare Aster Grid's revenue in FY2024 across sources.",
+    "filters": {},
+    "groups": [
+      "researchers"
+    ],
+    "relevant": [
+      {
+        "doc_id": "aster-24",
+        "version": 2,
+        "passage": "Aster Grid reported FY2024 revenue of USD 112 million."
+      },
+      {
+        "doc_id": "aster-note",
+        "version": 1,
+        "passage": "Aster Grid reported FY2024 revenue of USD 111 million."
+      }
+    ],
+    "expected": "answered"
+  },
+  {
+    "id": "deleted",
+    "split": "holdout",
+    "as_of": "2025-03-06T12:00:00Z",
+    "query": "What was Aster Grid's operating cash flow in FY2024?",
+    "filters": {},
+    "groups": [
+      "researchers"
+    ],
+    "relevant": [],
+    "expected": "abstained"
+  },
+  {
+    "id": "no-forecast",
+    "split": "holdout",
+    "as_of": "2025-03-06T12:00:00Z",
+    "query": "What will Aster Grid earn next year?",
+    "filters": {},
+    "groups": [
+      "researchers"
+    ],
+    "relevant": [],
+    "expected": "abstained"
+  },
+  {
+    "id": "vocabulary-sales",
+    "split": "holdout",
+    "as_of": "2025-03-07T12:00:00Z",
+    "query": "Aster Grid FY2024 sales",
+    "filters": {
+      "kind": "filing"
+    },
+    "groups": [
+      "researchers"
+    ],
+    "relevant": [
+      {
+        "doc_id": "aster-24",
+        "version": 2,
+        "passage": "Aster Grid reported FY2024 revenue of USD 112 million."
+      }
+    ],
+    "expected": "abstained"
+  }
+]

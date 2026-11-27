@@ -1,0 +1,26 @@
+Ready: 3.9.6 (standard library only)
+test_authentication_and_role_separation (tests.integration.test_interfaces.Interfaces) ... ok
+test_evidence_retains_all_raw_predictions (tests.integration.test_interfaces.Interfaces) ... ok
+test_http_adapter (tests.integration.test_interfaces.Interfaces) ... ok
+test_local_article_adapter_and_cli (tests.integration.test_interfaces.Interfaces) ... ok
+test_query_errors_and_empty_result (tests.integration.test_interfaces.Interfaces) ... ok
+test_delayed_label_excluded_at_training_boundary (tests.scenarios.test_scenarios.Scenarios) ... ok
+test_duplicate_syndicated_articles (tests.scenarios.test_scenarios.Scenarios) ... ok
+test_entity_ambiguity_and_word_boundaries (tests.scenarios.test_scenarios.Scenarios) ... ok
+test_headline_body_disagreement (tests.scenarios.test_scenarios.Scenarios) ... ok
+test_late_article_keeps_historical_snapshot (tests.scenarios.test_scenarios.Scenarios) ... ok
+test_leakage_in_test_text_and_labels (tests.scenarios.test_scenarios.Scenarios) ... ok
+test_multi_issuer_directions_and_window_edges (tests.scenarios.test_scenarios.Scenarios) ... ok
+test_sarcasm (tests.scenarios.test_scenarios.Scenarios) ... ok
+test_annotation_integrity (tests.unit.test_core.Contracts) ... ok
+test_confidence_and_probabilities (tests.unit.test_core.Contracts) ... ok
+test_model_reproducibility_and_calibration_selection (tests.unit.test_core.Contracts) ... ok
+test_perfect_and_wrong_predictions (tests.unit.test_core.Contracts) ... ok
+test_replay_conflicting_id_and_normalized_copy (tests.unit.test_core.Contracts) ... ok
+test_strict_utc_and_chronology (tests.unit.test_core.Contracts) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 0.134s
+
+OK
+Fixture checksums, raw evaluation and dashboard reproduced.

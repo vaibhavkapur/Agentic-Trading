@@ -1,0 +1,3 @@
+Subject: macro-north
+Northland Monetary Council | Rate decision
+Fact|policy_rate|2025-03-12|3.25|ones|percent|-

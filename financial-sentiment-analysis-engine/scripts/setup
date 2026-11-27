@@ -1,0 +1,3 @@
+#!/bin/sh
+set -eu
+python3 -c 'import sys; assert sys.version_info >= (3, 9), "Python 3.9+ required"; print("Ready:", sys.version.split()[0], "(standard library only)")'

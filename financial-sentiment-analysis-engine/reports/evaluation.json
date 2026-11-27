@@ -1,0 +1,1976 @@
+{
+  "available_cutoffs": [
+    "2025-03-01T00:00:00Z",
+    "2025-04-01T00:00:00Z",
+    "2025-06-01T00:00:00Z"
+  ],
+  "calibration_trials": [
+    {
+      "nll": 0.22993750801416696,
+      "temperature": 0.5
+    },
+    {
+      "nll": 0.24370944731296051,
+      "temperature": 0.75
+    },
+    {
+      "nll": 0.28155312107357644,
+      "temperature": 1.0
+    },
+    {
+      "nll": 0.32817738106999406,
+      "temperature": 1.25
+    },
+    {
+      "nll": 0.37800574826981215,
+      "temperature": 1.5
+    },
+    {
+      "nll": 0.4775106962073139,
+      "temperature": 2.0
+    },
+    {
+      "nll": 0.6493642406712798,
+      "temperature": 3.0
+    }
+  ],
+  "canonical_articles": 81,
+  "corpus_version": "desk-notes.v1",
+  "delayed_labels": [],
+  "drift": {
+    "gold_label_js_bits": 0.003307083237868065,
+    "test_oov_feature_rate": 0.43717277486910994
+  },
+  "duplicates": {
+    "note-078": "note-077",
+    "note-083": "note-001"
+  },
+  "input_version": "ad3a9c969f9301475277f29ed09b87a2d04da0d90d8bdc9376925d463e09603e",
+  "linking_issues": {
+    "note-080": [
+      "ambiguous_alias"
+    ]
+  },
+  "model_version": "2b6faf730623144f68b4c32ca2e7e57675546f8228ad1356743b168132d54844",
+  "models": {
+    "calibrated": {
+      "accuracy": 0.88,
+      "accuracy_wilson95": [
+        0.7004380781662651,
+        0.9583325864293191
+      ],
+      "brier": 0.21872958131873552,
+      "confusion": {
+        "negative": {
+          "negative": 6,
+          "neutral": 0,
+          "positive": 0,
+          "uncertain": 0
+        },
+        "neutral": {
+          "negative": 0,
+          "neutral": 5,
+          "positive": 0,
+          "uncertain": 0
+        },
+        "positive": {
+          "negative": 1,
+          "neutral": 0,
+          "positive": 6,
+          "uncertain": 0
+        },
+        "uncertain": {
+          "negative": 1,
+          "neutral": 0,
+          "positive": 1,
+          "uncertain": 5
+        }
+      },
+      "coverage": 0.8,
+      "ece": 0.10558998105369813,
+      "macro_f1": 0.886904761904762,
+      "n": 25,
+      "nll": 0.6801495013403099,
+      "per_class_f1": {
+        "negative": 0.8571428571428571,
+        "neutral": 1.0,
+        "positive": 0.8571428571428571,
+        "uncertain": 0.8333333333333334
+      },
+      "reliability_bins": [
+        {
+          "accuracy": 1.0,
+          "confidence": 0.6130705017265575,
+          "count": 1
+        },
+        {
+          "accuracy": 0.875,
+          "confidence": 0.9688675011695421,
+          "count": 24
+        }
+      ]
+    },
+    "lexicon": {
+      "accuracy": 1.0,
+      "accuracy_wilson95": [
+        0.8668035060468213,
+        1
+      ],
+      "brier": 0.1513056155554635,
+      "confusion": {
+        "negative": {
+          "negative": 6,
+          "neutral": 0,
+          "positive": 0,
+          "uncertain": 0
+        },
+        "neutral": {
+          "negative": 0,
+          "neutral": 5,
+          "positive": 0,
+          "uncertain": 0
+        },
+        "positive": {
+          "negative": 0,
+          "neutral": 0,
+          "positive": 7,
+          "uncertain": 0
+        },
+        "uncertain": {
+          "negative": 0,
+          "neutral": 0,
+          "positive": 0,
+          "uncertain": 7
+        }
+      },
+      "coverage": 0.72,
+      "ece": 0.31201739408129797,
+      "macro_f1": 1.0,
+      "n": 25,
+      "nll": 0.391056328824124,
+      "per_class_f1": {
+        "negative": 1.0,
+        "neutral": 1.0,
+        "positive": 1.0,
+        "uncertain": 1.0
+      },
+      "reliability_bins": [
+        {
+          "accuracy": 1.0,
+          "confidence": 0.48521351291364684,
+          "count": 6
+        },
+        {
+          "accuracy": 1.0,
+          "confidence": 0.7520149510781932,
+          "count": 19
+        }
+      ]
+    },
+    "prior": {
+      "accuracy": 0.24,
+      "accuracy_wilson95": [
+        0.11496157730326725,
+        0.43430059955238565
+      ],
+      "brier": 0.75,
+      "confusion": {
+        "negative": {
+          "negative": 6,
+          "neutral": 0,
+          "positive": 0,
+          "uncertain": 0
+        },
+        "neutral": {
+          "negative": 5,
+          "neutral": 0,
+          "positive": 0,
+          "uncertain": 0
+        },
+        "positive": {
+          "negative": 7,
+          "neutral": 0,
+          "positive": 0,
+          "uncertain": 0
+        },
+        "uncertain": {
+          "negative": 7,
+          "neutral": 0,
+          "positive": 0,
+          "uncertain": 0
+        }
+      },
+      "coverage": 1.0,
+      "ece": 0.010000000000000009,
+      "macro_f1": 0.0967741935483871,
+      "n": 25,
+      "nll": 1.3862943611198904,
+      "per_class_f1": {
+        "negative": 0.3870967741935484,
+        "neutral": 0.0,
+        "positive": 0.0,
+        "uncertain": 0.0
+      },
+      "reliability_bins": [
+        {
+          "accuracy": 0.24,
+          "confidence": 0.25,
+          "count": 25
+        }
+      ]
+    },
+    "served": {
+      "accuracy": 0.96,
+      "accuracy_wilson95": [
+        0.8045552759497747,
+        0.9929039496133008
+      ],
+      "brier": 0.21872958131873552,
+      "confusion": {
+        "negative": {
+          "negative": 6,
+          "neutral": 0,
+          "positive": 0,
+          "uncertain": 0
+        },
+        "neutral": {
+          "negative": 0,
+          "neutral": 5,
+          "positive": 0,
+          "uncertain": 0
+        },
+        "positive": {
+          "negative": 1,
+          "neutral": 0,
+          "positive": 6,
+          "uncertain": 0
+        },
+        "uncertain": {
+          "negative": 0,
+          "neutral": 0,
+          "positive": 0,
+          "uncertain": 7
+        }
+      },
+      "coverage": 0.72,
+      "ece": 0.10558998105369813,
+      "macro_f1": 0.9615384615384616,
+      "n": 25,
+      "nll": 0.6801495013403099,
+      "per_class_f1": {
+        "negative": 0.9230769230769231,
+        "neutral": 1.0,
+        "positive": 0.9230769230769231,
+        "uncertain": 1.0
+      },
+      "reliability_bins": [
+        {
+          "accuracy": 1.0,
+          "confidence": 0.6130705017265575,
+          "count": 1
+        },
+        {
+          "accuracy": 0.875,
+          "confidence": 0.9688675011695421,
+          "count": 24
+        }
+      ]
+    },
+    "supervised": {
+      "accuracy": 0.88,
+      "accuracy_wilson95": [
+        0.7004380781662651,
+        0.9583325864293191
+      ],
+      "brier": 0.20869409837992056,
+      "confusion": {
+        "negative": {
+          "negative": 6,
+          "neutral": 0,
+          "positive": 0,
+          "uncertain": 0
+        },
+        "neutral": {
+          "negative": 0,
+          "neutral": 5,
+          "positive": 0,
+          "uncertain": 0
+        },
+        "positive": {
+          "negative": 1,
+          "neutral": 0,
+          "positive": 6,
+          "uncertain": 0
+        },
+        "uncertain": {
+          "negative": 1,
+          "neutral": 0,
+          "positive": 1,
+          "uncertain": 5
+        }
+      },
+      "coverage": 0.8,
+      "ece": 0.131821119952634,
+      "macro_f1": 0.886904761904762,
+      "n": 25,
+      "nll": 0.4811295787454122,
+      "per_class_f1": {
+        "negative": 0.8571428571428571,
+        "neutral": 1.0,
+        "positive": 0.8571428571428571,
+        "uncertain": 0.8333333333333334
+      },
+      "reliability_bins": [
+        {
+          "accuracy": 1.0,
+          "confidence": 0.48793583846347,
+          "count": 2
+        },
+        {
+          "accuracy": 0.5,
+          "confidence": 0.7388291446019424,
+          "count": 6
+        },
+        {
+          "accuracy": 1.0,
+          "confidence": 0.9506808936393449,
+          "count": 17
+        }
+      ]
+    }
+  },
+  "schema_version": "sentiment.v1",
+  "split_counts": {
+    "calibration": 16,
+    "test": 25,
+    "train": 40
+  },
+  "temperature": 0.5,
+  "test_predictions": [
+    {
+      "abstain_reason": null,
+      "annotated_at": "2025-04-03T10:00:00Z",
+      "article_id": "note-057",
+      "available_at": "2025-04-03T09:00:00Z",
+      "event_at": "2025-04-03T08:00:00Z",
+      "gold": "positive",
+      "issuer": "NVL",
+      "label": "positive",
+      "models": {
+        "calibrated": {
+          "label": "positive",
+          "probabilities": {
+            "negative": 0.0007379972413505555,
+            "neutral": 0.01059697442352139,
+            "positive": 0.9851629619987078,
+            "uncertain": 0.0035020663364201928
+          }
+        },
+        "lexicon": {
+          "label": "positive",
+          "probabilities": {
+            "negative": 0.014209336618611039,
+            "neutral": 0.10499358540350653,
+            "positive": 0.775803492574376,
+            "uncertain": 0.10499358540350653
+          }
+        },
+        "prior": {
+          "label": "negative",
+          "probabilities": {
+            "negative": 0.25,
+            "neutral": 0.25,
+            "positive": 0.25,
+            "uncertain": 0.25
+          }
+        },
+        "served": {
+          "label": "positive",
+          "probabilities": {
+            "negative": 0.0007379972413505555,
+            "neutral": 0.01059697442352139,
+            "positive": 0.9851629619987078,
+            "uncertain": 0.0035020663364201928
+          }
+        },
+        "supervised": {
+          "label": "positive",
+          "probabilities": {
+            "negative": 0.02298628485057828,
+            "neutral": 0.08710284855417372,
+            "positive": 0.8398378680565892,
+            "uncertain": 0.05007299853865886
+          }
+        }
+      },
+      "probabilities": {
+        "negative": 0.0007379972413505555,
+        "neutral": 0.01059697442352139,
+        "positive": 0.9851629619987078,
+        "uncertain": 0.0035020663364201928
+      },
+      "sentiment": 0.9844249647573572,
+      "source": "synthetic-desk"
+    },
+    {
+      "abstain_reason": null,
+      "annotated_at": "2025-04-03T12:00:00Z",
+      "article_id": "note-058",
+      "available_at": "2025-04-03T11:00:00Z",
+      "event_at": "2025-04-03T10:00:00Z",
+      "gold": "negative",
+      "issuer": "HBR",
+      "label": "negative",
+      "models": {
+        "calibrated": {
+          "label": "negative",
+          "probabilities": {
+            "negative": 0.8018492232429262,
+            "neutral": 0.07995716155572588,
+            "positive": 0.09176953671924007,
+            "uncertain": 0.02642407848210781
+          }
+        },
+        "lexicon": {
+          "label": "negative",
+          "probabilities": {
+            "negative": 0.7758034925743758,
+            "neutral": 0.1049935854035065,
+            "positive": 0.014209336618611033,
+            "uncertain": 0.1049935854035065
+          }
+        },
+        "prior": {
+          "label": "negative",
+          "probabilities": {
+            "negative": 0.25,
+            "neutral": 0.25,
+            "positive": 0.25,
+            "uncertain": 0.25
+          }
+        },
+        "served": {
+          "label": "negative",
+          "probabilities": {
+            "negative": 0.8018492232429262,
+            "neutral": 0.07995716155572588,
+            "positive": 0.09176953671924007,
+            "uncertain": 0.02642407848210781
+          }
+        },
+        "supervised": {
+          "label": "negative",
+          "probabilities": {
+            "negative": 0.5447776730241698,
+            "neutral": 0.17202898546378892,
+            "positive": 0.1842986752557732,
+            "uncertain": 0.09889466625626804
+          }
+        }
+      },
+      "probabilities": {
+        "negative": 0.8018492232429262,
+        "neutral": 0.07995716155572588,
+        "positive": 0.09176953671924007,
+        "uncertain": 0.02642407848210781
+      },
+      "sentiment": -0.7100796865236861,
+      "source": "synthetic-desk"
+    },
+    {
+      "abstain_reason": null,
+      "annotated_at": "2025-04-03T14:00:00Z",
+      "article_id": "note-059",
+      "available_at": "2025-04-03T13:00:00Z",
+      "event_at": "2025-04-03T12:00:00Z",
+      "gold": "neutral",
+      "issuer": "KST",
+      "label": "neutral",
+      "models": {
+        "calibrated": {
+          "label": "neutral",
+          "probabilities": {
+            "negative": 5.204056629204364e-06,
+            "neutral": 0.9999680806886071,
+            "positive": 4.870963513454143e-06,
+            "uncertain": 2.1844291250377886e-05
+          }
+        },
+        "lexicon": {
+          "label": "neutral",
+          "probabilities": {
+            "negative": 0.17487770452710943,
+            "neutral": 0.4753668864186717,
+            "positive": 0.17487770452710943,
+            "uncertain": 0.17487770452710943
+          }
+        },
+        "prior": {
+          "label": "negative",
+          "probabilities": {
+            "negative": 0.25,
+            "neutral": 0.25,
+            "positive": 0.25,
+            "uncertain": 0.25
+          }
+        },
+        "served": {
+          "label": "neutral",
+          "probabilities": {
+            "negative": 5.204056629204364e-06,
+            "neutral": 0.9999680806886071,
+            "positive": 4.870963513454143e-06,
+            "uncertain": 2.1844291250377886e-05
+          }
+        },
+        "supervised": {
+          "label": "neutral",
+          "probabilities": {
+            "negative": 0.002260564813334886,
+            "neutral": 0.9909209837640726,
+            "positive": 0.002187023223131671,
+            "uncertain": 0.004631428199460826
+          }
+        }
+      },
+      "probabilities": {
+        "negative": 5.204056629204364e-06,
+        "neutral": 0.9999680806886071,
+        "positive": 4.870963513454143e-06,
+        "uncertain": 2.1844291250377886e-05
+      },
+      "sentiment": -3.330931157502204e-07,
+      "source": "synthetic-desk"
+    },
+    {
+      "abstain_reason": "explicit_uncertainty",
+      "annotated_at": "2025-04-03T16:00:00Z",
+      "article_id": "note-060",
+      "available_at": "2025-04-03T15:00:00Z",
+      "event_at": "2025-04-03T14:00:00Z",
+      "gold": "uncertain",
+      "issuer": "NVL",
+      "label": "uncertain",
+      "models": {
+        "calibrated": {
+          "label": "uncertain",
+          "probabilities": {
+            "negative": 0.00019517860474022245,
+            "neutral": 0.001163663570191335,
+            "positive": 3.023394729701796e-05,
+            "uncertain": 0.9986109238777715
+          }
+        },
+        "lexicon": {
+          "label": "uncertain",
+          "probabilities": {
+            "negative": 0.09625513525746873,
+            "neutral": 0.09625513525746873,
+            "positive": 0.09625513525746873,
+            "uncertain": 0.7112345942275939
+          }
+        },
+        "prior": {
+          "label": "negative",
+          "probabilities": {
+            "negative": 0.25,
+            "neutral": 0.25,
+            "positive": 0.25,
+            "uncertain": 0.25
+          }
+        },
+        "served": {
+          "label": "uncertain",
+          "probabilities": {
+            "negative": 0.00019517860474022245,
+            "neutral": 0.001163663570191335,
+            "positive": 3.023394729701796e-05,
+            "uncertain": 0.9986109238777715
+          }
+        },
+        "supervised": {
+          "label": "uncertain",
+          "probabilities": {
+            "negative": 0.013268883436723432,
+            "neutral": 0.032399028930383246,
+            "positive": 0.005222346699728026,
+            "uncertain": 0.9491097409331652
+          }
+        }
+      },
+      "probabilities": {
+        "negative": 0.00019517860474022245,
+        "neutral": 0.001163663570191335,
+        "positive": 3.023394729701796e-05,
+        "uncertain": 0.9986109238777715
+      },
+      "sentiment": null,
+      "source": "synthetic-desk"
+    },
+    {
+      "abstain_reason": null,
+      "annotated_at": "2025-04-04T10:00:00Z",
+      "article_id": "note-061",
+      "available_at": "2025-04-04T09:00:00Z",
+      "event_at": "2025-04-04T08:00:00Z",
+      "gold": "positive",
+      "issuer": "HBR",
+      "label": "positive",
+      "models": {
+        "calibrated": {
+          "label": "positive",
+          "probabilities": {
+            "negative": 0.08771949955098911,
+            "neutral": 3.100811476666922e-06,
+            "positive": 0.9122765227536709,
+            "uncertain": 8.768838633310349e-07
+          }
+        },
+        "lexicon": {
+          "label": "positive",
+          "probabilities": {
+            "negative": 0.014209336618611039,
+            "neutral": 0.10499358540350653,
+            "positive": 0.775803492574376,
+            "uncertain": 0.10499358540350653
+          }
+        },
+        "prior": {
+          "label": "negative",
+          "probabilities": {
+            "negative": 0.25,
+            "neutral": 0.25,
+            "positive": 0.25,
+            "uncertain": 0.25
+          }
+        },
+        "served": {
+          "label": "positive",
+          "probabilities": {
+            "negative": 0.08771949955098911,
+            "neutral": 3.100811476666922e-06,
+            "positive": 0.9122765227536709,
+            "uncertain": 8.768838633310349e-07
+          }
+        },
+        "supervised": {
+          "label": "positive",
+          "probabilities": {
+            "negative": 0.23618332027564082,
+            "neutral": 0.0014042318924763668,
+            "positive": 0.7616657030611131,
+            "uncertain": 0.0007467447707697728
+          }
+        }
+      },
+      "probabilities": {
+        "negative": 0.08771949955098911,
+        "neutral": 3.100811476666922e-06,
+        "positive": 0.9122765227536709,
+        "uncertain": 8.768838633310349e-07
+      },
+      "sentiment": 0.8245570232026818,
+      "source": "synthetic-desk"
+    },
+    {
+      "abstain_reason": null,
+      "annotated_at": "2025-04-04T12:00:00Z",
+      "article_id": "note-062",
+      "available_at": "2025-04-04T11:00:00Z",
+      "event_at": "2025-04-04T10:00:00Z",
+      "gold": "negative",
+      "issuer": "KST",
+      "label": "negative",
+      "models": {
+        "calibrated": {
+          "label": "negative",
+          "probabilities": {
+            "negative": 0.9952857769918755,
+            "neutral": 1.0813741814358175e-06,
+            "positive": 0.004712847782334528,
+            "uncertain": 2.938516086732828e-07
+          }
+        },
+        "lexicon": {
+          "label": "negative",
+          "probabilities": {
+            "negative": 0.7758034925743758,
+            "neutral": 0.1049935854035065,
+            "positive": 0.014209336618611033,
+            "uncertain": 0.1049935854035065
+          }
+        },
+        "prior": {
+          "label": "negative",
+          "probabilities": {
+            "negative": 0.25,
+            "neutral": 0.25,
+            "positive": 0.25,
+            "uncertain": 0.25
+          }
+        },
+        "served": {
+          "label": "negative",
+          "probabilities": {
+            "negative": 0.9952857769918755,
+            "neutral": 1.0813741814358175e-06,
+            "positive": 0.004712847782334528,
+            "uncertain": 2.938516086732828e-07
+          }
+        },
+        "supervised": {
+          "label": "negative",
+          "probabilities": {
+            "negative": 0.9342316876370135,
+            "neutral": 0.0009737975845555806,
+            "positive": 0.06428688775792832,
+            "uncertain": 0.0005076270205025611
+          }
+        }
+      },
+      "probabilities": {
+        "negative": 0.9952857769918755,
+        "neutral": 1.0813741814358175e-06,
+        "positive": 0.004712847782334528,
+        "uncertain": 2.938516086732828e-07
+      },
+      "sentiment": -0.990572929209541,
+      "source": "synthetic-desk"
+    },
+    {
+      "abstain_reason": null,
+      "annotated_at": "2025-04-04T14:00:00Z",
+      "article_id": "note-063",
+      "available_at": "2025-04-04T13:00:00Z",
+      "event_at": "2025-04-04T12:00:00Z",
+      "gold": "neutral",
+      "issuer": "NVL",
+      "label": "neutral",
+      "models": {
+        "calibrated": {
+          "label": "neutral",
+          "probabilities": {
+            "negative": 9.955854038207418e-08,
+            "neutral": 0.9999992056355393,
+            "positive": 3.763512754278146e-08,
+            "uncertain": 6.571707925919842e-07
+          }
+        },
+        "lexicon": {
+          "label": "neutral",
+          "probabilities": {
+            "negative": 0.17487770452710943,
+            "neutral": 0.4753668864186717,
+            "positive": 0.17487770452710943,
+            "uncertain": 0.17487770452710943
+          }
+        },
+        "prior": {
+          "label": "negative",
+          "probabilities": {
+            "negative": 0.25,
+            "neutral": 0.25,
+            "positive": 0.25,
+            "uncertain": 0.25
+          }
+        },
+        "served": {
+          "label": "neutral",
+          "probabilities": {
+            "negative": 9.955854038207418e-08,
+            "neutral": 0.9999992056355393,
+            "positive": 3.763512754278146e-08,
+            "uncertain": 6.571707925919842e-07
+          }
+        },
+        "supervised": {
+          "label": "neutral",
+          "probabilities": {
+            "negative": 0.00031511310180601577,
+            "neutral": 0.9986815526240075,
+            "positive": 0.0001937420525105423,
+            "uncertain": 0.0008095922216758356
+          }
+        }
+      },
+      "probabilities": {
+        "negative": 9.955854038207418e-08,
+        "neutral": 0.9999992056355393,
+        "positive": 3.763512754278146e-08,
+        "uncertain": 6.571707925919842e-07
+      },
+      "sentiment": -6.192341283929271e-08,
+      "source": "synthetic-desk"
+    },
+    {
+      "abstain_reason": "explicit_uncertainty",
+      "annotated_at": "2025-04-04T16:00:00Z",
+      "article_id": "note-064",
+      "available_at": "2025-04-04T15:00:00Z",
+      "event_at": "2025-04-04T14:00:00Z",
+      "gold": "uncertain",
+      "issuer": "HBR",
+      "label": "uncertain",
+      "models": {
+        "calibrated": {
+          "label": "uncertain",
+          "probabilities": {
+            "negative": 3.635082268384827e-06,
+            "neutral": 1.894767427903805e-05,
+            "positive": 1.680204251405021e-07,
+            "uncertain": 0.9999772492230273
+          }
+        },
+        "lexicon": {
+          "label": "uncertain",
+          "probabilities": {
+            "negative": 0.09625513525746873,
+            "neutral": 0.09625513525746873,
+            "positive": 0.09625513525746873,
+            "uncertain": 0.7112345942275939
+          }
+        },
+        "prior": {
+          "label": "negative",
+          "probabilities": {
+            "negative": 0.25,
+            "neutral": 0.25,
+            "positive": 0.25,
+            "uncertain": 0.25
+          }
+        },
+        "served": {
+          "label": "uncertain",
+          "probabilities": {
+            "negative": 3.635082268384827e-06,
+            "neutral": 1.894767427903805e-05,
+            "positive": 1.680204251405021e-07,
+            "uncertain": 0.9999772492230273
+          }
+        },
+        "supervised": {
+          "label": "uncertain",
+          "probabilities": {
+            "negative": 0.0018939790413031923,
+            "neutral": 0.004324102717432867,
+            "positive": 0.0004071918588192758,
+            "uncertain": 0.9933747263824446
+          }
+        }
+      },
+      "probabilities": {
+        "negative": 3.635082268384827e-06,
+        "neutral": 1.894767427903805e-05,
+        "positive": 1.680204251405021e-07,
+        "uncertain": 0.9999772492230273
+      },
+      "sentiment": null,
+      "source": "synthetic-desk"
+    },
+    {
+      "abstain_reason": null,
+      "annotated_at": "2025-04-05T10:00:00Z",
+      "article_id": "note-065",
+      "available_at": "2025-04-05T09:00:00Z",
+      "event_at": "2025-04-05T08:00:00Z",
+      "gold": "positive",
+      "issuer": "KST",
+      "label": "positive",
+      "models": {
+        "calibrated": {
+          "label": "positive",
+          "probabilities": {
+            "negative": 0.006342805785467822,
+            "neutral": 0.022769241846677897,
+            "positive": 0.9407890232999242,
+            "uncertain": 0.030098929067930033
+          }
+        },
+        "lexicon": {
+          "label": "positive",
+          "probabilities": {
+            "negative": 0.014209336618611039,
+            "neutral": 0.10499358540350653,
+            "positive": 0.775803492574376,
+            "uncertain": 0.10499358540350653
+          }
+        },
+        "prior": {
+          "label": "negative",
+          "probabilities": {
+            "negative": 0.25,
+            "neutral": 0.25,
+            "positive": 0.25,
+            "uncertain": 0.25
+          }
+        },
+        "served": {
+          "label": "positive",
+          "probabilities": {
+            "negative": 0.006342805785467822,
+            "neutral": 0.022769241846677897,
+            "positive": 0.9407890232999242,
+            "uncertain": 0.030098929067930033
+          }
+        },
+        "supervised": {
+          "label": "positive",
+          "probabilities": {
+            "negative": 0.05796469194835224,
+            "neutral": 0.1098239627910054,
+            "positive": 0.7059418783114996,
+            "uncertain": 0.12626946694914268
+          }
+        }
+      },
+      "probabilities": {
+        "negative": 0.006342805785467822,
+        "neutral": 0.022769241846677897,
+        "positive": 0.9407890232999242,
+        "uncertain": 0.030098929067930033
+      },
+      "sentiment": 0.9344462175144563,
+      "source": "synthetic-desk"
+    },
+    {
+      "abstain_reason": null,
+      "annotated_at": "2025-04-05T12:00:00Z",
+      "article_id": "note-066",
+      "available_at": "2025-04-05T11:00:00Z",
+      "event_at": "2025-04-05T10:00:00Z",
+      "gold": "negative",
+      "issuer": "NVL",
+      "label": "negative",
+      "models": {
+        "calibrated": {
+          "label": "negative",
+          "probabilities": {
+            "negative": 0.6130705017265575,
+            "neutral": 0.15219804563119896,
+            "positive": 0.0414024946848804,
+            "uncertain": 0.19332895795736307
+          }
+        },
+        "lexicon": {
+          "label": "negative",
+          "probabilities": {
+            "negative": 0.7758034925743758,
+            "neutral": 0.1049935854035065,
+            "positive": 0.014209336618611033,
+            "uncertain": 0.1049935854035065
+          }
+        },
+        "prior": {
+          "label": "negative",
+          "probabilities": {
+            "negative": 0.25,
+            "neutral": 0.25,
+            "positive": 0.25,
+            "uncertain": 0.25
+          }
+        },
+        "served": {
+          "label": "negative",
+          "probabilities": {
+            "negative": 0.6130705017265575,
+            "neutral": 0.15219804563119896,
+            "positive": 0.0414024946848804,
+            "uncertain": 0.19332895795736307
+          }
+        },
+        "supervised": {
+          "label": "negative",
+          "probabilities": {
+            "negative": 0.43109400390277025,
+            "neutral": 0.21479358666562354,
+            "positive": 0.11202888851763575,
+            "uncertain": 0.24208352091397048
+          }
+        }
+      },
+      "probabilities": {
+        "negative": 0.6130705017265575,
+        "neutral": 0.15219804563119896,
+        "positive": 0.0414024946848804,
+        "uncertain": 0.19332895795736307
+      },
+      "sentiment": -0.5716680070416771,
+      "source": "synthetic-desk"
+    },
+    {
+      "abstain_reason": null,
+      "annotated_at": "2025-04-05T14:00:00Z",
+      "article_id": "note-067",
+      "available_at": "2025-04-05T13:00:00Z",
+      "event_at": "2025-04-05T12:00:00Z",
+      "gold": "neutral",
+      "issuer": "HBR",
+      "label": "neutral",
+      "models": {
+        "calibrated": {
+          "label": "neutral",
+          "probabilities": {
+            "negative": 6.57812036235048e-05,
+            "neutral": 0.9998411377257784,
+            "positive": 2.4051087205809598e-05,
+            "uncertain": 6.902998339258743e-05
+          }
+        },
+        "lexicon": {
+          "label": "neutral",
+          "probabilities": {
+            "negative": 0.17487770452710943,
+            "neutral": 0.4753668864186717,
+            "positive": 0.17487770452710943,
+            "uncertain": 0.17487770452710943
+          }
+        },
+        "prior": {
+          "label": "negative",
+          "probabilities": {
+            "negative": 0.25,
+            "neutral": 0.25,
+            "positive": 0.25,
+            "uncertain": 0.25
+          }
+        },
+        "served": {
+          "label": "neutral",
+          "probabilities": {
+            "negative": 6.57812036235048e-05,
+            "neutral": 0.9998411377257784,
+            "positive": 2.4051087205809598e-05,
+            "uncertain": 6.902998339258743e-05
+          }
+        },
+        "supervised": {
+          "label": "neutral",
+          "probabilities": {
+            "negative": 0.007941846664963545,
+            "neutral": 0.9791203808548158,
+            "positive": 0.004802174601555282,
+            "uncertain": 0.008135597878665426
+          }
+        }
+      },
+      "probabilities": {
+        "negative": 6.57812036235048e-05,
+        "neutral": 0.9998411377257784,
+        "positive": 2.4051087205809598e-05,
+        "uncertain": 6.902998339258743e-05
+      },
+      "sentiment": -4.173011641769521e-05,
+      "source": "synthetic-desk"
+    },
+    {
+      "abstain_reason": "explicit_uncertainty",
+      "annotated_at": "2025-04-05T16:00:00Z",
+      "article_id": "note-068",
+      "available_at": "2025-04-05T15:00:00Z",
+      "event_at": "2025-04-05T14:00:00Z",
+      "gold": "uncertain",
+      "issuer": "KST",
+      "label": "uncertain",
+      "models": {
+        "calibrated": {
+          "label": "uncertain",
+          "probabilities": {
+            "negative": 1.6155013802915766e-06,
+            "neutral": 7.578644036640123e-05,
+            "positive": 1.5120988951532907e-06,
+            "uncertain": 0.9999210859593581
+          }
+        },
+        "lexicon": {
+          "label": "uncertain",
+          "probabilities": {
+            "negative": 0.09625513525746873,
+            "neutral": 0.09625513525746873,
+            "positive": 0.09625513525746873,
+            "uncertain": 0.7112345942275939
+          }
+        },
+        "prior": {
+          "label": "negative",
+          "probabilities": {
+            "negative": 0.25,
+            "neutral": 0.25,
+            "positive": 0.25,
+            "uncertain": 0.25
+          }
+        },
+        "served": {
+          "label": "uncertain",
+          "probabilities": {
+            "negative": 1.6155013802915766e-06,
+            "neutral": 7.578644036640123e-05,
+            "positive": 1.5120988951532907e-06,
+            "uncertain": 0.9999210859593581
+          }
+        },
+        "supervised": {
+          "label": "uncertain",
+          "probabilities": {
+            "negative": 0.001256987251431386,
+            "neutral": 0.008609401484115174,
+            "positive": 0.0012160944441160935,
+            "uncertain": 0.9889175168203375
+          }
+        }
+      },
+      "probabilities": {
+        "negative": 1.6155013802915766e-06,
+        "neutral": 7.578644036640123e-05,
+        "positive": 1.5120988951532907e-06,
+        "uncertain": 0.9999210859593581
+      },
+      "sentiment": null,
+      "source": "synthetic-desk"
+    },
+    {
+      "abstain_reason": null,
+      "annotated_at": "2025-04-06T10:00:00Z",
+      "article_id": "note-069",
+      "available_at": "2025-04-06T09:00:00Z",
+      "event_at": "2025-04-06T08:00:00Z",
+      "gold": "positive",
+      "issuer": "NVL",
+      "label": "positive",
+      "models": {
+        "calibrated": {
+          "label": "positive",
+          "probabilities": {
+            "negative": 0.0006663829958123361,
+            "neutral": 0.00012211474781294228,
+            "positive": 0.9979683127574464,
+            "uncertain": 0.0012431894989283377
+          }
+        },
+        "lexicon": {
+          "label": "positive",
+          "probabilities": {
+            "negative": 0.014209336618611039,
+            "neutral": 0.10499358540350653,
+            "positive": 0.775803492574376,
+            "uncertain": 0.10499358540350653
+          }
+        },
+        "prior": {
+          "label": "negative",
+          "probabilities": {
+            "negative": 0.25,
+            "neutral": 0.25,
+            "positive": 0.25,
+            "uncertain": 0.25
+          }
+        },
+        "served": {
+          "label": "positive",
+          "probabilities": {
+            "negative": 0.0006663829958123361,
+            "neutral": 0.00012211474781294228,
+            "positive": 0.9979683127574464,
+            "uncertain": 0.0012431894989283377
+          }
+        },
+        "supervised": {
+          "label": "positive",
+          "probabilities": {
+            "negative": 0.02410065802855864,
+            "neutral": 0.010316942393555805,
+            "positive": 0.9326642348901373,
+            "uncertain": 0.032918164687748164
+          }
+        }
+      },
+      "probabilities": {
+        "negative": 0.0006663829958123361,
+        "neutral": 0.00012211474781294228,
+        "positive": 0.9979683127574464,
+        "uncertain": 0.0012431894989283377
+      },
+      "sentiment": 0.997301929761634,
+      "source": "synthetic-desk"
+    },
+    {
+      "abstain_reason": null,
+      "annotated_at": "2025-04-06T12:00:00Z",
+      "article_id": "note-070",
+      "available_at": "2025-04-06T11:00:00Z",
+      "event_at": "2025-04-06T10:00:00Z",
+      "gold": "negative",
+      "issuer": "HBR",
+      "label": "negative",
+      "models": {
+        "calibrated": {
+          "label": "negative",
+          "probabilities": {
+            "negative": 0.9844850583423905,
+            "neutral": 0.0031190680297476297,
+            "positive": 0.010488835212173997,
+            "uncertain": 0.00190703841568793
+          }
+        },
+        "lexicon": {
+          "label": "negative",
+          "probabilities": {
+            "negative": 0.5344466453885229,
+            "neutral": 0.19661193324148185,
+            "positive": 0.07232948812851327,
+            "uncertain": 0.19661193324148185
+          }
+        },
+        "prior": {
+          "label": "negative",
+          "probabilities": {
+            "negative": 0.25,
+            "neutral": 0.25,
+            "positive": 0.25,
+            "uncertain": 0.25
+          }
+        },
+        "served": {
+          "label": "negative",
+          "probabilities": {
+            "negative": 0.9844850583423905,
+            "neutral": 0.0031190680297476297,
+            "positive": 0.010488835212173997,
+            "uncertain": 0.00190703841568793
+          }
+        },
+        "supervised": {
+          "label": "negative",
+          "probabilities": {
+            "negative": 0.8308972526016167,
+            "neutral": 0.0467686874770529,
+            "positive": 0.08576426884771612,
+            "uncertain": 0.036569791073614265
+          }
+        }
+      },
+      "probabilities": {
+        "negative": 0.9844850583423905,
+        "neutral": 0.0031190680297476297,
+        "positive": 0.010488835212173997,
+        "uncertain": 0.00190703841568793
+      },
+      "sentiment": -0.9739962231302165,
+      "source": "synthetic-desk"
+    },
+    {
+      "abstain_reason": null,
+      "annotated_at": "2025-04-06T14:00:00Z",
+      "article_id": "note-071",
+      "available_at": "2025-04-06T13:00:00Z",
+      "event_at": "2025-04-06T12:00:00Z",
+      "gold": "neutral",
+      "issuer": "KST",
+      "label": "neutral",
+      "models": {
+        "calibrated": {
+          "label": "neutral",
+          "probabilities": {
+            "negative": 9.28816228233324e-05,
+            "neutral": 0.9997477520743037,
+            "positive": 1.0133229635579575e-05,
+            "uncertain": 0.00014923307323736902
+          }
+        },
+        "lexicon": {
+          "label": "neutral",
+          "probabilities": {
+            "negative": 0.17487770452710943,
+            "neutral": 0.4753668864186717,
+            "positive": 0.17487770452710943,
+            "uncertain": 0.17487770452710943
+          }
+        },
+        "prior": {
+          "label": "negative",
+          "probabilities": {
+            "negative": 0.25,
+            "neutral": 0.25,
+            "positive": 0.25,
+            "uncertain": 0.25
+          }
+        },
+        "served": {
+          "label": "neutral",
+          "probabilities": {
+            "negative": 9.28816228233324e-05,
+            "neutral": 0.9997477520743037,
+            "positive": 1.0133229635579575e-05,
+            "uncertain": 0.00014923307323736902
+          }
+        },
+        "supervised": {
+          "label": "neutral",
+          "probabilities": {
+            "negative": 0.009403268743405278,
+            "neutral": 0.9755716450947051,
+            "positive": 0.0031059030359063024,
+            "uncertain": 0.01191918312598317
+          }
+        }
+      },
+      "probabilities": {
+        "negative": 9.28816228233324e-05,
+        "neutral": 0.9997477520743037,
+        "positive": 1.0133229635579575e-05,
+        "uncertain": 0.00014923307323736902
+      },
+      "sentiment": -8.274839318775282e-05,
+      "source": "synthetic-desk"
+    },
+    {
+      "abstain_reason": "explicit_uncertainty",
+      "annotated_at": "2025-04-06T16:00:00Z",
+      "article_id": "note-072",
+      "available_at": "2025-04-06T15:00:00Z",
+      "event_at": "2025-04-06T14:00:00Z",
+      "gold": "uncertain",
+      "issuer": "NVL",
+      "label": "uncertain",
+      "models": {
+        "calibrated": {
+          "label": "uncertain",
+          "probabilities": {
+            "negative": 0.0030026561471461727,
+            "neutral": 0.02683531870543602,
+            "positive": 0.0005632733321799205,
+            "uncertain": 0.9695987518152378
+          }
+        },
+        "lexicon": {
+          "label": "uncertain",
+          "probabilities": {
+            "negative": 0.09625513525746873,
+            "neutral": 0.09625513525746873,
+            "positive": 0.09625513525746873,
+            "uncertain": 0.7112345942275939
+          }
+        },
+        "prior": {
+          "label": "negative",
+          "probabilities": {
+            "negative": 0.25,
+            "neutral": 0.25,
+            "positive": 0.25,
+            "uncertain": 0.25
+          }
+        },
+        "served": {
+          "label": "uncertain",
+          "probabilities": {
+            "negative": 0.0030026561471461727,
+            "neutral": 0.02683531870543602,
+            "positive": 0.0005632733321799205,
+            "uncertain": 0.9695987518152378
+          }
+        },
+        "supervised": {
+          "label": "uncertain",
+          "probabilities": {
+            "negative": 0.04465794589186209,
+            "neutral": 0.1335055503123526,
+            "positive": 0.01934218521735085,
+            "uncertain": 0.8024943185784345
+          }
+        }
+      },
+      "probabilities": {
+        "negative": 0.0030026561471461727,
+        "neutral": 0.02683531870543602,
+        "positive": 0.0005632733321799205,
+        "uncertain": 0.9695987518152378
+      },
+      "sentiment": null,
+      "source": "synthetic-desk"
+    },
+    {
+      "abstain_reason": null,
+      "annotated_at": "2025-04-07T10:00:00Z",
+      "article_id": "note-073",
+      "available_at": "2025-04-07T09:00:00Z",
+      "event_at": "2025-04-07T08:00:00Z",
+      "gold": "positive",
+      "issuer": "HBR",
+      "label": "negative",
+      "models": {
+        "calibrated": {
+          "label": "negative",
+          "probabilities": {
+            "negative": 0.8656414685799932,
+            "neutral": 0.00024889048749427475,
+            "positive": 0.1340913291904851,
+            "uncertain": 1.8311742027376228e-05
+          }
+        },
+        "lexicon": {
+          "label": "positive",
+          "probabilities": {
+            "negative": 0.014209336618611039,
+            "neutral": 0.10499358540350653,
+            "positive": 0.775803492574376,
+            "uncertain": 0.10499358540350653
+          }
+        },
+        "prior": {
+          "label": "negative",
+          "probabilities": {
+            "negative": 0.25,
+            "neutral": 0.25,
+            "positive": 0.25,
+            "uncertain": 0.25
+          }
+        },
+        "served": {
+          "label": "negative",
+          "probabilities": {
+            "negative": 0.8656414685799932,
+            "neutral": 0.00024889048749427475,
+            "positive": 0.1340913291904851,
+            "uncertain": 1.8311742027376228e-05
+          }
+        },
+        "supervised": {
+          "label": "negative",
+          "probabilities": {
+            "negative": 0.7066467320083796,
+            "neutral": 0.011982225193271072,
+            "positive": 0.27812093205702604,
+            "uncertain": 0.0032501107413231384
+          }
+        }
+      },
+      "probabilities": {
+        "negative": 0.8656414685799932,
+        "neutral": 0.00024889048749427475,
+        "positive": 0.1340913291904851,
+        "uncertain": 1.8311742027376228e-05
+      },
+      "sentiment": -0.7315501393895081,
+      "source": "synthetic-desk"
+    },
+    {
+      "abstain_reason": null,
+      "annotated_at": "2025-04-07T12:00:00Z",
+      "article_id": "note-074",
+      "available_at": "2025-04-07T11:00:00Z",
+      "event_at": "2025-04-07T10:00:00Z",
+      "gold": "negative",
+      "issuer": "KST",
+      "label": "negative",
+      "models": {
+        "calibrated": {
+          "label": "negative",
+          "probabilities": {
+            "negative": 0.9999573604047732,
+            "neutral": 4.492331047591765e-06,
+            "positive": 3.781674770145607e-05,
+            "uncertain": 3.305164776414586e-07
+          }
+        },
+        "lexicon": {
+          "label": "negative",
+          "probabilities": {
+            "negative": 0.7758034925743758,
+            "neutral": 0.1049935854035065,
+            "positive": 0.014209336618611033,
+            "uncertain": 0.1049935854035065
+          }
+        },
+        "prior": {
+          "label": "negative",
+          "probabilities": {
+            "negative": 0.25,
+            "neutral": 0.25,
+            "positive": 0.25,
+            "uncertain": 0.25
+          }
+        },
+        "served": {
+          "label": "negative",
+          "probabilities": {
+            "negative": 0.9999573604047732,
+            "neutral": 4.492331047591765e-06,
+            "positive": 3.781674770145607e-05,
+            "uncertain": 3.305164776414586e-07
+          }
+        },
+        "supervised": {
+          "label": "negative",
+          "probabilities": {
+            "negative": 0.9912333945909833,
+            "neutral": 0.002100975850996148,
+            "positive": 0.006095751753986519,
+            "uncertain": 0.0005698778040340761
+          }
+        }
+      },
+      "probabilities": {
+        "negative": 0.9999573604047732,
+        "neutral": 4.492331047591765e-06,
+        "positive": 3.781674770145607e-05,
+        "uncertain": 3.305164776414586e-07
+      },
+      "sentiment": -0.9999195436570718,
+      "source": "synthetic-desk"
+    },
+    {
+      "abstain_reason": null,
+      "annotated_at": "2025-04-07T14:00:00Z",
+      "article_id": "note-075",
+      "available_at": "2025-04-07T13:00:00Z",
+      "event_at": "2025-04-07T12:00:00Z",
+      "gold": "neutral",
+      "issuer": "NVL",
+      "label": "neutral",
+      "models": {
+        "calibrated": {
+          "label": "neutral",
+          "probabilities": {
+            "negative": 5.462746132965647e-08,
+            "neutral": 0.9999992848976496,
+            "positive": 3.3040443808678454e-09,
+            "uncertain": 6.5717084468076e-07
+          }
+        },
+        "lexicon": {
+          "label": "neutral",
+          "probabilities": {
+            "negative": 0.17487770452710943,
+            "neutral": 0.4753668864186717,
+            "positive": 0.17487770452710943,
+            "uncertain": 0.17487770452710943
+          }
+        },
+        "prior": {
+          "label": "negative",
+          "probabilities": {
+            "negative": 0.25,
+            "neutral": 0.25,
+            "positive": 0.25,
+            "uncertain": 0.25
+          }
+        },
+        "served": {
+          "label": "neutral",
+          "probabilities": {
+            "negative": 5.462746132965647e-08,
+            "neutral": 0.9999992848976496,
+            "positive": 3.3040443808678454e-09,
+            "uncertain": 6.5717084468076e-07
+          }
+        },
+        "supervised": {
+          "label": "neutral",
+          "probabilities": {
+            "negative": 0.00023346801617836553,
+            "neutral": 0.9988993456343179,
+            "positive": 5.741757152047109e-05,
+            "uncertain": 0.0008097687779831126
+          }
+        }
+      },
+      "probabilities": {
+        "negative": 5.462746132965647e-08,
+        "neutral": 0.9999992848976496,
+        "positive": 3.3040443808678454e-09,
+        "uncertain": 6.5717084468076e-07
+      },
+      "sentiment": -5.1323416948788626e-08,
+      "source": "synthetic-desk"
+    },
+    {
+      "abstain_reason": "explicit_uncertainty",
+      "annotated_at": "2025-04-07T16:00:00Z",
+      "article_id": "note-076",
+      "available_at": "2025-04-07T15:00:00Z",
+      "event_at": "2025-04-07T14:00:00Z",
+      "gold": "uncertain",
+      "issuer": "HBR",
+      "label": "uncertain",
+      "models": {
+        "calibrated": {
+          "label": "uncertain",
+          "probabilities": {
+            "negative": 6.827387054373843e-08,
+            "neutral": 2.626889142031596e-07,
+            "positive": 2.4602637011073806e-08,
+            "uncertain": 0.9999996444345783
+          }
+        },
+        "lexicon": {
+          "label": "uncertain",
+          "probabilities": {
+            "negative": 0.09625513525746873,
+            "neutral": 0.09625513525746873,
+            "positive": 0.09625513525746873,
+            "uncertain": 0.7112345942275939
+          }
+        },
+        "prior": {
+          "label": "negative",
+          "probabilities": {
+            "negative": 0.25,
+            "neutral": 0.25,
+            "positive": 0.25,
+            "uncertain": 0.25
+          }
+        },
+        "served": {
+          "label": "uncertain",
+          "probabilities": {
+            "negative": 6.827387054373843e-08,
+            "neutral": 2.626889142031596e-07,
+            "positive": 2.4602637011073806e-08,
+            "uncertain": 0.9999996444345783
+          }
+        },
+        "supervised": {
+          "label": "uncertain",
+          "probabilities": {
+            "negative": 0.00026104978475496946,
+            "neutral": 0.0005120553994603895,
+            "positive": 0.0001567064624576876,
+            "uncertain": 0.999070188353327
+          }
+        }
+      },
+      "probabilities": {
+        "negative": 6.827387054373843e-08,
+        "neutral": 2.626889142031596e-07,
+        "positive": 2.4602637011073806e-08,
+        "uncertain": 0.9999996444345783
+      },
+      "sentiment": null,
+      "source": "synthetic-desk"
+    },
+    {
+      "abstain_reason": null,
+      "annotated_at": "2025-04-20T13:00:00Z",
+      "article_id": "note-077",
+      "available_at": "2025-04-20T12:00:00Z",
+      "event_at": "2025-04-18T08:00:00Z",
+      "gold": "positive",
+      "issuer": "NVL",
+      "label": "positive",
+      "models": {
+        "calibrated": {
+          "label": "positive",
+          "probabilities": {
+            "negative": 0.00012332941230536586,
+            "neutral": 0.00034736609003353856,
+            "positive": 0.9995131022514558,
+            "uncertain": 1.6202246205403024e-05
+          }
+        },
+        "lexicon": {
+          "label": "positive",
+          "probabilities": {
+            "negative": 0.014209336618611039,
+            "neutral": 0.10499358540350653,
+            "positive": 0.775803492574376,
+            "uncertain": 0.10499358540350653
+          }
+        },
+        "prior": {
+          "label": "negative",
+          "probabilities": {
+            "negative": 0.25,
+            "neutral": 0.25,
+            "positive": 0.25,
+            "uncertain": 0.25
+          }
+        },
+        "served": {
+          "label": "positive",
+          "probabilities": {
+            "negative": 0.00012332941230536586,
+            "neutral": 0.00034736609003353856,
+            "positive": 0.9995131022514558,
+            "uncertain": 1.6202246205403024e-05
+          }
+        },
+        "supervised": {
+          "label": "positive",
+          "probabilities": {
+            "negative": 0.01074514804305026,
+            "neutral": 0.01803319930387725,
+            "positive": 0.9673270183374582,
+            "uncertain": 0.0038946343156142666
+          }
+        }
+      },
+      "probabilities": {
+        "negative": 0.00012332941230536586,
+        "neutral": 0.00034736609003353856,
+        "positive": 0.9995131022514558,
+        "uncertain": 1.6202246205403024e-05
+      },
+      "sentiment": 0.9993897728391504,
+      "source": "synthetic-desk"
+    },
+    {
+      "abstain_reason": "headline_body_conflict",
+      "annotated_at": "2025-04-21T10:00:00Z",
+      "article_id": "note-079",
+      "available_at": "2025-04-21T09:00:00Z",
+      "event_at": "2025-04-21T08:00:00Z",
+      "gold": "uncertain",
+      "issuer": "HBR",
+      "label": "uncertain",
+      "models": {
+        "calibrated": {
+          "label": "positive",
+          "probabilities": {
+            "negative": 0.1400989282751542,
+            "neutral": 6.088677940981376e-05,
+            "positive": 0.8597564242807029,
+            "uncertain": 8.376066473314957e-05
+          }
+        },
+        "lexicon": {
+          "label": "uncertain",
+          "probabilities": {
+            "negative": 0.09625513525746873,
+            "neutral": 0.09625513525746873,
+            "positive": 0.09625513525746873,
+            "uncertain": 0.7112345942275939
+          }
+        },
+        "prior": {
+          "label": "negative",
+          "probabilities": {
+            "negative": 0.25,
+            "neutral": 0.25,
+            "positive": 0.25,
+            "uncertain": 0.25
+          }
+        },
+        "served": {
+          "label": "uncertain",
+          "probabilities": {
+            "negative": 0.1400989282751542,
+            "neutral": 6.088677940981376e-05,
+            "positive": 0.8597564242807029,
+            "uncertain": 8.376066473314957e-05
+          }
+        },
+        "supervised": {
+          "label": "positive",
+          "probabilities": {
+            "negative": 0.2838851687611281,
+            "neutral": 0.005918161314565569,
+            "positive": 0.703255297357892,
+            "uncertain": 0.006941372566414258
+          }
+        }
+      },
+      "probabilities": {
+        "negative": 0.1400989282751542,
+        "neutral": 6.088677940981376e-05,
+        "positive": 0.8597564242807029,
+        "uncertain": 8.376066473314957e-05
+      },
+      "sentiment": null,
+      "source": "synthetic-desk"
+    },
+    {
+      "abstain_reason": "sarcasm_cue",
+      "annotated_at": "2025-04-21T14:00:00Z",
+      "article_id": "note-081",
+      "available_at": "2025-04-21T13:00:00Z",
+      "event_at": "2025-04-21T12:00:00Z",
+      "gold": "uncertain",
+      "issuer": "KST",
+      "label": "uncertain",
+      "models": {
+        "calibrated": {
+          "label": "negative",
+          "probabilities": {
+            "negative": 0.9688746746552986,
+            "neutral": 0.01840556867110628,
+            "positive": 0.0031251919166563353,
+            "uncertain": 0.009594564756938654
+          }
+        },
+        "lexicon": {
+          "label": "uncertain",
+          "probabilities": {
+            "negative": 0.09625513525746873,
+            "neutral": 0.09625513525746873,
+            "positive": 0.09625513525746873,
+            "uncertain": 0.7112345942275939
+          }
+        },
+        "prior": {
+          "label": "negative",
+          "probabilities": {
+            "negative": 0.25,
+            "neutral": 0.25,
+            "positive": 0.25,
+            "uncertain": 0.25
+          }
+        },
+        "served": {
+          "label": "uncertain",
+          "probabilities": {
+            "negative": 0.9688746746552986,
+            "neutral": 0.01840556867110628,
+            "positive": 0.0031251919166563353,
+            "uncertain": 0.009594564756938654
+          }
+        },
+        "supervised": {
+          "label": "negative",
+          "probabilities": {
+            "negative": 0.7727162452342097,
+            "neutral": 0.10650275957330105,
+            "positive": 0.04388585732705925,
+            "uncertain": 0.07689513786543024
+          }
+        }
+      },
+      "probabilities": {
+        "negative": 0.9688746746552986,
+        "neutral": 0.01840556867110628,
+        "positive": 0.0031251919166563353,
+        "uncertain": 0.009594564756938654
+      },
+      "sentiment": null,
+      "source": "synthetic-desk"
+    },
+    {
+      "abstain_reason": null,
+      "annotated_at": "2025-04-22T10:00:00Z",
+      "article_id": "note-082",
+      "available_at": "2025-04-22T09:00:00Z",
+      "event_at": "2025-04-22T08:00:00Z",
+      "gold": "negative",
+      "issuer": "HBR",
+      "label": "negative",
+      "models": {
+        "calibrated": {
+          "label": "negative",
+          "probabilities": {
+            "negative": 0.9999380886870348,
+            "neutral": 1.7455299357207451e-06,
+            "positive": 5.572319004823947e-05,
+            "uncertain": 4.442592981228532e-06
+          }
+        },
+        "lexicon": {
+          "label": "negative",
+          "probabilities": {
+            "negative": 0.7758034925743758,
+            "neutral": 0.1049935854035065,
+            "positive": 0.014209336618611033,
+            "uncertain": 0.1049935854035065
+          }
+        },
+        "prior": {
+          "label": "negative",
+          "probabilities": {
+            "negative": 0.25,
+            "neutral": 0.25,
+            "positive": 0.25,
+            "uncertain": 0.25
+          }
+        },
+        "served": {
+          "label": "negative",
+          "probabilities": {
+            "negative": 0.9999380886870348,
+            "neutral": 1.7455299357207451e-06,
+            "positive": 5.572319004823947e-05,
+            "uncertain": 4.442592981228532e-06
+          }
+        },
+        "supervised": {
+          "label": "negative",
+          "probabilities": {
+            "negative": 0.9892233367154357,
+            "neutral": 0.0013069875426300365,
+            "positive": 0.00738457971580907,
+            "uncertain": 0.0020850960261251566
+          }
+        }
+      },
+      "probabilities": {
+        "negative": 0.9999380886870348,
+        "neutral": 1.7455299357207451e-06,
+        "positive": 5.572319004823947e-05,
+        "uncertain": 4.442592981228532e-06
+      },
+      "sentiment": -0.9998823654969866,
+      "source": "synthetic-desk"
+    },
+    {
+      "abstain_reason": null,
+      "annotated_at": "2025-04-22T10:00:00Z",
+      "article_id": "note-082",
+      "available_at": "2025-04-22T09:00:00Z",
+      "event_at": "2025-04-22T08:00:00Z",
+      "gold": "positive",
+      "issuer": "NVL",
+      "label": "positive",
+      "models": {
+        "calibrated": {
+          "label": "positive",
+          "probabilities": {
+            "negative": 0.007919783768620991,
+            "neutral": 0.013981360837278408,
+            "positive": 0.9736589134909588,
+            "uncertain": 0.004439941903141664
+          }
+        },
+        "lexicon": {
+          "label": "positive",
+          "probabilities": {
+            "negative": 0.014209336618611039,
+            "neutral": 0.10499358540350653,
+            "positive": 0.775803492574376,
+            "uncertain": 0.10499358540350653
+          }
+        },
+        "prior": {
+          "label": "negative",
+          "probabilities": {
+            "negative": 0.25,
+            "neutral": 0.25,
+            "positive": 0.25,
+            "uncertain": 0.25
+          }
+        },
+        "served": {
+          "label": "positive",
+          "probabilities": {
+            "negative": 0.007919783768620991,
+            "neutral": 0.013981360837278408,
+            "positive": 0.9736589134909588,
+            "uncertain": 0.004439941903141664
+          }
+        },
+        "supervised": {
+          "label": "positive",
+          "probabilities": {
+            "negative": 0.070595296740361,
+            "neutral": 0.0937980539514764,
+            "positive": 0.7827490116385598,
+            "uncertain": 0.05285763766960283
+          }
+        }
+      },
+      "probabilities": {
+        "negative": 0.007919783768620991,
+        "neutral": 0.013981360837278408,
+        "positive": 0.9736589134909588,
+        "uncertain": 0.004439941903141664
+      },
+      "sentiment": 0.9657391297223378,
+      "source": "synthetic-desk"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+test_end_to_end_identical_scenarios_and_export_replay (integration.test_experiment.ExperimentTests) ... ok
+test_fixture_tampering_logs_failure_and_stops (integration.test_experiment.ExperimentTests) ... ok
+test_gymnasium_contract_and_seeded_actions (integration.test_experiment.ExperimentTests) ... ok
+test_short_window_is_logged (integration.test_experiment.ExperimentTests) ... ok
+test_future_price_changes_invisible_before_availability (scenarios.test_controls.ControlScenarios) ... ok
+test_regime_shift_changes_held_out_drawdown (scenarios.test_controls.ControlScenarios) ... ok
+test_reward_hacking_churn_loses_costs_and_cannot_farm_terminal_reward (scenarios.test_controls.ControlScenarios) ... ok
+test_seed_reproduces_training (scenarios.test_controls.ControlScenarios) ... ok
+test_transaction_cost_sensitivity (scenarios.test_controls.ControlScenarios) ... ok
+test_unbounded_actions_fail_before_mutation (scenarios.test_controls.ControlScenarios) ... ok
+test_unrealistic_fills_capped_and_zero_liquidity_expires (scenarios.test_controls.ControlScenarios) ... ok
+test_fill_cash_mark_and_reward_conserve (unit.test_accounting.AccountingTests) ... ok
+test_gap_is_earned_only_by_existing_inventory (unit.test_accounting.AccountingTests) ... ok
+test_invalid_market_contracts (unit.test_accounting.AccountingTests) ... ok
+test_post_cost_half_target_on_buy_and_sell (unit.test_accounting.AccountingTests) ... ok
+test_learns_to_hold_on_a_rising_path_with_zero_cost (unit.test_learning.LearningTests) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.468s
+
+OK

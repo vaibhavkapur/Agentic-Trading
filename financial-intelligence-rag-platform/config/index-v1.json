@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "chunk_chars": 480,
+  "dimensions": 128,
+  "keyword_weight": 0.55,
+  "candidate_limit": 40
+}

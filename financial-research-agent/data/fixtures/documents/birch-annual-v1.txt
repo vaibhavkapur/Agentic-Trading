@@ -1,0 +1,3 @@
+Subject: issuer-birch
+Birch Components | Annual statement
+Fact|revenue|FY2024|80|millions|money|EUR

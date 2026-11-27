@@ -1,0 +1,13 @@
+{
+  "version": "desk-notes.v1",
+  "origin": "Original fictional English headlines, bodies and issuer annotations authored for this prototype.",
+  "sources": [
+    "synthetic-desk",
+    "synthetic-wire"
+  ],
+  "entitlement": "Bundled synthetic material for local evaluation and reproduction. No external feed, personal repository or issuer records used.",
+  "sha256": {
+    "annotations.jsonl": "6ed9a9cf16ea6f1023d8f3f976bd6f620cec5665e5803a3ebc6f9c17ebdac322",
+    "articles.jsonl": "606fcf6839e889d5bd11a6a47ce3747180b024e4ea398ab426d987b92bc47460"
+  }
+}

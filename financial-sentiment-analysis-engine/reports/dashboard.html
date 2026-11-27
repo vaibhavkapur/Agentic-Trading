@@ -1,0 +1,29 @@
+<!doctype html><html lang="en"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Issuer sentiment · Model evaluation</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f6f5ef;color:#182d29;font:16px/1.55 "Inter",system-ui,sans-serif}
+main{max-width:1080px;margin:auto;padding:35px clamp(16px,4vw,52px) 64px}
+header{border-bottom:2px solid #294b42;padding-bottom:22px}h1,h2{font-family:"Baskervville",Georgia,serif;font-weight:500}
+h1{font-size:clamp(38px,6vw,66px);line-height:1.05;margin:12px 0}h2{font-size:28px;margin:0 0 10px}
+header small,dt{color:#39594e}section{margin-top:32px}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:16px}
+dl{margin:0;border-left:3px solid #467d69;padding-left:15px}dd{margin:4px 0;font:38px Georgia,serif}
+.scroll{overflow:auto}table{width:100%;border-collapse:collapse;background:#fffefa;font-variant-numeric:tabular-nums}
+th,td{padding:9px 12px;border-bottom:1px solid #d1d8d1;text-align:right}th:first-child,td:first-child{text-align:left}
+thead{background:#e6ebe4}footer{margin-top:26px;font:13px monospace;overflow-wrap:anywhere}
+</style><main><header><small>Financial research / Model evaluation</small><h1>Issuer sentiment</h1>
+<p>Held-out synthetic desk notes · 2025-04-01 to 2025-06-01 (exclusive), UTC</p></header>
+<section class="cards"><dl><dt>Served macro-F1</dt><dd>0.962</dd></dl>
+<dl><dt>Decision coverage</dt><dd>72%</dd></dl>
+<dl><dt>Evaluated issuer labels</dt><dd>25</dd></dl>
+<dl><dt>Syndicated copies</dt><dd>2</dd></dl></section>
+<section><h2>Baseline comparison</h2><div class="scroll"><table><thead><tr><th>Method</th><th>Macro-F1 ↑</th>
+<th>Brier ↓</th><th>Calibration error ↓</th><th>Coverage</th></tr></thead><tbody><tr><th>Training prior</th><td>0.097</td><td>0.750</td><td>0.010</td><td>100%</td></tr><tr><th>Finance lexicon</th><td>1.000</td><td>0.151</td><td>0.312</td><td>72%</td></tr><tr><th>Text classifier</th><td>0.887</td><td>0.209</td><td>0.132</td><td>80%</td></tr><tr><th>Temperature-scaled</th><td>0.887</td><td>0.219</td><td>0.106</td><td>80%</td></tr><tr><th>Served decisions</th><td>0.962</td><td>0.219</td><td>0.106</td><td>72%</td></tr></tbody></table></div>
+<p>Coverage counts directional and neutral decisions. Probability metrics use the distribution before abstention.</p></section>
+<section><h2>Confusion matrix</h2><div class="scroll"><table><thead><tr><th>Gold ↓ / Served →</th><th>Negative</th><th>Neutral</th><th>Positive</th><th>Uncertain</th></tr></thead>
+<tbody><tr><th>Negative</th><td>6</td><td>0</td><td>0</td><td>0</td></tr><tr><th>Neutral</th><td>0</td><td>5</td><td>0</td><td>0</td></tr><tr><th>Positive</th><td>1</td><td>0</td><td>6</td><td>0</td></tr><tr><th>Uncertain</th><td>0</td><td>0</td><td>0</td><td>7</td></tr></tbody></table></div></section>
+<section><h2>Distribution drift</h2><p>43.7% of test token and bigram occurrences are outside
+the training vocabulary. Gold label divergence is 0.0033 bits (Jensen–Shannon).</p></section>
+<section><h2>Abstentions and errors</h2><div class="scroll"><table><thead><tr><th>Article</th><th>Issuer</th><th>Gold</th>
+<th>Served</th><th>Reason</th></tr></thead><tbody><tr><td>note-060</td><td>NVL</td><td>uncertain</td><td>uncertain</td><td>explicit uncertainty</td></tr><tr><td>note-064</td><td>HBR</td><td>uncertain</td><td>uncertain</td><td>explicit uncertainty</td></tr><tr><td>note-068</td><td>KST</td><td>uncertain</td><td>uncertain</td><td>explicit uncertainty</td></tr><tr><td>note-072</td><td>NVL</td><td>uncertain</td><td>uncertain</td><td>explicit uncertainty</td></tr><tr><td>note-073</td><td>HBR</td><td>positive</td><td>negative</td><td>classification error</td></tr><tr><td>note-076</td><td>HBR</td><td>uncertain</td><td>uncertain</td><td>explicit uncertainty</td></tr><tr><td>note-079</td><td>HBR</td><td>uncertain</td><td>uncertain</td><td>headline body conflict</td></tr><tr><td>note-081</td><td>KST</td><td>uncertain</td><td>uncertain</td><td>sarcasm cue</td></tr></tbody></table></div></section>
+<footer>Model 2b6faf730623144f68b4c32ca2e7e57675546f8228ad1356743b168132d54844</footer></main></html>

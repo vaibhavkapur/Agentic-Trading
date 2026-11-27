@@ -1,0 +1,11 @@
+#!/bin/sh
+set -eu
+cd "$(dirname "$0")/.."
+demo_dir=$(mktemp -d)
+trap 'rm -rf "$demo_dir"' EXIT
+query() { ./bin/research --db "$demo_dir/research.sqlite" "$@"; }
+query ingest
+query brief DEMO:ALDR FY2024 revenue net_income --as-of 2025-03-15T00:00:00Z
+query source alder-annual-v2 4
+query ask Alder FY2024 'What was revenue?' --as-of 2025-04-02T00:00:00Z
+query ask Northland 2025-03-12 'What was policy rate?' --as-of 2025-03-15T00:00:00Z

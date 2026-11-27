@@ -1,0 +1,55 @@
+#!/usr/bin/env python3
+"""Command-line entry point for the local prototype."""
+import argparse
+import json
+import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "src"))
+from sentiment.dashboard import render
+from sentiment.domain import instant
+from sentiment.engine import Catalog, Engine
+from sentiment.evaluation import evaluate
+from sentiment.server import serve
+
+
+def main():
+    parser = argparse.ArgumentParser()
+    commands = parser.add_subparsers(dest="command", required=True)
+    commands.add_parser("demo")
+    commands.add_parser("evaluate")
+    feature = commands.add_parser("features")
+    feature.add_argument("--as-of", required=True)
+    feature.add_argument("--window-end")
+    feature.add_argument("--issuer")
+    server = commands.add_parser("serve")
+    server.add_argument("--port", type=int, default=8080)
+    for command in (feature, server):
+        command.add_argument("--articles", type=Path, help="Local observation JSONL for the feature feed")
+    args = parser.parse_args()
+    engine = Engine.load(ROOT)
+    catalog = Catalog.load(args.articles, engine.linker) if getattr(args, "articles", None) else engine.reference
+    if args.command == "serve":
+        serve(engine, args.port, catalog)
+    elif args.command == "features":
+        print(json.dumps(engine.feed(instant(args.as_of), instant(args.window_end or args.as_of), args.issuer, catalog), indent=2))
+    else:
+        report = evaluate(engine)
+        if args.command == "evaluate":
+            out = ROOT / "reports"
+            out.mkdir(exist_ok=True)
+            (out / "evaluation.json").write_text(json.dumps(report, indent=2, sort_keys=True)+"\n")
+            (out / "dashboard.html").write_text(render(report)+"\n")
+            print("Wrote reports/evaluation.json and reports/dashboard.html")
+        else:
+            print(json.dumps(dict(split_counts=report["split_counts"], served_macro_f1=report["models"]["served"]["macro_f1"],
+                                  feed=engine.feed(instant("2025-04-23T00:00:00Z"), instant("2025-04-23T00:00:00Z"))), indent=2))
+
+
+if __name__ == "__main__":
+    try:
+        main()
+    except (ValueError, OSError) as exc:
+        print(json.dumps({"error": getattr(exc, "code", "startup_failed"), "detail": str(exc)}), file=sys.stderr)
+        sys.exit(1)

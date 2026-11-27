@@ -1,0 +1,11 @@
+{
+  "schema": "synthetic-sessions/v1",
+  "asset": "SIM-USD",
+  "currency": "USD",
+  "provenance": "generated",
+  "generator": "scripts/generate_fixture.py",
+  "seed": 7025,
+  "sessions": 361,
+  "sha256": "6c53f8da85b4e87b6797ec6e2908f54e48c17f50d2326c7d598ddb37b429e661",
+  "entitlement": "Original generated fixture for local simulation and tests."
+}

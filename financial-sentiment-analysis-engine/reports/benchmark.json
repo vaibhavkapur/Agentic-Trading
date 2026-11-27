@@ -1,0 +1,14 @@
+{
+  "python": "3.9.6",
+  "os": "Darwin",
+  "architecture": "arm64",
+  "model_version": "2b6faf730623144f68b4c32ca2e7e57675546f8228ad1356743b168132d54844",
+  "measure": "warm in-process fixture feed query",
+  "unit": "ms",
+  "iterations": 200,
+  "canonical_articles": 81,
+  "returned_decisions": 2,
+  "median": 0.0530205,
+  "p95_nearest_rank": 0.05625,
+  "maximum": 0.122416
+}

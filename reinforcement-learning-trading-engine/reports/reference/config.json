@@ -1,0 +1,21 @@
+{
+  "schema": "allocation-experiment/v1",
+  "seed": 731,
+  "initial_train_steps": 120,
+  "validation_steps": 40,
+  "test_steps": 40,
+  "episodes": 20,
+  "learning_rates": [
+    0.08,
+    0.25
+  ],
+  "discount": 0.95,
+  "epsilon": 0.2,
+  "bootstrap_samples": 1000,
+  "rules": {
+    "initial_cash": 10000,
+    "fee_bps": 2,
+    "slippage_bps": 5,
+    "participation": 0.05
+  }
+}

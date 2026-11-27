@@ -1,0 +1,6 @@
+Subject: issuer-alder
+Alder Instruments | Restated FY2024 statement
+Revenue and net income have been revised.
+Fact|revenue|FY2024|118|millions|money|USD
+Fact|net_income|FY2024|8.75|millions|money|USD
+Fact|shares_outstanding|FY2024|12|millions|shares|-

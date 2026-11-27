@@ -1,0 +1,5 @@
+Subject: issuer-alder
+Alder Instruments | Annual statement for FY2024
+Fact|revenue|FY2024|120|millions|money|USD
+Fact|net_income|FY2024|9.50|millions|money|USD
+Fact|shares_outstanding|FY2024|12|millions|shares|-

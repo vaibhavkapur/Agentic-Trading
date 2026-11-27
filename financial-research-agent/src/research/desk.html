@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research desk</title><link rel="stylesheet" href="/desk.css"><script defer src="/desk.js"></script></head>
+<body><header><h1>Research desk</h1><form id="login"><label>Access token<input id="token" type="password" required autocomplete="off"></label><button>Connect</button></form></header>
+<p id="status" role="status">Connect with a reader or analyst token.</p>
+<main hidden id="workspace"><aside><h2>Research request</h2>
+<form id="query"><label>Company or institution<select id="subject"></select></label>
+<label>Reporting period or event date<input id="period" value="FY2024" required></label>
+<label>As of (UTC)<input id="asof" value="2025-03-15T00:00:00Z" required></label>
+<fieldset><legend>Measures</legend><div id="measures"></div></fieldset><button>Build brief</button></form>
+<h2>Recent briefs</h2><nav aria-label="Recent briefs" id="recent"></nav></aside>
+<section aria-label="Research brief"><h2 id="title">Select or build a brief</h2><div id="result"></div>
+<form id="review" hidden><h3>Analyst decision</h3><label>Review note<textarea id="note" required maxlength="1000"></textarea></label>
+<button value="approve">Approve</button> <button class="secondary" value="reject">Reject</button></form></section></main></body></html>

@@ -1,0 +1,124 @@
+{
+  "build": {
+    "versions": 8,
+    "chunks": 17,
+    "events": 10,
+    "retired_ids": 1,
+    "manifest_sha256": "4a5dc4ab9d262a4dc87b10fb3d0690c643dea6eab9258b8a3fcf66d575163b44"
+  }
+}
+{
+  "request": {
+    "as_of": "2025-03-06T12:00:00Z",
+    "query": "substation upgrade",
+    "filters": {
+      "kind": "internal"
+    }
+  },
+  "response": {
+    "as_of": "2025-03-06T12:00:00.000000Z",
+    "hits": []
+  }
+}
+{
+  "request": {
+    "as_of": "2025-02-28T12:00:00Z",
+    "query": "What was Aster Grid's revenue in FY2024?",
+    "filters": {
+      "kind": "filing"
+    }
+  },
+  "response": {
+    "status": "answered",
+    "claims": [
+      {
+        "text": "Aster Grid reported FY2024 revenue of USD 110 million.",
+        "value": "USD 110 million",
+        "citation": {
+          "chunk_id": "fc4d63ee71557579a7d81a6b14cbbdbd1ea1c3e4a5c98b213925271e72c9f1c2",
+          "doc_id": "aster-24",
+          "version": 1,
+          "sha256": "f6e3cf19102f9f15dfc8a8707e32a06a3d484bc19c1de5d31bdf916808126bdf",
+          "start": 0,
+          "end": 54,
+          "passage": "Aster Grid reported FY2024 revenue of USD 110 million.",
+          "issuer": "Aster Grid",
+          "kind": "filing",
+          "period": "FY2024",
+          "event_at": "2024-12-31T00:00:00.000000Z",
+          "available_at": "2025-02-10T09:00:00.000000Z",
+          "provenance": "Authored synthetic filing for this local prototype",
+          "license": "Synthetic fixture permitted for local testing"
+        }
+      }
+    ],
+    "as_of": "2025-02-28T12:00:00.000000Z"
+  }
+}
+{
+  "request": {
+    "as_of": "2025-03-06T12:00:00Z",
+    "query": "Compare Aster Grid's revenue in FY2024 across sources.",
+    "filters": {}
+  },
+  "response": {
+    "status": "answered",
+    "claims": [
+      {
+        "text": "Aster Grid reported FY2024 revenue of USD 112 million.",
+        "value": "USD 112 million",
+        "citation": {
+          "chunk_id": "74129ccb3f494e7e9006df223f343480c83ea4f64d4117de838a59383c22550d",
+          "doc_id": "aster-24",
+          "version": 2,
+          "sha256": "75406ebed2ede07b3c4eb50624b195322084a144af5407b69fdb3439b95b4053",
+          "start": 0,
+          "end": 54,
+          "passage": "Aster Grid reported FY2024 revenue of USD 112 million.",
+          "issuer": "Aster Grid",
+          "kind": "filing",
+          "period": "FY2024",
+          "event_at": "2025-02-25T00:00:00.000000Z",
+          "available_at": "2025-03-03T09:00:00.000000Z",
+          "provenance": "Authored synthetic filing for this local prototype",
+          "license": "Synthetic fixture permitted for local testing"
+        }
+      },
+      {
+        "text": "Aster Grid reported FY2024 revenue of USD 111 million.",
+        "value": "USD 111 million",
+        "citation": {
+          "chunk_id": "9e69f84a226a8239b5151606a1ef4c9b6dd6f95050188e689251737c2ce60fa5",
+          "doc_id": "aster-note",
+          "version": 1,
+          "sha256": "ac52964478b73291897a1cf927df2a26ddc0b8b1de26e50d8650ce6bfdbd2206",
+          "start": 0,
+          "end": 54,
+          "passage": "Aster Grid reported FY2024 revenue of USD 111 million.",
+          "issuer": "Aster Grid",
+          "kind": "research",
+          "period": "FY2024",
+          "event_at": "2025-02-11T00:00:00.000000Z",
+          "available_at": "2025-02-12T09:00:00.000000Z",
+          "provenance": "Authored synthetic research for this local prototype",
+          "license": "Synthetic fixture permitted for local testing"
+        }
+      }
+    ],
+    "comparison": "different_reported_values",
+    "as_of": "2025-03-06T12:00:00.000000Z"
+  }
+}
+{
+  "request": {
+    "as_of": "2025-03-06T12:00:00Z",
+    "query": "What was Aster Grid's operating income in FY2024?",
+    "filters": {}
+  },
+  "response": {
+    "status": "abstained",
+    "reason": "missing_evidence",
+    "claims": [],
+    "as_of": "2025-03-06T12:00:00.000000Z"
+  }
+}

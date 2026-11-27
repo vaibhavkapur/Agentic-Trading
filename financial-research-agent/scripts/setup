@@ -1,0 +1,5 @@
+#!/bin/sh
+set -eu
+cd "$(dirname "$0")/.."
+python3 -c 'import sqlite3,sys; assert sys.version_info >= (3,9) and sqlite3.sqlite_version_info >= (3,25), "Requires Python 3.9+ and SQLite 3.25+"'
+exec ./bin/research ingest

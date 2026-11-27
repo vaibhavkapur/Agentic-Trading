@@ -1,0 +1,14 @@
+[
+  {"case":"published but unavailable","subject":"ALDR","as_of":"2025-02-02T11:59:59Z","metric":"revenue","expected":"missing_evidence","evidence":[]},
+  {"case":"original on arrival","subject":"ALDR","as_of":"2025-02-02T12:00:00Z","metric":"revenue","expected":"supported","evidence":[["alder-annual-v1",3,"120000000","money","USD"]]},
+  {"case":"issuer isolation","subject":"DEMO:BRCH","as_of":"2025-02-11T00:00:00Z","metric":"revenue","expected":"supported","evidence":[["birch-annual-v1",3,"80000000","money","EUR"]]},
+  {"case":"unreported income","subject":"Birch","as_of":"2025-02-12T00:00:00Z","metric":"net_income","expected":"missing_evidence","evidence":[]},
+  {"case":"revision in transit","subject":"Alder","as_of":"2025-03-04T11:59:59Z","metric":"net_income","expected":"supported","evidence":[["alder-annual-v1",4,"9500000","money","USD"]]},
+  {"case":"restatement on arrival","subject":"Alder","as_of":"2025-03-04T12:00:00Z","metric":"revenue","expected":"supported","evidence":[["alder-annual-v2",4,"118000000","money","USD"]]},
+  {"case":"share count","subject":"Alder","as_of":"2025-03-05T12:00:00Z","metric":"shares_outstanding","expected":"supported","evidence":[["alder-annual-v2",6,"12000000","shares",null]]},
+  {"case":"macro before retrieval","subject":"Northland","period":"2025-03-12","as_of":"2025-03-13T11:59:59Z","metric":"policy_rate","expected":"missing_evidence","evidence":[]},
+  {"case":"macro decision","subject":"Northland","period":"2025-03-12","as_of":"2025-03-13T12:00:00Z","metric":"policy_rate","expected":"supported","evidence":[["north-rate-v1",3,"3.25","percent",null]]},
+  {"case":"independent disagreement","subject":"Alder","as_of":"2025-04-01T12:00:00Z","metric":"revenue","expected":"conflicting_evidence","evidence":[["alder-annual-v2",4,"118000000","money","USD"],["alder-news-v1",3,"119000000","money","USD"]]},
+  {"case":"price target","subject":"Alder","as_of":"2025-04-01T12:00:00Z","question":"What is the price target?","expected":"unsupported_question","evidence":[]},
+  {"case":"stale income","subject":"Alder","as_of":"2026-05-01T12:00:00Z","metric":"net_income","expected":"stale_evidence","evidence":[["alder-annual-v2",5,"8750000","money","USD"]]}
+]

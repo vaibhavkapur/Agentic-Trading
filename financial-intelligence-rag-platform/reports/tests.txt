@@ -1,0 +1,22 @@
+test_exact_version_hash_offsets_and_rebuild (tests.integration.test_adapters.Adapters) ... ok
+test_malformed_queries_fail_closed (tests.integration.test_adapters.Adapters) ... ok
+test_metadata_filters_and_source_comparison (tests.integration.test_adapters.Adapters) ... ok
+test_overlapping_builds_and_reads (tests.integration.test_adapters.Adapters) ... ok
+test_rebuild_rejects_rewrites_and_rolls_back_on_bad_object (tests.integration.test_adapters.Adapters) ... ok
+test_bearer_required_and_scope_server_assigned (tests.integration.test_http.Transport) ... ok
+test_credential_file_validation (tests.integration.test_http.Transport) ... ok
+test_cross_tenant_and_group_retrieval_and_resolution (tests.scenarios.test_boundaries.Boundaries) ... ok
+test_deletion_propagates_to_all_as_of_dates (tests.scenarios.test_boundaries.Boundaries) ... ok
+test_future_document_leakage (tests.scenarios.test_boundaries.Boundaries) ... ok
+test_malicious_embedded_instructions_are_inert (tests.scenarios.test_boundaries.Boundaries) ... ok
+test_stale_filing_superseded_at_exact_availability (tests.scenarios.test_boundaries.Boundaries) ... ok
+test_unanswerable_and_compound_questions (tests.scenarios.test_boundaries.Boundaries) ... ok
+test_chunk_offsets_preserve_unicode_and_newlines (tests.unit.test_contracts.Contracts) ... ok
+test_dense_adapter_normalized_and_synonym_aware (tests.unit.test_contracts.Contracts) ... ok
+test_invalid_config_identity_and_manifest (tests.unit.test_contracts.Contracts) ... ok
+test_utc_normalization_and_rejection (tests.unit.test_contracts.Contracts) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.157s
+
+OK

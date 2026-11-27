@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "max_age_days": 400,
+  "subjects": [
+    {"id":"issuer-alder","kind":"issuer","name":"Alder Instruments","currency":"USD","aliases":["ALDR","Alder"],"instruments":["DEMO:ALDR"]},
+    {"id":"issuer-birch","kind":"issuer","name":"Birch Components","currency":"EUR","aliases":["BRCH","Birch"],"instruments":["DEMO:BRCH"]},
+    {"id":"macro-north","kind":"macro","name":"Northland Monetary Council","currency":null,"aliases":["Northland"],"instruments":[]}
+  ],
+  "metrics": {
+    "revenue":{"name":"Revenue","kind":"issuer","unit":"money"},
+    "net_income":{"name":"Net income","kind":"issuer","unit":"money"},
+    "shares_outstanding":{"name":"Shares outstanding","kind":"issuer","unit":"shares"},
+    "policy_rate":{"name":"Policy rate","kind":"macro","unit":"percent"}
+  }
+}

@@ -1,0 +1,181 @@
+{
+  "added": 5,
+  "unchanged": 0
+}
+{
+  "id": "28e16bcbdefdd10fbf594166a8c00b60b05155ec5bd216d1b9a877cf988c580f",
+  "created": "2026-11-27T10:10:01Z",
+  "request": {
+    "as_of": "2025-03-15T00:00:00Z",
+    "metrics": [
+      "revenue",
+      "net_income"
+    ],
+    "period": "FY2024",
+    "subject": "issuer-alder"
+  },
+  "result": {
+    "as_of": "2025-03-15T00:00:00Z",
+    "items": [
+      {
+        "citations": [
+          {
+            "document": "alder-annual-v2",
+            "href": "/api/sources/alder-annual-v2/4",
+            "line": 4,
+            "passage": "Fact|revenue|FY2024|118|millions|money|USD",
+            "published": "2025-03-01T09:00:00Z",
+            "retrieved": "2025-03-04T12:00:00Z",
+            "revision": 2,
+            "sha256": "31f050fc353850271892712df7dc334f869353c6c2571732621679992c92da76"
+          }
+        ],
+        "currency": "USD",
+        "metric": "revenue",
+        "status": "supported",
+        "text": "Revenue was 118000000 USD.",
+        "unit": "money",
+        "value": "118000000"
+      },
+      {
+        "citations": [
+          {
+            "document": "alder-annual-v2",
+            "href": "/api/sources/alder-annual-v2/5",
+            "line": 5,
+            "passage": "Fact|net_income|FY2024|8.75|millions|money|USD",
+            "published": "2025-03-01T09:00:00Z",
+            "retrieved": "2025-03-04T12:00:00Z",
+            "revision": 2,
+            "sha256": "31f050fc353850271892712df7dc334f869353c6c2571732621679992c92da76"
+          }
+        ],
+        "currency": "USD",
+        "metric": "net_income",
+        "status": "supported",
+        "text": "Net income was 8750000 USD.",
+        "unit": "money",
+        "value": "8750000"
+      }
+    ],
+    "period": "FY2024",
+    "status": "supported",
+    "subject": "issuer-alder",
+    "version": 1
+  },
+  "review": null
+}
+{
+  "document": "alder-annual-v2",
+  "line": 4,
+  "text": "Fact|revenue|FY2024|118|millions|money|USD",
+  "metadata": {
+    "id": "alder-annual-v2",
+    "kind": "filing",
+    "license": "synthetic-project-fixture",
+    "path": "documents/alder-annual-v2.txt",
+    "published": "2025-03-01T09:00:00Z",
+    "retrieved": "2025-03-04T12:00:00Z",
+    "revision": 2,
+    "series": "alder-annual",
+    "sha256": "31f050fc353850271892712df7dc334f869353c6c2571732621679992c92da76",
+    "subject": "issuer-alder",
+    "supersedes": "alder-annual-v1"
+  }
+}
+{
+  "id": "829dbf687c2086fc544ce35536624ef4e45eb7579270ee949130f92402ab79f7",
+  "created": "2026-11-27T10:10:01Z",
+  "request": {
+    "as_of": "2025-04-02T00:00:00Z",
+    "period": "FY2024",
+    "question": "What was revenue?",
+    "subject": "issuer-alder"
+  },
+  "result": {
+    "as_of": "2025-04-02T00:00:00Z",
+    "items": [
+      {
+        "metric": "revenue",
+        "observations": [
+          {
+            "citation": {
+              "document": "alder-annual-v2",
+              "href": "/api/sources/alder-annual-v2/4",
+              "line": 4,
+              "passage": "Fact|revenue|FY2024|118|millions|money|USD",
+              "published": "2025-03-01T09:00:00Z",
+              "retrieved": "2025-03-04T12:00:00Z",
+              "revision": 2,
+              "sha256": "31f050fc353850271892712df7dc334f869353c6c2571732621679992c92da76"
+            },
+            "currency": "USD",
+            "unit": "money",
+            "value": "118000000"
+          },
+          {
+            "citation": {
+              "document": "alder-news-v1",
+              "href": "/api/sources/alder-news-v1/3",
+              "line": 3,
+              "passage": "Fact|revenue|FY2024|119|millions|money|USD",
+              "published": "2025-04-01T09:00:00Z",
+              "retrieved": "2025-04-01T12:00:00Z",
+              "revision": 1,
+              "sha256": "75d2ffbc0e5a0f6a6b13810cb6bfe13a7db8af80d8c8afa1fd96198b9af9be59"
+            },
+            "currency": "USD",
+            "unit": "money",
+            "value": "119000000"
+          }
+        ],
+        "status": "conflicting_evidence"
+      }
+    ],
+    "period": "FY2024",
+    "status": "abstained",
+    "subject": "issuer-alder",
+    "version": 1
+  },
+  "review": null
+}
+{
+  "id": "9b91f4c856c1db81ca99ea610584845efa583cec98a2cd101ea3cc651ae11361",
+  "created": "2026-11-27T10:10:01Z",
+  "request": {
+    "as_of": "2025-03-15T00:00:00Z",
+    "period": "2025-03-12",
+    "question": "What was policy rate?",
+    "subject": "macro-north"
+  },
+  "result": {
+    "as_of": "2025-03-15T00:00:00Z",
+    "items": [
+      {
+        "citations": [
+          {
+            "document": "north-rate-v1",
+            "href": "/api/sources/north-rate-v1/3",
+            "line": 3,
+            "passage": "Fact|policy_rate|2025-03-12|3.25|ones|percent|-",
+            "published": "2025-03-12T09:00:00Z",
+            "retrieved": "2025-03-13T12:00:00Z",
+            "revision": 1,
+            "sha256": "95d11a147e6a390c96726691576480d4e61470dbbd47b0167919d7f03459b1e2"
+          }
+        ],
+        "currency": null,
+        "metric": "policy_rate",
+        "status": "supported",
+        "text": "Policy rate was 3.25 percent.",
+        "unit": "percent",
+        "value": "3.25"
+      }
+    ],
+    "period": "2025-03-12",
+    "status": "supported",
+    "subject": "macro-north",
+    "version": 1
+  },
+  "review": null
+}

@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "documents": [
+    {
+      "id": "alder-annual-v1",
+      "series": "alder-annual",
+      "subject": "issuer-alder",
+      "kind": "filing",
+      "published": "2025-02-01T09:00:00Z",
+      "retrieved": "2025-02-02T12:00:00Z",
+      "revision": 1,
+      "supersedes": null,
+      "license": "synthetic-project-fixture",
+      "path": "documents/alder-annual-v1.txt",
+      "sha256": "f14ecfbf0c42c2fc37b5b8a85a20832081828edd1d972cdeaf9c8b2f62711875"
+    },
+    {
+      "id": "alder-annual-v2",
+      "series": "alder-annual",
+      "subject": "issuer-alder",
+      "kind": "filing",
+      "published": "2025-03-01T09:00:00Z",
+      "retrieved": "2025-03-04T12:00:00Z",
+      "revision": 2,
+      "supersedes": "alder-annual-v1",
+      "license": "synthetic-project-fixture",
+      "path": "documents/alder-annual-v2.txt",
+      "sha256": "31f050fc353850271892712df7dc334f869353c6c2571732621679992c92da76"
+    },
+    {
+      "id": "birch-annual-v1",
+      "series": "birch-annual",
+      "subject": "issuer-birch",
+      "kind": "filing",
+      "published": "2025-02-10T09:00:00Z",
+      "retrieved": "2025-02-10T12:00:00Z",
+      "revision": 1,
+      "supersedes": null,
+      "license": "synthetic-project-fixture",
+      "path": "documents/birch-annual-v1.txt",
+      "sha256": "c3aa105d6906d2f09de0df7c17900041fca40779efb6303cbb88aac2bc12e1c2"
+    },
+    {
+      "id": "alder-news-v1",
+      "series": "alder-news",
+      "subject": "issuer-alder",
+      "kind": "news",
+      "published": "2025-04-01T09:00:00Z",
+      "retrieved": "2025-04-01T12:00:00Z",
+      "revision": 1,
+      "supersedes": null,
+      "license": "synthetic-project-fixture",
+      "path": "documents/alder-news-v1.txt",
+      "sha256": "75d2ffbc0e5a0f6a6b13810cb6bfe13a7db8af80d8c8afa1fd96198b9af9be59"
+    },
+    {
+      "id": "north-rate-v1",
+      "series": "north-rate",
+      "subject": "macro-north",
+      "kind": "news",
+      "published": "2025-03-12T09:00:00Z",
+      "retrieved": "2025-03-13T12:00:00Z",
+      "revision": 1,
+      "supersedes": null,
+      "license": "synthetic-project-fixture",
+      "path": "documents/north-rate-v1.txt",
+      "sha256": "95d11a147e6a390c96726691576480d4e61470dbbd47b0167919d7f03459b1e2"
+    }
+  ]
+}

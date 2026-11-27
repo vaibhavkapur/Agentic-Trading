@@ -1,0 +1,8 @@
+{
+  "python": "3.9.6",
+  "platform": "macOS-26.5.1-arm64-arm-64bit",
+  "source_sha256": "69b935044f39b9ca83280230f398db1ac9fe0198e922224692da3e4f54448810",
+  "config_sha256": "a733eb4290abe5cb3b93cfb7e149d1a0a6591c8588aceca7525da082e02ad4a0",
+  "fixture_sha256": "6c53f8da85b4e87b6797ec6e2908f54e48c17f50d2326c7d598ddb37b429e661",
+  "fixture_manifest_sha256": "0cdb9ebe57afc6f42fe93f82dbe7e987a3970b306fa21498c07c5c5f75b89dc2"
+}
