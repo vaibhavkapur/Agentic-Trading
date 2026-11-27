@@ -1,0 +1,149 @@
+{
+  "all_passed": true,
+  "scenarios": {
+    "cost_sensitivity": {
+      "baseline_sensitivity": {
+        "base_institutional": {
+          "annualized_turnover": 6.496229,
+          "cagr": 0.363238,
+          "cost_scenario_hash": "feae3ae34a56fbbfca7ef327fd282c60622bf8669106a982b585f0e19089db67",
+          "linear_trade_bps": 6.0,
+          "max_drawdown": 0.039344,
+          "sharpe_ratio": 3.036961,
+          "total_cost_drag": 0.004234,
+          "total_return": 0.31064
+        },
+        "severe_3x": {
+          "annualized_turnover": 6.496229,
+          "cagr": 0.350076,
+          "cost_scenario_hash": "02b4c80ef539f9eea75382d072eb02862fdcd23fe82e2d5d7dc9e488080f6b97",
+          "linear_trade_bps": 18.0,
+          "max_drawdown": 0.040955,
+          "sharpe_ratio": 2.932719,
+          "total_cost_drag": 0.012702,
+          "total_return": 0.299585
+        },
+        "stressed_2x": {
+          "annualized_turnover": 6.496229,
+          "cagr": 0.356643,
+          "cost_scenario_hash": "447e47e8616af7bf5d54c5658457fc0b454b22e44f4127cb5a6971f45921d500",
+          "linear_trade_bps": 12.0,
+          "max_drawdown": 0.040149,
+          "sharpe_ratio": 2.985254,
+          "total_cost_drag": 0.008468,
+          "total_return": 0.305102
+        },
+        "zero_cost_reference": {
+          "annualized_turnover": 6.496229,
+          "cagr": 0.369862,
+          "cost_scenario_hash": "0cac03874ee249fa776980f5beaf1ab9d574ed2ce8647c7f6a5ab93ba76064f6",
+          "linear_trade_bps": 0.0,
+          "max_drawdown": 0.039279,
+          "sharpe_ratio": 3.087791,
+          "total_cost_drag": 0.0,
+          "total_return": 0.316197
+        }
+      },
+      "candidate_sensitivity": {
+        "base_institutional": {
+          "annualized_turnover": 58.388982,
+          "cagr": -0.286671,
+          "cost_scenario_hash": "feae3ae34a56fbbfca7ef327fd282c60622bf8669106a982b585f0e19089db67",
+          "linear_trade_bps": 6.0,
+          "max_drawdown": 0.271707,
+          "sharpe_ratio": -4.158272,
+          "total_cost_drag": 0.039025,
+          "total_return": -0.255405
+        },
+        "severe_3x": {
+          "annualized_turnover": 58.388982,
+          "cagr": -0.347792,
+          "cost_scenario_hash": "02b4c80ef539f9eea75382d072eb02862fdcd23fe82e2d5d7dc9e488080f6b97",
+          "linear_trade_bps": 18.0,
+          "max_drawdown": 0.315354,
+          "sharpe_ratio": -5.180466,
+          "total_cost_drag": 0.117075,
+          "total_return": -0.311417
+        },
+        "stressed_2x": {
+          "annualized_turnover": 58.388982,
+          "cagr": -0.317911,
+          "cost_scenario_hash": "447e47e8616af7bf5d54c5658457fc0b454b22e44f4127cb5a6971f45921d500",
+          "linear_trade_bps": 12.0,
+          "max_drawdown": 0.293519,
+          "sharpe_ratio": -4.672597,
+          "total_cost_drag": 0.07805,
+          "total_return": -0.283954
+        },
+        "zero_cost_reference": {
+          "annualized_turnover": 58.388982,
+          "cagr": -0.25401,
+          "cost_scenario_hash": "0cac03874ee249fa776980f5beaf1ab9d574ed2ce8647c7f6a5ab93ba76064f6",
+          "linear_trade_bps": 0.0,
+          "max_drawdown": 0.249229,
+          "sharpe_ratio": -3.638651,
+          "total_cost_drag": 0.0,
+          "total_return": -0.225727
+        }
+      },
+      "identical_cost_hashes_with_baseline": true,
+      "monotonic_cost_drag_increase": true,
+      "monotonic_return_degradation": true,
+      "passed": true
+    },
+    "excessive_turnover": {
+      "annualized_turnover": 63.448443,
+      "governance_status": "REJECTED",
+      "gross_total_return": -0.221725,
+      "net_total_return": -0.285275,
+      "passed": true,
+      "rejection_reasons": [
+        "excessive_turnover:63.45>10.00",
+        "non_positive_net_sharpe:-2.627",
+        "fails_stressed_2x_cost_sensitivity",
+        "low_fold_consistency:0.25<0.50",
+        "failed_deflated_sharpe:0.000<0.50"
+      ],
+      "strategy_id": "high_churn_mr",
+      "total_cost_drag": 0.085109,
+      "turnover_limit": 10.0
+    },
+    "holdout_leakage": {
+      "holdout_audit": {
+        "blocked_attempts": 1,
+        "holdout_reads_after_lock": 0,
+        "holdout_reads_during_selection": 0,
+        "manifest_hash": "6a749f1451f8cc79ed49a3025f24d53ed8af4ade45370a279a6f70d92b9d4110",
+        "selection_locked": false,
+        "total_authorized_reads": 0
+      },
+      "leak_error_code": "HOLDOUT_LEAKAGE_VIOLATION",
+      "passed": true,
+      "tamper_error_code": "MANIFEST_INTEGRITY_ERROR"
+    },
+    "look_ahead_injection": {
+      "clean_signal_compiled": true,
+      "compiler_shift_fault_code": "LOOK_AHEAD_VIOLATION",
+      "future_availability_fault_code": "LOOK_AHEAD_VIOLATION",
+      "passed": true
+    },
+    "multiple_testing_inflation": {
+      "best_bh_fdr_q_value": 0.971117,
+      "deflated_sharpe_prob": 0.134984,
+      "expected_max_null_sharpe": 2.765112,
+      "fdr_survivors_on_noise": 0,
+      "naive_best_psr": 0.864089,
+      "naive_best_sharpe": 1.37988,
+      "num_noise_trials": 40,
+      "passed": true
+    },
+    "same_seed_rerun": {
+      "passed": true,
+      "report_fingerprint_run1": "ba16d355d9a62f3d742005de7b2c006de908ce75942935858ebdad224024b5d4",
+      "report_fingerprint_run2": "ba16d355d9a62f3d742005de7b2c006de908ce75942935858ebdad224024b5d4",
+      "run_id": "run_fe9fe9f4c8f1",
+      "trials_jsonl_identical": true
+    }
+  },
+  "schema_version": "1.0.0"
+}

@@ -1,0 +1,107 @@
+{
+  "dataset_fingerprint": "95d1d5dd098eb17732c88ef6a3ea8310619f4fa938d6b33f592570ea43784f00",
+  "embargo_bars": 5,
+  "inner_folds": [
+    {
+      "embargo_bars": 5,
+      "fold_id": "inner_fold_1",
+      "train_end": 438,
+      "train_end_utc": "2021-09-06T21:00:00Z",
+      "train_start": 0,
+      "train_start_utc": "2020-01-02T21:00:00Z",
+      "val_end": 623,
+      "val_end_utc": "2022-05-23T21:00:00Z",
+      "val_start": 443,
+      "val_start_utc": "2021-09-14T21:00:00Z"
+    },
+    {
+      "embargo_bars": 5,
+      "fold_id": "inner_fold_2",
+      "train_end": 618,
+      "train_end_utc": "2022-05-16T21:00:00Z",
+      "train_start": 0,
+      "train_start_utc": "2020-01-02T21:00:00Z",
+      "val_end": 803,
+      "val_end_utc": "2023-01-30T21:00:00Z",
+      "val_start": 623,
+      "val_start_utc": "2022-05-24T21:00:00Z"
+    },
+    {
+      "embargo_bars": 5,
+      "fold_id": "inner_fold_3",
+      "train_end": 798,
+      "train_end_utc": "2023-01-23T21:00:00Z",
+      "train_start": 0,
+      "train_start_utc": "2020-01-02T21:00:00Z",
+      "val_end": 985,
+      "val_end_utc": "2023-10-11T21:00:00Z",
+      "val_start": 803,
+      "val_start_utc": "2023-01-31T21:00:00Z"
+    }
+  ],
+  "manifest_hash": "def5ca74c8c8e7b21f5bf164b75f4cfda5503758094fdae6727d8f0415c27f08",
+  "schema_version": "1.0.0",
+  "test_end": 1800,
+  "test_end_utc": "2026-11-25T21:00:00Z",
+  "test_start": 1440,
+  "test_start_utc": "2025-07-10T21:00:00Z",
+  "total_bars": 1800,
+  "train_end": 985,
+  "train_end_utc": "2023-10-11T21:00:00Z",
+  "train_start": 0,
+  "train_start_utc": "2020-01-02T21:00:00Z",
+  "val_end": 1435,
+  "val_end_utc": "2025-07-02T21:00:00Z",
+  "val_start": 990,
+  "val_start_utc": "2023-10-19T21:00:00Z",
+  "walk_forward_folds": [
+    {
+      "embargo_bars": 5,
+      "fold_id": "wf_fold_1",
+      "train_end": 985,
+      "train_end_utc": "2023-10-11T21:00:00Z",
+      "train_start": 0,
+      "train_start_utc": "2020-01-02T21:00:00Z",
+      "val_end": 1101,
+      "val_end_utc": "2024-03-21T21:00:00Z",
+      "val_start": 990,
+      "val_start_utc": "2023-10-19T21:00:00Z"
+    },
+    {
+      "embargo_bars": 5,
+      "fold_id": "wf_fold_2",
+      "train_end": 1096,
+      "train_end_utc": "2024-03-14T21:00:00Z",
+      "train_start": 0,
+      "train_start_utc": "2020-01-02T21:00:00Z",
+      "val_end": 1212,
+      "val_end_utc": "2024-08-23T21:00:00Z",
+      "val_start": 1101,
+      "val_start_utc": "2024-03-22T21:00:00Z"
+    },
+    {
+      "embargo_bars": 5,
+      "fold_id": "wf_fold_3",
+      "train_end": 1207,
+      "train_end_utc": "2024-08-16T21:00:00Z",
+      "train_start": 0,
+      "train_start_utc": "2020-01-02T21:00:00Z",
+      "val_end": 1323,
+      "val_end_utc": "2025-01-27T21:00:00Z",
+      "val_start": 1212,
+      "val_start_utc": "2024-08-26T21:00:00Z"
+    },
+    {
+      "embargo_bars": 5,
+      "fold_id": "wf_fold_4",
+      "train_end": 1318,
+      "train_end_utc": "2025-01-20T21:00:00Z",
+      "train_start": 0,
+      "train_start_utc": "2020-01-02T21:00:00Z",
+      "val_end": 1435,
+      "val_end_utc": "2025-07-02T21:00:00Z",
+      "val_start": 1323,
+      "val_start_utc": "2025-01-28T21:00:00Z"
+    }
+  ]
+}

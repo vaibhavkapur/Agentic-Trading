@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0.0",
+  "config_version": "1.0.0",
+  "environment": "local_prototype",
+  "execution_mode": "DISABLED",
+  "allowed_promotion_targets": ["PAPER_SANDBOX"],
+  "seed": 42,
+  "currency": "USD",
+  "initial_capital_usd": 1000000.0,
+  "split": {
+    "train_ratio": 0.60,
+    "validation_ratio": 0.25,
+    "holdout_ratio": 0.15,
+    "embargo_bars": 5
+  },
+  "budget": {
+    "max_iterations": 4,
+    "max_experiments": 8,
+    "max_cost_usd": 1.00,
+    "cost_per_experiment_usd": 0.08,
+    "max_compute_seconds": 60.0,
+    "max_llm_tokens": 20000
+  },
+  "stop_conditions": {
+    "max_consecutive_failures": 3,
+    "min_improvement_sharpe": 0.02,
+    "patience_rounds": 2,
+    "near_duplicate_distance": 0.03
+  },
+  "critic": {
+    "metric_tolerance": 1e-9,
+    "min_trade_count": 5,
+    "max_drawdown_limit": 0.35,
+    "min_validation_sharpe": 0.20,
+    "max_train_val_sharpe_gap": 1.50
+  },
+  "reproducibility_tolerance": 1e-12
+}

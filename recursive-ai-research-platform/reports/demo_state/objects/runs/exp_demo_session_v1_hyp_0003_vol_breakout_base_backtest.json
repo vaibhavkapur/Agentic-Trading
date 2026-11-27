@@ -1,0 +1,108 @@
+{
+  "backtest": {
+    "backtester_name": "ts14_clean_room_adapter",
+    "backtester_version": "1.0.0",
+    "flat_metrics": {
+      "train_max_drawdown": 0.0837974819,
+      "train_sharpe": 0.9180356203,
+      "train_total_return": 0.0958779034,
+      "train_trade_count": 30.0,
+      "train_val_sharpe_gap": 0.9349229271,
+      "validation_annualized_volatility": 0.1080509159,
+      "validation_cagr": -0.0075765672,
+      "validation_cost_drag_return": 0.0032562434,
+      "validation_gross_total_return": 0.0006641099,
+      "validation_hit_rate": 0.5606060606,
+      "validation_max_drawdown": 0.0549668838,
+      "validation_sharpe": -0.0168873068,
+      "validation_sortino": -0.0226149467,
+      "validation_total_return": -0.0025921334,
+      "validation_trade_count": 10.0,
+      "validation_turnover_daily": 0.0658914729
+    },
+    "train_metrics": {
+      "annualized_volatility": 0.1293383917,
+      "bar_count": 209,
+      "cagr": 0.1167164246,
+      "cost_drag_return": 0.0116866637,
+      "gross_total_return": 0.1075645671,
+      "hit_rate": 0.4973544974,
+      "max_drawdown": 0.0837974819,
+      "sharpe": 0.9180356203,
+      "sortino": 1.3506414053,
+      "split_name": "train",
+      "total_return": 0.0958779034,
+      "trade_count": 30,
+      "turnover_daily": 0.0909090909
+    },
+    "validation_metrics": {
+      "annualized_volatility": 0.1080509159,
+      "bar_count": 86,
+      "cagr": -0.0075765672,
+      "cost_drag_return": 0.0032562434,
+      "gross_total_return": 0.0006641099,
+      "hit_rate": 0.5606060606,
+      "max_drawdown": 0.0549668838,
+      "sharpe": -0.0168873068,
+      "sortino": -0.0226149467,
+      "split_name": "validation",
+      "total_return": -0.0025921334,
+      "trade_count": 10,
+      "turnover_daily": 0.0658914729
+    }
+  },
+  "experiment_spec": {
+    "code_version": "0.1.0",
+    "cost_model": {
+      "annual_borrow_bps": 35.0,
+      "commission_bps": 1.5,
+      "currency": "USD",
+      "half_spread_bps": 2.0,
+      "scenario_name": "baseline_institutional",
+      "slippage_bps": 1.5
+    },
+    "data_manifest_id": "manifest_synthetic_multi_regime_equities_v1_seed42",
+    "data_manifest_sha256": "cd4dcf4bf007bf921618262d0893d625d982e13eeb8ecfc0d849bf453de4184c",
+    "experiment_id": "exp_demo_session_v1_hyp_0003_vol_breakout_base",
+    "hypothesis": {
+      "created_at_utc": "2026-11-27T10:13:30Z",
+      "family": "volatility_breakout",
+      "generation": 0,
+      "hypothesis_id": "hyp_0003_vol_breakout_base",
+      "parameters": {
+        "breakout_mult": 1.2,
+        "channel_window": 15,
+        "signal_lag_bars": 1,
+        "vol_window": 20
+      },
+      "parent_hypothesis_id": null,
+      "proposer_id": "rarp_research_loop_v1",
+      "rationale": "Test breakout sensitivity to volatility expansions across synthetic universe.",
+      "schema_version": "1.0.0",
+      "tags": [
+        "baseline",
+        "breakout"
+      ],
+      "title": "Causal volatility-scaled channel breakout (15/20)",
+      "universe": [
+        "SYN_EQ_A",
+        "SYN_EQ_B",
+        "SYN_EQ_C"
+      ]
+    },
+    "initial_capital_usd": 1000000.0,
+    "metadata": {
+      "iteration": 2,
+      "session_id": "demo_session_v1"
+    },
+    "schema_version": "1.0.0",
+    "seed": 42,
+    "split": {
+      "embargo_bars": 5,
+      "holdout_ratio": 0.15,
+      "train_ratio": 0.6,
+      "validation_ratio": 0.25
+    }
+  },
+  "split_sha256": "060ff2f0b54eec179d9ada09c3737837b2f61ba4ef901d48223e2698c6740847"
+}

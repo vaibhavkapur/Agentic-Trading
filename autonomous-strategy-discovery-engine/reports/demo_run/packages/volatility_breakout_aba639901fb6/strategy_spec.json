@@ -1,0 +1,18 @@
+{
+  "description": "Inner-tuned neighbor of volatility_breakout_a039cdfda510",
+  "dsl_version": "1.0.0",
+  "family": "volatility_breakout",
+  "feature_lag_overrides": {},
+  "is_baseline": false,
+  "max_gross_leverage": 1.0,
+  "max_single_asset_weight": 0.5,
+  "parameters": {
+    "breakout_window": 40,
+    "exit_window": 5,
+    "signal_lag_bars": 2,
+    "target_vol": 0.16,
+    "vol_window": 30
+  },
+  "raw_code": null,
+  "strategy_id": "volatility_breakout_aba639901fb6"
+}

@@ -1,0 +1,71 @@
+"""Domain contracts, structured errors, and experiment DSL."""
+
+from __future__ import annotations
+
+from rarp.domain.dsl import (
+    BudgetSpec,
+    CostModelSpec,
+    DataManifest,
+    ExperimentSpec,
+    HypothesisSpec,
+    SplitSpec,
+    StopConditionsSpec,
+    StrategyCatalog,
+    load_strategy_catalog,
+)
+from rarp.domain.errors import (
+    ArtifactSignatureError,
+    BudgetExhaustedError,
+    DuplicateHypothesisError,
+    HallucinatedMetricError,
+    HoldoutAccessError,
+    LeakageError,
+    PolicyViolationError,
+    RARPError,
+    RARPValidationError,
+    ReviewGateError,
+    WorkerCrashError,
+)
+from rarp.domain.types import (
+    ExecutionMode,
+    PromotionTarget,
+    ReviewDecisionStatus,
+    RunStatus,
+    canonical_json,
+    parse_utc_iso,
+    sha256_bytes,
+    sha256_json,
+    utc_now_iso,
+)
+
+__all__ = [
+    "ArtifactSignatureError",
+    "BudgetExhaustedError",
+    "BudgetSpec",
+    "CostModelSpec",
+    "DataManifest",
+    "DuplicateHypothesisError",
+    "ExecutionMode",
+    "ExperimentSpec",
+    "HallucinatedMetricError",
+    "HoldoutAccessError",
+    "HypothesisSpec",
+    "LeakageError",
+    "PolicyViolationError",
+    "PromotionTarget",
+    "RARPError",
+    "RARPValidationError",
+    "ReviewDecisionStatus",
+    "ReviewGateError",
+    "RunStatus",
+    "SplitSpec",
+    "StopConditionsSpec",
+    "StrategyCatalog",
+    "WorkerCrashError",
+    "canonical_json",
+    "load_strategy_catalog",
+    "parse_utc_iso",
+    "sha256_bytes",
+    "sha256_json",
+    "utc_now_iso",
+]

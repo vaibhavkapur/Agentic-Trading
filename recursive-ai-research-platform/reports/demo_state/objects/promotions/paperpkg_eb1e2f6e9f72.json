@@ -1,0 +1,182 @@
+{
+  "config_sha256": "dec5b2337d34974a502ccec2d3775b57e4b3510b73577c4005794f851481f3f3",
+  "critic_report_sha256": "898c20cd14b7c2f9e2f5400424fff032dff00812878b26f8ed7aa09e3a518899",
+  "data_manifest_id": "manifest_synthetic_multi_regime_equities_v1_seed42",
+  "data_manifest_sha256": "cd4dcf4bf007bf921618262d0893d625d982e13eeb8ecfc0d849bf453de4184c",
+  "decision_id": "rev_83d513c86b0c",
+  "execution_mode": "DISABLED",
+  "experiment_spec": {
+    "code_version": "0.1.0",
+    "cost_model": {
+      "annual_borrow_bps": 35.0,
+      "commission_bps": 1.5,
+      "currency": "USD",
+      "half_spread_bps": 2.0,
+      "scenario_name": "baseline_institutional",
+      "slippage_bps": 1.5
+    },
+    "data_manifest_id": "manifest_synthetic_multi_regime_equities_v1_seed42",
+    "data_manifest_sha256": "cd4dcf4bf007bf921618262d0893d625d982e13eeb8ecfc0d849bf453de4184c",
+    "experiment_id": "exp_demo_session_v1_hyp_0002_mr_base",
+    "hypothesis": {
+      "created_at_utc": "2026-11-27T10:13:30Z",
+      "family": "mean_reversion_zscore",
+      "generation": 0,
+      "hypothesis_id": "hyp_0002_mr_base",
+      "parameters": {
+        "entry_z": 1.5,
+        "exit_z": 0.25,
+        "lookback_window": 20,
+        "signal_lag_bars": 1
+      },
+      "parent_hypothesis_id": null,
+      "proposer_id": "rarp_research_loop_v1",
+      "rationale": "Evaluate counter-trend mean reversion during choppy regimes with strict 1-bar lag.",
+      "schema_version": "1.0.0",
+      "tags": [
+        "baseline",
+        "mean_reversion"
+      ],
+      "title": "Causal rolling z-score mean reversion (20d)",
+      "universe": [
+        "SYN_EQ_A",
+        "SYN_EQ_B",
+        "SYN_EQ_C"
+      ]
+    },
+    "initial_capital_usd": 1000000.0,
+    "metadata": {
+      "iteration": 1,
+      "session_id": "demo_session_v1"
+    },
+    "schema_version": "1.0.0",
+    "seed": 42,
+    "split": {
+      "embargo_bars": 5,
+      "holdout_ratio": 0.15,
+      "train_ratio": 0.6,
+      "validation_ratio": 0.25
+    }
+  },
+  "hypothesis_id": "hyp_0002_mr_base",
+  "live_deployment_prohibited": true,
+  "metrics": {
+    "train_max_drawdown": 0.0899016077,
+    "train_sharpe": 0.5099593643,
+    "train_total_return": 0.0393074197,
+    "train_trade_count": 52.0,
+    "train_val_sharpe_gap": -1.701184551,
+    "validation_annualized_volatility": 0.0770202899,
+    "validation_cagr": 0.1821289198,
+    "validation_cost_drag_return": 0.005045666,
+    "validation_gross_total_return": 0.0638076013,
+    "validation_hit_rate": 0.5303030303,
+    "validation_max_drawdown": 0.0241506379,
+    "validation_sharpe": 2.2111439153,
+    "validation_sortino": 3.4914274888,
+    "validation_total_return": 0.0587619353,
+    "validation_trade_count": 25.0,
+    "validation_turnover_daily": 0.1046511628
+  },
+  "order_execution_enabled": false,
+  "package_id": "paperpkg_eb1e2f6e9f72",
+  "proposer_id": "rarp_research_loop_v1",
+  "reviewer_id": "reviewer_independent_lead",
+  "run_id": "run_0002_3d62823c2c",
+  "signed_artifact": {
+    "artifact_id": "art_eb1e2f6e9f72",
+    "artifact_type": "paper_sandbox_package",
+    "key_id": "rarp_session_hmac_v1",
+    "payload": {
+      "config_sha256": "dec5b2337d34974a502ccec2d3775b57e4b3510b73577c4005794f851481f3f3",
+      "critic_report_sha256": "898c20cd14b7c2f9e2f5400424fff032dff00812878b26f8ed7aa09e3a518899",
+      "data_manifest_id": "manifest_synthetic_multi_regime_equities_v1_seed42",
+      "data_manifest_sha256": "cd4dcf4bf007bf921618262d0893d625d982e13eeb8ecfc0d849bf453de4184c",
+      "decision_id": "rev_83d513c86b0c",
+      "execution_mode": "DISABLED",
+      "experiment_spec": {
+        "code_version": "0.1.0",
+        "cost_model": {
+          "annual_borrow_bps": 35.0,
+          "commission_bps": 1.5,
+          "currency": "USD",
+          "half_spread_bps": 2.0,
+          "scenario_name": "baseline_institutional",
+          "slippage_bps": 1.5
+        },
+        "data_manifest_id": "manifest_synthetic_multi_regime_equities_v1_seed42",
+        "data_manifest_sha256": "cd4dcf4bf007bf921618262d0893d625d982e13eeb8ecfc0d849bf453de4184c",
+        "experiment_id": "exp_demo_session_v1_hyp_0002_mr_base",
+        "hypothesis": {
+          "created_at_utc": "2026-11-27T10:13:30Z",
+          "family": "mean_reversion_zscore",
+          "generation": 0,
+          "hypothesis_id": "hyp_0002_mr_base",
+          "parameters": {
+            "entry_z": 1.5,
+            "exit_z": 0.25,
+            "lookback_window": 20,
+            "signal_lag_bars": 1
+          },
+          "parent_hypothesis_id": null,
+          "proposer_id": "rarp_research_loop_v1",
+          "rationale": "Evaluate counter-trend mean reversion during choppy regimes with strict 1-bar lag.",
+          "schema_version": "1.0.0",
+          "tags": [
+            "baseline",
+            "mean_reversion"
+          ],
+          "title": "Causal rolling z-score mean reversion (20d)",
+          "universe": [
+            "SYN_EQ_A",
+            "SYN_EQ_B",
+            "SYN_EQ_C"
+          ]
+        },
+        "initial_capital_usd": 1000000.0,
+        "metadata": {
+          "iteration": 1,
+          "session_id": "demo_session_v1"
+        },
+        "schema_version": "1.0.0",
+        "seed": 42,
+        "split": {
+          "embargo_bars": 5,
+          "holdout_ratio": 0.15,
+          "train_ratio": 0.6,
+          "validation_ratio": 0.25
+        }
+      },
+      "hypothesis_id": "hyp_0002_mr_base",
+      "live_deployment_prohibited": true,
+      "metrics": {
+        "train_max_drawdown": 0.0899016077,
+        "train_sharpe": 0.5099593643,
+        "train_total_return": 0.0393074197,
+        "train_trade_count": 52.0,
+        "train_val_sharpe_gap": -1.701184551,
+        "validation_annualized_volatility": 0.0770202899,
+        "validation_cagr": 0.1821289198,
+        "validation_cost_drag_return": 0.005045666,
+        "validation_gross_total_return": 0.0638076013,
+        "validation_hit_rate": 0.5303030303,
+        "validation_max_drawdown": 0.0241506379,
+        "validation_sharpe": 2.2111439153,
+        "validation_sortino": 3.4914274888,
+        "validation_total_return": 0.0587619353,
+        "validation_trade_count": 25.0,
+        "validation_turnover_daily": 0.1046511628
+      },
+      "order_execution_enabled": false,
+      "proposer_id": "rarp_research_loop_v1",
+      "reviewer_id": "reviewer_independent_lead",
+      "run_id": "run_0002_3d62823c2c",
+      "split_sha256": "060ff2f0b54eec179d9ada09c3737837b2f61ba4ef901d48223e2698c6740847",
+      "target_environment": "PAPER_SANDBOX"
+    },
+    "payload_sha256": "eb1e2f6e9f720d3e8cc4bc0cd594a44a25e094a25cbc23f46f269aca8e1e4663",
+    "signature_hmac_sha256": "a3cd1981e631c888aae2afe96d63e32cc8d03921dddb018348ef3f5a2e337769",
+    "signed_at_utc": "2026-11-27T10:13:30Z"
+  },
+  "split_sha256": "060ff2f0b54eec179d9ada09c3737837b2f61ba4ef901d48223e2698c6740847"
+}

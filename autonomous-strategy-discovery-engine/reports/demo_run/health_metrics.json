@@ -1,0 +1,12 @@
+{
+  "baselines_evaluated": 3,
+  "candidates_eligible_for_review": 2,
+  "candidates_evaluated": 18,
+  "candidates_failed": 0,
+  "candidates_rejected": 16,
+  "exported_packages_count": 2,
+  "holdout_reads_during_selection": 0,
+  "order_execution_enabled": false,
+  "run_id": "run_927735496198",
+  "total_trials_recorded": 93
+}

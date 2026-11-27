@@ -1,0 +1,30 @@
+{
+  "catalog_fingerprint": "d31f706dc3c3d7d9eba3c7a4020cdb52d2eec443b1674609f110a01d104e4e87",
+  "config_fingerprint": "e888e26ab91de1ffb399b8c38bb3f66fd65d059ee7dcddc4e4bf5e5ab405d287",
+  "cost_scenario_hash": "feae3ae34a56fbbfca7ef327fd282c60622bf8669106a982b585f0e19089db67",
+  "dataset_data_sha256": "5047a3f1592188143848df3c595267e90e7dd6ba13e12cf7d8f78e1cf4d94225",
+  "dataset_fingerprint": "95d1d5dd098eb17732c88ef6a3ea8310619f4fa938d6b33f592570ea43784f00",
+  "dataset_id": "synthetic_equities_daily_v1",
+  "engine_version": "0.1.0",
+  "evaluation_evidence_sha256": "ae19348b08458630e3270671bed8dc5b687e692c8d95ae1b497e9beed15aba57",
+  "family": "trend_ma_crossover",
+  "files": [
+    "strategy_spec.json",
+    "config_snapshot.json",
+    "dataset_manifest.json",
+    "split_manifest.json",
+    "evaluation_evidence.json",
+    "review_record.json"
+  ],
+  "live_execution_permitted": false,
+  "order_execution_enabled": false,
+  "package_fingerprint": "fe0cb6bfe5c612bdbce9e4c49455c4ea542bf11c2e9a47b90663a227bf583baa",
+  "package_schema_version": "1.0.0",
+  "primary_cost_scenario": "base_institutional",
+  "produced_by": "asde_engine",
+  "run_id": "run_927735496198",
+  "seed": 20260401,
+  "split_manifest_hash": "def5ca74c8c8e7b21f5bf164b75f4cfda5503758094fdae6727d8f0415c27f08",
+  "strategy_id": "trend_ma_crossover_8dbb34db6310",
+  "strategy_spec_sha256": "76cdd226053f1775ac96b62cb20e307119e5e0eee2cf813f24413f6e3a4e9c98"
+}

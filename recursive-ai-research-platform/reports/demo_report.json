@@ -1,0 +1,1334 @@
+{
+  "best_run_id": "run_0002_3d62823c2c",
+  "budget_snapshot": {
+    "compute_seconds_used": 0.01152,
+    "cost_usd_used": 0.32,
+    "experiments_used": 4,
+    "iterations_used": 2,
+    "llm_tokens_used": 0,
+    "max_compute_seconds": 60.0,
+    "max_cost_usd": 1.0,
+    "max_experiments": 8,
+    "max_iterations": 4,
+    "max_llm_tokens": 20000
+  },
+  "critic_reports": [
+    {
+      "claims": [
+        {
+          "artifact_sha256": "c877a6ea266620e0f11e23a3fc71c710b59ee0961f64dc04742a92895a94da3d",
+          "claimed_value": -1.462511435,
+          "metric_name": "train_sharpe",
+          "run_id": "run_0001_e064248ddf"
+        },
+        {
+          "artifact_sha256": "c877a6ea266620e0f11e23a3fc71c710b59ee0961f64dc04742a92895a94da3d",
+          "claimed_value": 1.2006193351,
+          "metric_name": "validation_sharpe",
+          "run_id": "run_0001_e064248ddf"
+        },
+        {
+          "artifact_sha256": "c877a6ea266620e0f11e23a3fc71c710b59ee0961f64dc04742a92895a94da3d",
+          "claimed_value": 0.0278906181,
+          "metric_name": "validation_max_drawdown",
+          "run_id": "run_0001_e064248ddf"
+        },
+        {
+          "artifact_sha256": "c877a6ea266620e0f11e23a3fc71c710b59ee0961f64dc04742a92895a94da3d",
+          "claimed_value": 160.0,
+          "metric_name": "validation_trade_count",
+          "run_id": "run_0001_e064248ddf"
+        },
+        {
+          "artifact_sha256": "c877a6ea266620e0f11e23a3fc71c710b59ee0961f64dc04742a92895a94da3d",
+          "claimed_value": 0.0029813448,
+          "metric_name": "validation_cost_drag_return",
+          "run_id": "run_0001_e064248ddf"
+        },
+        {
+          "artifact_sha256": "c877a6ea266620e0f11e23a3fc71c710b59ee0961f64dc04742a92895a94da3d",
+          "claimed_value": -2.6631307701,
+          "metric_name": "train_val_sharpe_gap",
+          "run_id": "run_0001_e064248ddf"
+        }
+      ],
+      "created_at_utc": "2026-11-27T10:13:30Z",
+      "critic_adapter": "deterministic_evidence_critic_v1",
+      "findings": [],
+      "hypothesis_id": "hyp_0001_mom_base",
+      "report_id": "crit_4970f7a6ae7c",
+      "report_sha256": "4970f7a6ae7c419ac4b58eb4f868ed968929bdc2a711941ab64d793f6ac0ded0",
+      "run_id": "run_0001_e064248ddf",
+      "summary": "Run run_0001_e064248ddf verdict=CANDIDATE_FOR_REVIEW: val_sharpe=1.201, max_dd=2.79%, trades=160, DSR=0.758 (N=1 trials).",
+      "trial_accounting": {
+        "bonferroni_p_value": 0.48368964,
+        "deflated_sharpe_ratio": 0.75815518,
+        "expected_null_max_sharpe": 0.0,
+        "failed_or_rejected_trials": 0,
+        "observed_sharpe": 1.20061934,
+        "probabilistic_sharpe_ratio": 0.75815518,
+        "raw_two_sided_p_value": 0.48368964,
+        "sample_bars": 87,
+        "succeeded_trials": 1,
+        "total_trials": 1
+      },
+      "verdict": "CANDIDATE_FOR_REVIEW",
+      "verified": true
+    },
+    {
+      "claims": [
+        {
+          "artifact_sha256": "d1d475f302b8bebadbdd1accedc867e2688f2c351642416d514f121d0b4c52a1",
+          "claimed_value": 0.5099593643,
+          "metric_name": "train_sharpe",
+          "run_id": "run_0002_3d62823c2c"
+        },
+        {
+          "artifact_sha256": "d1d475f302b8bebadbdd1accedc867e2688f2c351642416d514f121d0b4c52a1",
+          "claimed_value": 2.2111439153,
+          "metric_name": "validation_sharpe",
+          "run_id": "run_0002_3d62823c2c"
+        },
+        {
+          "artifact_sha256": "d1d475f302b8bebadbdd1accedc867e2688f2c351642416d514f121d0b4c52a1",
+          "claimed_value": 0.0241506379,
+          "metric_name": "validation_max_drawdown",
+          "run_id": "run_0002_3d62823c2c"
+        },
+        {
+          "artifact_sha256": "d1d475f302b8bebadbdd1accedc867e2688f2c351642416d514f121d0b4c52a1",
+          "claimed_value": 25.0,
+          "metric_name": "validation_trade_count",
+          "run_id": "run_0002_3d62823c2c"
+        },
+        {
+          "artifact_sha256": "d1d475f302b8bebadbdd1accedc867e2688f2c351642416d514f121d0b4c52a1",
+          "claimed_value": 0.005045666,
+          "metric_name": "validation_cost_drag_return",
+          "run_id": "run_0002_3d62823c2c"
+        },
+        {
+          "artifact_sha256": "d1d475f302b8bebadbdd1accedc867e2688f2c351642416d514f121d0b4c52a1",
+          "claimed_value": -1.701184551,
+          "metric_name": "train_val_sharpe_gap",
+          "run_id": "run_0002_3d62823c2c"
+        }
+      ],
+      "created_at_utc": "2026-11-27T10:13:30Z",
+      "critic_adapter": "deterministic_evidence_critic_v1",
+      "findings": [],
+      "hypothesis_id": "hyp_0002_mr_base",
+      "report_id": "crit_898c20cd14b7",
+      "report_sha256": "898c20cd14b7c2f9e2f5400424fff032dff00812878b26f8ed7aa09e3a518899",
+      "run_id": "run_0002_3d62823c2c",
+      "summary": "Run run_0002_3d62823c2c verdict=CANDIDATE_FOR_REVIEW: val_sharpe=2.211, max_dd=2.42%, trades=25, DSR=0.704 (N=2 trials).",
+      "trial_accounting": {
+        "bonferroni_p_value": 0.39724029,
+        "deflated_sharpe_ratio": 0.70437456,
+        "expected_null_max_sharpe": 1.287422,
+        "failed_or_rejected_trials": 0,
+        "observed_sharpe": 2.21114392,
+        "probabilistic_sharpe_ratio": 0.90068993,
+        "raw_two_sided_p_value": 0.19862015,
+        "sample_bars": 87,
+        "succeeded_trials": 2,
+        "total_trials": 2
+      },
+      "verdict": "CANDIDATE_FOR_REVIEW",
+      "verified": true
+    },
+    {
+      "claims": [
+        {
+          "artifact_sha256": "84f012463a0cce208ffe6bf2386af5042f4404315a2a0f65a88939e686b16f98",
+          "claimed_value": 0.9180356203,
+          "metric_name": "train_sharpe",
+          "run_id": "run_0003_1bcd61f6c6"
+        },
+        {
+          "artifact_sha256": "84f012463a0cce208ffe6bf2386af5042f4404315a2a0f65a88939e686b16f98",
+          "claimed_value": -0.0168873068,
+          "metric_name": "validation_sharpe",
+          "run_id": "run_0003_1bcd61f6c6"
+        },
+        {
+          "artifact_sha256": "84f012463a0cce208ffe6bf2386af5042f4404315a2a0f65a88939e686b16f98",
+          "claimed_value": 0.0549668838,
+          "metric_name": "validation_max_drawdown",
+          "run_id": "run_0003_1bcd61f6c6"
+        },
+        {
+          "artifact_sha256": "84f012463a0cce208ffe6bf2386af5042f4404315a2a0f65a88939e686b16f98",
+          "claimed_value": 10.0,
+          "metric_name": "validation_trade_count",
+          "run_id": "run_0003_1bcd61f6c6"
+        },
+        {
+          "artifact_sha256": "84f012463a0cce208ffe6bf2386af5042f4404315a2a0f65a88939e686b16f98",
+          "claimed_value": 0.0032562434,
+          "metric_name": "validation_cost_drag_return",
+          "run_id": "run_0003_1bcd61f6c6"
+        },
+        {
+          "artifact_sha256": "84f012463a0cce208ffe6bf2386af5042f4404315a2a0f65a88939e686b16f98",
+          "claimed_value": 0.9349229271,
+          "metric_name": "train_val_sharpe_gap",
+          "run_id": "run_0003_1bcd61f6c6"
+        }
+      ],
+      "created_at_utc": "2026-11-27T10:13:30Z",
+      "critic_adapter": "deterministic_evidence_critic_v1",
+      "findings": [
+        {
+          "code": "WEAK_VALIDATION_SHARPE",
+          "evidence_metrics": [
+            "validation_sharpe"
+          ],
+          "message": "Validation Sharpe (-0.017) is below target (0.200).",
+          "severity": "WARNING"
+        },
+        {
+          "code": "MULTIPLE_TESTING_CAUTION",
+          "evidence_metrics": [
+            "validation_sharpe"
+          ],
+          "message": "Deflated Sharpe Ratio (0.160) across 3 trials indicates selection-bias risk; do not infer live alpha.",
+          "severity": "INFO"
+        }
+      ],
+      "hypothesis_id": "hyp_0003_vol_breakout_base",
+      "report_id": "crit_336da2db0eda",
+      "report_sha256": "336da2db0eda4f5d0133ed93fc1e8b3da95554566ef9a447cabb936afb56968d",
+      "run_id": "run_0003_1bcd61f6c6",
+      "summary": "Run run_0003_1bcd61f6c6 verdict=REFINE: val_sharpe=-0.017, max_dd=5.50%, trades=10, DSR=0.160 (N=3 trials).",
+      "trial_accounting": {
+        "bonferroni_p_value": 1.0,
+        "deflated_sharpe_ratio": 0.15960001,
+        "expected_null_max_sharpe": 1.68823484,
+        "failed_or_rejected_trials": 0,
+        "observed_sharpe": -0.01688731,
+        "probabilistic_sharpe_ratio": 0.49606439,
+        "raw_two_sided_p_value": 0.99212878,
+        "sample_bars": 87,
+        "succeeded_trials": 3,
+        "total_trials": 3
+      },
+      "verdict": "REFINE",
+      "verified": true
+    },
+    {
+      "claims": [
+        {
+          "artifact_sha256": "1c8ac19061b9debba6a5814e5c1cdbe17f8c6cf51452261771bfb80b35f7fd19",
+          "claimed_value": -0.3066315136,
+          "metric_name": "train_sharpe",
+          "run_id": "run_0004_cd24448430"
+        },
+        {
+          "artifact_sha256": "1c8ac19061b9debba6a5814e5c1cdbe17f8c6cf51452261771bfb80b35f7fd19",
+          "claimed_value": -0.7665399676,
+          "metric_name": "validation_sharpe",
+          "run_id": "run_0004_cd24448430"
+        },
+        {
+          "artifact_sha256": "1c8ac19061b9debba6a5814e5c1cdbe17f8c6cf51452261771bfb80b35f7fd19",
+          "claimed_value": 0.0380359422,
+          "metric_name": "validation_max_drawdown",
+          "run_id": "run_0004_cd24448430"
+        },
+        {
+          "artifact_sha256": "1c8ac19061b9debba6a5814e5c1cdbe17f8c6cf51452261771bfb80b35f7fd19",
+          "claimed_value": 8.0,
+          "metric_name": "validation_trade_count",
+          "run_id": "run_0004_cd24448430"
+        },
+        {
+          "artifact_sha256": "1c8ac19061b9debba6a5814e5c1cdbe17f8c6cf51452261771bfb80b35f7fd19",
+          "claimed_value": 0.0015687533,
+          "metric_name": "validation_cost_drag_return",
+          "run_id": "run_0004_cd24448430"
+        },
+        {
+          "artifact_sha256": "1c8ac19061b9debba6a5814e5c1cdbe17f8c6cf51452261771bfb80b35f7fd19",
+          "claimed_value": 0.459908454,
+          "metric_name": "train_val_sharpe_gap",
+          "run_id": "run_0004_cd24448430"
+        }
+      ],
+      "created_at_utc": "2026-11-27T10:13:30Z",
+      "critic_adapter": "deterministic_evidence_critic_v1",
+      "findings": [
+        {
+          "code": "WEAK_VALIDATION_SHARPE",
+          "evidence_metrics": [
+            "validation_sharpe"
+          ],
+          "message": "Validation Sharpe (-0.767) is below target (0.200).",
+          "severity": "WARNING"
+        },
+        {
+          "code": "MULTIPLE_TESTING_CAUTION",
+          "evidence_metrics": [
+            "validation_sharpe"
+          ],
+          "message": "Deflated Sharpe Ratio (0.055) across 4 trials indicates selection-bias risk; do not infer live alpha.",
+          "severity": "INFO"
+        }
+      ],
+      "hypothesis_id": "hyp_0004_gen1",
+      "report_id": "crit_e204083e0fce",
+      "report_sha256": "e204083e0fceed92511e261fd741f8d42974974777b416cb4b50b70b48c0a4e3",
+      "run_id": "run_0004_cd24448430",
+      "summary": "Run run_0004_cd24448430 verdict=REFINE: val_sharpe=-0.767, max_dd=3.80%, trades=8, DSR=0.055 (N=4 trials).",
+      "trial_accounting": {
+        "bonferroni_p_value": 1.0,
+        "deflated_sharpe_ratio": 0.05466609,
+        "expected_null_max_sharpe": 1.97598241,
+        "failed_or_rejected_trials": 0,
+        "observed_sharpe": -0.76653997,
+        "probabilistic_sharpe_ratio": 0.32724302,
+        "raw_two_sided_p_value": 0.65448604,
+        "sample_bars": 87,
+        "succeeded_trials": 4,
+        "total_trials": 4
+      },
+      "verdict": "REFINE",
+      "verified": true
+    }
+  ],
+  "dag": {
+    "dag_id": "dag_demo_session_v1",
+    "edge_count": 13,
+    "edges": [
+      {
+        "relation": "data_validated",
+        "source_id": "node_validate_data",
+        "target_id": "propose_hyp_0001_mom_base"
+      },
+      {
+        "relation": "data_validated",
+        "source_id": "node_validate_data",
+        "target_id": "propose_hyp_0002_mr_base"
+      },
+      {
+        "relation": "data_validated",
+        "source_id": "node_validate_data",
+        "target_id": "propose_hyp_0003_vol_breakout_base"
+      },
+      {
+        "relation": "execute",
+        "source_id": "propose_hyp_0001_mom_base",
+        "target_id": "exec_hyp_0001_mom_base"
+      },
+      {
+        "relation": "critique",
+        "source_id": "exec_hyp_0001_mom_base",
+        "target_id": "critique_hyp_0001_mom_base"
+      },
+      {
+        "relation": "execute",
+        "source_id": "propose_hyp_0002_mr_base",
+        "target_id": "exec_hyp_0002_mr_base"
+      },
+      {
+        "relation": "critique",
+        "source_id": "exec_hyp_0002_mr_base",
+        "target_id": "critique_hyp_0002_mr_base"
+      },
+      {
+        "relation": "refine_from_critique",
+        "source_id": "critique_hyp_0002_mr_base",
+        "target_id": "refine_hyp_0004_gen1"
+      },
+      {
+        "relation": "execute",
+        "source_id": "propose_hyp_0003_vol_breakout_base",
+        "target_id": "exec_hyp_0003_vol_breakout_base"
+      },
+      {
+        "relation": "critique",
+        "source_id": "exec_hyp_0003_vol_breakout_base",
+        "target_id": "critique_hyp_0003_vol_breakout_base"
+      },
+      {
+        "relation": "execute",
+        "source_id": "refine_hyp_0004_gen1",
+        "target_id": "exec_hyp_0004_gen1"
+      },
+      {
+        "relation": "critique",
+        "source_id": "exec_hyp_0004_gen1",
+        "target_id": "critique_hyp_0004_gen1"
+      },
+      {
+        "relation": "submit_for_human_review",
+        "source_id": "critique_hyp_0002_mr_base",
+        "target_id": "node_human_review_gate"
+      }
+    ],
+    "node_count": 14,
+    "nodes": [
+      {
+        "attempt_count": 0,
+        "created_at_utc": "2026-11-27T10:13:30Z",
+        "hypothesis_id": null,
+        "label": "Validate manifest_synthetic_multi_regime_equities_v1_seed42",
+        "metadata": {
+          "content_sha256": "cd4dcf4bf007bf921618262d0893d625d982e13eeb8ecfc0d849bf453de4184c",
+          "manifest_id": "manifest_synthetic_multi_regime_equities_v1_seed42",
+          "split_sha256": "060ff2f0b54eec179d9ada09c3737837b2f61ba4ef901d48223e2698c6740847"
+        },
+        "node_id": "node_validate_data",
+        "node_type": "VALIDATE_DATA",
+        "run_id": null,
+        "status": "SUCCEEDED",
+        "updated_at_utc": "2026-11-27T10:13:30Z"
+      },
+      {
+        "attempt_count": 0,
+        "created_at_utc": "2026-11-27T10:13:30Z",
+        "hypothesis_id": "hyp_0001_mom_base",
+        "label": "Causal dual-MA momentum baseline (5/25)",
+        "metadata": {},
+        "node_id": "propose_hyp_0001_mom_base",
+        "node_type": "PROPOSE",
+        "run_id": null,
+        "status": "SUCCEEDED",
+        "updated_at_utc": "2026-11-27T10:13:30Z"
+      },
+      {
+        "attempt_count": 0,
+        "created_at_utc": "2026-11-27T10:13:30Z",
+        "hypothesis_id": "hyp_0002_mr_base",
+        "label": "Causal rolling z-score mean reversion (20d)",
+        "metadata": {},
+        "node_id": "propose_hyp_0002_mr_base",
+        "node_type": "PROPOSE",
+        "run_id": null,
+        "status": "SUCCEEDED",
+        "updated_at_utc": "2026-11-27T10:13:30Z"
+      },
+      {
+        "attempt_count": 0,
+        "created_at_utc": "2026-11-27T10:13:30Z",
+        "hypothesis_id": "hyp_0003_vol_breakout_base",
+        "label": "Causal volatility-scaled channel breakout (15/20)",
+        "metadata": {},
+        "node_id": "propose_hyp_0003_vol_breakout_base",
+        "node_type": "PROPOSE",
+        "run_id": null,
+        "status": "SUCCEEDED",
+        "updated_at_utc": "2026-11-27T10:13:30Z"
+      },
+      {
+        "attempt_count": 0,
+        "created_at_utc": "2026-11-27T10:13:30Z",
+        "hypothesis_id": "hyp_0001_mom_base",
+        "label": "Run hyp_0001_mom_base",
+        "metadata": {},
+        "node_id": "exec_hyp_0001_mom_base",
+        "node_type": "EXECUTE_EXPERIMENT",
+        "run_id": "run_0001_e064248ddf",
+        "status": "SUCCEEDED",
+        "updated_at_utc": "2026-11-27T10:13:30Z"
+      },
+      {
+        "attempt_count": 0,
+        "created_at_utc": "2026-11-27T10:13:30Z",
+        "hypothesis_id": "hyp_0002_mr_base",
+        "label": "Run hyp_0002_mr_base",
+        "metadata": {},
+        "node_id": "exec_hyp_0002_mr_base",
+        "node_type": "EXECUTE_EXPERIMENT",
+        "run_id": "run_0002_3d62823c2c",
+        "status": "SUCCEEDED",
+        "updated_at_utc": "2026-11-27T10:13:30Z"
+      },
+      {
+        "attempt_count": 0,
+        "created_at_utc": "2026-11-27T10:13:30Z",
+        "hypothesis_id": "hyp_0003_vol_breakout_base",
+        "label": "Run hyp_0003_vol_breakout_base",
+        "metadata": {},
+        "node_id": "exec_hyp_0003_vol_breakout_base",
+        "node_type": "EXECUTE_EXPERIMENT",
+        "run_id": "run_0003_1bcd61f6c6",
+        "status": "SUCCEEDED",
+        "updated_at_utc": "2026-11-27T10:13:30Z"
+      },
+      {
+        "attempt_count": 0,
+        "created_at_utc": "2026-11-27T10:13:30Z",
+        "hypothesis_id": "hyp_0001_mom_base",
+        "label": "Critique run_0001_e064248ddf",
+        "metadata": {
+          "report_id": "crit_4970f7a6ae7c",
+          "verdict": "CANDIDATE_FOR_REVIEW"
+        },
+        "node_id": "critique_hyp_0001_mom_base",
+        "node_type": "CRITIQUE",
+        "run_id": "run_0001_e064248ddf",
+        "status": "SUCCEEDED",
+        "updated_at_utc": "2026-11-27T10:13:30Z"
+      },
+      {
+        "attempt_count": 0,
+        "created_at_utc": "2026-11-27T10:13:30Z",
+        "hypothesis_id": "hyp_0002_mr_base",
+        "label": "Critique run_0002_3d62823c2c",
+        "metadata": {
+          "report_id": "crit_898c20cd14b7",
+          "verdict": "CANDIDATE_FOR_REVIEW"
+        },
+        "node_id": "critique_hyp_0002_mr_base",
+        "node_type": "CRITIQUE",
+        "run_id": "run_0002_3d62823c2c",
+        "status": "SUCCEEDED",
+        "updated_at_utc": "2026-11-27T10:13:30Z"
+      },
+      {
+        "attempt_count": 0,
+        "created_at_utc": "2026-11-27T10:13:30Z",
+        "hypothesis_id": "hyp_0003_vol_breakout_base",
+        "label": "Critique run_0003_1bcd61f6c6",
+        "metadata": {
+          "report_id": "crit_336da2db0eda",
+          "verdict": "REFINE"
+        },
+        "node_id": "critique_hyp_0003_vol_breakout_base",
+        "node_type": "CRITIQUE",
+        "run_id": "run_0003_1bcd61f6c6",
+        "status": "SUCCEEDED",
+        "updated_at_utc": "2026-11-27T10:13:30Z"
+      },
+      {
+        "attempt_count": 0,
+        "created_at_utc": "2026-11-27T10:13:30Z",
+        "hypothesis_id": "hyp_0002_mr_base",
+        "label": "Human Review Gate (run_0002_3d62823c2c)",
+        "metadata": {
+          "decision_id": "rev_83d513c86b0c",
+          "reviewer_id": "reviewer_independent_lead"
+        },
+        "node_id": "node_human_review_gate",
+        "node_type": "REVIEW_GATE",
+        "run_id": "run_0002_3d62823c2c",
+        "status": "SUCCEEDED",
+        "updated_at_utc": "2026-11-27T10:13:30Z"
+      },
+      {
+        "attempt_count": 0,
+        "created_at_utc": "2026-11-27T10:13:30Z",
+        "hypothesis_id": "hyp_0004_gen1",
+        "label": "Refined mean-reversion (lb=30, ez=1.80, xz=0.25)",
+        "metadata": {},
+        "node_id": "refine_hyp_0004_gen1",
+        "node_type": "REFINE",
+        "run_id": null,
+        "status": "SUCCEEDED",
+        "updated_at_utc": "2026-11-27T10:13:30Z"
+      },
+      {
+        "attempt_count": 0,
+        "created_at_utc": "2026-11-27T10:13:30Z",
+        "hypothesis_id": "hyp_0004_gen1",
+        "label": "Run hyp_0004_gen1",
+        "metadata": {},
+        "node_id": "exec_hyp_0004_gen1",
+        "node_type": "EXECUTE_EXPERIMENT",
+        "run_id": "run_0004_cd24448430",
+        "status": "SUCCEEDED",
+        "updated_at_utc": "2026-11-27T10:13:30Z"
+      },
+      {
+        "attempt_count": 0,
+        "created_at_utc": "2026-11-27T10:13:30Z",
+        "hypothesis_id": "hyp_0004_gen1",
+        "label": "Critique run_0004_cd24448430",
+        "metadata": {
+          "report_id": "crit_e204083e0fce",
+          "verdict": "REFINE"
+        },
+        "node_id": "critique_hyp_0004_gen1",
+        "node_type": "CRITIQUE",
+        "run_id": "run_0004_cd24448430",
+        "status": "SUCCEEDED",
+        "updated_at_utc": "2026-11-27T10:13:30Z"
+      }
+    ],
+    "topological_order": [
+      "node_validate_data",
+      "propose_hyp_0001_mom_base",
+      "propose_hyp_0002_mr_base",
+      "propose_hyp_0003_vol_breakout_base",
+      "exec_hyp_0001_mom_base",
+      "exec_hyp_0002_mr_base",
+      "exec_hyp_0003_vol_breakout_base",
+      "critique_hyp_0001_mom_base",
+      "critique_hyp_0002_mr_base",
+      "critique_hyp_0003_vol_breakout_base",
+      "node_human_review_gate",
+      "refine_hyp_0004_gen1",
+      "exec_hyp_0004_gen1",
+      "critique_hyp_0004_gen1"
+    ]
+  },
+  "data_manifest_id": "manifest_synthetic_multi_regime_equities_v1_seed42",
+  "data_manifest_sha256": "cd4dcf4bf007bf921618262d0893d625d982e13eeb8ecfc0d849bf453de4184c",
+  "failed_hypotheses": [],
+  "holdout_metadata": {
+    "embargo_bars": 5,
+    "holdout_access_attempts": 0,
+    "holdout_blinded": true,
+    "split_sha256": "060ff2f0b54eec179d9ada09c3737837b2f61ba4ef901d48223e2698c6740847",
+    "train_range_utc": [
+      "2023-01-02T21:00:00Z",
+      "2023-10-20T21:00:00Z"
+    ],
+    "validation_range_utc": [
+      "2023-10-30T21:00:00Z",
+      "2024-02-27T21:00:00Z"
+    ]
+  },
+  "memory_entries": [
+    {
+      "critic_verdict": "CANDIDATE_FOR_REVIEW",
+      "error_code": null,
+      "failure_reason": null,
+      "family": "momentum_crossover",
+      "fingerprint": "6f0b4bc7cfab1d3209f75073b90e32e5a902346a45a007cf42e4c46fe0c68177",
+      "generation": 0,
+      "hypothesis_id": "hyp_0001_mom_base",
+      "parameters": {
+        "fast_window": 5,
+        "signal_lag_bars": 1,
+        "slow_window": 25,
+        "vol_target_annual": 0.15
+      },
+      "parent_hypothesis_id": null,
+      "recorded_at_utc": "2026-11-27T10:13:30Z",
+      "run_id": "run_0001_e064248ddf",
+      "status": "SUCCEEDED",
+      "tags": [
+        "baseline",
+        "momentum"
+      ],
+      "title": "Causal dual-MA momentum baseline (5/25)",
+      "universe": [
+        "SYN_EQ_A",
+        "SYN_EQ_B",
+        "SYN_EQ_C"
+      ],
+      "validation_sharpe": 1.2006193351
+    },
+    {
+      "critic_verdict": "CANDIDATE_FOR_REVIEW",
+      "error_code": null,
+      "failure_reason": null,
+      "family": "mean_reversion_zscore",
+      "fingerprint": "65dabc48284f8f4bb6589b06c0038758d1b71ca3cf207ac9452c26fd20c71300",
+      "generation": 0,
+      "hypothesis_id": "hyp_0002_mr_base",
+      "parameters": {
+        "entry_z": 1.5,
+        "exit_z": 0.25,
+        "lookback_window": 20,
+        "signal_lag_bars": 1
+      },
+      "parent_hypothesis_id": null,
+      "recorded_at_utc": "2026-11-27T10:13:30Z",
+      "run_id": "run_0002_3d62823c2c",
+      "status": "SUCCEEDED",
+      "tags": [
+        "baseline",
+        "mean_reversion"
+      ],
+      "title": "Causal rolling z-score mean reversion (20d)",
+      "universe": [
+        "SYN_EQ_A",
+        "SYN_EQ_B",
+        "SYN_EQ_C"
+      ],
+      "validation_sharpe": 2.2111439153
+    },
+    {
+      "critic_verdict": "REFINE",
+      "error_code": null,
+      "failure_reason": null,
+      "family": "volatility_breakout",
+      "fingerprint": "b1df33d92c6a528331315327016f1cd7b460b95114ca62d501d207e3a425296c",
+      "generation": 0,
+      "hypothesis_id": "hyp_0003_vol_breakout_base",
+      "parameters": {
+        "breakout_mult": 1.2,
+        "channel_window": 15,
+        "signal_lag_bars": 1,
+        "vol_window": 20
+      },
+      "parent_hypothesis_id": null,
+      "recorded_at_utc": "2026-11-27T10:13:30Z",
+      "run_id": "run_0003_1bcd61f6c6",
+      "status": "SUCCEEDED",
+      "tags": [
+        "baseline",
+        "breakout"
+      ],
+      "title": "Causal volatility-scaled channel breakout (15/20)",
+      "universe": [
+        "SYN_EQ_A",
+        "SYN_EQ_B",
+        "SYN_EQ_C"
+      ],
+      "validation_sharpe": -0.0168873068
+    },
+    {
+      "critic_verdict": "REFINE",
+      "error_code": null,
+      "failure_reason": null,
+      "family": "mean_reversion_zscore",
+      "fingerprint": "4c233def519827f76b63264cb5174d9ed8bb0a5dcfeb9d817c658d701e0d704f",
+      "generation": 1,
+      "hypothesis_id": "hyp_0004_gen1",
+      "parameters": {
+        "entry_z": 1.8,
+        "exit_z": 0.25,
+        "lookback_window": 30,
+        "signal_lag_bars": 1
+      },
+      "parent_hypothesis_id": "hyp_0002_mr_base",
+      "recorded_at_utc": "2026-11-27T10:13:30Z",
+      "run_id": "run_0004_cd24448430",
+      "status": "SUCCEEDED",
+      "tags": [
+        "refined",
+        "gen_1"
+      ],
+      "title": "Refined mean-reversion (lb=30, ez=1.80, xz=0.25)",
+      "universe": [
+        "SYN_EQ_A",
+        "SYN_EQ_B",
+        "SYN_EQ_C"
+      ],
+      "validation_sharpe": -0.7665399676
+    }
+  ],
+  "paper_sandbox_package": {
+    "config_sha256": "dec5b2337d34974a502ccec2d3775b57e4b3510b73577c4005794f851481f3f3",
+    "critic_report_sha256": "898c20cd14b7c2f9e2f5400424fff032dff00812878b26f8ed7aa09e3a518899",
+    "data_manifest_id": "manifest_synthetic_multi_regime_equities_v1_seed42",
+    "data_manifest_sha256": "cd4dcf4bf007bf921618262d0893d625d982e13eeb8ecfc0d849bf453de4184c",
+    "decision_id": "rev_83d513c86b0c",
+    "execution_mode": "DISABLED",
+    "experiment_spec": {
+      "code_version": "0.1.0",
+      "cost_model": {
+        "annual_borrow_bps": 35.0,
+        "commission_bps": 1.5,
+        "currency": "USD",
+        "half_spread_bps": 2.0,
+        "scenario_name": "baseline_institutional",
+        "slippage_bps": 1.5
+      },
+      "data_manifest_id": "manifest_synthetic_multi_regime_equities_v1_seed42",
+      "data_manifest_sha256": "cd4dcf4bf007bf921618262d0893d625d982e13eeb8ecfc0d849bf453de4184c",
+      "experiment_id": "exp_demo_session_v1_hyp_0002_mr_base",
+      "hypothesis": {
+        "created_at_utc": "2026-11-27T10:13:30Z",
+        "family": "mean_reversion_zscore",
+        "generation": 0,
+        "hypothesis_id": "hyp_0002_mr_base",
+        "parameters": {
+          "entry_z": 1.5,
+          "exit_z": 0.25,
+          "lookback_window": 20,
+          "signal_lag_bars": 1
+        },
+        "parent_hypothesis_id": null,
+        "proposer_id": "rarp_research_loop_v1",
+        "rationale": "Evaluate counter-trend mean reversion during choppy regimes with strict 1-bar lag.",
+        "schema_version": "1.0.0",
+        "tags": [
+          "baseline",
+          "mean_reversion"
+        ],
+        "title": "Causal rolling z-score mean reversion (20d)",
+        "universe": [
+          "SYN_EQ_A",
+          "SYN_EQ_B",
+          "SYN_EQ_C"
+        ]
+      },
+      "initial_capital_usd": 1000000.0,
+      "metadata": {
+        "iteration": 1,
+        "session_id": "demo_session_v1"
+      },
+      "schema_version": "1.0.0",
+      "seed": 42,
+      "split": {
+        "embargo_bars": 5,
+        "holdout_ratio": 0.15,
+        "train_ratio": 0.6,
+        "validation_ratio": 0.25
+      }
+    },
+    "hypothesis_id": "hyp_0002_mr_base",
+    "live_deployment_prohibited": true,
+    "metrics": {
+      "train_max_drawdown": 0.0899016077,
+      "train_sharpe": 0.5099593643,
+      "train_total_return": 0.0393074197,
+      "train_trade_count": 52.0,
+      "train_val_sharpe_gap": -1.701184551,
+      "validation_annualized_volatility": 0.0770202899,
+      "validation_cagr": 0.1821289198,
+      "validation_cost_drag_return": 0.005045666,
+      "validation_gross_total_return": 0.0638076013,
+      "validation_hit_rate": 0.5303030303,
+      "validation_max_drawdown": 0.0241506379,
+      "validation_sharpe": 2.2111439153,
+      "validation_sortino": 3.4914274888,
+      "validation_total_return": 0.0587619353,
+      "validation_trade_count": 25.0,
+      "validation_turnover_daily": 0.1046511628
+    },
+    "order_execution_enabled": false,
+    "package_id": "paperpkg_eb1e2f6e9f72",
+    "proposer_id": "rarp_research_loop_v1",
+    "reviewer_id": "reviewer_independent_lead",
+    "run_id": "run_0002_3d62823c2c",
+    "signed_artifact": {
+      "artifact_id": "art_eb1e2f6e9f72",
+      "artifact_type": "paper_sandbox_package",
+      "key_id": "rarp_session_hmac_v1",
+      "payload": {
+        "config_sha256": "dec5b2337d34974a502ccec2d3775b57e4b3510b73577c4005794f851481f3f3",
+        "critic_report_sha256": "898c20cd14b7c2f9e2f5400424fff032dff00812878b26f8ed7aa09e3a518899",
+        "data_manifest_id": "manifest_synthetic_multi_regime_equities_v1_seed42",
+        "data_manifest_sha256": "cd4dcf4bf007bf921618262d0893d625d982e13eeb8ecfc0d849bf453de4184c",
+        "decision_id": "rev_83d513c86b0c",
+        "execution_mode": "DISABLED",
+        "experiment_spec": {
+          "code_version": "0.1.0",
+          "cost_model": {
+            "annual_borrow_bps": 35.0,
+            "commission_bps": 1.5,
+            "currency": "USD",
+            "half_spread_bps": 2.0,
+            "scenario_name": "baseline_institutional",
+            "slippage_bps": 1.5
+          },
+          "data_manifest_id": "manifest_synthetic_multi_regime_equities_v1_seed42",
+          "data_manifest_sha256": "cd4dcf4bf007bf921618262d0893d625d982e13eeb8ecfc0d849bf453de4184c",
+          "experiment_id": "exp_demo_session_v1_hyp_0002_mr_base",
+          "hypothesis": {
+            "created_at_utc": "2026-11-27T10:13:30Z",
+            "family": "mean_reversion_zscore",
+            "generation": 0,
+            "hypothesis_id": "hyp_0002_mr_base",
+            "parameters": {
+              "entry_z": 1.5,
+              "exit_z": 0.25,
+              "lookback_window": 20,
+              "signal_lag_bars": 1
+            },
+            "parent_hypothesis_id": null,
+            "proposer_id": "rarp_research_loop_v1",
+            "rationale": "Evaluate counter-trend mean reversion during choppy regimes with strict 1-bar lag.",
+            "schema_version": "1.0.0",
+            "tags": [
+              "baseline",
+              "mean_reversion"
+            ],
+            "title": "Causal rolling z-score mean reversion (20d)",
+            "universe": [
+              "SYN_EQ_A",
+              "SYN_EQ_B",
+              "SYN_EQ_C"
+            ]
+          },
+          "initial_capital_usd": 1000000.0,
+          "metadata": {
+            "iteration": 1,
+            "session_id": "demo_session_v1"
+          },
+          "schema_version": "1.0.0",
+          "seed": 42,
+          "split": {
+            "embargo_bars": 5,
+            "holdout_ratio": 0.15,
+            "train_ratio": 0.6,
+            "validation_ratio": 0.25
+          }
+        },
+        "hypothesis_id": "hyp_0002_mr_base",
+        "live_deployment_prohibited": true,
+        "metrics": {
+          "train_max_drawdown": 0.0899016077,
+          "train_sharpe": 0.5099593643,
+          "train_total_return": 0.0393074197,
+          "train_trade_count": 52.0,
+          "train_val_sharpe_gap": -1.701184551,
+          "validation_annualized_volatility": 0.0770202899,
+          "validation_cagr": 0.1821289198,
+          "validation_cost_drag_return": 0.005045666,
+          "validation_gross_total_return": 0.0638076013,
+          "validation_hit_rate": 0.5303030303,
+          "validation_max_drawdown": 0.0241506379,
+          "validation_sharpe": 2.2111439153,
+          "validation_sortino": 3.4914274888,
+          "validation_total_return": 0.0587619353,
+          "validation_trade_count": 25.0,
+          "validation_turnover_daily": 0.1046511628
+        },
+        "order_execution_enabled": false,
+        "proposer_id": "rarp_research_loop_v1",
+        "reviewer_id": "reviewer_independent_lead",
+        "run_id": "run_0002_3d62823c2c",
+        "split_sha256": "060ff2f0b54eec179d9ada09c3737837b2f61ba4ef901d48223e2698c6740847",
+        "target_environment": "PAPER_SANDBOX"
+      },
+      "payload_sha256": "eb1e2f6e9f720d3e8cc4bc0cd594a44a25e094a25cbc23f46f269aca8e1e4663",
+      "signature_hmac_sha256": "a3cd1981e631c888aae2afe96d63e32cc8d03921dddb018348ef3f5a2e337769",
+      "signed_at_utc": "2026-11-27T10:13:30Z"
+    },
+    "split_sha256": "060ff2f0b54eec179d9ada09c3737837b2f61ba4ef901d48223e2698c6740847"
+  },
+  "registry_hash_chain_valid": true,
+  "review_decision": {
+    "artifact_id": "art_961bd29dade8",
+    "critic_report_id": "crit_898c20cd14b7",
+    "critic_report_sha256": "898c20cd14b7c2f9e2f5400424fff032dff00812878b26f8ed7aa09e3a518899",
+    "decided_at_utc": "2026-11-27T10:13:30Z",
+    "decision": "APPROVED_PAPER_ONLY",
+    "decision_id": "rev_83d513c86b0c",
+    "decision_sha256": "83d513c86b0cb6c887f2d7a4f6adf8a7a5a7bf5cfbe9265b1657095c11d86230",
+    "hypothesis_id": "hyp_0002_mr_base",
+    "notes": "Approved for PAPER_SANDBOX observation only; live execution remains prohibited.",
+    "proposer_id": "rarp_research_loop_v1",
+    "reviewer_id": "reviewer_independent_lead",
+    "run_id": "run_0002_3d62823c2c",
+    "target_environment": "PAPER_SANDBOX"
+  },
+  "runs": [
+    {
+      "artifact_sha256": "c877a6ea266620e0f11e23a3fc71c710b59ee0961f64dc04742a92895a94da3d",
+      "artifact_uri": "/Users/vaibhavkapur/Desktop/existing/recursive-ai-research-platform/reports/demo_state/objects/runs/exp_demo_session_v1_hyp_0001_mom_base_backtest.json",
+      "attempts": 1,
+      "completed_at_utc": "2026-11-27T10:13:30Z",
+      "config_sha256": "3c0bee632a1ca2fb91fa93256ce3318b40ee3f4c59d089ad4dfc10b1a5d92333",
+      "data_manifest_id": "manifest_synthetic_multi_regime_equities_v1_seed42",
+      "data_manifest_sha256": "cd4dcf4bf007bf921618262d0893d625d982e13eeb8ecfc0d849bf453de4184c",
+      "error_code": null,
+      "error_message": null,
+      "experiment_id": "exp_demo_session_v1_hyp_0001_mom_base",
+      "experiment_spec": {
+        "code_version": "0.1.0",
+        "cost_model": {
+          "annual_borrow_bps": 35.0,
+          "commission_bps": 1.5,
+          "currency": "USD",
+          "half_spread_bps": 2.0,
+          "scenario_name": "baseline_institutional",
+          "slippage_bps": 1.5
+        },
+        "data_manifest_id": "manifest_synthetic_multi_regime_equities_v1_seed42",
+        "data_manifest_sha256": "cd4dcf4bf007bf921618262d0893d625d982e13eeb8ecfc0d849bf453de4184c",
+        "experiment_id": "exp_demo_session_v1_hyp_0001_mom_base",
+        "hypothesis": {
+          "created_at_utc": "2026-11-27T10:13:30Z",
+          "family": "momentum_crossover",
+          "generation": 0,
+          "hypothesis_id": "hyp_0001_mom_base",
+          "parameters": {
+            "fast_window": 5,
+            "signal_lag_bars": 1,
+            "slow_window": 25,
+            "vol_target_annual": 0.15
+          },
+          "parent_hypothesis_id": null,
+          "proposer_id": "rarp_research_loop_v1",
+          "rationale": "Test medium-term trend continuation across synthetic multi-regime equities with 1-bar lag.",
+          "schema_version": "1.0.0",
+          "tags": [
+            "baseline",
+            "momentum"
+          ],
+          "title": "Causal dual-MA momentum baseline (5/25)",
+          "universe": [
+            "SYN_EQ_A",
+            "SYN_EQ_B",
+            "SYN_EQ_C"
+          ]
+        },
+        "initial_capital_usd": 1000000.0,
+        "metadata": {
+          "iteration": 1,
+          "session_id": "demo_session_v1"
+        },
+        "schema_version": "1.0.0",
+        "seed": 42,
+        "split": {
+          "embargo_bars": 5,
+          "holdout_ratio": 0.15,
+          "train_ratio": 0.6,
+          "validation_ratio": 0.25
+        }
+      },
+      "hypothesis_fingerprint": "6f0b4bc7cfab1d3209f75073b90e32e5a902346a45a007cf42e4c46fe0c68177",
+      "hypothesis_id": "hyp_0001_mom_base",
+      "idempotency_key": "e064248ddfed47fc85dc6b8dc89f016f0883166434215c4a31364315eff482a4",
+      "metrics": {
+        "train_max_drawdown": 0.1315031219,
+        "train_sharpe": -1.462511435,
+        "train_total_return": -0.0957250249,
+        "train_trade_count": 552.0,
+        "train_val_sharpe_gap": -2.6631307701,
+        "validation_annualized_volatility": 0.0711635111,
+        "validation_cagr": 0.0864586842,
+        "validation_cost_drag_return": 0.0029813448,
+        "validation_gross_total_return": 0.0316848612,
+        "validation_hit_rate": 0.5573770492,
+        "validation_max_drawdown": 0.0278906181,
+        "validation_sharpe": 1.2006193351,
+        "validation_sortino": 1.7770491661,
+        "validation_total_return": 0.0287035164,
+        "validation_trade_count": 160.0,
+        "validation_turnover_daily": 0.0604221083
+      },
+      "prev_record_sha256": "GENESIS",
+      "record_sha256": "5a3c3e88b6fb7500d3b22a813ac41c7883a23064f7cd384bb6cb8f9534536463",
+      "run_id": "run_0001_e064248ddf",
+      "seed": 42,
+      "split_sha256": "060ff2f0b54eec179d9ada09c3737837b2f61ba4ef901d48223e2698c6740847",
+      "started_at_utc": "2026-11-27T10:13:30Z",
+      "status": "SUCCEEDED"
+    },
+    {
+      "artifact_sha256": "d1d475f302b8bebadbdd1accedc867e2688f2c351642416d514f121d0b4c52a1",
+      "artifact_uri": "/Users/vaibhavkapur/Desktop/existing/recursive-ai-research-platform/reports/demo_state/objects/runs/exp_demo_session_v1_hyp_0002_mr_base_backtest.json",
+      "attempts": 1,
+      "completed_at_utc": "2026-11-27T10:13:30Z",
+      "config_sha256": "dec5b2337d34974a502ccec2d3775b57e4b3510b73577c4005794f851481f3f3",
+      "data_manifest_id": "manifest_synthetic_multi_regime_equities_v1_seed42",
+      "data_manifest_sha256": "cd4dcf4bf007bf921618262d0893d625d982e13eeb8ecfc0d849bf453de4184c",
+      "error_code": null,
+      "error_message": null,
+      "experiment_id": "exp_demo_session_v1_hyp_0002_mr_base",
+      "experiment_spec": {
+        "code_version": "0.1.0",
+        "cost_model": {
+          "annual_borrow_bps": 35.0,
+          "commission_bps": 1.5,
+          "currency": "USD",
+          "half_spread_bps": 2.0,
+          "scenario_name": "baseline_institutional",
+          "slippage_bps": 1.5
+        },
+        "data_manifest_id": "manifest_synthetic_multi_regime_equities_v1_seed42",
+        "data_manifest_sha256": "cd4dcf4bf007bf921618262d0893d625d982e13eeb8ecfc0d849bf453de4184c",
+        "experiment_id": "exp_demo_session_v1_hyp_0002_mr_base",
+        "hypothesis": {
+          "created_at_utc": "2026-11-27T10:13:30Z",
+          "family": "mean_reversion_zscore",
+          "generation": 0,
+          "hypothesis_id": "hyp_0002_mr_base",
+          "parameters": {
+            "entry_z": 1.5,
+            "exit_z": 0.25,
+            "lookback_window": 20,
+            "signal_lag_bars": 1
+          },
+          "parent_hypothesis_id": null,
+          "proposer_id": "rarp_research_loop_v1",
+          "rationale": "Evaluate counter-trend mean reversion during choppy regimes with strict 1-bar lag.",
+          "schema_version": "1.0.0",
+          "tags": [
+            "baseline",
+            "mean_reversion"
+          ],
+          "title": "Causal rolling z-score mean reversion (20d)",
+          "universe": [
+            "SYN_EQ_A",
+            "SYN_EQ_B",
+            "SYN_EQ_C"
+          ]
+        },
+        "initial_capital_usd": 1000000.0,
+        "metadata": {
+          "iteration": 1,
+          "session_id": "demo_session_v1"
+        },
+        "schema_version": "1.0.0",
+        "seed": 42,
+        "split": {
+          "embargo_bars": 5,
+          "holdout_ratio": 0.15,
+          "train_ratio": 0.6,
+          "validation_ratio": 0.25
+        }
+      },
+      "hypothesis_fingerprint": "65dabc48284f8f4bb6589b06c0038758d1b71ca3cf207ac9452c26fd20c71300",
+      "hypothesis_id": "hyp_0002_mr_base",
+      "idempotency_key": "3d62823c2c8ff926875b7a914ed2ca6471b7c2f0a5b0d655d41779b63b2b4bb6",
+      "metrics": {
+        "train_max_drawdown": 0.0899016077,
+        "train_sharpe": 0.5099593643,
+        "train_total_return": 0.0393074197,
+        "train_trade_count": 52.0,
+        "train_val_sharpe_gap": -1.701184551,
+        "validation_annualized_volatility": 0.0770202899,
+        "validation_cagr": 0.1821289198,
+        "validation_cost_drag_return": 0.005045666,
+        "validation_gross_total_return": 0.0638076013,
+        "validation_hit_rate": 0.5303030303,
+        "validation_max_drawdown": 0.0241506379,
+        "validation_sharpe": 2.2111439153,
+        "validation_sortino": 3.4914274888,
+        "validation_total_return": 0.0587619353,
+        "validation_trade_count": 25.0,
+        "validation_turnover_daily": 0.1046511628
+      },
+      "prev_record_sha256": "5a3c3e88b6fb7500d3b22a813ac41c7883a23064f7cd384bb6cb8f9534536463",
+      "record_sha256": "4b1326e0c460c78b67209937d81a4dff588904bba01089a337c7065f028986e7",
+      "run_id": "run_0002_3d62823c2c",
+      "seed": 42,
+      "split_sha256": "060ff2f0b54eec179d9ada09c3737837b2f61ba4ef901d48223e2698c6740847",
+      "started_at_utc": "2026-11-27T10:13:30Z",
+      "status": "SUCCEEDED"
+    },
+    {
+      "artifact_sha256": "84f012463a0cce208ffe6bf2386af5042f4404315a2a0f65a88939e686b16f98",
+      "artifact_uri": "/Users/vaibhavkapur/Desktop/existing/recursive-ai-research-platform/reports/demo_state/objects/runs/exp_demo_session_v1_hyp_0003_vol_breakout_base_backtest.json",
+      "attempts": 1,
+      "completed_at_utc": "2026-11-27T10:13:30Z",
+      "config_sha256": "5c609c346d763b37fea7238a09156305cc806bccee6d7f91dfbf2ee61f6339d4",
+      "data_manifest_id": "manifest_synthetic_multi_regime_equities_v1_seed42",
+      "data_manifest_sha256": "cd4dcf4bf007bf921618262d0893d625d982e13eeb8ecfc0d849bf453de4184c",
+      "error_code": null,
+      "error_message": null,
+      "experiment_id": "exp_demo_session_v1_hyp_0003_vol_breakout_base",
+      "experiment_spec": {
+        "code_version": "0.1.0",
+        "cost_model": {
+          "annual_borrow_bps": 35.0,
+          "commission_bps": 1.5,
+          "currency": "USD",
+          "half_spread_bps": 2.0,
+          "scenario_name": "baseline_institutional",
+          "slippage_bps": 1.5
+        },
+        "data_manifest_id": "manifest_synthetic_multi_regime_equities_v1_seed42",
+        "data_manifest_sha256": "cd4dcf4bf007bf921618262d0893d625d982e13eeb8ecfc0d849bf453de4184c",
+        "experiment_id": "exp_demo_session_v1_hyp_0003_vol_breakout_base",
+        "hypothesis": {
+          "created_at_utc": "2026-11-27T10:13:30Z",
+          "family": "volatility_breakout",
+          "generation": 0,
+          "hypothesis_id": "hyp_0003_vol_breakout_base",
+          "parameters": {
+            "breakout_mult": 1.2,
+            "channel_window": 15,
+            "signal_lag_bars": 1,
+            "vol_window": 20
+          },
+          "parent_hypothesis_id": null,
+          "proposer_id": "rarp_research_loop_v1",
+          "rationale": "Test breakout sensitivity to volatility expansions across synthetic universe.",
+          "schema_version": "1.0.0",
+          "tags": [
+            "baseline",
+            "breakout"
+          ],
+          "title": "Causal volatility-scaled channel breakout (15/20)",
+          "universe": [
+            "SYN_EQ_A",
+            "SYN_EQ_B",
+            "SYN_EQ_C"
+          ]
+        },
+        "initial_capital_usd": 1000000.0,
+        "metadata": {
+          "iteration": 2,
+          "session_id": "demo_session_v1"
+        },
+        "schema_version": "1.0.0",
+        "seed": 42,
+        "split": {
+          "embargo_bars": 5,
+          "holdout_ratio": 0.15,
+          "train_ratio": 0.6,
+          "validation_ratio": 0.25
+        }
+      },
+      "hypothesis_fingerprint": "b1df33d92c6a528331315327016f1cd7b460b95114ca62d501d207e3a425296c",
+      "hypothesis_id": "hyp_0003_vol_breakout_base",
+      "idempotency_key": "1bcd61f6c6aa140f67eec72a12a477c9ca19b0e867af28bff3793880ac38fead",
+      "metrics": {
+        "train_max_drawdown": 0.0837974819,
+        "train_sharpe": 0.9180356203,
+        "train_total_return": 0.0958779034,
+        "train_trade_count": 30.0,
+        "train_val_sharpe_gap": 0.9349229271,
+        "validation_annualized_volatility": 0.1080509159,
+        "validation_cagr": -0.0075765672,
+        "validation_cost_drag_return": 0.0032562434,
+        "validation_gross_total_return": 0.0006641099,
+        "validation_hit_rate": 0.5606060606,
+        "validation_max_drawdown": 0.0549668838,
+        "validation_sharpe": -0.0168873068,
+        "validation_sortino": -0.0226149467,
+        "validation_total_return": -0.0025921334,
+        "validation_trade_count": 10.0,
+        "validation_turnover_daily": 0.0658914729
+      },
+      "prev_record_sha256": "4b1326e0c460c78b67209937d81a4dff588904bba01089a337c7065f028986e7",
+      "record_sha256": "ac677b11a9338e7ee51dee607fe626d55a7c136be9523878edff8831f4eb5787",
+      "run_id": "run_0003_1bcd61f6c6",
+      "seed": 42,
+      "split_sha256": "060ff2f0b54eec179d9ada09c3737837b2f61ba4ef901d48223e2698c6740847",
+      "started_at_utc": "2026-11-27T10:13:30Z",
+      "status": "SUCCEEDED"
+    },
+    {
+      "artifact_sha256": "1c8ac19061b9debba6a5814e5c1cdbe17f8c6cf51452261771bfb80b35f7fd19",
+      "artifact_uri": "/Users/vaibhavkapur/Desktop/existing/recursive-ai-research-platform/reports/demo_state/objects/runs/exp_demo_session_v1_hyp_0004_gen1_backtest.json",
+      "attempts": 1,
+      "completed_at_utc": "2026-11-27T10:13:30Z",
+      "config_sha256": "78f196e6ca3297d982be8a9762d20a9405045ed93b6310659c919cc50ab8b4a2",
+      "data_manifest_id": "manifest_synthetic_multi_regime_equities_v1_seed42",
+      "data_manifest_sha256": "cd4dcf4bf007bf921618262d0893d625d982e13eeb8ecfc0d849bf453de4184c",
+      "error_code": null,
+      "error_message": null,
+      "experiment_id": "exp_demo_session_v1_hyp_0004_gen1",
+      "experiment_spec": {
+        "code_version": "0.1.0",
+        "cost_model": {
+          "annual_borrow_bps": 35.0,
+          "commission_bps": 1.5,
+          "currency": "USD",
+          "half_spread_bps": 2.0,
+          "scenario_name": "baseline_institutional",
+          "slippage_bps": 1.5
+        },
+        "data_manifest_id": "manifest_synthetic_multi_regime_equities_v1_seed42",
+        "data_manifest_sha256": "cd4dcf4bf007bf921618262d0893d625d982e13eeb8ecfc0d849bf453de4184c",
+        "experiment_id": "exp_demo_session_v1_hyp_0004_gen1",
+        "hypothesis": {
+          "created_at_utc": "2026-11-27T10:13:30Z",
+          "family": "mean_reversion_zscore",
+          "generation": 1,
+          "hypothesis_id": "hyp_0004_gen1",
+          "parameters": {
+            "entry_z": 1.8,
+            "exit_z": 0.25,
+            "lookback_window": 30,
+            "signal_lag_bars": 1
+          },
+          "parent_hypothesis_id": "hyp_0002_mr_base",
+          "proposer_id": "rarp_research_loop_v1",
+          "rationale": "Adjusted from hyp_0002_mr_base addressing critic codes ['GENERAL_TUNING'].",
+          "schema_version": "1.0.0",
+          "tags": [
+            "refined",
+            "gen_1"
+          ],
+          "title": "Refined mean-reversion (lb=30, ez=1.80, xz=0.25)",
+          "universe": [
+            "SYN_EQ_A",
+            "SYN_EQ_B",
+            "SYN_EQ_C"
+          ]
+        },
+        "initial_capital_usd": 1000000.0,
+        "metadata": {
+          "iteration": 2,
+          "session_id": "demo_session_v1"
+        },
+        "schema_version": "1.0.0",
+        "seed": 42,
+        "split": {
+          "embargo_bars": 5,
+          "holdout_ratio": 0.15,
+          "train_ratio": 0.6,
+          "validation_ratio": 0.25
+        }
+      },
+      "hypothesis_fingerprint": "4c233def519827f76b63264cb5174d9ed8bb0a5dcfeb9d817c658d701e0d704f",
+      "hypothesis_id": "hyp_0004_gen1",
+      "idempotency_key": "cd24448430c92777b9c8f044fee8b29873f8cb7771ec2e35749f2303b09a9cf6",
+      "metrics": {
+        "train_max_drawdown": 0.0867223806,
+        "train_sharpe": -0.3066315136,
+        "train_total_return": -0.0275725484,
+        "train_trade_count": 30.0,
+        "train_val_sharpe_gap": 0.459908454,
+        "validation_annualized_volatility": 0.0626136167,
+        "validation_cagr": -0.0487126833,
+        "validation_cost_drag_return": 0.0015687533,
+        "validation_gross_total_return": -0.0153295638,
+        "validation_hit_rate": 0.4821428571,
+        "validation_max_drawdown": 0.0380359422,
+        "validation_sharpe": -0.7665399676,
+        "validation_sortino": -1.0363467845,
+        "validation_total_return": -0.0168983172,
+        "validation_trade_count": 8.0,
+        "validation_turnover_daily": 0.0310077519
+      },
+      "prev_record_sha256": "ac677b11a9338e7ee51dee607fe626d55a7c136be9523878edff8831f4eb5787",
+      "record_sha256": "6f0090a7a1b6eb9d2fc0c5e3e8ba2f455cb58d33953f341f21efe0f9083fef01",
+      "run_id": "run_0004_cd24448430",
+      "seed": 42,
+      "split_sha256": "060ff2f0b54eec179d9ada09c3737837b2f61ba4ef901d48223e2698c6740847",
+      "started_at_utc": "2026-11-27T10:13:30Z",
+      "status": "SUCCEEDED"
+    }
+  ],
+  "session_id": "demo_session_v1",
+  "signed_research_artifact": {
+    "artifact_id": "art_961bd29dade8",
+    "artifact_type": "research_candidate_bundle",
+    "key_id": "rarp_session_hmac_v1",
+    "payload": {
+      "config_sha256": "dec5b2337d34974a502ccec2d3775b57e4b3510b73577c4005794f851481f3f3",
+      "critic_report_id": "crit_898c20cd14b7",
+      "critic_report_sha256": "898c20cd14b7c2f9e2f5400424fff032dff00812878b26f8ed7aa09e3a518899",
+      "data_manifest_id": "manifest_synthetic_multi_regime_equities_v1_seed42",
+      "data_manifest_sha256": "cd4dcf4bf007bf921618262d0893d625d982e13eeb8ecfc0d849bf453de4184c",
+      "execution_mode": "DISABLED",
+      "hypothesis_id": "hyp_0002_mr_base",
+      "live_deployment_prohibited": true,
+      "metrics": {
+        "train_max_drawdown": 0.0899016077,
+        "train_sharpe": 0.5099593643,
+        "train_total_return": 0.0393074197,
+        "train_trade_count": 52.0,
+        "train_val_sharpe_gap": -1.701184551,
+        "validation_annualized_volatility": 0.0770202899,
+        "validation_cagr": 0.1821289198,
+        "validation_cost_drag_return": 0.005045666,
+        "validation_gross_total_return": 0.0638076013,
+        "validation_hit_rate": 0.5303030303,
+        "validation_max_drawdown": 0.0241506379,
+        "validation_sharpe": 2.2111439153,
+        "validation_sortino": 3.4914274888,
+        "validation_total_return": 0.0587619353,
+        "validation_trade_count": 25.0,
+        "validation_turnover_daily": 0.1046511628
+      },
+      "run_id": "run_0002_3d62823c2c",
+      "session_id": "demo_session_v1",
+      "split_sha256": "060ff2f0b54eec179d9ada09c3737837b2f61ba4ef901d48223e2698c6740847",
+      "trial_counts": {
+        "failed_or_rejected_trials": 0,
+        "succeeded_trials": 4,
+        "total_trials": 4
+      }
+    },
+    "payload_sha256": "961bd29dade80d9f5a182b944d067bb1299003ef51e23d24e0c8c8370a02edf8",
+    "signature_hmac_sha256": "29de094557c2a4eb0d12140e36225b5f1c5279aec939d52ef70b00061a5229e1",
+    "signed_at_utc": "2026-11-27T10:13:30Z"
+  },
+  "split_sha256": "060ff2f0b54eec179d9ada09c3737837b2f61ba4ef901d48223e2698c6740847",
+  "stop_reason": "QUEUE_EXHAUSTED"
+}

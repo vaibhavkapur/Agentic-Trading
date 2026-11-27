@@ -1,0 +1,108 @@
+{
+  "backtest": {
+    "backtester_name": "ts14_clean_room_adapter",
+    "backtester_version": "1.0.0",
+    "flat_metrics": {
+      "train_max_drawdown": 0.0867223806,
+      "train_sharpe": -0.3066315136,
+      "train_total_return": -0.0275725484,
+      "train_trade_count": 30.0,
+      "train_val_sharpe_gap": 0.459908454,
+      "validation_annualized_volatility": 0.0626136167,
+      "validation_cagr": -0.0487126833,
+      "validation_cost_drag_return": 0.0015687533,
+      "validation_gross_total_return": -0.0153295638,
+      "validation_hit_rate": 0.4821428571,
+      "validation_max_drawdown": 0.0380359422,
+      "validation_sharpe": -0.7665399676,
+      "validation_sortino": -1.0363467845,
+      "validation_total_return": -0.0168983172,
+      "validation_trade_count": 8.0,
+      "validation_turnover_daily": 0.0310077519
+    },
+    "train_metrics": {
+      "annualized_volatility": 0.0952008183,
+      "bar_count": 209,
+      "cagr": -0.0331503748,
+      "cost_drag_return": 0.0057133939,
+      "gross_total_return": -0.0218591545,
+      "hit_rate": 0.5060240964,
+      "max_drawdown": 0.0867223806,
+      "sharpe": -0.3066315136,
+      "sortino": -0.4058235551,
+      "split_name": "train",
+      "total_return": -0.0275725484,
+      "trade_count": 30,
+      "turnover_daily": 0.0494417863
+    },
+    "validation_metrics": {
+      "annualized_volatility": 0.0626136167,
+      "bar_count": 86,
+      "cagr": -0.0487126833,
+      "cost_drag_return": 0.0015687533,
+      "gross_total_return": -0.0153295638,
+      "hit_rate": 0.4821428571,
+      "max_drawdown": 0.0380359422,
+      "sharpe": -0.7665399676,
+      "sortino": -1.0363467845,
+      "split_name": "validation",
+      "total_return": -0.0168983172,
+      "trade_count": 8,
+      "turnover_daily": 0.0310077519
+    }
+  },
+  "experiment_spec": {
+    "code_version": "0.1.0",
+    "cost_model": {
+      "annual_borrow_bps": 35.0,
+      "commission_bps": 1.5,
+      "currency": "USD",
+      "half_spread_bps": 2.0,
+      "scenario_name": "baseline_institutional",
+      "slippage_bps": 1.5
+    },
+    "data_manifest_id": "manifest_synthetic_multi_regime_equities_v1_seed42",
+    "data_manifest_sha256": "cd4dcf4bf007bf921618262d0893d625d982e13eeb8ecfc0d849bf453de4184c",
+    "experiment_id": "exp_demo_session_v1_hyp_0004_gen1",
+    "hypothesis": {
+      "created_at_utc": "2026-11-27T10:13:30Z",
+      "family": "mean_reversion_zscore",
+      "generation": 1,
+      "hypothesis_id": "hyp_0004_gen1",
+      "parameters": {
+        "entry_z": 1.8,
+        "exit_z": 0.25,
+        "lookback_window": 30,
+        "signal_lag_bars": 1
+      },
+      "parent_hypothesis_id": "hyp_0002_mr_base",
+      "proposer_id": "rarp_research_loop_v1",
+      "rationale": "Adjusted from hyp_0002_mr_base addressing critic codes ['GENERAL_TUNING'].",
+      "schema_version": "1.0.0",
+      "tags": [
+        "refined",
+        "gen_1"
+      ],
+      "title": "Refined mean-reversion (lb=30, ez=1.80, xz=0.25)",
+      "universe": [
+        "SYN_EQ_A",
+        "SYN_EQ_B",
+        "SYN_EQ_C"
+      ]
+    },
+    "initial_capital_usd": 1000000.0,
+    "metadata": {
+      "iteration": 2,
+      "session_id": "demo_session_v1"
+    },
+    "schema_version": "1.0.0",
+    "seed": 42,
+    "split": {
+      "embargo_bars": 5,
+      "holdout_ratio": 0.15,
+      "train_ratio": 0.6,
+      "validation_ratio": 0.25
+    }
+  },
+  "split_sha256": "060ff2f0b54eec179d9ada09c3737837b2f61ba4ef901d48223e2698c6740847"
+}

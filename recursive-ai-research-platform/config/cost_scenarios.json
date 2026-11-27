@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0.0",
+  "cost_scenarios_version": "1.0.0",
+  "default_scenario": "baseline_institutional",
+  "scenarios": {
+    "baseline_institutional": {
+      "currency": "USD",
+      "commission_bps": 1.5,
+      "half_spread_bps": 2.0,
+      "slippage_bps": 1.5,
+      "annual_borrow_bps": 35.0
+    },
+    "stressed_liquidity": {
+      "currency": "USD",
+      "commission_bps": 2.5,
+      "half_spread_bps": 6.0,
+      "slippage_bps": 5.0,
+      "annual_borrow_bps": 100.0
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "demo_status": "PASSED",
+  "elapsed_ms": 2.8,
+  "policy_version": "POL-MATP-2026.1",
+  "default_disabled_block_code": "EXECUTION_DISABLED",
+  "run_id": "RUN-B8A51F16E7",
+  "approval_id": "APR-E3856D689A",
+  "exact_action_hash": "532cf186d9a63143baccadf032be6f014f269f8d45878a54b7f56d9df82a71d3",
+  "order_id": "ORD-ECFB54D0F6",
+  "order_status": "FILLED",
+  "filled_quantity": 83,
+  "avg_fill_price": "225.2000",
+  "broker_order_count": 1,
+  "risk_stages_executed": [
+    "PRE_APPROVAL",
+    "PRE_DISPATCH"
+  ],
+  "evidence_count": 7,
+  "audit_chain_valid": true,
+  "audit_entry_count": 20,
+  "final_account": {
+    "account_id": "PAPER-ACCT-001",
+    "cash_usd": "381308.40",
+    "positions": {
+      "AAPL": {
+        "symbol": "AAPL",
+        "quantity": 283,
+        "avg_cost_usd": "214.4580"
+      },
+      "MSFT": {
+        "symbol": "MSFT",
+        "quantity": 100,
+        "avg_cost_usd": "415.00"
+      },
+      "SPY": {
+        "symbol": "SPY",
+        "quantity": 150,
+        "avg_cost_usd": "580.00"
+      }
+    },
+    "as_of_utc": "2026-11-27T14:30:00Z"
+  }
+}

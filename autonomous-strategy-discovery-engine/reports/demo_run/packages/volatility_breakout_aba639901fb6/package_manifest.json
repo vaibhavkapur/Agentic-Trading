@@ -1,0 +1,30 @@
+{
+  "catalog_fingerprint": "d31f706dc3c3d7d9eba3c7a4020cdb52d2eec443b1674609f110a01d104e4e87",
+  "config_fingerprint": "e888e26ab91de1ffb399b8c38bb3f66fd65d059ee7dcddc4e4bf5e5ab405d287",
+  "cost_scenario_hash": "feae3ae34a56fbbfca7ef327fd282c60622bf8669106a982b585f0e19089db67",
+  "dataset_data_sha256": "5047a3f1592188143848df3c595267e90e7dd6ba13e12cf7d8f78e1cf4d94225",
+  "dataset_fingerprint": "95d1d5dd098eb17732c88ef6a3ea8310619f4fa938d6b33f592570ea43784f00",
+  "dataset_id": "synthetic_equities_daily_v1",
+  "engine_version": "0.1.0",
+  "evaluation_evidence_sha256": "308a20a61bc74e3aa3bd94e855382a9b9157c31e5cdedabe968d71489b8ded60",
+  "family": "volatility_breakout",
+  "files": [
+    "strategy_spec.json",
+    "config_snapshot.json",
+    "dataset_manifest.json",
+    "split_manifest.json",
+    "evaluation_evidence.json",
+    "review_record.json"
+  ],
+  "live_execution_permitted": false,
+  "order_execution_enabled": false,
+  "package_fingerprint": "53b6773299f7e9b123f122f0a85f4a4640b567666ed2a76252563a849eba0f55",
+  "package_schema_version": "1.0.0",
+  "primary_cost_scenario": "base_institutional",
+  "produced_by": "asde_engine",
+  "run_id": "run_927735496198",
+  "seed": 20260401,
+  "split_manifest_hash": "def5ca74c8c8e7b21f5bf164b75f4cfda5503758094fdae6727d8f0415c27f08",
+  "strategy_id": "volatility_breakout_aba639901fb6",
+  "strategy_spec_sha256": "b0ea2f3ff52704f4811ed6ea9a9dfa5b5653403af106f46c58018235fc4ff3e9"
+}

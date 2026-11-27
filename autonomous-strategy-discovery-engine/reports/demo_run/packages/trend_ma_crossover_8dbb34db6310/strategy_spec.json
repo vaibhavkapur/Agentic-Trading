@@ -1,0 +1,19 @@
+{
+  "description": "Inner-tuned neighbor of trend_ma_crossover_c2fb70967bab",
+  "dsl_version": "1.0.0",
+  "family": "trend_ma_crossover",
+  "feature_lag_overrides": {},
+  "is_baseline": false,
+  "max_gross_leverage": 1.0,
+  "max_single_asset_weight": 0.5,
+  "parameters": {
+    "fast_window": 10,
+    "rebalance_band": 0.2,
+    "signal_lag_bars": 1,
+    "slow_window": 50,
+    "target_vol": 0.08,
+    "vol_window": 20
+  },
+  "raw_code": null,
+  "strategy_id": "trend_ma_crossover_8dbb34db6310"
+}

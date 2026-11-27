@@ -1,0 +1,115 @@
+{
+  "fixture_id": "FX-MKT-001",
+  "as_of_utc": "2026-11-27T14:30:00Z",
+  "base_currency": "USD",
+  "account": {
+    "account_id": "PAPER-ACCT-001",
+    "cash_usd": "400000.00",
+    "positions": {
+      "AAPL": {
+        "symbol": "AAPL",
+        "quantity": 200,
+        "avg_cost_usd": "210.00"
+      },
+      "MSFT": {
+        "symbol": "MSFT",
+        "quantity": 100,
+        "avg_cost_usd": "415.00"
+      },
+      "SPY": {
+        "symbol": "SPY",
+        "quantity": 150,
+        "avg_cost_usd": "580.00"
+      }
+    }
+  },
+  "quotes": {
+    "AAPL": {
+      "symbol": "AAPL",
+      "bid": "224.80",
+      "ask": "225.20",
+      "last": "225.00",
+      "currency": "USD",
+      "quote_timestamp_utc": "2026-11-27T14:29:45Z",
+      "source": "SYNTHETIC_EXCHANGE_SIM"
+    },
+    "MSFT": {
+      "symbol": "MSFT",
+      "bid": "429.70",
+      "ask": "430.30",
+      "last": "430.00",
+      "currency": "USD",
+      "quote_timestamp_utc": "2026-11-27T14:29:50Z",
+      "source": "SYNTHETIC_EXCHANGE_SIM"
+    },
+    "NVDA": {
+      "symbol": "NVDA",
+      "bid": "139.85",
+      "ask": "140.15",
+      "last": "140.00",
+      "currency": "USD",
+      "quote_timestamp_utc": "2026-11-27T14:29:52Z",
+      "source": "SYNTHETIC_EXCHANGE_SIM"
+    },
+    "SPY": {
+      "symbol": "SPY",
+      "bid": "589.90",
+      "ask": "590.10",
+      "last": "590.00",
+      "currency": "USD",
+      "quote_timestamp_utc": "2026-11-27T14:29:55Z",
+      "source": "SYNTHETIC_EXCHANGE_SIM"
+    },
+    "TLT": {
+      "symbol": "TLT",
+      "bid": "94.90",
+      "ask": "95.10",
+      "last": "95.00",
+      "currency": "USD",
+      "quote_timestamp_utc": "2026-11-27T14:29:48Z",
+      "source": "SYNTHETIC_EXCHANGE_SIM"
+    }
+  },
+  "fundamentals": {
+    "AAPL": {
+      "symbol": "AAPL",
+      "pe_ratio": 29.5,
+      "revenue_growth_yoy": 0.082,
+      "momentum_20d": 0.045,
+      "volatility_20d": 0.21,
+      "available_at_utc": "2026-11-27T13:00:00Z"
+    },
+    "MSFT": {
+      "symbol": "MSFT",
+      "pe_ratio": 32.0,
+      "revenue_growth_yoy": 0.145,
+      "momentum_20d": 0.032,
+      "volatility_20d": 0.19,
+      "available_at_utc": "2026-11-27T13:00:00Z"
+    },
+    "NVDA": {
+      "symbol": "NVDA",
+      "pe_ratio": 44.0,
+      "revenue_growth_yoy": 0.54,
+      "momentum_20d": 0.078,
+      "volatility_20d": 0.36,
+      "available_at_utc": "2026-11-27T13:00:00Z"
+    },
+    "SPY": {
+      "symbol": "SPY",
+      "pe_ratio": 21.5,
+      "revenue_growth_yoy": 0.06,
+      "momentum_20d": 0.015,
+      "volatility_20d": 0.13,
+      "available_at_utc": "2026-11-27T13:00:00Z"
+    },
+    "TLT": {
+      "symbol": "TLT",
+      "pe_ratio": 0.0,
+      "revenue_growth_yoy": 0.0,
+      "momentum_20d": -0.018,
+      "volatility_20d": 0.16,
+      "available_at_utc": "2026-11-27T13:00:00Z"
+    }
+  }
+}

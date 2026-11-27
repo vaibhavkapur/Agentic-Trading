@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0.0",
+  "currency": "USD",
+  "scenarios": {
+    "zero_cost_reference": {
+      "name": "zero_cost_reference",
+      "description": "Frictionless diagnostic reference only; never eligible for promotion.",
+      "commission_bps": 0.0,
+      "half_spread_bps": 0.0,
+      "slippage_bps": 0.0,
+      "borrow_annual_bps": 0.0,
+      "impact_coeff_bps": 0.0
+    },
+    "base_institutional": {
+      "name": "base_institutional",
+      "description": "Realistic liquid daily-rebalanced equity institutional cost assumption.",
+      "commission_bps": 1.0,
+      "half_spread_bps": 2.0,
+      "slippage_bps": 3.0,
+      "borrow_annual_bps": 50.0,
+      "impact_coeff_bps": 2.0
+    },
+    "stressed_2x": {
+      "name": "stressed_2x",
+      "description": "Stressed liquidity regime (2x execution costs, elevated borrow).",
+      "commission_bps": 2.0,
+      "half_spread_bps": 4.0,
+      "slippage_bps": 6.0,
+      "borrow_annual_bps": 100.0,
+      "impact_coeff_bps": 4.0
+    },
+    "severe_3x": {
+      "name": "severe_3x",
+      "description": "Severe market stress regime (3x execution costs, constrained borrow).",
+      "commission_bps": 3.0,
+      "half_spread_bps": 6.0,
+      "slippage_bps": 9.0,
+      "borrow_annual_bps": 150.0,
+      "impact_coeff_bps": 6.0
+    }
+  }
+}

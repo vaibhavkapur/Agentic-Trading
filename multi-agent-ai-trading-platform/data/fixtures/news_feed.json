@@ -1,0 +1,45 @@
+{
+  "fixture_id": "FX-NEWS-001",
+  "items": [
+    {
+      "news_id": "NEWS-20261127-001",
+      "symbol": "AAPL",
+      "headline": "Synthetic Filing: AAPL services revenue beats consensus by 4% with expanding margins",
+      "body": "Quarterly synthetic earnings release shows strong recurring services growth and stable hardware demand across key regions.",
+      "sentiment_score": 0.72,
+      "published_at_utc": "2026-11-27T14:05:00Z",
+      "available_at_utc": "2026-11-27T14:05:05Z",
+      "source": "SYNTHETIC_WIRE"
+    },
+    {
+      "news_id": "NEWS-20261127-002",
+      "symbol": "MSFT",
+      "headline": "Synthetic Wire: Cloud enterprise backlog accelerates in Q3 synthetic benchmark",
+      "body": "Enterprise AI infrastructure bookings increased 19% YoY with disciplined capex guidance.",
+      "sentiment_score": 0.65,
+      "published_at_utc": "2026-11-27T14:10:00Z",
+      "available_at_utc": "2026-11-27T14:10:02Z",
+      "source": "SYNTHETIC_WIRE"
+    },
+    {
+      "news_id": "NEWS-20261127-003",
+      "symbol": "NVDA",
+      "headline": "Synthetic Wire: Next-generation accelerator supply ramps ahead of schedule",
+      "body": "Foundry yields improved in synthetic industry survey, supporting stronger data center shipment cadence.",
+      "sentiment_score": 0.81,
+      "published_at_utc": "2026-11-27T14:15:00Z",
+      "available_at_utc": "2026-11-27T14:15:03Z",
+      "source": "SYNTHETIC_WIRE"
+    },
+    {
+      "news_id": "NEWS-20261127-004",
+      "symbol": "TLT",
+      "headline": "Synthetic Macro: Long-duration bond yields drift higher after firm inflation print",
+      "body": "Synthetic macro desk notes modest upward pressure on 20-year yields and weaker duration demand.",
+      "sentiment_score": -0.58,
+      "published_at_utc": "2026-11-27T14:18:00Z",
+      "available_at_utc": "2026-11-27T14:18:04Z",
+      "source": "SYNTHETIC_WIRE"
+    }
+  ]
+}

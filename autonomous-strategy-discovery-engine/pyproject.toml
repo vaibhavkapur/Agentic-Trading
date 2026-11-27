@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=58.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "autonomous-strategy-discovery-engine"
+version = "0.1.0"
+description = "Constrained systematic strategy discovery, cost-aware walk-forward evaluation, multiple-testing reporting, and auditable package export."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "Proprietary - Internal Research Prototype"}
+dependencies = []
+
+[project.optional-dependencies]
+analytics = [
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "polars>=0.20",
+]
+search = [
+    "optuna>=3.5",
+]
+postgres = [
+    "psycopg[binary]>=3.1",
+]
+dev = [
+    "pytest>=7.4",
+]
+
+[project.scripts]
+asde = "asde.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

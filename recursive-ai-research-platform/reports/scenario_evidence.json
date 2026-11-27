@@ -1,0 +1,156 @@
+{
+  "all_passed": true,
+  "generated_at_utc": "2026-11-27T10:13:56Z",
+  "scenarios": {
+    "budget_exhaustion": {
+      "budget_snapshot": {
+        "compute_seconds_used": 0.003776,
+        "cost_usd_used": 0.2,
+        "experiments_used": 2,
+        "iterations_used": 0,
+        "llm_tokens_used": 0,
+        "max_compute_seconds": 60.0,
+        "max_cost_usd": 0.25,
+        "max_experiments": 10,
+        "max_iterations": 5,
+        "max_llm_tokens": 20000
+      },
+      "dispatched_experiments": 2,
+      "error": {
+        "details": {
+          "compute_seconds_used": 0.003776,
+          "cost_usd_used": 0.2,
+          "experiments_used": 2,
+          "iterations_used": 0,
+          "llm_tokens_used": 0,
+          "max_compute_seconds": 60.0,
+          "max_cost_usd": 0.25,
+          "max_experiments": 10,
+          "max_iterations": 5,
+          "max_llm_tokens": 20000
+        },
+        "error_code": "BUDGET_EXHAUSTED",
+        "message": "Cost budget would be exceeded: used=0.2000 + next=0.1000 > max=0.2500 USD"
+      },
+      "passed": true
+    },
+    "future_data_mutation": {
+      "discoverable_failed_count": 1,
+      "manifest_mutation_error": {
+        "details": {
+          "actual_sha256": "101db724dca3c72297ba95c36786074bda4647d950d05346b29f2a7e14d7659e",
+          "expected_sha256": "cd4dcf4bf007bf921618262d0893d625d982e13eeb8ecfc0d849bf453de4184c",
+          "manifest_id": "manifest_synthetic_multi_regime_equities_v1_seed42"
+        },
+        "error_code": "LEAKAGE_DETECTED",
+        "message": "Dataset content SHA-256 does not match versioned DataManifest (possible post-hoc or future-data mutation)"
+      },
+      "passed": true,
+      "pit_leak_error": {
+        "details": {
+          "available_time_utc": "2029-01-01T00:00:00Z",
+          "bar_index": 10,
+          "event_time_utc": "2023-01-16T21:00:00Z",
+          "symbol": "SYN_EQ_A"
+        },
+        "error_code": "LEAKAGE_DETECTED",
+        "message": "Future-data availability violation for SYN_EQ_A at bar 10: available_time_utc (2029-01-01T00:00:00Z) > event_time_utc (2023-01-16T21:00:00Z)"
+      },
+      "recorded_run_status": "REJECTED"
+    },
+    "hallucinated_metric": {
+      "audit_events_logged": 3,
+      "detected_modes": [
+        "fake_metric_name",
+        "forged_hash",
+        "wrong_value"
+      ],
+      "passed": true,
+      "promotion_blocked": true
+    },
+    "holdout_access_denial": {
+      "audit_log_entries": [
+        {
+          "caller_id": "refiner_agent",
+          "granted": false,
+          "purpose": "hyperparameter_search",
+          "reason": "Missing independent reviewer release token",
+          "timestamp_utc": "2026-11-27T10:13:56Z",
+          "token_id": null
+        },
+        {
+          "caller_id": "proposer_x",
+          "granted": false,
+          "purpose": "issue_release_token",
+          "reason": "Independent reviewer required; proposer cannot unlock holdout",
+          "timestamp_utc": "2026-11-27T10:13:56Z",
+          "token_id": null
+        },
+        {
+          "caller_id": "refiner_agent",
+          "granted": false,
+          "purpose": "forged_read",
+          "reason": "Invalid or forged holdout release token",
+          "timestamp_utc": "2026-11-27T10:13:56Z",
+          "token_id": "holdout_tok_forged"
+        },
+        {
+          "caller_id": "sealed_evaluator",
+          "granted": true,
+          "purpose": "final_eval",
+          "reason": "Authorized by independent reviewer independent_reviewer_z",
+          "timestamp_utc": "2026-11-27T10:13:56Z",
+          "token_id": "holdout_tok_8b5b5901a0a6"
+        },
+        {
+          "caller_id": "sealed_evaluator",
+          "granted": false,
+          "purpose": "replay_attempt",
+          "reason": "Single-use holdout release token already consumed",
+          "timestamp_utc": "2026-11-27T10:13:56Z",
+          "token_id": "holdout_tok_8b5b5901a0a6"
+        }
+      ],
+      "authorized_single_use_succeeded": true,
+      "denials_verified": [
+        "forged_token",
+        "no_token",
+        "proposer_self_unlock",
+        "reused_token"
+      ],
+      "passed": true
+    },
+    "repeated_hypotheses": {
+      "exact_duplicate_error": {
+        "details": {
+          "duplicate_of": "hyp_s2_orig",
+          "fingerprint": "841198f685295384201ca4fd68ca9209f1211616aeba628fed636d4465bd66d8",
+          "hypothesis_id": "hyp_s2_exact_dup",
+          "is_near_duplicate": false
+        },
+        "error_code": "DUPLICATE_HYPOTHESIS",
+        "message": "Exact duplicate hypothesis detected (matches hyp_s2_orig)"
+      },
+      "near_duplicate_error": {
+        "details": {
+          "distance": 0.004125,
+          "duplicate_of": "hyp_s2_orig",
+          "hypothesis_id": "hyp_s2_near_dup",
+          "is_near_duplicate": true,
+          "threshold": 0.05
+        },
+        "error_code": "DUPLICATE_HYPOTHESIS",
+        "message": "Near-duplicate hypothesis detected (distance=0.0041 < 0.0500 to hyp_s2_orig)"
+      },
+      "passed": true
+    },
+    "worker_crash_and_retry": {
+      "attempts_until_success": 2,
+      "cost_charged_once_usd": 0.1,
+      "crash_checkpoint_events": 1,
+      "final_run_id": "run_0001_ac47023344",
+      "passed": true,
+      "replay_deduplicated": true
+    }
+  }
+}

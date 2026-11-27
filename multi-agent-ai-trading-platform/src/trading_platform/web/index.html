@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Multi-Agent AI Trading Platform — Operator Console</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --panel: #1e293b;
+      --border: #334155;
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+      --accent: #38bdf8;
+      --green: #22c55e;
+      --red: #ef4444;
+      --amber: #f59e0b;
+    }
+    * { box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    body { margin: 0; background: var(--bg); color: var(--text); padding: 20px; }
+    header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); padding-bottom: 14px; margin-bottom: 20px; flex-wrap: wrap; gap: 12px; }
+    h1 { margin: 0; font-size: 1.35rem; }
+    .subtitle { color: var(--muted); font-size: 0.85rem; margin-top: 4px; }
+    .badges { display: flex; gap: 8px; flex-wrap: wrap; }
+    .badge { padding: 4px 10px; border-radius: 999px; font-size: 0.78rem; font-weight: 600; background: var(--panel); border: 1px solid var(--border); }
+    .badge.ok { border-color: var(--green); color: var(--green); }
+    .badge.warn { border-color: var(--amber); color: var(--amber); }
+    .badge.danger { border-color: var(--red); color: var(--red); }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 16px; }
+    .card { background: var(--panel); border: 1px solid var(--border); border-radius: 10px; padding: 16px; }
+    .card h2 { margin: 0 0 12px 0; font-size: 1rem; color: var(--accent); }
+    .row { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin-bottom: 10px; }
+    input, select, button { padding: 7px 10px; border-radius: 6px; border: 1px solid var(--border); background: #0b1220; color: var(--text); font-size: 0.85rem; }
+    button { cursor: pointer; background: #1d4ed8; border-color: #2563eb; font-weight: 600; }
+    button.secondary { background: #334155; border-color: #475569; }
+    button.danger { background: #b91c1c; border-color: #dc2626; }
+    button.success { background: #15803d; border-color: #16a34a; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
+    th, td { text-align: left; padding: 6px; border-bottom: 1px solid var(--border); vertical-align: top; }
+    th { color: var(--muted); }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.75rem; color: #bae6fd; word-break: break-all; }
+    #statusBanner { margin-bottom: 14px; padding: 10px 12px; border-radius: 8px; display: none; font-size: 0.85rem; }
+    #statusBanner.info { display: block; background: #0c4a6e; border: 1px solid #0284c7; }
+    #statusBanner.error { display: block; background: #7f1d1d; border: 1px solid #dc2626; }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <h1>Multi-Agent AI Trading Platform — Operator Console</h1>
+      <div class="subtitle">Typed Proposals &bull; Deterministic Policy Authority &bull; Exact-Action Approvals &bull; Paper Broker Only</div>
+    </div>
+    <div class="badges" id="headerBadges"></div>
+  </header>
+
+  <div id="statusBanner"></div>
+
+  <div class="grid">
+    <div class="card">
+      <h2>1. Operational Controls &amp; Run Orchestrator</h2>
+      <div class="row">
+        <label>Actor:
+          <select id="actorSelect">
+            <option value="ops_approver_1">ops_approver_1 (RISK_OFFICER)</option>
+            <option value="ops_approver_2">ops_approver_2 (TRADING_SUPERVISOR)</option>
+            <option value="cio_reviewer">cio_reviewer (PORTFOLIO_APPROVER)</option>
+          </select>
+        </label>
+        <button class="secondary" onclick="setMode('PAPER')">Enable PAPER</button>
+        <button class="secondary" onclick="setMode('DISABLED')">Disable Execution</button>
+        <button class="danger" onclick="toggleKillSwitch(true)">Kill Switch ON</button>
+        <button class="success" onclick="toggleKillSwitch(false)">Kill Switch OFF</button>
+      </div>
+      <div class="row">
+        <label>Symbol:
+          <select id="symbolSelect">
+            <option value="AAPL">AAPL</option>
+            <option value="MSFT">MSFT</option>
+            <option value="NVDA">NVDA</option>
+            <option value="SPY">SPY</option>
+            <option value="TLT">TLT</option>
+          </select>
+        </label>
+        <button onclick="runCycle()">Run Multi-Agent Cycle</button>
+        <button class="secondary" onclick="refreshAll()">Refresh</button>
+      </div>
+      <div id="accountBox" class="subtitle"></div>
+    </div>
+
+    <div class="card">
+      <h2>2. Exact-Action Approvals (Hash-Bound &amp; Expiring)</h2>
+      <table>
+        <thead>
+          <tr><th>Approval</th><th>Order</th><th>Hash</th><th>Status</th><th>Action</th></tr>
+        </thead>
+        <tbody id="approvalsBody"></tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2>3. Orchestration Runs &amp; Provenance</h2>
+      <table>
+        <thead>
+          <tr><th>Run ID</th><th>Symbol</th><th>Status</th><th>Tools</th><th>Summary</th></tr>
+        </thead>
+        <tbody id="runsBody"></tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2>4. Idempotent OMS Orders &amp; Paper Fills</h2>
+      <table>
+        <thead>
+          <tr><th>Order ID</th><th>Intent</th><th>Status</th><th>Filled</th><th>Pre-Dispatch Risk</th></tr>
+        </thead>
+        <tbody id="ordersBody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    function showBanner(msg, isErr = false) {
+      const el = document.getElementById("statusBanner");
+      el.textContent = msg;
+      el.className = isErr ? "error" : "info";
+    }
+
+    async function api(path, options = {}) {
+      const res = await fetch(path, {
+        headers: { "Content-Type": "application/json" },
+        ...options
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        throw new Error(data.message || data.detail || JSON.stringify(data));
+      }
+      return data;
+    }
+
+    async function setMode(mode) {
+      try {
+        const actor = document.getElementById("actorSelect").value;
+        await api("/api/controls/execution-mode", {
+          method: "POST",
+          body: JSON.stringify({ mode, actor_id: actor, reason: "Operator console toggle" })
+        });
+        showBanner("Execution mode updated to " + mode);
+        await refreshAll();
+      } catch (e) { showBanner(e.message, true); }
+    }
+
+    async function toggleKillSwitch(active) {
+      try {
+        const actor = document.getElementById("actorSelect").value;
+        await api("/api/controls/kill-switch", {
+          method: "POST",
+          body: JSON.stringify({ active, actor_id: actor, reason: "Operator console kill switch" })
+        });
+        showBanner("Kill switch set to " + (active ? "ACTIVE" : "INACTIVE"));
+        await refreshAll();
+      } catch (e) { showBanner(e.message, true); }
+    }
+
+    async function runCycle() {
+      try {
+        const symbol = document.getElementById("symbolSelect").value;
+        const res = await api("/api/runs", {
+          method: "POST",
+          body: JSON.stringify({ symbol })
+        });
+        showBanner("Run " + res.run.run_id + " completed with status " + res.run.status);
+        await refreshAll();
+      } catch (e) { showBanner(e.message, true); }
+    }
+
+    async function decide(approvalId, exactHash, approve) {
+      try {
+        const actor = document.getElementById("actorSelect").value;
+        await api("/api/approvals/" + approvalId + "/decide", {
+          method: "POST",
+          body: JSON.stringify({
+            actor_id: actor,
+            approve,
+            expected_action_hash: exactHash,
+            reason: approve ? "Verified exact parameters in operator console" : "Rejected by operator"
+          })
+        });
+        showBanner("Approval " + approvalId + (approve ? " APPROVED" : " REJECTED"));
+        await refreshAll();
+      } catch (e) { showBanner(e.message, true); }
+    }
+
+    async function dispatch(approvalId) {
+      try {
+        const actor = document.getElementById("actorSelect").value;
+        const res = await api("/api/oms/dispatch", {
+          method: "POST",
+          body: JSON.stringify({
+            approval_id: approvalId,
+            idempotency_key: "IDEMP-" + approvalId,
+            actor_id: actor
+          })
+        });
+        showBanner("Dispatched order " + res.order_id + " (" + res.status + ")");
+        await refreshAll();
+      } catch (e) { showBanner(e.message, true); }
+    }
+
+    async function refreshAll() {
+      try {
+        const [metrics, account, runs, approvals, orders] = await Promise.all([
+          api("/api/metrics"),
+          api("/api/account"),
+          api("/api/runs?limit=20"),
+          api("/api/approvals"),
+          api("/api/oms/orders?limit=20")
+        ]);
+
+        const badges = document.getElementById("headerBadges");
+        badges.innerHTML = [
+          `<span class="badge">Policy: ${metrics.policy_version}</span>`,
+          `<span class="badge ${metrics.execution_mode === 'PAPER' ? 'ok' : 'warn'}">Mode: ${metrics.execution_mode}</span>`,
+          `<span class="badge ${metrics.kill_switch_active ? 'danger' : 'ok'}">Kill Switch: ${metrics.kill_switch_active ? 'ON' : 'OFF'}</span>`,
+          `<span class="badge ${metrics.audit_chain_valid ? 'ok' : 'danger'}">Audit Chain: ${metrics.audit_chain_valid ? 'VERIFIED' : 'BROKEN'} (${metrics.audit_entries})</span>`
+        ].join("");
+
+        const posStr = Object.values(account.positions || {})
+          .map(p => `${p.symbol}:${p.quantity}@$${p.avg_cost_usd}`)
+          .join(", ");
+        document.getElementById("accountBox").textContent =
+          `Account ${account.account_id} | Cash: $${account.cash_usd} USD | Positions: ${posStr || "none"}`;
+
+        document.getElementById("approvalsBody").innerHTML = approvals.map(a => {
+          const i = a.order_intent;
+          let actions = "";
+          if (a.status === "PENDING") {
+            actions = `<button class="success" onclick="decide('${a.approval_id}','${a.exact_action_hash}',true)">Approve</button>
+                       <button class="danger" onclick="decide('${a.approval_id}','${a.exact_action_hash}',false)">Reject</button>`;
+          } else if (a.status === "APPROVED") {
+            actions = `<button onclick="dispatch('${a.approval_id}')">Dispatch Paper</button>`;
+          }
+          return `<tr>
+            <td><code>${a.approval_id}</code></td>
+            <td>${i.side} ${i.quantity} ${i.symbol} @ ${i.limit_price || "MKT"}</td>
+            <td><code>${a.exact_action_hash.slice(0, 14)}...</code></td>
+            <td>${a.status}</td>
+            <td>${actions}</td>
+          </tr>`;
+        }).join("") || `<tr><td colspan="5">No approvals yet.</td></tr>`;
+
+        document.getElementById("runsBody").innerHTML = runs.map(r => `<tr>
+          <td><code>${r.run_id}</code></td>
+          <td>${r.symbol}</td>
+          <td>${r.status}</td>
+          <td>${r.tool_calls_used}</td>
+          <td>${r.summary}</td>
+        </tr>`).join("") || `<tr><td colspan="5">No runs yet.</td></tr>`;
+
+        document.getElementById("ordersBody").innerHTML = orders.map(o => `<tr>
+          <td><code>${o.order_id}</code></td>
+          <td>${o.order_intent.side} ${o.order_intent.quantity} ${o.order_intent.symbol}</td>
+          <td>${o.status}</td>
+          <td>${o.filled_quantity}/${o.order_intent.quantity} @ ${o.avg_fill_price || "-"}</td>
+          <td><code>${o.pre_dispatch_risk_id}</code></td>
+        </tr>`).join("") || `<tr><td colspan="5">No orders dispatched yet.</td></tr>`;
+      } catch (e) { showBanner(e.message, true); }
+    }
+
+    refreshAll();
+  </script>
+</body>
+</html>

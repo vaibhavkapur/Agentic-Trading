@@ -1,0 +1,38 @@
+{
+  "config_version": "1.0.0",
+  "environment": "local-prototype",
+  "policy": {
+    "policy_version": "POL-MATP-2026.1",
+    "execution_mode": "DISABLED",
+    "allow_live_trading": false,
+    "require_human_approval": true,
+    "approval_ttl_seconds": 300,
+    "allow_agent_policy_override": false,
+    "conflict_resolution_mode": "BLOCK_AND_ESCALATE",
+    "allowed_symbols": ["AAPL", "MSFT", "NVDA", "SPY", "TLT"],
+    "allowed_order_types": ["LIMIT", "MARKET"],
+    "allowed_time_in_force": ["DAY", "IOC"],
+    "authorized_approvers": {
+      "ops_approver_1": "RISK_OFFICER",
+      "ops_approver_2": "TRADING_SUPERVISOR",
+      "cio_reviewer": "PORTFOLIO_APPROVER"
+    },
+    "forbidden_approver_roles": ["AGENT", "RESEARCH_AGENT", "PORTFOLIO_AGENT", "AUDITOR", "SYSTEM_ADMIN"]
+  },
+  "risk_limits": {
+    "max_quote_age_seconds": 60,
+    "max_order_notional_usd": "100000.00",
+    "max_position_notional_usd": "250000.00",
+    "max_gross_exposure_usd": "600000.00",
+    "max_single_order_pct_nav": "0.15",
+    "max_position_pct_nav": "0.30",
+    "min_cash_buffer_usd": "50000.00",
+    "max_price_deviation_bps": 250
+  },
+  "orchestrator": {
+    "max_tool_calls_per_agent": 6,
+    "max_total_tool_calls": 16,
+    "max_steps_per_run": 12,
+    "seed": 42
+  }
+}

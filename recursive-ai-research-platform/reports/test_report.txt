@@ -1,0 +1,18 @@
+test_full_loop_reproducibility_and_review_console (integration.test_end_to_end.TestEndToEndResearchLoopAndConsole) ... ok
+test_all_six_required_scenarios (scenarios.test_required_scenarios.TestRequiredScenarios) ... ok
+test_artifact_signing_detects_tampering (unit.test_dsl_and_dag.TestDAGAndBudgetAndSigning) ... ok
+test_budget_hard_ceiling_and_stop_conditions (unit.test_dsl_and_dag.TestDAGAndBudgetAndSigning) ... ok
+test_dag_topological_order_and_cycle_rejection (unit.test_dsl_and_dag.TestDAGAndBudgetAndSigning) ... ok
+test_trial_accounting_penalizes_multiple_testing (unit.test_dsl_and_dag.TestDAGAndBudgetAndSigning) ... ok
+test_experiment_spec_idempotency_key_stability (unit.test_dsl_and_dag.TestDSLAndCatalog) ... ok
+test_parameter_bounds_and_relational_constraints (unit.test_dsl_and_dag.TestDSLAndCatalog) ... ok
+test_unrestricted_code_tokens_are_rejected (unit.test_dsl_and_dag.TestDSLAndCatalog) ... ok
+test_valid_hypothesis_and_canonical_fingerprint (unit.test_dsl_and_dag.TestDSLAndCatalog) ... ok
+test_promotion_gate_enforces_independent_reviewer_and_paper_only (unit.test_registry_and_governance.TestRegistryImmutabilityAndGovernance) ... ok
+test_registry_triggers_block_update_and_delete (unit.test_registry_and_governance.TestRegistryImmutabilityAndGovernance) ... ok
+test_ts14_adapter_blocks_unvetted_external_copy (unit.test_registry_and_governance.TestRegistryImmutabilityAndGovernance) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.193s
+
+OK

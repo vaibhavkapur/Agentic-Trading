@@ -1,0 +1,21 @@
+{
+  "currency": "USD",
+  "data_file": "synthetic_equities_daily.csv",
+  "data_sha256": "5047a3f1592188143848df3c595267e90e7dd6ba13e12cf7d8f78e1cf4d94225",
+  "dataset_id": "synthetic_equities_daily_v1",
+  "end_time_utc": "2026-11-25T21:00:00Z",
+  "entitlement": "permitted_internal_synthetic_fixture",
+  "frequency": "1D",
+  "license_note": "Generated synthetically for reproducible research and testing; no external market data license required.",
+  "row_count": 7200,
+  "schema_version": "1.0.0",
+  "seed": 20260401,
+  "source_type": "synthetic",
+  "start_time_utc": "2020-01-02T21:00:00Z",
+  "symbols": [
+    "SYN_TECH",
+    "SYN_IND",
+    "SYN_HLTH",
+    "SYN_ENER"
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "catalog_path": "config/strategy_catalog.json",
+  "config_version": "1.0.0",
+  "cost_scenarios_path": "config/cost_scenarios.json",
+  "dataset_manifest_path": "data/fixtures/synthetic_equities_manifest.json",
+  "engine_version": "0.1.0",
+  "evaluation": {
+    "annualization_factor": 252,
+    "bootstrap_block_size": 10,
+    "bootstrap_samples": 200,
+    "fdr_alpha": 0.1,
+    "max_annualized_turnover": 18.0,
+    "max_drawdown_limit": 0.35,
+    "min_deflated_sharpe_prob": 0.5,
+    "primary_cost_scenario": "base_institutional",
+    "risk_free_rate_annual": 0.02,
+    "stress_cost_scenarios": [
+      "zero_cost_reference",
+      "base_institutional",
+      "stressed_2x",
+      "severe_3x"
+    ]
+  },
+  "governance": {
+    "allow_live_selection": false,
+    "min_reviewers": 1,
+    "order_execution_enabled": false,
+    "require_independent_review": true
+  },
+  "search": {
+    "families": [
+      "trend_ma_crossover",
+      "mean_reversion_zscore",
+      "volatility_breakout",
+      "dual_momentum"
+    ],
+    "include_baselines": [
+      "baseline_buy_and_hold",
+      "baseline_cash",
+      "baseline_risk_parity_equal_weight"
+    ],
+    "max_candidates": 18,
+    "max_inner_trials_per_candidate": 4
+  },
+  "seed": 20260401,
+  "split_policy": {
+    "embargo_bars": 5,
+    "inner_tuning_folds": 3,
+    "min_fold_bars": 40,
+    "min_train_bars": 120,
+    "test_ratio": 0.2,
+    "train_ratio": 0.55,
+    "validation_ratio": 0.25,
+    "walk_forward_folds": 4
+  }
+}

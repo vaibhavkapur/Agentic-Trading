@@ -1,0 +1,10 @@
+{
+  "decision": null,
+  "deployment_target": "research_only",
+  "live_execution_permitted": false,
+  "order_execution_enabled": false,
+  "paper_execution_permitted": false,
+  "policy_checks_passed": true,
+  "policy_failures": [],
+  "review_status": "PENDING_INDEPENDENT_REVIEW"
+}

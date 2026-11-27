@@ -1,0 +1,79 @@
+{
+  "dsl_version": "1.0.0",
+  "catalog_version": "1.0.0",
+  "disallowed_constructs": [
+    "python_eval",
+    "python_exec",
+    "arbitrary_code",
+    "negative_lag",
+    "future_bar_reference"
+  ],
+  "families": {
+    "trend_ma_crossover": {
+      "description": "Dual simple moving average trend-following crossover with optional volatility scaling.",
+      "allow_short": true,
+      "parameters": {
+        "fast_window": {"type": "int", "min": 5, "max": 40, "step": 5},
+        "slow_window": {"type": "int", "min": 20, "max": 120, "step": 10},
+        "vol_window": {"type": "int", "min": 10, "max": 40, "step": 10},
+        "target_vol": {"type": "float", "min": 0.08, "max": 0.20, "step": 0.04},
+        "rebalance_band": {"type": "float", "min": 0.0, "max": 0.25, "step": 0.05},
+        "signal_lag_bars": {"type": "int", "min": 1, "max": 3, "step": 1}
+      },
+      "constraints": [
+        "fast_window < slow_window"
+      ]
+    },
+    "mean_reversion_zscore": {
+      "description": "Rolling price z-score mean-reversion with entry/exit thresholds and volatility scaling.",
+      "allow_short": true,
+      "parameters": {
+        "lookback_window": {"type": "int", "min": 10, "max": 60, "step": 5},
+        "entry_z": {"type": "float", "min": 1.0, "max": 2.5, "step": 0.25},
+        "exit_z": {"type": "float", "min": 0.0, "max": 0.75, "step": 0.25},
+        "vol_window": {"type": "int", "min": 10, "max": 30, "step": 10},
+        "target_vol": {"type": "float", "min": 0.08, "max": 0.16, "step": 0.04},
+        "signal_lag_bars": {"type": "int", "min": 1, "max": 3, "step": 1}
+      },
+      "constraints": [
+        "exit_z < entry_z"
+      ]
+    },
+    "volatility_breakout": {
+      "description": "Donchian channel / volatility-normalized breakout with trailing exit.",
+      "allow_short": true,
+      "parameters": {
+        "breakout_window": {"type": "int", "min": 10, "max": 60, "step": 10},
+        "exit_window": {"type": "int", "min": 5, "max": 30, "step": 5},
+        "vol_window": {"type": "int", "min": 10, "max": 30, "step": 10},
+        "target_vol": {"type": "float", "min": 0.08, "max": 0.20, "step": 0.04},
+        "signal_lag_bars": {"type": "int", "min": 1, "max": 3, "step": 1}
+      },
+      "constraints": [
+        "exit_window < breakout_window"
+      ]
+    },
+    "dual_momentum": {
+      "description": "Absolute + cross-sectional momentum ranking top assets with positive trailing return.",
+      "allow_short": false,
+      "parameters": {
+        "momentum_window": {"type": "int", "min": 20, "max": 120, "step": 20},
+        "top_k": {"type": "int", "min": 1, "max": 3, "step": 1},
+        "rebalance_every_bars": {"type": "int", "min": 5, "max": 20, "step": 5},
+        "signal_lag_bars": {"type": "int", "min": 1, "max": 3, "step": 1}
+      },
+      "constraints": []
+    }
+  },
+  "baselines": {
+    "baseline_buy_and_hold": {
+      "description": "Equal-weight buy-and-hold across the tradable universe (monthly drift tolerance)."
+    },
+    "baseline_cash": {
+      "description": "Zero-exposure cash benchmark earning risk-free rate."
+    },
+    "baseline_risk_parity_equal_weight": {
+      "description": "Inverse-volatility risk-parity rebalanced every 20 bars."
+    }
+  }
+}

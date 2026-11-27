@@ -1,0 +1,76 @@
+{
+  "drill_status": "ALL_PASSED",
+  "scenarios_executed": 8,
+  "elapsed_ms": 26.81,
+  "results": [
+    {
+      "scenario": "Injected instructions in news",
+      "status": "PASSED",
+      "tainted_evidence_count": 2,
+      "matched_rules": [
+        "IGNORE_INSTRUCTIONS",
+        "SYSTEM_OVERRIDE",
+        "BYPASS_APPROVAL",
+        "OVERRIDE_RISK",
+        "DIRECT_ORDER_EXECUTION",
+        "PRIVILEGE_ESCALATION"
+      ],
+      "broker_orders": 0
+    },
+    {
+      "scenario": "Malicious tool arguments",
+      "status": "PASSED",
+      "rejection_codes": [
+        "MALICIOUS_TOOL_ARGUMENTS",
+        "AGENT_EXECUTION_FORBIDDEN"
+      ]
+    },
+    {
+      "scenario": "Approval replay",
+      "status": "PASSED",
+      "tamper_rejection_code": "APPROVAL_PARAMETER_MISMATCH",
+      "replay_rejection_code": "APPROVAL_ALREADY_CONSUMED",
+      "consumed_by_order_id": "ORD-9ECAE79902",
+      "broker_orders": 1
+    },
+    {
+      "scenario": "Conflicting agents",
+      "status": "PASSED",
+      "run_status": "BLOCKED_CONFLICT",
+      "conflict_id": "CONF-DDED20443C",
+      "stances": {
+        "research-bull-desk": "BULLISH",
+        "research-bear-desk": "BEARISH"
+      }
+    },
+    {
+      "scenario": "Stale quote",
+      "status": "PASSED",
+      "pre_approval_run_status": "BLOCKED_RISK",
+      "pre_dispatch_rejection_code": "STALE_MARKET_DATA",
+      "broker_orders": 0
+    },
+    {
+      "scenario": "Broker timeout",
+      "status": "PASSED",
+      "timeout_code": "BROKER_TIMEOUT_UNCERTAIN",
+      "reconciled_status": "FILLED",
+      "broker_submit_attempts": 1,
+      "broker_orders": 1
+    },
+    {
+      "scenario": "Duplicate fill & Partial fill",
+      "status": "PASSED",
+      "duplicate_leg1_accepted": false,
+      "final_status": "FILLED",
+      "final_filled_qty": 20
+    },
+    {
+      "scenario": "Restart recovery",
+      "status": "PASSED",
+      "recovered_approval_id": "APR-CBC9133776",
+      "audit_chain_valid": true,
+      "audit_entries": 14
+    }
+  ]
+}

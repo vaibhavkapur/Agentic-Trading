@@ -1,0 +1,108 @@
+{
+  "backtest": {
+    "backtester_name": "ts14_clean_room_adapter",
+    "backtester_version": "1.0.0",
+    "flat_metrics": {
+      "train_max_drawdown": 0.1315031219,
+      "train_sharpe": -1.462511435,
+      "train_total_return": -0.0957250249,
+      "train_trade_count": 552.0,
+      "train_val_sharpe_gap": -2.6631307701,
+      "validation_annualized_volatility": 0.0711635111,
+      "validation_cagr": 0.0864586842,
+      "validation_cost_drag_return": 0.0029813448,
+      "validation_gross_total_return": 0.0316848612,
+      "validation_hit_rate": 0.5573770492,
+      "validation_max_drawdown": 0.0278906181,
+      "validation_sharpe": 1.2006193351,
+      "validation_sortino": 1.7770491661,
+      "validation_total_return": 0.0287035164,
+      "validation_trade_count": 160.0,
+      "validation_turnover_daily": 0.0604221083
+    },
+    "train_metrics": {
+      "annualized_volatility": 0.0807171949,
+      "bar_count": 209,
+      "cagr": -0.1142529621,
+      "cost_drag_return": 0.0084062966,
+      "gross_total_return": -0.0873187283,
+      "hit_rate": 0.4402173913,
+      "max_drawdown": 0.1315031219,
+      "sharpe": -1.462511435,
+      "sortino": -1.917725912,
+      "split_name": "train",
+      "total_return": -0.0957250249,
+      "trade_count": 552,
+      "turnover_daily": 0.0820114961
+    },
+    "validation_metrics": {
+      "annualized_volatility": 0.0711635111,
+      "bar_count": 86,
+      "cagr": 0.0864586842,
+      "cost_drag_return": 0.0029813448,
+      "gross_total_return": 0.0316848612,
+      "hit_rate": 0.5573770492,
+      "max_drawdown": 0.0278906181,
+      "sharpe": 1.2006193351,
+      "sortino": 1.7770491661,
+      "split_name": "validation",
+      "total_return": 0.0287035164,
+      "trade_count": 160,
+      "turnover_daily": 0.0604221083
+    }
+  },
+  "experiment_spec": {
+    "code_version": "0.1.0",
+    "cost_model": {
+      "annual_borrow_bps": 35.0,
+      "commission_bps": 1.5,
+      "currency": "USD",
+      "half_spread_bps": 2.0,
+      "scenario_name": "baseline_institutional",
+      "slippage_bps": 1.5
+    },
+    "data_manifest_id": "manifest_synthetic_multi_regime_equities_v1_seed42",
+    "data_manifest_sha256": "cd4dcf4bf007bf921618262d0893d625d982e13eeb8ecfc0d849bf453de4184c",
+    "experiment_id": "exp_demo_session_v1_hyp_0001_mom_base",
+    "hypothesis": {
+      "created_at_utc": "2026-11-27T10:13:30Z",
+      "family": "momentum_crossover",
+      "generation": 0,
+      "hypothesis_id": "hyp_0001_mom_base",
+      "parameters": {
+        "fast_window": 5,
+        "signal_lag_bars": 1,
+        "slow_window": 25,
+        "vol_target_annual": 0.15
+      },
+      "parent_hypothesis_id": null,
+      "proposer_id": "rarp_research_loop_v1",
+      "rationale": "Test medium-term trend continuation across synthetic multi-regime equities with 1-bar lag.",
+      "schema_version": "1.0.0",
+      "tags": [
+        "baseline",
+        "momentum"
+      ],
+      "title": "Causal dual-MA momentum baseline (5/25)",
+      "universe": [
+        "SYN_EQ_A",
+        "SYN_EQ_B",
+        "SYN_EQ_C"
+      ]
+    },
+    "initial_capital_usd": 1000000.0,
+    "metadata": {
+      "iteration": 1,
+      "session_id": "demo_session_v1"
+    },
+    "schema_version": "1.0.0",
+    "seed": 42,
+    "split": {
+      "embargo_bars": 5,
+      "holdout_ratio": 0.15,
+      "train_ratio": 0.6,
+      "validation_ratio": 0.25
+    }
+  },
+  "split_sha256": "060ff2f0b54eec179d9ada09c3737837b2f61ba4ef901d48223e2698c6740847"
+}

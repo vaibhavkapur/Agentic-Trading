@@ -1,0 +1,108 @@
+{
+  "backtest": {
+    "backtester_name": "ts14_clean_room_adapter",
+    "backtester_version": "1.0.0",
+    "flat_metrics": {
+      "train_max_drawdown": 0.0899016077,
+      "train_sharpe": 0.5099593643,
+      "train_total_return": 0.0393074197,
+      "train_trade_count": 52.0,
+      "train_val_sharpe_gap": -1.701184551,
+      "validation_annualized_volatility": 0.0770202899,
+      "validation_cagr": 0.1821289198,
+      "validation_cost_drag_return": 0.005045666,
+      "validation_gross_total_return": 0.0638076013,
+      "validation_hit_rate": 0.5303030303,
+      "validation_max_drawdown": 0.0241506379,
+      "validation_sharpe": 2.2111439153,
+      "validation_sortino": 3.4914274888,
+      "validation_total_return": 0.0587619353,
+      "validation_trade_count": 25.0,
+      "validation_turnover_daily": 0.1046511628
+    },
+    "train_metrics": {
+      "annualized_volatility": 0.1011513714,
+      "bar_count": 209,
+      "cagr": 0.0475842763,
+      "cost_drag_return": 0.0110459127,
+      "gross_total_return": 0.0503533323,
+      "hit_rate": 0.5297297297,
+      "max_drawdown": 0.0899016077,
+      "sharpe": 0.5099593643,
+      "sortino": 0.7326280943,
+      "split_name": "train",
+      "total_return": 0.0393074197,
+      "trade_count": 52,
+      "turnover_daily": 0.0925039872
+    },
+    "validation_metrics": {
+      "annualized_volatility": 0.0770202899,
+      "bar_count": 86,
+      "cagr": 0.1821289198,
+      "cost_drag_return": 0.005045666,
+      "gross_total_return": 0.0638076013,
+      "hit_rate": 0.5303030303,
+      "max_drawdown": 0.0241506379,
+      "sharpe": 2.2111439153,
+      "sortino": 3.4914274888,
+      "split_name": "validation",
+      "total_return": 0.0587619353,
+      "trade_count": 25,
+      "turnover_daily": 0.1046511628
+    }
+  },
+  "experiment_spec": {
+    "code_version": "0.1.0",
+    "cost_model": {
+      "annual_borrow_bps": 35.0,
+      "commission_bps": 1.5,
+      "currency": "USD",
+      "half_spread_bps": 2.0,
+      "scenario_name": "baseline_institutional",
+      "slippage_bps": 1.5
+    },
+    "data_manifest_id": "manifest_synthetic_multi_regime_equities_v1_seed42",
+    "data_manifest_sha256": "cd4dcf4bf007bf921618262d0893d625d982e13eeb8ecfc0d849bf453de4184c",
+    "experiment_id": "exp_demo_session_v1_hyp_0002_mr_base",
+    "hypothesis": {
+      "created_at_utc": "2026-11-27T10:13:30Z",
+      "family": "mean_reversion_zscore",
+      "generation": 0,
+      "hypothesis_id": "hyp_0002_mr_base",
+      "parameters": {
+        "entry_z": 1.5,
+        "exit_z": 0.25,
+        "lookback_window": 20,
+        "signal_lag_bars": 1
+      },
+      "parent_hypothesis_id": null,
+      "proposer_id": "rarp_research_loop_v1",
+      "rationale": "Evaluate counter-trend mean reversion during choppy regimes with strict 1-bar lag.",
+      "schema_version": "1.0.0",
+      "tags": [
+        "baseline",
+        "mean_reversion"
+      ],
+      "title": "Causal rolling z-score mean reversion (20d)",
+      "universe": [
+        "SYN_EQ_A",
+        "SYN_EQ_B",
+        "SYN_EQ_C"
+      ]
+    },
+    "initial_capital_usd": 1000000.0,
+    "metadata": {
+      "iteration": 1,
+      "session_id": "demo_session_v1"
+    },
+    "schema_version": "1.0.0",
+    "seed": 42,
+    "split": {
+      "embargo_bars": 5,
+      "holdout_ratio": 0.15,
+      "train_ratio": 0.6,
+      "validation_ratio": 0.25
+    }
+  },
+  "split_sha256": "060ff2f0b54eec179d9ada09c3737837b2f61ba4ef901d48223e2698c6740847"
+}

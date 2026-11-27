@@ -1,0 +1,19 @@
+{
+  "content_sha256": "cd4dcf4bf007bf921618262d0893d625d982e13eeb8ecfc0d849bf453de4184c",
+  "created_at_utc": "2026-01-01T00:00:00Z",
+  "dataset_name": "synthetic_multi_regime_equities_v1",
+  "end_event_time_utc": "2024-05-17T21:00:00Z",
+  "entitlement": "PERMITTED_INTERNAL_RESEARCH_SYNTHETIC",
+  "file_path": "synthetic_multi_regime_equities_v1.csv",
+  "license_notes": "Synthetic fixture generated deterministically for local prototype validation; not live market data.",
+  "manifest_id": "manifest_synthetic_multi_regime_equities_v1_seed42",
+  "row_count": 1080,
+  "schema_version": "1.0.0",
+  "source_type": "synthetic_deterministic",
+  "start_event_time_utc": "2023-01-02T21:00:00Z",
+  "symbols": [
+    "SYN_EQ_A",
+    "SYN_EQ_B",
+    "SYN_EQ_C"
+  ]
+}

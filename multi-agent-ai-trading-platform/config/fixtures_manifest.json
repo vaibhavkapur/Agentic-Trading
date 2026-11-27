@@ -1,0 +1,42 @@
+{
+  "manifest_version": "1.0.0",
+  "license": "Synthetic / Internal Prototype Only — No Third-Party Market Data Redistribution",
+  "created_utc": "2026-11-27T09:00:00Z",
+  "fixtures": [
+    {
+      "id": "FX-MKT-001",
+      "path": "data/fixtures/market_data.json",
+      "description": "Synthetic equity/ETF quotes, fundamentals, starting paper positions and USD cash balance.",
+      "provenance": "Generated deterministically for local testing; not real market quotes.",
+      "entitlements": "internal-synthetic-unrestricted"
+    },
+    {
+      "id": "FX-NEWS-001",
+      "path": "data/fixtures/news_feed.json",
+      "description": "Clean synthetic financial news items with point-in-time UTC availability timestamps.",
+      "provenance": "Generated deterministically for local testing.",
+      "entitlements": "internal-synthetic-unrestricted"
+    },
+    {
+      "id": "FX-FAULT-INJ-001",
+      "path": "data/fixtures/fault_injected_news.json",
+      "description": "Adversarial prompt-injection news payload attempting policy override and direct order execution.",
+      "provenance": "Synthetic security validation fixture.",
+      "entitlements": "internal-synthetic-unrestricted"
+    },
+    {
+      "id": "FX-FAULT-STALE-001",
+      "path": "data/fixtures/fault_stale_quotes.json",
+      "description": "Market quote snapshot intentionally aged beyond max_quote_age_seconds threshold.",
+      "provenance": "Synthetic risk validation fixture.",
+      "entitlements": "internal-synthetic-unrestricted"
+    },
+    {
+      "id": "FX-FAULT-CONFLICT-001",
+      "path": "data/fixtures/fault_conflicting_signals.json",
+      "description": "Divergent research signals producing directly conflicting directional views on the same symbol.",
+      "provenance": "Synthetic orchestration conflict validation fixture.",
+      "entitlements": "internal-synthetic-unrestricted"
+    }
+  ]
+}
