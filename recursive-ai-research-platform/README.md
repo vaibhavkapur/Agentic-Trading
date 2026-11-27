@@ -4,12 +4,11 @@ An auditable, bounded recursive AI research loop that proposes hypotheses, execu
 
 > **Governance Notice:** This is a local reproducible prototype. Order execution is **disabled by default**, automatic or direct live deployment is **explicitly prohibited**, unrestricted generated code is **explicitly banned**, and simulated metrics on synthetic fixtures never imply live performance or alpha.
 
-## Quickstart (Clean Checkout)
+## Getting started
 
-Requires **Python 3.9+** (zero mandatory external dependencies for core execution; optional FastAPI, PostgreSQL, and S3 extras are declared in `pyproject.toml`).
+Run these commands from `recursive-ai-research-platform/` with Python 3.9 or later. The core demo uses the standard library. Optional FastAPI, PostgreSQL, and S3 dependencies are listed in [pyproject.toml](pyproject.toml).
 
 ```bash
-cd recursive-ai-research-platform
 bash scripts/setup.sh
 bash scripts/validate.sh
 bash scripts/demo.sh
@@ -22,7 +21,7 @@ To launch the local Review Console on `http://127.0.0.1:8080` after running the 
 PYTHONPATH=src python3 -m rarp serve-console --state-dir reports/demo_state --port 8080
 ```
 
-## MVP Deliverables Implemented
+## How it works
 
 | Deliverable | Module(s) | Key Guarantees |
 |---|---|---|
@@ -32,7 +31,7 @@ PYTHONPATH=src python3 -m rarp serve-console --state-dir reports/demo_state --po
 | Evidence-Linked Critic & Refiner | `src/rarp/critic/` | Every numerical claim binds to `(run_id, metric_name, artifact_sha256, value)` verified against the immutable registry; hallucinated or tampered metrics are detected, audited, and quarantined; bounded iterative refiner consumes critic findings and negative memory. |
 | Human Review, Signing & Paper-Only Gate | `src/rarp/governance/` | HMAC-SHA256 signed research bundles (key from env/caller, never hardcoded), strict separation of duties (`reviewer_id != proposer_id`, no automated self-review), `PAPER_SANDBOX` target only (`order_execution_enabled=false`, `LIVE` rejected), WSGI + optional FastAPI review console. |
 
-## Repository Structure
+## Project layout
 
 ```text
 recursive-ai-research-platform/

@@ -4,19 +4,18 @@ Constrained systematic strategy discovery, nested parameter tuning, cost-aware w
 
 > **Governance Notice:** This is a local reproducible research prototype. Order execution is disabled by default, live strategy selection based on backtest returns is strictly prohibited, and simulated walk-forward metrics never imply live trading performance.
 
-## Quickstart (Clean Checkout)
+## Getting started
 
-Requires Python 3.9+ (zero mandatory external dependencies for core execution).
+Run these commands from `autonomous-strategy-discovery-engine/` with Python 3.9 or later. The core demo uses the standard library.
 
 ```bash
-cd autonomous-strategy-discovery-engine
 bash scripts/setup.sh
 bash scripts/validate.sh
 bash scripts/demo.sh
 bash scripts/reproduce.sh
 ```
 
-## MVP Deliverables Implemented
+## How it works
 
 | Component | Module(s) | Responsibility |
 |---|---|---|
@@ -26,7 +25,7 @@ bash scripts/reproduce.sh
 | Search, Tuning & Reporting | `src/asde/search/`, `src/asde/reporting/` | Seeded bounded candidate generator, nested inner-fold parameter tuner (`OptimizerAdapter` contract), append-only SQLite + JSONL trial ledger accounting for every trial (including failures), PSR/DSR/Bonferroni/Holm/BH-FDR multiple-testing adjustments, and research leaderboard. |
 | Export & Independent Review | `src/asde/export/` | Self-contained strategy packages with exact config, catalog, dataset, split, and cost SHA-256 fingerprints; `ReviewGate` enforcing independent human review for `paper_sandbox` only while keeping live execution disabled. |
 
-## Repository Structure
+## Project layout
 
 ```text
 autonomous-strategy-discovery-engine/
@@ -48,4 +47,4 @@ autonomous-strategy-discovery-engine/
 - [API & Schema Reference](docs/api_and_schemas.md)
 - [Assumptions, Limitations, Security & IP Review](docs/assumptions_and_limitations.md)
 - [Operator Runbook](docs/runbook.md)
-- [ADRs](docs/adr/0001-foundation-contracts.md)
+- [Architecture decision records](docs/adr/)

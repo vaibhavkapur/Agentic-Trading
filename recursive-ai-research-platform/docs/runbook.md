@@ -1,5 +1,7 @@
 # Operator Runbook — Recursive AI Research Platform
 
+Run the commands in this guide from `recursive-ai-research-platform/`. See the [project README](../README.md) for prerequisites.
+
 ## Standard Operating Procedures
 
 ### 1. Clean Checkout Setup & Verification

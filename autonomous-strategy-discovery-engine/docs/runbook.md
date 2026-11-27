@@ -1,5 +1,7 @@
 # Operator Runbook
 
+Run the commands in this guide from `autonomous-strategy-discovery-engine/`. See the [project README](../README.md) for prerequisites.
+
 ## 1. Standard Operations
 
 ### Setup & Verification on Clean Checkout

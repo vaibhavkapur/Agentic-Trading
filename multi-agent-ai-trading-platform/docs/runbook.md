@@ -1,5 +1,7 @@
 # Operations Runbook
 
+Run the commands in this guide from `multi-agent-ai-trading-platform/`. See the [project README](../README.md) for prerequisites.
+
 ## 1. Startup & Health Verification
 
 ```bash

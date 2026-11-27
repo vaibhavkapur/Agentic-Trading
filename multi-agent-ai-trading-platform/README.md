@@ -1,10 +1,12 @@
 # Multi-Agent AI Trading Platform
 
-> **Project 02 of 25** — Coordinates read-only research and portfolio agents, an independent deterministic risk service, a deterministic policy engine, exact-action human approvals, and an idempotent paper OMS while ensuring deterministic policy remains the final authority.
+Research and portfolio agents propose paper trades. An independent risk service checks each proposal, the policy engine decides whether it can proceed, and a human approves the exact order before the order management system sends it to the paper broker.
 
 > **Scope & Safety Notice**: Local reproducible prototype operating strictly on synthetic fixtures (`config/fixtures_manifest.json`). Order execution defaults to `DISABLED`; only `PAPER` mode may be explicitly enabled by an authorized operator. Live real-capital trading is permanently disabled in this prototype and is not implied by simulated test evidence.
 
-## Quickstart (Clean Checkout)
+## Getting started
+
+Run these commands from `multi-agent-ai-trading-platform/`. The setup script uses `python3 -m uv` to create a Python 3.12 virtual environment.
 
 ```bash
 # 1. Create Python 3.12 virtualenv and install package + dev tools
@@ -17,7 +19,7 @@
 .venv/bin/matp serve
 ```
 
-## Key Capabilities Delivered (MVP)
+## How it works
 
 | Component | Implementation |
 |---|---|
@@ -27,7 +29,7 @@
 | **Deterministic Policy & Exact-Action Approvals** | `PolicyEngine` (`src/trading_platform/policy/engine.py`) acts as final authority and forbids agent overrides or live execution. `ExactActionApprovalService` (`src/trading_platform/policy/approvals.py`) binds approvals to a canonical SHA-256 `exact_action_hash`, enforces TTL expiration, RBAC/maker-checker separation, and single-use consumption against replay. |
 | **Idempotent OMS, Paper Broker & Console** | `IdempotentOMS` (`src/trading_platform/execution/oms.py`) repeats independent risk checks at `PRE_DISPATCH`, deduplicates orders via `idempotency_key`, reconciles broker timeouts by `client_order_id`, and deduplicates fills by `broker_fill_id`. Exposed via FastAPI (`src/trading_platform/api/app.py`), zero-CDN Operator Console (`src/trading_platform/web/index.html`), and `matp` CLI (`src/trading_platform/cli.py`). |
 
-## Repository Layout
+## Project layout
 
 ```text
 multi-agent-ai-trading-platform/
@@ -44,7 +46,7 @@ multi-agent-ai-trading-platform/
 └── reports/                       # M1–M4 milestone reports, acceptance checklist, and raw evidence/
 ```
 
-## Documentation & Evidence Index
+## Documentation
 
 - [Architecture & Trust Boundaries](docs/architecture.md)
 - [API, CLI, Event Bus & PostgreSQL Schema](docs/api_and_schema.md) ([schema.sql](docs/schema.sql))
