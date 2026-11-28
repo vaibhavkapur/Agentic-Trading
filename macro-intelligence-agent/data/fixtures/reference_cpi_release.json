@@ -1,0 +1,170 @@
+{
+  "fixture_id": "reference_cpi_and_fomc_v1",
+  "provenance": "Synthetic educational/research fixture modeled on public macroeconomic release structure; contains no proprietary, live, or customer data.",
+  "releases": [
+    {
+      "release_id": "US_CPI_2025_03",
+      "vintage_id": "v1_initial",
+      "vintage_sequence": 1,
+      "series_group": "US_INFLATION_POLICY",
+      "reference_period": "2025-03",
+      "document_type": "economic_release",
+      "source_id": "SYNTH_BLS",
+      "source_name": "Synthetic Bureau of Labor Statistics",
+      "title": "Consumer Price Index Summary - March 2025 (Initial Release)",
+      "published_at": "2025-04-10T12:30:00Z",
+      "embargo_until": "2025-04-10T12:30:00Z",
+      "ingested_at": "2025-04-10T12:30:05Z",
+      "raw_text": "Synthetic Statistical Release: For March 2025, US Headline CPI rose 2.8% YoY, while US Core CPI excluding food and energy increased 3.1% YoY. Shelter and services components accounted for the majority of the twelve-month advance.",
+      "reported_metrics": [
+        {
+          "series_id": "US_CPI_HEADLINE",
+          "reference_period": "2025-03",
+          "value": "2.8",
+          "unit": "percent_yoy",
+          "quote": "US Headline CPI rose 2.8% YoY"
+        },
+        {
+          "series_id": "US_CPI_CORE",
+          "reference_period": "2025-03",
+          "value": "3.1",
+          "unit": "percent_yoy",
+          "quote": "US Core CPI excluding food and energy increased 3.1% YoY"
+        }
+      ],
+      "metadata": {
+        "synthetic": true,
+        "vintage_note": "Initial print"
+      }
+    },
+    {
+      "release_id": "FOMC_STMT_2025_05",
+      "vintage_id": "v1_statement",
+      "vintage_sequence": 1,
+      "series_group": "US_INFLATION_POLICY",
+      "reference_period": "2025-05",
+      "document_type": "central_bank_statement",
+      "source_id": "SYNTH_FED",
+      "source_name": "Synthetic Federal Open Market Committee",
+      "title": "Monetary Policy Statement - May 2025",
+      "published_at": "2025-05-07T18:00:00Z",
+      "embargo_until": "2025-05-07T18:00:00Z",
+      "ingested_at": "2025-05-07T18:00:03Z",
+      "raw_text": "The Committee decided to maintain the target range for the federal funds rate at 4.50%. Inflation remains somewhat elevated relative to the Committee's 2 percent longer-run objective. In considering the extent and timing of additional adjustments, the Committee will carefully assess incoming data, the evolving outlook, and the balance of risks. The Committee is prepared to maintain the target range if inflation persistence continues.",
+      "reported_metrics": [
+        {
+          "series_id": "FED_FUNDS_TARGET_UPPER",
+          "reference_period": "2025-05",
+          "value": "4.50",
+          "unit": "percent_rate",
+          "quote": "maintain the target range for the federal funds rate at 4.50%"
+        }
+      ],
+      "metadata": {
+        "synthetic": true
+      }
+    },
+    {
+      "release_id": "US_CPI_2025_03",
+      "vintage_id": "v2_revised",
+      "vintage_sequence": 2,
+      "series_group": "US_INFLATION_POLICY",
+      "reference_period": "2025-03",
+      "document_type": "economic_release",
+      "source_id": "SYNTH_BLS",
+      "source_name": "Synthetic Bureau of Labor Statistics",
+      "title": "Consumer Price Index Summary - March 2025 (Revised Benchmark)",
+      "published_at": "2025-05-13T12:30:00Z",
+      "embargo_until": "2025-05-13T12:30:00Z",
+      "ingested_at": "2025-05-13T12:30:05Z",
+      "raw_text": "Synthetic Statistical Revision: Following seasonal factor updates for March 2025, US Headline CPI was revised upward to 2.9% YoY, while US Core CPI was revised downward to 3.0% YoY.",
+      "reported_metrics": [
+        {
+          "series_id": "US_CPI_HEADLINE",
+          "reference_period": "2025-03",
+          "value": "2.9",
+          "unit": "percent_yoy",
+          "quote": "US Headline CPI was revised upward to 2.9% YoY"
+        },
+        {
+          "series_id": "US_CPI_CORE",
+          "reference_period": "2025-03",
+          "value": "3.0",
+          "unit": "percent_yoy",
+          "quote": "US Core CPI was revised downward to 3.0% YoY"
+        }
+      ],
+      "metadata": {
+        "synthetic": true,
+        "vintage_note": "Seasonal benchmark revision"
+      }
+    },
+    {
+      "release_id": "US_CPI_2025_05_EMBARGOED",
+      "vintage_id": "v1_embargoed",
+      "vintage_sequence": 1,
+      "series_group": "US_INFLATION_POLICY",
+      "reference_period": "2025-05",
+      "document_type": "economic_release",
+      "source_id": "SYNTH_BLS",
+      "source_name": "Synthetic Bureau of Labor Statistics",
+      "title": "Consumer Price Index Summary - May 2025 (Embargoed Future Release)",
+      "published_at": "2025-06-11T12:30:00Z",
+      "embargo_until": "2025-06-11T12:30:00Z",
+      "ingested_at": "2025-06-11T11:45:00Z",
+      "raw_text": "EMBARGOED UNTIL 2025-06-11T12:30:00Z: For May 2025, US Headline CPI fell to 2.1% YoY and US Core CPI fell to 2.4% YoY.",
+      "reported_metrics": [
+        {
+          "series_id": "US_CPI_HEADLINE",
+          "reference_period": "2025-05",
+          "value": "2.1",
+          "unit": "percent_yoy",
+          "quote": "US Headline CPI fell to 2.1% YoY"
+        },
+        {
+          "series_id": "US_CPI_CORE",
+          "reference_period": "2025-05",
+          "value": "2.4",
+          "unit": "percent_yoy",
+          "quote": "US Core CPI fell to 2.4% YoY"
+        }
+      ],
+      "metadata": {
+        "synthetic": true,
+        "embargo_test": true
+      }
+    }
+  ],
+  "consensus_estimates": [
+    {
+      "consensus_id": "CONS_US_CPI_HEADLINE_2025_03",
+      "series_id": "US_CPI_HEADLINE",
+      "reference_period": "2025-03",
+      "expected_value": "2.6",
+      "unit": "percent_yoy",
+      "published_at": "2025-04-09T20:00:00Z",
+      "source_id": "SYNTH_SURVEY",
+      "contributor_count": 42
+    },
+    {
+      "consensus_id": "CONS_US_CPI_CORE_2025_03",
+      "series_id": "US_CPI_CORE",
+      "reference_period": "2025-03",
+      "expected_value": "3.1",
+      "unit": "percent_yoy",
+      "published_at": "2025-04-09T20:00:00Z",
+      "source_id": "SYNTH_SURVEY",
+      "contributor_count": 42
+    },
+    {
+      "consensus_id": "CONS_FED_FUNDS_2025_05",
+      "series_id": "FED_FUNDS_TARGET_UPPER",
+      "reference_period": "2025-05",
+      "expected_value": "450",
+      "unit": "bps",
+      "published_at": "2025-05-06T18:00:00Z",
+      "source_id": "SYNTH_SURVEY",
+      "contributor_count": 55
+    }
+  ]
+}

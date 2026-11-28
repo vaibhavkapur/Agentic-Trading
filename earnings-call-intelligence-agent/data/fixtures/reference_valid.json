@@ -1,0 +1,114 @@
+{
+  "schema_version": "1.0.0",
+  "transcript_id": "tx_acme_q4_fy2025_ref",
+  "ticker": "ACME",
+  "company_name": "Acme Cloud Systems Inc.",
+  "fiscal_period": "Q4 FY2025",
+  "call_timestamp": "2026-01-29T21:00:00Z",
+  "published_at": "2026-01-29T22:15:00Z",
+  "filing_timestamp": "2026-01-29T20:30:00Z",
+  "currency": "USD",
+  "language": "en",
+  "source_name": "synthetic_educational_fixture",
+  "source_license": "MIT-synthetic",
+  "segments": [
+    {
+      "segment_id": "seg_001",
+      "speaker": "Conference Operator",
+      "speaker_role": "OPERATOR",
+      "section": "OPERATOR_INTRO",
+      "text": "Good afternoon and welcome to the Acme Cloud Systems fourth quarter fiscal 2025 earnings conference call.",
+      "start_offset_sec": 0.0,
+      "end_offset_sec": 18.0
+    },
+    {
+      "segment_id": "seg_002",
+      "speaker": "Elena Vance",
+      "speaker_role": "CEO",
+      "section": "PREPARED_REMARKS",
+      "text": "Thank you, operator. In Q4 FY2025, total revenue was $420 million. Non-GAAP operating margin reached 24.5% in Q4 FY2025. For full-year FY2026, we expect total revenue of $1.80 billion to $1.85 billion.",
+      "start_offset_sec": 18.0,
+      "end_offset_sec": 74.0
+    },
+    {
+      "segment_id": "seg_003",
+      "speaker": "Marcus Thorne",
+      "speaker_role": "CFO",
+      "section": "PREPARED_REMARKS",
+      "text": "Thanks, Elena. Q4 FY2025 non-GAAP diluted EPS was $1.42 per share, and free cash flow totaled $96 million. For Q1 FY2026, we guide total revenue of $430 million to $440 million. For FY2026, we reaffirm non-GAAP operating margin of 25.0% to 26.0%, subject to macro headwinds and hardware supply visibility. We also expect FY2026 non-GAAP diluted EPS of $5.80 to $6.00 per share.",
+      "start_offset_sec": 74.0,
+      "end_offset_sec": 145.0
+    },
+    {
+      "segment_id": "seg_004",
+      "speaker": "Priya Nair",
+      "speaker_role": "ANALYST",
+      "section": "QA",
+      "text": "Can you comment on whether customer churn changed this quarter and whether you expect revenue of $500 million in Q1 FY2026?",
+      "start_offset_sec": 145.0,
+      "end_offset_sec": 168.0
+    },
+    {
+      "segment_id": "seg_005",
+      "speaker": "Marcus Thorne",
+      "speaker_role": "CFO",
+      "section": "QA",
+      "text": "We do not disclose quarterly customer churn figures. Our Q1 FY2026 guidance remains as stated in prepared remarks.",
+      "start_offset_sec": 168.0,
+      "end_offset_sec": 192.0
+    }
+  ],
+  "prior_guidance": [
+    {
+      "guidance_id": "pg_acme_fy26_rev",
+      "metric_name": "revenue",
+      "fiscal_period": "FY2026",
+      "accounting_basis": "UNSPECIFIED",
+      "value_low": 1.70,
+      "value_high": 1.75,
+      "unit": "usd_billions",
+      "source_ref": "Q3_FY2025_10Q_outlook",
+      "published_at": "2025-10-30T21:30:00Z"
+    },
+    {
+      "guidance_id": "pg_acme_fy26_om",
+      "metric_name": "operating_margin",
+      "fiscal_period": "FY2026",
+      "accounting_basis": "NON_GAAP",
+      "value_low": 25.0,
+      "value_high": 26.0,
+      "unit": "percent",
+      "source_ref": "Q3_FY2025_10Q_outlook",
+      "published_at": "2025-10-30T21:30:00Z"
+    },
+    {
+      "guidance_id": "pg_acme_fy26_eps",
+      "metric_name": "eps",
+      "fiscal_period": "FY2026",
+      "accounting_basis": "NON_GAAP",
+      "value_low": 6.10,
+      "value_high": 6.30,
+      "unit": "usd_per_share",
+      "source_ref": "Q3_FY2025_10Q_outlook",
+      "published_at": "2025-10-30T21:30:00Z"
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "q_rev_fy26",
+      "question": "What is Acme's FY2026 revenue guidance and how did it change?",
+      "metric_hint": "revenue",
+      "fiscal_period_hint": "FY2026"
+    },
+    {
+      "question_id": "q_eps_q4",
+      "question": "What was Q4 FY2025 diluted EPS?",
+      "metric_hint": "eps",
+      "fiscal_period_hint": "Q4 FY2025"
+    },
+    {
+      "question_id": "q_churn_unanswerable",
+      "question": "What was the customer churn rate in Q4 FY2025?"
+    }
+  ]
+}

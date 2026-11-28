@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0.0",
+  "transcript_id": "tx_northstar_stale_2024",
+  "ticker": "NSTL",
+  "company_name": "Northstar Logistics Group",
+  "fiscal_period": "Q1 FY2024",
+  "call_timestamp": "2024-05-01T20:00:00Z",
+  "published_at": "2024-05-01T21:00:00Z",
+  "filing_timestamp": "2024-05-01T19:30:00Z",
+  "currency": "USD",
+  "language": "en",
+  "source_name": "synthetic_stale_fixture",
+  "source_license": "MIT-synthetic",
+  "segments": [
+    {
+      "segment_id": "seg_n01",
+      "speaker": "Amina Patel",
+      "speaker_role": "CEO",
+      "section": "PREPARED_REMARKS",
+      "text": "In Q1 FY2024, total revenue was $310 million. For FY2024, we expect total revenue of $1.25 billion to $1.30 billion.",
+      "start_offset_sec": 10.0,
+      "end_offset_sec": 55.0
+    }
+  ],
+  "prior_guidance": [
+    {
+      "guidance_id": "pg_nstl_fy24_rev",
+      "metric_name": "revenue",
+      "fiscal_period": "FY2024",
+      "accounting_basis": "UNSPECIFIED",
+      "value_low": 1200.0,
+      "value_high": 1250.0,
+      "unit": "usd_millions",
+      "source_ref": "FY2023_10K",
+      "published_at": "2024-02-20T21:00:00Z"
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "q_nstl_stale_rev",
+      "question": "What is Northstar's FY2024 revenue guidance?",
+      "metric_hint": "revenue",
+      "fiscal_period_hint": "FY2024"
+    },
+    {
+      "question_id": "q_nstl_unanswerable_ma",
+      "question": "What acquisition targets did Northstar announce for Europe?"
+    }
+  ]
+}

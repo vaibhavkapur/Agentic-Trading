@@ -1,0 +1,71 @@
+{
+  "description": "Invalid input cases expected to raise explicit validation or unsupported input errors",
+  "cases": [
+    {
+      "case_id": "live_execution_mode_forbidden",
+      "expected_error": "NoExecutionCapabilityError",
+      "patch": {
+        "execution_mode": "LIVE"
+      }
+    },
+    {
+      "case_id": "negative_quantity",
+      "expected_error": "SchemaValidationError",
+      "patch": {
+        "candidate_position": {
+          "quantity": -100
+        }
+      }
+    },
+    {
+      "case_id": "non_utc_timestamp",
+      "expected_error": "SchemaValidationError",
+      "patch": {
+        "created_at": "2026-11-28 09:00:00"
+      }
+    },
+    {
+      "case_id": "unsupported_currency",
+      "expected_error": "UnsupportedInputError",
+      "patch": {
+        "candidate_position": {
+          "currency": "EUR"
+        }
+      }
+    },
+    {
+      "case_id": "invalid_side",
+      "expected_error": "SchemaValidationError",
+      "patch": {
+        "candidate_position": {
+          "side": "SHORT_MARGIN"
+        }
+      }
+    },
+    {
+      "case_id": "zero_nav",
+      "expected_error": "SchemaValidationError",
+      "patch": {
+        "portfolio_state": {
+          "nav_usd": 0.0
+        }
+      }
+    },
+    {
+      "case_id": "policy_allow_live_execution_true",
+      "expected_error": "NoExecutionCapabilityError",
+      "patch": {
+        "risk_policy": {
+          "allow_live_execution": true
+        }
+      }
+    },
+    {
+      "case_id": "missing_proposal_id",
+      "expected_error": "SchemaValidationError",
+      "delete_keys": [
+        "proposal_id"
+      ]
+    }
+  ]
+}

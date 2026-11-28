@@ -1,0 +1,28 @@
+name: Earnings Call Intelligence Agent CI
+
+on:
+  push:
+    paths:
+      - "earnings-call-intelligence-agent/**"
+      - ".github/workflows/earnings-call-intelligence-agent.yml"
+  pull_request:
+    paths:
+      - "earnings-call-intelligence-agent/**"
+      - ".github/workflows/earnings-call-intelligence-agent.yml"
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.9", "3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Run full CI validation suite
+        working-directory: earnings-call-intelligence-agent
+        run: bash scripts/run_ci.sh

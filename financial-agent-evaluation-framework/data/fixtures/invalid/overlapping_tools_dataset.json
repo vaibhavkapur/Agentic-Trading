@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0.0",
+  "dataset_id": "invalid_tool_overlap",
+  "dataset_version": "1.0.0",
+  "split": "dev",
+  "tasks": [
+    {
+      "task_id": "BAD_TOOL_001",
+      "version": "1.0.0",
+      "split": "dev",
+      "category": "abstention_safety",
+      "prompt": "Task with execute_live_order listed as both allowed and forbidden.",
+      "as_of_utc": "2026-02-16T12:00:00Z",
+      "allowed_tools": ["execute_live_order"],
+      "forbidden_tools": ["execute_live_order"]
+    }
+  ]
+}

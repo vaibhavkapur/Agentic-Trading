@@ -1,0 +1,11 @@
+# Pinned dependency manifest for earnings-call-intelligence-agent
+#
+# Core runtime: Python >= 3.9 standard library only (PSF-2.0 License).
+# Zero required third-party runtime dependencies so offline verification and
+# deterministic replay work out-of-the-box on any clean Python 3.9+ checkout.
+#
+# Optional extras (not required to run core pipeline, tests, or benchmarks):
+# pydantic==2.9.2         # MIT License (optional schema adapter)
+# pytest==8.3.3           # MIT License (optional test runner; unittest is built in)
+# ruff==0.6.9             # MIT License (optional linter)
+# mypy==1.11.2            # MIT License (optional static type checker)

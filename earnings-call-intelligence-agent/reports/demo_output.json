@@ -1,0 +1,85 @@
+{
+  "demo_version": "1.0.0",
+  "as_of_timestamp": "2026-02-15T12:00:00Z",
+  "data_provenance": "synthetic_educational_fixtures",
+  "reference_run_id": "run_665c5464612b",
+  "reference_logical_digest": "540dc913daea5330af29bb5b0ee8d5a2caf1deb3adf4e9449652a50a36016464",
+  "replay_reproducible_match": true,
+  "reference_research_note": {
+    "envelope_version": "1.0.0",
+    "source_agent": "earnings-call-intelligence-agent",
+    "execution_mode": "research_only_no_orders",
+    "trade_action_permitted": false,
+    "run_id": "run_665c5464612b",
+    "ticker": "ACME",
+    "company_name": "Acme Cloud Systems Inc.",
+    "fiscal_period": "Q4_FY2025",
+    "as_of_timestamp": "2026-02-15T12:00:00Z",
+    "is_stale_source": false,
+    "prompt_injection_detected": false,
+    "guidance_summary": [
+      {
+        "comparison_id": "cmp_ed3a7ca69b14",
+        "metric_name": "eps",
+        "fiscal_period": "FY2026",
+        "direction": "LOWERED",
+        "normalized_unit": "USD_PER_SHARE",
+        "current_midpoint": 5.9,
+        "delta_midpoint": -0.3,
+        "contradiction_detected": false,
+        "uncertainty_flags": [],
+        "evidence_count": 1
+      },
+      {
+        "comparison_id": "cmp_0f5077049445",
+        "metric_name": "operating_margin",
+        "fiscal_period": "FY2026",
+        "direction": "REAFFIRMED",
+        "normalized_unit": "PERCENT",
+        "current_midpoint": 25.5,
+        "delta_midpoint": 0.0,
+        "contradiction_detected": false,
+        "uncertainty_flags": [
+          "HIGH_UNCERTAINTY_LANGUAGE"
+        ],
+        "evidence_count": 1
+      },
+      {
+        "comparison_id": "cmp_b4fad6eb9a5e",
+        "metric_name": "revenue",
+        "fiscal_period": "FY2026",
+        "direction": "RAISED",
+        "normalized_unit": "USD_MILLIONS",
+        "current_midpoint": 1825.0,
+        "delta_midpoint": 100.0,
+        "contradiction_detected": false,
+        "uncertainty_flags": [],
+        "evidence_count": 1
+      },
+      {
+        "comparison_id": "cmp_d4b6ae71e2e3",
+        "metric_name": "revenue",
+        "fiscal_period": "Q1_FY2026",
+        "direction": "INTRODUCED",
+        "normalized_unit": "USD_MILLIONS",
+        "current_midpoint": 435.0,
+        "delta_midpoint": null,
+        "contradiction_detected": false,
+        "uncertainty_flags": [
+          "NO_PRIOR_GUIDANCE_BASELINE"
+        ],
+        "evidence_count": 1
+      }
+    ],
+    "verified_claim_count": 8,
+    "abstained_question_count": 1
+  },
+  "prompt_injection_summary": {
+    "run_id": "run_e1bf17489423",
+    "injection_events_detected": 8,
+    "segments_quarantined": 1,
+    "verified_claims_preserved": 4,
+    "abstained_questions": 2,
+    "trade_action_permitted": false
+  }
+}

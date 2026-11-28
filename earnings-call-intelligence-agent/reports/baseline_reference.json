@@ -1,0 +1,565 @@
+{
+  "schema_version": "1.0.0",
+  "run_id": "run_665c5464612b",
+  "input_digest": "f920ada126df80ccdd48107c4017e2559c34acff990da4e9dcdcd56f9753b823",
+  "config_digest": "e135797a6fcbb584d081df61c936ad8d4f4517b95baa73aae8715056f965926c",
+  "seed": 42,
+  "transcript_id": "tx_acme_q4_fy2025_ref",
+  "ticker": "ACME",
+  "company_name": "Acme Cloud Systems Inc.",
+  "fiscal_period": "Q4_FY2025",
+  "as_of_timestamp": "2026-02-15T12:00:00Z",
+  "source_freshness": {
+    "is_stale": false,
+    "age_days": 16.5729,
+    "max_age_days": 90,
+    "as_of_timestamp": "2026-02-15T12:00:00Z",
+    "published_at": "2026-01-29T22:15:00Z",
+    "filing_timestamp": "2026-01-29T20:30:00Z",
+    "filing_lag_hours": 1.75,
+    "stale_reason": null
+  },
+  "trade_action_permitted": false,
+  "claims": [
+    {
+      "claim_id": "clm_cd10e9016f58",
+      "claim_type": "REPORTED_METRIC",
+      "metric_name": "revenue",
+      "fiscal_period": "Q4_FY2025",
+      "accounting_basis": "UNSPECIFIED",
+      "raw_value_text": "$420 million",
+      "raw_unit": "million",
+      "normalized_unit": "USD_MILLIONS",
+      "normalized_low": 420.0,
+      "normalized_high": 420.0,
+      "normalized_point": 420.0,
+      "is_range": false,
+      "is_approximate": false,
+      "uncertainty_level": "LOW",
+      "uncertainty_cues": [],
+      "evidence": {
+        "segment_id": "seg_002",
+        "speaker": "Elena Vance",
+        "speaker_role": "CEO",
+        "section": "PREPARED_REMARKS",
+        "char_start": 21,
+        "char_end": 66,
+        "exact_quote": "In Q4 FY2025, total revenue was $420 million.",
+        "timestamp_sec": 18.0,
+        "source_published_at": "2026-01-29T22:15:00Z",
+        "verified": true,
+        "quote_sha256": "fd98a5ccf628e9b9ba3cbffa2e2e87b0caa523710326cf57f63e273d84462826"
+      },
+      "extraction_method": "deterministic_rules"
+    },
+    {
+      "claim_id": "clm_5d35fb031f0e",
+      "claim_type": "REPORTED_METRIC",
+      "metric_name": "operating_margin",
+      "fiscal_period": "Q4_FY2025",
+      "accounting_basis": "NON_GAAP",
+      "raw_value_text": "24.5%",
+      "raw_unit": "%",
+      "normalized_unit": "PERCENT",
+      "normalized_low": 24.5,
+      "normalized_high": 24.5,
+      "normalized_point": 24.5,
+      "is_range": false,
+      "is_approximate": false,
+      "uncertainty_level": "LOW",
+      "uncertainty_cues": [],
+      "evidence": {
+        "segment_id": "seg_002",
+        "speaker": "Elena Vance",
+        "speaker_role": "CEO",
+        "section": "PREPARED_REMARKS",
+        "char_start": 67,
+        "char_end": 120,
+        "exact_quote": "Non-GAAP operating margin reached 24.5% in Q4 FY2025.",
+        "timestamp_sec": 18.0,
+        "source_published_at": "2026-01-29T22:15:00Z",
+        "verified": true,
+        "quote_sha256": "f00cfd20d3f8e7a0e99507ec9268534d50c06bcfc752ecb9946776b81bc27629"
+      },
+      "extraction_method": "deterministic_rules"
+    },
+    {
+      "claim_id": "clm_7acc6afb70c7",
+      "claim_type": "FORWARD_GUIDANCE",
+      "metric_name": "revenue",
+      "fiscal_period": "FY2026",
+      "accounting_basis": "UNSPECIFIED",
+      "raw_value_text": "$1.80 billion to $1.85 billion",
+      "raw_unit": "billion",
+      "normalized_unit": "USD_MILLIONS",
+      "normalized_low": 1800.0,
+      "normalized_high": 1850.0,
+      "normalized_point": 1825.0,
+      "is_range": true,
+      "is_approximate": false,
+      "uncertainty_level": "LOW",
+      "uncertainty_cues": [],
+      "evidence": {
+        "segment_id": "seg_002",
+        "speaker": "Elena Vance",
+        "speaker_role": "CEO",
+        "section": "PREPARED_REMARKS",
+        "char_start": 121,
+        "char_end": 201,
+        "exact_quote": "For full-year FY2026, we expect total revenue of $1.80 billion to $1.85 billion.",
+        "timestamp_sec": 18.0,
+        "source_published_at": "2026-01-29T22:15:00Z",
+        "verified": true,
+        "quote_sha256": "bfb899e91d6ec24e1bcc7fc206961cf4d74b4c89c7f51fae306610a58b351b68"
+      },
+      "extraction_method": "deterministic_rules"
+    },
+    {
+      "claim_id": "clm_47c62c80c3d7",
+      "claim_type": "REPORTED_METRIC",
+      "metric_name": "eps",
+      "fiscal_period": "Q4_FY2025",
+      "accounting_basis": "NON_GAAP",
+      "raw_value_text": "$1.42 per share",
+      "raw_unit": "usd_per_share",
+      "normalized_unit": "USD_PER_SHARE",
+      "normalized_low": 1.42,
+      "normalized_high": 1.42,
+      "normalized_point": 1.42,
+      "is_range": false,
+      "is_approximate": false,
+      "uncertainty_level": "LOW",
+      "uncertainty_cues": [],
+      "evidence": {
+        "segment_id": "seg_003",
+        "speaker": "Marcus Thorne",
+        "speaker_role": "CFO",
+        "section": "PREPARED_REMARKS",
+        "char_start": 15,
+        "char_end": 65,
+        "exact_quote": "Q4 FY2025 non-GAAP diluted EPS was $1.42 per share",
+        "timestamp_sec": 74.0,
+        "source_published_at": "2026-01-29T22:15:00Z",
+        "verified": true,
+        "quote_sha256": "bc8387f302a694048f3c5f7085ed239182c00012061f6cde5589e1f527859280"
+      },
+      "extraction_method": "deterministic_rules"
+    },
+    {
+      "claim_id": "clm_dbee2c79c3fa",
+      "claim_type": "REPORTED_METRIC",
+      "metric_name": "free_cash_flow",
+      "fiscal_period": "Q4_FY2025",
+      "accounting_basis": "UNSPECIFIED",
+      "raw_value_text": "$96 million",
+      "raw_unit": "million",
+      "normalized_unit": "USD_MILLIONS",
+      "normalized_low": 96.0,
+      "normalized_high": 96.0,
+      "normalized_point": 96.0,
+      "is_range": false,
+      "is_approximate": false,
+      "uncertainty_level": "LOW",
+      "uncertainty_cues": [],
+      "evidence": {
+        "segment_id": "seg_003",
+        "speaker": "Marcus Thorne",
+        "speaker_role": "CFO",
+        "section": "PREPARED_REMARKS",
+        "char_start": 71,
+        "char_end": 106,
+        "exact_quote": "free cash flow totaled $96 million.",
+        "timestamp_sec": 74.0,
+        "source_published_at": "2026-01-29T22:15:00Z",
+        "verified": true,
+        "quote_sha256": "ca2afbe58f81c3de66b9efc0b87a2dec5de326d67bfe297fb1712906c1691ee8"
+      },
+      "extraction_method": "deterministic_rules"
+    },
+    {
+      "claim_id": "clm_0c0ca9b11518",
+      "claim_type": "FORWARD_GUIDANCE",
+      "metric_name": "revenue",
+      "fiscal_period": "Q1_FY2026",
+      "accounting_basis": "UNSPECIFIED",
+      "raw_value_text": "$430 million to $440 million",
+      "raw_unit": "million",
+      "normalized_unit": "USD_MILLIONS",
+      "normalized_low": 430.0,
+      "normalized_high": 440.0,
+      "normalized_point": 435.0,
+      "is_range": true,
+      "is_approximate": false,
+      "uncertainty_level": "LOW",
+      "uncertainty_cues": [],
+      "evidence": {
+        "segment_id": "seg_003",
+        "speaker": "Marcus Thorne",
+        "speaker_role": "CFO",
+        "section": "PREPARED_REMARKS",
+        "char_start": 107,
+        "char_end": 177,
+        "exact_quote": "For Q1 FY2026, we guide total revenue of $430 million to $440 million.",
+        "timestamp_sec": 74.0,
+        "source_published_at": "2026-01-29T22:15:00Z",
+        "verified": true,
+        "quote_sha256": "b25f84c8933ef7f019a8dc52431b0966e52b1256491ed4ab53fa3b326c01dcce"
+      },
+      "extraction_method": "deterministic_rules"
+    },
+    {
+      "claim_id": "clm_7a8c385d4136",
+      "claim_type": "FORWARD_GUIDANCE",
+      "metric_name": "operating_margin",
+      "fiscal_period": "FY2026",
+      "accounting_basis": "NON_GAAP",
+      "raw_value_text": "25.0% to 26.0%",
+      "raw_unit": "%",
+      "normalized_unit": "PERCENT",
+      "normalized_low": 25.0,
+      "normalized_high": 26.0,
+      "normalized_point": 25.5,
+      "is_range": true,
+      "is_approximate": false,
+      "uncertainty_level": "HIGH",
+      "uncertainty_cues": [
+        "headwinds",
+        "macro",
+        "subject to",
+        "visibility"
+      ],
+      "evidence": {
+        "segment_id": "seg_003",
+        "speaker": "Marcus Thorne",
+        "speaker_role": "CFO",
+        "section": "PREPARED_REMARKS",
+        "char_start": 178,
+        "char_end": 305,
+        "exact_quote": "For FY2026, we reaffirm non-GAAP operating margin of 25.0% to 26.0%, subject to macro headwinds and hardware supply visibility.",
+        "timestamp_sec": 74.0,
+        "source_published_at": "2026-01-29T22:15:00Z",
+        "verified": true,
+        "quote_sha256": "9daa87a3dc4e7129e3411579fba1b742d9acccbf9ac18d33fa5a3e7572c2083c"
+      },
+      "extraction_method": "deterministic_rules"
+    },
+    {
+      "claim_id": "clm_52c2d5968d27",
+      "claim_type": "FORWARD_GUIDANCE",
+      "metric_name": "eps",
+      "fiscal_period": "FY2026",
+      "accounting_basis": "NON_GAAP",
+      "raw_value_text": "$5.80 to $6.00 per share",
+      "raw_unit": "usd_per_share",
+      "normalized_unit": "USD_PER_SHARE",
+      "normalized_low": 5.8,
+      "normalized_high": 6.0,
+      "normalized_point": 5.9,
+      "is_range": true,
+      "is_approximate": false,
+      "uncertainty_level": "LOW",
+      "uncertainty_cues": [],
+      "evidence": {
+        "segment_id": "seg_003",
+        "speaker": "Marcus Thorne",
+        "speaker_role": "CFO",
+        "section": "PREPARED_REMARKS",
+        "char_start": 306,
+        "char_end": 377,
+        "exact_quote": "We also expect FY2026 non-GAAP diluted EPS of $5.80 to $6.00 per share.",
+        "timestamp_sec": 74.0,
+        "source_published_at": "2026-01-29T22:15:00Z",
+        "verified": true,
+        "quote_sha256": "e4fefc0edea19300908d68ddcb2eeee3a4ee4c686b13d5639f8449b5d7b9b269"
+      },
+      "extraction_method": "deterministic_rules"
+    }
+  ],
+  "guidance_comparisons": [
+    {
+      "comparison_id": "cmp_ed3a7ca69b14",
+      "metric_name": "eps",
+      "fiscal_period": "FY2026",
+      "accounting_basis": "NON_GAAP",
+      "normalized_unit": "USD_PER_SHARE",
+      "prior_low": 6.1,
+      "prior_high": 6.3,
+      "prior_midpoint": 6.2,
+      "current_low": 5.8,
+      "current_high": 6.0,
+      "current_midpoint": 5.9,
+      "delta_midpoint": -0.3,
+      "delta_pct": -4.8387,
+      "direction": "LOWERED",
+      "uncertainty_flags": [],
+      "contradiction_detected": false,
+      "contradicting_claim_ids": [],
+      "supporting_claim_ids": [
+        "clm_52c2d5968d27"
+      ],
+      "prior_guidance_id": "pg_acme_fy26_eps",
+      "evidence_spans": [
+        {
+          "segment_id": "seg_003",
+          "speaker": "Marcus Thorne",
+          "speaker_role": "CFO",
+          "section": "PREPARED_REMARKS",
+          "char_start": 306,
+          "char_end": 377,
+          "exact_quote": "We also expect FY2026 non-GAAP diluted EPS of $5.80 to $6.00 per share.",
+          "timestamp_sec": 74.0,
+          "source_published_at": "2026-01-29T22:15:00Z",
+          "verified": true,
+          "quote_sha256": "e4fefc0edea19300908d68ddcb2eeee3a4ee4c686b13d5639f8449b5d7b9b269"
+        }
+      ]
+    },
+    {
+      "comparison_id": "cmp_0f5077049445",
+      "metric_name": "operating_margin",
+      "fiscal_period": "FY2026",
+      "accounting_basis": "NON_GAAP",
+      "normalized_unit": "PERCENT",
+      "prior_low": 25.0,
+      "prior_high": 26.0,
+      "prior_midpoint": 25.5,
+      "current_low": 25.0,
+      "current_high": 26.0,
+      "current_midpoint": 25.5,
+      "delta_midpoint": 0.0,
+      "delta_pct": 0.0,
+      "direction": "REAFFIRMED",
+      "uncertainty_flags": [
+        "HIGH_UNCERTAINTY_LANGUAGE"
+      ],
+      "contradiction_detected": false,
+      "contradicting_claim_ids": [],
+      "supporting_claim_ids": [
+        "clm_7a8c385d4136"
+      ],
+      "prior_guidance_id": "pg_acme_fy26_om",
+      "evidence_spans": [
+        {
+          "segment_id": "seg_003",
+          "speaker": "Marcus Thorne",
+          "speaker_role": "CFO",
+          "section": "PREPARED_REMARKS",
+          "char_start": 178,
+          "char_end": 305,
+          "exact_quote": "For FY2026, we reaffirm non-GAAP operating margin of 25.0% to 26.0%, subject to macro headwinds and hardware supply visibility.",
+          "timestamp_sec": 74.0,
+          "source_published_at": "2026-01-29T22:15:00Z",
+          "verified": true,
+          "quote_sha256": "9daa87a3dc4e7129e3411579fba1b742d9acccbf9ac18d33fa5a3e7572c2083c"
+        }
+      ]
+    },
+    {
+      "comparison_id": "cmp_b4fad6eb9a5e",
+      "metric_name": "revenue",
+      "fiscal_period": "FY2026",
+      "accounting_basis": "UNSPECIFIED",
+      "normalized_unit": "USD_MILLIONS",
+      "prior_low": 1700.0,
+      "prior_high": 1750.0,
+      "prior_midpoint": 1725.0,
+      "current_low": 1800.0,
+      "current_high": 1850.0,
+      "current_midpoint": 1825.0,
+      "delta_midpoint": 100.0,
+      "delta_pct": 5.7971,
+      "direction": "RAISED",
+      "uncertainty_flags": [],
+      "contradiction_detected": false,
+      "contradicting_claim_ids": [],
+      "supporting_claim_ids": [
+        "clm_7acc6afb70c7"
+      ],
+      "prior_guidance_id": "pg_acme_fy26_rev",
+      "evidence_spans": [
+        {
+          "segment_id": "seg_002",
+          "speaker": "Elena Vance",
+          "speaker_role": "CEO",
+          "section": "PREPARED_REMARKS",
+          "char_start": 121,
+          "char_end": 201,
+          "exact_quote": "For full-year FY2026, we expect total revenue of $1.80 billion to $1.85 billion.",
+          "timestamp_sec": 18.0,
+          "source_published_at": "2026-01-29T22:15:00Z",
+          "verified": true,
+          "quote_sha256": "bfb899e91d6ec24e1bcc7fc206961cf4d74b4c89c7f51fae306610a58b351b68"
+        }
+      ]
+    },
+    {
+      "comparison_id": "cmp_d4b6ae71e2e3",
+      "metric_name": "revenue",
+      "fiscal_period": "Q1_FY2026",
+      "accounting_basis": "UNSPECIFIED",
+      "normalized_unit": "USD_MILLIONS",
+      "prior_low": null,
+      "prior_high": null,
+      "prior_midpoint": null,
+      "current_low": 430.0,
+      "current_high": 440.0,
+      "current_midpoint": 435.0,
+      "delta_midpoint": null,
+      "delta_pct": null,
+      "direction": "INTRODUCED",
+      "uncertainty_flags": [
+        "NO_PRIOR_GUIDANCE_BASELINE"
+      ],
+      "contradiction_detected": false,
+      "contradicting_claim_ids": [],
+      "supporting_claim_ids": [
+        "clm_0c0ca9b11518"
+      ],
+      "prior_guidance_id": null,
+      "evidence_spans": [
+        {
+          "segment_id": "seg_003",
+          "speaker": "Marcus Thorne",
+          "speaker_role": "CFO",
+          "section": "PREPARED_REMARKS",
+          "char_start": 107,
+          "char_end": 177,
+          "exact_quote": "For Q1 FY2026, we guide total revenue of $430 million to $440 million.",
+          "timestamp_sec": 74.0,
+          "source_published_at": "2026-01-29T22:15:00Z",
+          "verified": true,
+          "quote_sha256": "b25f84c8933ef7f019a8dc52431b0966e52b1256491ed4ab53fa3b326c01dcce"
+        }
+      ]
+    }
+  ],
+  "question_answers": [
+    {
+      "question_id": "q_rev_fy26",
+      "question": "What is Acme's FY2026 revenue guidance and how did it change?",
+      "answered": true,
+      "abstained": false,
+      "abstention_reason": null,
+      "answer_text": "FY2026 revenue guidance is $1,800.00M to $1,850.00M (RAISED vs prior guidance of $1,700.00M to $1,750.00M; midpoint delta +100).",
+      "supporting_claim_ids": [
+        "clm_7acc6afb70c7"
+      ],
+      "evidence_spans": [
+        {
+          "segment_id": "seg_002",
+          "speaker": "Elena Vance",
+          "speaker_role": "CEO",
+          "section": "PREPARED_REMARKS",
+          "char_start": 121,
+          "char_end": 201,
+          "exact_quote": "For full-year FY2026, we expect total revenue of $1.80 billion to $1.85 billion.",
+          "timestamp_sec": 18.0,
+          "source_published_at": "2026-01-29T22:15:00Z",
+          "verified": true,
+          "quote_sha256": "bfb899e91d6ec24e1bcc7fc206961cf4d74b4c89c7f51fae306610a58b351b68"
+        }
+      ],
+      "confidence": 1.0
+    },
+    {
+      "question_id": "q_eps_q4",
+      "question": "What was Q4 FY2025 diluted EPS?",
+      "answered": true,
+      "abstained": false,
+      "abstention_reason": null,
+      "answer_text": "Q4_FY2025 eps (NON_GAAP) (REPORTED_METRIC) is $1.42/share, cited by Marcus Thorne (seg_003).",
+      "supporting_claim_ids": [
+        "clm_47c62c80c3d7"
+      ],
+      "evidence_spans": [
+        {
+          "segment_id": "seg_003",
+          "speaker": "Marcus Thorne",
+          "speaker_role": "CFO",
+          "section": "PREPARED_REMARKS",
+          "char_start": 15,
+          "char_end": 65,
+          "exact_quote": "Q4 FY2025 non-GAAP diluted EPS was $1.42 per share",
+          "timestamp_sec": 74.0,
+          "source_published_at": "2026-01-29T22:15:00Z",
+          "verified": true,
+          "quote_sha256": "bc8387f302a694048f3c5f7085ed239182c00012061f6cde5589e1f527859280"
+        }
+      ],
+      "confidence": 1.0
+    },
+    {
+      "question_id": "q_churn_unanswerable",
+      "question": "What was the customer churn rate in Q4 FY2025?",
+      "answered": false,
+      "abstained": true,
+      "abstention_reason": "NO_SUPPORTING_EVIDENCE",
+      "answer_text": null,
+      "supporting_claim_ids": [],
+      "evidence_spans": [],
+      "confidence": 0.0
+    }
+  ],
+  "prompt_injection_events": [],
+  "warnings": [],
+  "diagnostics": {
+    "segments_ingested": 5,
+    "segments_quarantined": 0,
+    "injection_events_count": 0,
+    "claims_extracted": 8,
+    "claims_verified": 8,
+    "claims_rejected_unverified": 0,
+    "guidance_comparisons_count": 4,
+    "contradictions_detected": 0,
+    "questions_answered": 2,
+    "questions_abstained": 1,
+    "llm_calls_used": 0,
+    "llm_tokens_used": 0
+  },
+  "runtime_metadata": {
+    "package_version": "0.1.0",
+    "python_version": "3.9.6",
+    "platform": "macOS-26.5.1-arm64-arm-64bit",
+    "extraction_mode": "deterministic",
+    "config_version": "1.0.0",
+    "seed": 42
+  },
+  "structured_logs": [
+    {
+      "stage": "ingestion",
+      "run_id": "run_665c5464612b",
+      "transcript_id": "tx_acme_q4_fy2025_ref",
+      "segments_count": 5,
+      "prior_guidance_count": 3,
+      "is_stale": false,
+      "age_days": 16.5729
+    },
+    {
+      "stage": "security_scan",
+      "run_id": "run_665c5464612b",
+      "injection_events_count": 0,
+      "segments_quarantined": 0
+    },
+    {
+      "stage": "extraction_and_verification",
+      "run_id": "run_665c5464612b",
+      "claims_extracted": 8,
+      "claims_verified": 8,
+      "claims_rejected_unverified": 0,
+      "llm_calls_used": 0,
+      "llm_tokens_used": 0
+    },
+    {
+      "stage": "guidance_comparison",
+      "run_id": "run_665c5464612b",
+      "guidance_comparisons_count": 4,
+      "contradictions_detected": 0
+    },
+    {
+      "stage": "question_answering",
+      "run_id": "run_665c5464612b",
+      "questions_answered": 2,
+      "questions_abstained": 1
+    }
+  ]
+}

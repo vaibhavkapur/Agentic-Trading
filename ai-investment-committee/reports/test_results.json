@@ -1,0 +1,14 @@
+{
+  "all_passed": true,
+  "baseline_comparison_file": "reports/baseline_comparison.json",
+  "demo_runtime_config_id": "committee-default-v1",
+  "demo_summary_file": "reports/demo_run_summary.json",
+  "duration_ms": 38.83,
+  "errors": 0,
+  "failures": 0,
+  "generated_at": "2026-11-28T04:31:25Z",
+  "platform": "macOS-26.5.1-arm64-arm-64bit",
+  "python_version": "3.9.6",
+  "skipped": 0,
+  "tests_run": 18
+}

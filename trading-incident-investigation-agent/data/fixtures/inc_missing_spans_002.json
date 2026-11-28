@@ -1,0 +1,227 @@
+{
+  "schema_version": "1.0.0",
+  "incident_id": "INC-MS-002",
+  "title": "OMS rate-limit throttle spike with missing intermediate spans and misleading market-data logs",
+  "environment": "synthetic",
+  "reported_at_utc": "2026-04-16T09:16:00Z",
+  "metadata": {
+    "scenario": "missing_spans_and_misleading_logs",
+    "synthetic_provenance": "domain correctness scenario for M2 testing"
+  },
+  "traces": [
+    {
+      "span_id": "sp-ms-001",
+      "trace_id": "tr-ms-200",
+      "parent_span_id": null,
+      "service": "order-router",
+      "operation": "SubmitOrder",
+      "start_time_utc": "2026-04-16T09:15:00.100Z",
+      "duration_ms": 145.0,
+      "status": "ERROR",
+      "status_message": "OMS returned rate limit throttle rejection",
+      "attributes": {
+        "order.id": "ORD-SIM-2101",
+        "symbol": "SIMB",
+        "venue": "SIMX"
+      }
+    },
+    {
+      "span_id": "sp-ms-003",
+      "trace_id": "tr-ms-200",
+      "parent_span_id": "sp-ms-002-MISSING",
+      "service": "oms-core",
+      "operation": "EnforceOrderRateLimit",
+      "start_time_utc": "2026-04-16T09:15:00.140Z",
+      "duration_ms": 98.0,
+      "status": "ERROR",
+      "status_message": "token bucket exhausted: order rate limit exceeded (500/500 req/s)",
+      "attributes": {
+        "order.id": "ORD-SIM-2101",
+        "throttle.bucket": "simx_burst_bucket",
+        "throttle.limit_rps": 500
+      }
+    },
+    {
+      "span_id": "sp-ms-004",
+      "trace_id": "tr-ms-201",
+      "parent_span_id": "sp-ms-002-MISSING-B",
+      "service": "oms-core",
+      "operation": "EnforceOrderRateLimit",
+      "start_time_utc": "2026-04-16T09:15:01.050Z",
+      "duration_ms": 102.0,
+      "status": "ERROR",
+      "status_message": "token bucket exhausted: throttle reject OMS_RATE_LIMIT",
+      "attributes": {
+        "order.id": "ORD-SIM-2102",
+        "throttle.bucket": "simx_burst_bucket"
+      }
+    },
+    {
+      "span_id": "sp-ms-005",
+      "trace_id": "tr-ms-202",
+      "parent_span_id": null,
+      "service": "market-data-feed",
+      "operation": "PublishTopOfBook",
+      "start_time_utc": "2026-04-16T09:15:00.200Z",
+      "duration_ms": 3.2,
+      "status": "OK",
+      "status_message": null,
+      "attributes": {
+        "symbol": "SIMB",
+        "quote.age_ms": 4.1
+      }
+    }
+  ],
+  "logs": [
+    {
+      "log_id": "lg-ms-001",
+      "timestamp_utc": "2026-04-16T09:15:00.150Z",
+      "service": "oms-core",
+      "severity": "ERROR",
+      "message": "OMS token bucket simx_burst_bucket depleted; throttling ORD-SIM-2101 with OMS_RATE_LIMIT",
+      "trace_id": "tr-ms-200",
+      "span_id": "sp-ms-003",
+      "order_id": "ORD-SIM-2101",
+      "attributes": {}
+    },
+    {
+      "log_id": "lg-ms-redherring-01",
+      "timestamp_utc": "2026-04-16T09:15:04.500Z",
+      "service": "market-data-feed",
+      "severity": "ERROR",
+      "message": "Transient backup feed disconnect on archival replay channel; stale quote cache warning ignored on live book",
+      "trace_id": null,
+      "span_id": null,
+      "order_id": null,
+      "attributes": {
+        "channel": "archival_replay_only"
+      }
+    },
+    {
+      "log_id": "lg-ms-redherring-02",
+      "timestamp_utc": "2026-04-16T09:15:05.000Z",
+      "service": "market-data-feed",
+      "severity": "WARNING",
+      "message": "Secondary md gap noticed during background snapshot checksum; primary quote feed unaffected",
+      "trace_id": null,
+      "span_id": null,
+      "order_id": null,
+      "attributes": {
+        "channel": "archival_replay_only"
+      }
+    }
+  ],
+  "oms_events": [
+    {
+      "event_id": "oms-ms-001",
+      "timestamp_utc": "2026-04-16T09:15:00.160Z",
+      "service": "oms-core",
+      "order_id": "ORD-SIM-2101",
+      "symbol": "SIMB",
+      "venue": "SIMX",
+      "event_type": "THROTTLE_TRIGGERED",
+      "latency_ms": 112.0,
+      "notional_usd": 12000.0,
+      "reject_code": "OMS_RATE_LIMIT",
+      "trace_id": "tr-ms-200",
+      "message": "Order throttled by oms-core rate limiter bucket simx_burst_bucket"
+    },
+    {
+      "event_id": "oms-ms-002",
+      "timestamp_utc": "2026-04-16T09:15:01.160Z",
+      "service": "oms-core",
+      "order_id": "ORD-SIM-2102",
+      "symbol": "SIMB",
+      "venue": "SIMX",
+      "event_type": "ORDER_REJECT",
+      "latency_ms": 110.0,
+      "notional_usd": 15000.0,
+      "reject_code": "OMS_RATE_LIMIT",
+      "trace_id": "tr-ms-201",
+      "message": "Order rejected due to oms-core order rate limit exhaustion"
+    }
+  ],
+  "alerts": [
+    {
+      "alert_id": "al-ms-001",
+      "timestamp_utc": "2026-04-16T09:15:02.000Z",
+      "rule_id": "ALERT_OMS_THROTTLE_SPIKE",
+      "service": "oms-core",
+      "severity": "CRITICAL",
+      "title": "OMS Order Rate-Limit Throttle Spike",
+      "description": "oms-core throttle rejection rate exceeded threshold on simx_burst_bucket",
+      "metric_name": "oms_throttle_reject_rate_pct",
+      "metric_value": 18.4,
+      "threshold_value": 2.0,
+      "unit": "percent",
+      "trace_id": "tr-ms-200",
+      "labels": {
+        "bucket": "simx_burst_bucket"
+      }
+    }
+  ],
+  "runbooks": [
+    {
+      "runbook_id": "RB-OMS-THROTTLE-004",
+      "version": "1.1.0",
+      "title": "OMS Order Rate-Limit Throttle Exhaustion",
+      "service": "oms-core",
+      "failure_mode": "oms_rate_limit_throttle",
+      "symptoms": [
+        "token bucket exhausted",
+        "rate limit",
+        "EnforceOrderRateLimit",
+        "throttling",
+        "OMS_RATE_LIMIT"
+      ],
+      "alert_rules": [
+        "ALERT_OMS_THROTTLE_SPIKE"
+      ],
+      "reject_codes": [
+        "OMS_RATE_LIMIT"
+      ],
+      "diagnostic_checks": [
+        "Check oms-core token bucket utilization and burst config",
+        "Verify whether missing intermediate spans conceal upstream burst retry loop"
+      ],
+      "recommended_actions": [
+        "rebalance_oms_throttle_bucket_sim"
+      ],
+      "expected_recovery_signals": [
+        "oms_throttle_reject_rate_pct < 1.0%",
+        "p99_ack_latency_ms < 100ms"
+      ],
+      "notes": "Do not disable risk limits; only adjust simulated burst bucket within safe bounds."
+    },
+    {
+      "runbook_id": "RB-MD-STALE-003",
+      "version": "1.0.0",
+      "title": "Market Data Feed Stale Quotes",
+      "service": "market-data-feed",
+      "failure_mode": "market_data_feed_stale",
+      "symptoms": [
+        "feed disconnect",
+        "stale quote",
+        "md gap",
+        "sequence drop"
+      ],
+      "alert_rules": [
+        "ALERT_MD_STALE_FEED"
+      ],
+      "reject_codes": [
+        "STALE_PRICE_REJECT"
+      ],
+      "diagnostic_checks": [
+        "Confirm PublishTopOfBook spans show elevated quote age or errors",
+        "Confirm STALE_PRICE_REJECT events in OMS"
+      ],
+      "recommended_actions": [
+        "failover_market_data_secondary_sim"
+      ],
+      "expected_recovery_signals": [
+        "md_quote_age_ms < 50ms"
+      ],
+      "notes": "Ignore archival replay channel warnings when live PublishTopOfBook spans are OK."
+    }
+  ]
+}

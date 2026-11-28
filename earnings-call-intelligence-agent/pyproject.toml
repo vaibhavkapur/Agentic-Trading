@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=58.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "earnings-call-intelligence-agent"
+version = "0.1.0"
+description = "Verifiable earnings-call claim extraction, guidance comparison, and evidence-grounded QA agent (research prototype)"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.9"
+authors = [
+  {name = "Trading-Agentic Research Contributors"}
+]
+dependencies = []
+
+[project.optional-dependencies]
+pydantic = [
+  "pydantic==2.9.2",
+]
+dev = [
+  "pytest==8.3.3",
+  "ruff==0.6.9",
+  "mypy==1.11.2",
+]
+
+[project.scripts]
+earnings-call-agent = "earnings_call_agent.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"

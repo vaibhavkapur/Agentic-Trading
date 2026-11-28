@@ -1,0 +1,13 @@
+# Pinned dependency lockfile (CPython 3.12, macOS/Linux)
+# Licenses: MIT (pydantic, pydantic-core, annotated-types, typing-inspection, pytest, iniconfig, pluggy),
+# PSF-2.0 (typing-extensions), Apache-2.0 OR BSD-2-Clause (packaging), BSD-2-Clause (pygments)
+annotated-types==0.8.0
+iniconfig==2.3.1
+packaging==26.4
+pluggy==1.7.0
+pydantic==2.14.4
+pydantic-core==2.50.5
+pygments==2.21.0
+pytest==8.4.2
+typing-extensions==4.16.0
+typing-inspection==0.4.5

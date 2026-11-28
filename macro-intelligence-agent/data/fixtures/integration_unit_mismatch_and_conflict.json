@@ -1,0 +1,126 @@
+{
+  "fixture_id": "integration_unit_mismatch_and_conflict_v1",
+  "provenance": "Synthetic integration test fixture for unit mismatch (MoM vs YoY), compatible conversion (bps to percent_rate), and conflicting multi-source reports.",
+  "releases": [
+    {
+      "release_id": "EU_HICP_2025_04",
+      "vintage_id": "v1_flash",
+      "vintage_sequence": 1,
+      "series_group": "INTEGRATION_EDGE_CASES",
+      "reference_period": "2025-04",
+      "document_type": "economic_release",
+      "source_id": "SYNTH_EUROSTAT",
+      "source_name": "Synthetic Eurostat Flash",
+      "title": "Euro Area HICP Flash Estimate - April 2025",
+      "published_at": "2025-05-02T09:00:00Z",
+      "raw_text": "Euro Area HICP rose 0.4% MoM in April 2025 according to the flash estimate.",
+      "reported_metrics": [
+        {
+          "series_id": "EU_HICP_HEADLINE",
+          "reference_period": "2025-04",
+          "value": "0.4",
+          "unit": "percent_mom",
+          "quote": "Euro Area HICP rose 0.4% MoM"
+        }
+      ]
+    },
+    {
+      "release_id": "ECB_RATE_2025_04",
+      "vintage_id": "v1_decision",
+      "vintage_sequence": 1,
+      "series_group": "INTEGRATION_EDGE_CASES",
+      "reference_period": "2025-04",
+      "document_type": "central_bank_statement",
+      "source_id": "SYNTH_ECB",
+      "source_name": "Synthetic European Central Bank",
+      "title": "ECB Monetary Policy Decision - April 2025",
+      "published_at": "2025-04-17T12:15:00Z",
+      "raw_text": "The Governing Council set the deposit facility rate at 2.50%. Disinflation is well on track and the Council remains data-dependent.",
+      "reported_metrics": [
+        {
+          "series_id": "ECB_DEPOSIT_RATE",
+          "reference_period": "2025-04",
+          "value": "2.50",
+          "unit": "percent_rate",
+          "quote": "deposit facility rate at 2.50%"
+        }
+      ]
+    },
+    {
+      "release_id": "US_NFP_2025_04_WIRE_A",
+      "vintage_id": "v1_wire_a",
+      "vintage_sequence": 1,
+      "series_group": "INTEGRATION_EDGE_CASES",
+      "reference_period": "2025-04",
+      "document_type": "press_report",
+      "source_id": "SYNTH_WIRE_A",
+      "source_name": "Synthetic Wire A",
+      "title": "Payrolls Flash Report (Wire A)",
+      "published_at": "2025-05-02T12:30:10Z",
+      "raw_text": "Wire A Flash: US Nonfarm Payrolls increased by 185 thousand in April 2025.",
+      "reported_metrics": [
+        {
+          "series_id": "US_NFP",
+          "reference_period": "2025-04",
+          "value": "185",
+          "unit": "thousands",
+          "quote": "US Nonfarm Payrolls increased by 185 thousand"
+        }
+      ]
+    },
+    {
+      "release_id": "US_NFP_2025_04_WIRE_B",
+      "vintage_id": "v1_wire_b",
+      "vintage_sequence": 1,
+      "series_group": "INTEGRATION_EDGE_CASES",
+      "reference_period": "2025-04",
+      "document_type": "press_report",
+      "source_id": "SYNTH_WIRE_B",
+      "source_name": "Synthetic Wire B",
+      "title": "Payrolls Flash Report (Wire B)",
+      "published_at": "2025-05-02T12:30:12Z",
+      "raw_text": "Wire B Flash: US Nonfarm Payrolls increased by 245 thousand in April 2025.",
+      "reported_metrics": [
+        {
+          "series_id": "US_NFP",
+          "reference_period": "2025-04",
+          "value": "245",
+          "unit": "thousands",
+          "quote": "US Nonfarm Payrolls increased by 245 thousand"
+        }
+      ]
+    }
+  ],
+  "consensus_estimates": [
+    {
+      "consensus_id": "CONS_EU_HICP_YOY_MISMATCH",
+      "series_id": "EU_HICP_HEADLINE",
+      "reference_period": "2025-04",
+      "expected_value": "2.4",
+      "unit": "percent_yoy",
+      "published_at": "2025-05-01T16:00:00Z",
+      "source_id": "SYNTH_SURVEY",
+      "contributor_count": 30
+    },
+    {
+      "consensus_id": "CONS_ECB_RATE_BPS",
+      "series_id": "ECB_DEPOSIT_RATE",
+      "reference_period": "2025-04",
+      "expected_value": "225",
+      "unit": "bps",
+      "published_at": "2025-04-16T16:00:00Z",
+      "source_id": "SYNTH_SURVEY",
+      "contributor_count": 38
+    },
+    {
+      "consensus_id": "CONS_US_NFP_2025_04",
+      "series_id": "US_NFP",
+      "reference_period": "2025-04",
+      "expected_value": "190",
+      "unit": "thousands",
+      "published_at": "2025-05-01T16:00:00Z",
+      "source_id": "SYNTH_SURVEY",
+      "contributor_count": 50
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "schema_version": "1.0.0",
+  "proposal_id": "PROP-2026-001",
+  "created_at": "2026-11-28T09:00:00Z",
+  "as_of": "2026-11-28T09:00:00Z",
+  "execution_mode": "PAPER",
+  "candidate_position": {
+    "ticker": "ACME",
+    "sector": "Industrials",
+    "side": "BUY",
+    "quantity": 500,
+    "limit_price_usd": 100.0,
+    "currency": "USD",
+    "horizon_days": 90,
+    "estimated_volatility_annual_pct": 22.0,
+    "average_daily_volume_shares": 250000,
+    "thesis_summary": "Add 5% paper allocation to ACME following backlog expansion and margin recovery."
+  },
+  "portfolio_state": {
+    "portfolio_id": "PAPER-CORE-01",
+    "as_of": "2026-11-28T08:55:00Z",
+    "nav_usd": 1000000.0,
+    "cash_usd": 200000.0,
+    "current_estimated_var_95_pct": 2.4,
+    "holdings": [
+      {
+        "ticker": "ACME",
+        "sector": "Industrials",
+        "quantity": 200,
+        "market_price_usd": 100.0,
+        "market_value_usd": 20000.0,
+        "volatility_annual_pct": 22.0
+      },
+      {
+        "ticker": "INDX",
+        "sector": "Industrials",
+        "quantity": 1000,
+        "market_price_usd": 100.0,
+        "market_value_usd": 100000.0,
+        "volatility_annual_pct": 18.0
+      },
+      {
+        "ticker": "HLTH",
+        "sector": "Healthcare",
+        "quantity": 2000,
+        "market_price_usd": 150.0,
+        "market_value_usd": 300000.0,
+        "volatility_annual_pct": 16.0
+      },
+      {
+        "ticker": "TECH",
+        "sector": "Technology",
+        "quantity": 1900,
+        "market_price_usd": 200.0,
+        "market_value_usd": 380000.0,
+        "volatility_annual_pct": 28.0
+      }
+    ]
+  },
+  "risk_policy": {
+    "schema_version": "1.0.0",
+    "policy_id": "risk-policy-paper-v1",
+    "max_single_position_weight_pct": 10.0,
+    "max_sector_weight_pct": 25.0,
+    "max_gross_exposure_pct": 100.0,
+    "min_cash_reserve_pct": 10.0,
+    "max_estimated_var_95_pct": 4.5,
+    "max_adv_participation_pct": 5.0,
+    "min_verified_citation_ratio": 0.5,
+    "max_fabricated_citations": 0,
+    "restricted_tickers": [
+      "RESTRICTED1",
+      "SANCTIONED"
+    ],
+    "allow_live_execution": false
+  },
+  "research_briefs": [
+    {
+      "brief_id": "BRIEF-ACME-Q3",
+      "title": "ACME Q3 2026 Synthetic Operating Update",
+      "source": "Synthetic Filings Archive",
+      "published_at": "2026-11-20T14:00:00Z",
+      "stance_hint": "bullish",
+      "snippets": [
+        {
+          "evidence_id": "EV-ACME-001",
+          "text": "Order backlog grew 14.5% year-over-year to $420M across grid automation contracts.",
+          "metric_name": "backlog_yoy_pct",
+          "metric_value": 14.5,
+          "unit": "pct"
+        },
+        {
+          "evidence_id": "EV-ACME-002",
+          "text": "Operating margin expanded by 120 bps to 16.2% due to lower input freight costs.",
+          "metric_name": "operating_margin_pct",
+          "metric_value": 16.2,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "brief_id": "BRIEF-ACME-RISKS",
+      "title": "ACME Synthetic Supply Chain & Valuation Review",
+      "source": "Synthetic Independent Research",
+      "published_at": "2026-11-24T10:30:00Z",
+      "stance_hint": "bearish",
+      "snippets": [
+        {
+          "evidence_id": "EV-ACME-003",
+          "text": "Forward EV/EBITDA stands at 15.8x versus a 5-year peer median of 13.5x.",
+          "metric_name": "forward_ev_ebitda",
+          "metric_value": 15.8,
+          "unit": "multiple"
+        },
+        {
+          "evidence_id": "EV-ACME-004",
+          "text": "Top two municipal customers account for 28% of scheduled Q4 deliveries.",
+          "metric_name": "top2_customer_share_pct",
+          "metric_value": 28.0,
+          "unit": "pct"
+        }
+      ]
+    }
+  ]
+}

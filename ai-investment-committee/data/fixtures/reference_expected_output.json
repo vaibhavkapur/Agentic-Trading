@@ -1,0 +1,32 @@
+{
+  "description": "Independent hand-calculated expected oracle for valid_reference_proposal.json (parametric 1-day 95% z=1.6448536, 252 trading days)",
+  "proposal_id": "PROP-2026-001",
+  "expected_metrics": {
+    "trade_notional_usd": 50000.0,
+    "pro_forma_ticker_value_usd": 70000.0,
+    "pro_forma_ticker_weight_pct": 7.0,
+    "pro_forma_sector_value_usd": 170000.0,
+    "pro_forma_sector_weight_pct": 17.0,
+    "pro_forma_gross_exposure_usd": 850000.0,
+    "pro_forma_gross_exposure_pct": 85.0,
+    "pro_forma_cash_usd": 150000.0,
+    "pro_forma_cash_reserve_pct": 15.0,
+    "adv_participation_pct": 0.2,
+    "incremental_var_95_pct": 0.114,
+    "pro_forma_estimated_var_95_pct": 2.514
+  },
+  "tolerances": {
+    "percentage_abs": 0.005,
+    "usd_abs": 0.01
+  },
+  "expected_verdict": "PASS",
+  "expected_violated_rules": [],
+  "expected_decision_status_before_human": "AWAITING_HUMAN_APPROVAL",
+  "expected_decision_status_after_human_approve": "APPROVED_FOR_PAPER_ONLY",
+  "expected_invariants": {
+    "execution_capability": "NONE_PAPER_ONLY",
+    "all_claims_cited_or_uncertain": true,
+    "fabricated_citations": 0,
+    "prompt_injection_detected": false
+  }
+}

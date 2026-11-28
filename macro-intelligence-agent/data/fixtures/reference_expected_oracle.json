@@ -1,0 +1,65 @@
+{
+  "oracle_id": "hand_calculated_reference_cpi_oracle_v1",
+  "tolerance": "0.0001",
+  "description": "Independent hand-calculated expected results for reference_cpi_release.json across two historical cutoffs (pre-revision T1 and post-revision T2).",
+  "cutoffs": {
+    "T1_initial_only": {
+      "as_of_utc": "2025-04-10T13:00:00Z",
+      "series_group": "US_INFLATION_POLICY",
+      "expected_visible_release_ids": ["US_CPI_2025_03:v1_initial"],
+      "expected_gated_out_count": 3,
+      "expected_figures": {
+        "US_CPI_HEADLINE:2025-03": {"value": "2.8", "unit": "percent_yoy", "vintage_id": "v1_initial"},
+        "US_CPI_CORE:2025-03": {"value": "3.1", "unit": "percent_yoy", "vintage_id": "v1_initial"}
+      },
+      "expected_surprises": {
+        "US_CPI_HEADLINE:2025-03": {"surprise": "0.2", "direction": "above_consensus", "unit": "percent_yoy"},
+        "US_CPI_CORE:2025-03": {"surprise": "0.0", "direction": "in_line", "unit": "percent_yoy"}
+      },
+      "expected_revisions": [],
+      "expected_conflicts": 0,
+      "expected_abstentions": 0
+    },
+    "T2_post_revision_and_fomc": {
+      "as_of_utc": "2025-05-13T13:00:00Z",
+      "series_group": "US_INFLATION_POLICY",
+      "expected_visible_release_ids": [
+        "US_CPI_2025_03:v1_initial",
+        "FOMC_STMT_2025_05:v1_statement",
+        "US_CPI_2025_03:v2_revised"
+      ],
+      "expected_gated_out_count": 1,
+      "expected_latest_figures": {
+        "US_CPI_HEADLINE:2025-03": {"value": "2.9", "unit": "percent_yoy", "vintage_id": "v2_revised"},
+        "US_CPI_CORE:2025-03": {"value": "3.0", "unit": "percent_yoy", "vintage_id": "v2_revised"},
+        "FED_FUNDS_TARGET_UPPER:2025-05": {"value": "4.50", "unit": "percent_rate", "vintage_id": "v1_statement"}
+      },
+      "expected_surprises": {
+        "US_CPI_HEADLINE:2025-03": {"surprise": "0.3", "direction": "above_consensus", "unit": "percent_yoy"},
+        "US_CPI_CORE:2025-03": {"surprise": "-0.1", "direction": "below_consensus", "unit": "percent_yoy"},
+        "FED_FUNDS_TARGET_UPPER:2025-05": {"surprise": "0.00", "direction": "in_line", "unit": "percent_rate", "converted_from_unit": "bps"}
+      },
+      "expected_revisions": [
+        {
+          "series_id": "US_CPI_HEADLINE",
+          "reference_period": "2025-03",
+          "prior_value": "2.8",
+          "current_value": "2.9",
+          "delta": "0.1",
+          "direction": "upward_revision"
+        },
+        {
+          "series_id": "US_CPI_CORE",
+          "reference_period": "2025-03",
+          "prior_value": "3.1",
+          "current_value": "3.0",
+          "delta": "-0.1",
+          "direction": "downward_revision"
+        }
+      ],
+      "expected_policy_stances": ["hawkish", "data_dependent"],
+      "expected_conflicts": 0,
+      "expected_abstentions": 0
+    }
+  }
+}

@@ -1,0 +1,368 @@
+{
+  "brief": {
+    "abstentions": [
+      {
+        "abstention_id": "abs_f48cc6aaa55084f9",
+        "explanation": "Abstained from surprise calculation for EU_HICP_HEADLINE (2025-04) because actual unit 'percent_mom' is incompatible with consensus unit 'percent_yoy'.",
+        "reason_code": "UNIT_MISMATCH",
+        "related_conflict_id": "cnf_d735c35a329d5434",
+        "scope": "surprise:EU_HICP_HEADLINE:2025-04"
+      },
+      {
+        "abstention_id": "abs_beda0cd306f55d76",
+        "explanation": "Abstained from selecting a canonical value or surprise for US_NFP (2025-04) due to unresolved conflicting_reports.",
+        "reason_code": "CONFLICTING_REPORTS",
+        "related_conflict_id": "cnf_d9a41e0c7f81ed90",
+        "scope": "metric:US_NFP:2025-04"
+      }
+    ],
+    "as_of_utc": "2025-05-02T13:00:00Z",
+    "brief_id": "brf_ba7f7646437091e3",
+    "citations_index": {
+      "cit_4329ab5663d9db0b": {
+        "char_end": 91,
+        "char_start": 62,
+        "citation_id": "cit_4329ab5663d9db0b",
+        "document_sha256": "f7c0661f3e569a9db8bd9f2efc0fd5846e3c1433d6f1bebc70b4b0610b7808c3",
+        "published_at": "2025-04-17T12:15:00Z",
+        "quote": "Disinflation is well on track",
+        "release_id": "ECB_RATE_2025_04",
+        "source_id": "SYNTH_ECB",
+        "vintage_id": "v1_decision"
+      },
+      "cit_5134b5771d9ce5fa": {
+        "char_end": 130,
+        "char_start": 116,
+        "citation_id": "cit_5134b5771d9ce5fa",
+        "document_sha256": "f7c0661f3e569a9db8bd9f2efc0fd5846e3c1433d6f1bebc70b4b0610b7808c3",
+        "published_at": "2025-04-17T12:15:00Z",
+        "quote": "data-dependent",
+        "release_id": "ECB_RATE_2025_04",
+        "source_id": "SYNTH_ECB",
+        "vintage_id": "v1_decision"
+      },
+      "cit_6261d53833079060": {
+        "char_end": 59,
+        "char_start": 14,
+        "citation_id": "cit_6261d53833079060",
+        "document_sha256": "2e3a978f25dc707e3cc389a265a00ecefad5f0765143acb9bb5f9245059a2d3f",
+        "published_at": "2025-05-02T12:30:10Z",
+        "quote": "US Nonfarm Payrolls increased by 185 thousand",
+        "release_id": "US_NFP_2025_04_WIRE_A",
+        "source_id": "SYNTH_WIRE_A",
+        "vintage_id": "v1_wire_a"
+      },
+      "cit_8af0a334c905f95a": {
+        "char_end": 28,
+        "char_start": 0,
+        "citation_id": "cit_8af0a334c905f95a",
+        "document_sha256": "b2b16249cfbecd78b9ae33e34ec243660e019f591d5c200323a9f842f2ed4960",
+        "published_at": "2025-05-02T09:00:00Z",
+        "quote": "Euro Area HICP rose 0.4% MoM",
+        "release_id": "EU_HICP_2025_04",
+        "source_id": "SYNTH_EUROSTAT",
+        "vintage_id": "v1_flash"
+      },
+      "cit_b484999c71bb0206": {
+        "char_end": 60,
+        "char_start": 30,
+        "citation_id": "cit_b484999c71bb0206",
+        "document_sha256": "f7c0661f3e569a9db8bd9f2efc0fd5846e3c1433d6f1bebc70b4b0610b7808c3",
+        "published_at": "2025-04-17T12:15:00Z",
+        "quote": "deposit facility rate at 2.50%",
+        "release_id": "ECB_RATE_2025_04",
+        "source_id": "SYNTH_ECB",
+        "vintage_id": "v1_decision"
+      },
+      "cit_cd385e996d4074f4": {
+        "char_end": 59,
+        "char_start": 14,
+        "citation_id": "cit_cd385e996d4074f4",
+        "document_sha256": "1ea83fe67a26cade01401ce1956187c5f5ec1f261f2f188f012bb0a225c707e4",
+        "published_at": "2025-05-02T12:30:12Z",
+        "quote": "US Nonfarm Payrolls increased by 245 thousand",
+        "release_id": "US_NFP_2025_04_WIRE_B",
+        "source_id": "SYNTH_WIRE_B",
+        "vintage_id": "v1_wire_b"
+      }
+    },
+    "conflicts": [
+      {
+        "citations": [
+          {
+            "char_end": 28,
+            "char_start": 0,
+            "citation_id": "cit_8af0a334c905f95a",
+            "document_sha256": "b2b16249cfbecd78b9ae33e34ec243660e019f591d5c200323a9f842f2ed4960",
+            "published_at": "2025-05-02T09:00:00Z",
+            "quote": "Euro Area HICP rose 0.4% MoM",
+            "release_id": "EU_HICP_2025_04",
+            "source_id": "SYNTH_EUROSTAT",
+            "vintage_id": "v1_flash"
+          }
+        ],
+        "conflict_id": "cnf_d735c35a329d5434",
+        "conflict_type": "unit_mismatch",
+        "description": "Unit mismatch between actual EU_HICP_HEADLINE (percent_mom) and consensus CONS_EU_HICP_YOY_MISMATCH (percent_yoy)",
+        "involved_release_ids": [
+          "EU_HICP_2025_04:v1_flash",
+          "CONS_EU_HICP_YOY_MISMATCH"
+        ],
+        "involved_values": [
+          "0.4 percent_mom",
+          "2.4 percent_yoy"
+        ],
+        "reference_period": "2025-04",
+        "series_id": "EU_HICP_HEADLINE"
+      },
+      {
+        "citations": [
+          {
+            "char_end": 59,
+            "char_start": 14,
+            "citation_id": "cit_6261d53833079060",
+            "document_sha256": "2e3a978f25dc707e3cc389a265a00ecefad5f0765143acb9bb5f9245059a2d3f",
+            "published_at": "2025-05-02T12:30:10Z",
+            "quote": "US Nonfarm Payrolls increased by 185 thousand",
+            "release_id": "US_NFP_2025_04_WIRE_A",
+            "source_id": "SYNTH_WIRE_A",
+            "vintage_id": "v1_wire_a"
+          },
+          {
+            "char_end": 59,
+            "char_start": 14,
+            "citation_id": "cit_cd385e996d4074f4",
+            "document_sha256": "1ea83fe67a26cade01401ce1956187c5f5ec1f261f2f188f012bb0a225c707e4",
+            "published_at": "2025-05-02T12:30:12Z",
+            "quote": "US Nonfarm Payrolls increased by 245 thousand",
+            "release_id": "US_NFP_2025_04_WIRE_B",
+            "source_id": "SYNTH_WIRE_B",
+            "vintage_id": "v1_wire_b"
+          }
+        ],
+        "conflict_id": "cnf_d9a41e0c7f81ed90",
+        "conflict_type": "conflicting_reports",
+        "description": "Competing reports disagree for US_NFP (2025-04): 185 thousands (SYNTH_WIRE_A); 245 thousands (SYNTH_WIRE_B)",
+        "involved_release_ids": [
+          "US_NFP_2025_04_WIRE_A:v1_wire_a",
+          "US_NFP_2025_04_WIRE_B:v1_wire_b"
+        ],
+        "involved_values": [
+          "185 thousands (SYNTH_WIRE_A)",
+          "245 thousands (SYNTH_WIRE_B)"
+        ],
+        "reference_period": "2025-04",
+        "series_id": "US_NFP"
+      }
+    ],
+    "executive_summary": "As of 2025-05-02T13:00:00Z for INTEGRATION_EDGE_CASES: Verified latest figures: ECB_DEPOSIT_RATE (2025-04)=2.50 percent_rate [cit_b484999c71bb0206], EU_HICP_HEADLINE (2025-04)=0.4 percent_mom [cit_8af0a334c905f95a]. Consensus comparison: ECB_DEPOSIT_RATE above_consensus (+0.25 percent_rate vs consensus 2.25). Central bank communication cues (2 cited): data_dependent, dovish. Detected 2 conflict/unit-mismatch issue(s); abstained on affected metrics.",
+    "figures": [
+      {
+        "citation": {
+          "char_end": 60,
+          "char_start": 30,
+          "citation_id": "cit_b484999c71bb0206",
+          "document_sha256": "f7c0661f3e569a9db8bd9f2efc0fd5846e3c1433d6f1bebc70b4b0610b7808c3",
+          "published_at": "2025-04-17T12:15:00Z",
+          "quote": "deposit facility rate at 2.50%",
+          "release_id": "ECB_RATE_2025_04",
+          "source_id": "SYNTH_ECB",
+          "vintage_id": "v1_decision"
+        },
+        "extraction_method": "grounded_structured_metric",
+        "figure_id": "fig_2178aab855041535",
+        "published_at": "2025-04-17T12:15:00Z",
+        "reference_period": "2025-04",
+        "release_id": "ECB_RATE_2025_04",
+        "series_id": "ECB_DEPOSIT_RATE",
+        "source_id": "SYNTH_ECB",
+        "unit": "percent_rate",
+        "value": "2.50",
+        "vintage_id": "v1_decision"
+      },
+      {
+        "citation": {
+          "char_end": 28,
+          "char_start": 0,
+          "citation_id": "cit_8af0a334c905f95a",
+          "document_sha256": "b2b16249cfbecd78b9ae33e34ec243660e019f591d5c200323a9f842f2ed4960",
+          "published_at": "2025-05-02T09:00:00Z",
+          "quote": "Euro Area HICP rose 0.4% MoM",
+          "release_id": "EU_HICP_2025_04",
+          "source_id": "SYNTH_EUROSTAT",
+          "vintage_id": "v1_flash"
+        },
+        "extraction_method": "grounded_structured_metric",
+        "figure_id": "fig_141f55e02bfcfc78",
+        "published_at": "2025-05-02T09:00:00Z",
+        "reference_period": "2025-04",
+        "release_id": "EU_HICP_2025_04",
+        "series_id": "EU_HICP_HEADLINE",
+        "source_id": "SYNTH_EUROSTAT",
+        "unit": "percent_mom",
+        "value": "0.4",
+        "vintage_id": "v1_flash"
+      }
+    ],
+    "limitations_notice": "Research and educational prototype only. All macro interpretations are structured hypotheses grounded in archived synthetic/public releases as of the stated UTC cutoff, not predictions, market-impact forecasts, or trading recommendations.",
+    "policy_signals": [
+      {
+        "citation": {
+          "char_end": 91,
+          "char_start": 62,
+          "citation_id": "cit_4329ab5663d9db0b",
+          "document_sha256": "f7c0661f3e569a9db8bd9f2efc0fd5846e3c1433d6f1bebc70b4b0610b7808c3",
+          "published_at": "2025-04-17T12:15:00Z",
+          "quote": "Disinflation is well on track",
+          "release_id": "ECB_RATE_2025_04",
+          "source_id": "SYNTH_ECB",
+          "vintage_id": "v1_decision"
+        },
+        "matched_phrase": "Disinflation is well on track",
+        "release_id": "ECB_RATE_2025_04",
+        "signal_id": "pol_0257b33926673138",
+        "stance": "dovish",
+        "topic": "easing_bias",
+        "vintage_id": "v1_decision"
+      },
+      {
+        "citation": {
+          "char_end": 130,
+          "char_start": 116,
+          "citation_id": "cit_5134b5771d9ce5fa",
+          "document_sha256": "f7c0661f3e569a9db8bd9f2efc0fd5846e3c1433d6f1bebc70b4b0610b7808c3",
+          "published_at": "2025-04-17T12:15:00Z",
+          "quote": "data-dependent",
+          "release_id": "ECB_RATE_2025_04",
+          "source_id": "SYNTH_ECB",
+          "vintage_id": "v1_decision"
+        },
+        "matched_phrase": "data-dependent",
+        "release_id": "ECB_RATE_2025_04",
+        "signal_id": "pol_945ddafb97989f88",
+        "stance": "data_dependent",
+        "topic": "reaction_function",
+        "vintage_id": "v1_decision"
+      }
+    ],
+    "revisions": [],
+    "scenarios": [
+      {
+        "condition": "If upside macro surprises, upward benchmark revisions, or elevated-inflation policy language persist across upcoming vintages.",
+        "confidence_note": "Qualitative hypothesis conditional on cited vintages; no market-impact estimate is made.",
+        "disclaimer": "Hypothesis only; not a forecast, market-impact estimate, or trade recommendation.",
+        "hypothesis_id": "hyp_d5c7e178d4760abc",
+        "interpretation": "Hypothesis: policymakers may emphasize maintaining restrictive settings longer before adjusting rates; this reflects cited release language rather than a forecast.",
+        "label": "Policy Restraint Persistence Hypothesis",
+        "supporting_citation_ids": [
+          "cit_b484999c71bb0206"
+        ]
+      },
+      {
+        "condition": "If downward core revisions or disinflation/data-dependent communication cues are reinforced by subsequent official releases.",
+        "confidence_note": "Qualitative hypothesis conditional on cited vintages; no market-impact estimate is made.",
+        "disclaimer": "Hypothesis only; not a forecast, market-impact estimate, or trade recommendation.",
+        "hypothesis_id": "hyp_729accdc31c8a61f",
+        "interpretation": "Hypothesis: communication framing preserves optionality to calibrate policy meeting-by-meeting as incoming vintages clarify underlying momentum.",
+        "label": "Data-Dependent Normalization Hypothesis",
+        "supporting_citation_ids": [
+          "cit_4329ab5663d9db0b",
+          "cit_5134b5771d9ce5fa"
+        ]
+      },
+      {
+        "condition": "While competing reports or incompatible units remain unresolved for one or more series.",
+        "confidence_note": "Explicit abstention guardrail active.",
+        "disclaimer": "Hypothesis only; not a forecast, market-impact estimate, or trade recommendation.",
+        "hypothesis_id": "hyp_2be65d7b1bc662b0",
+        "interpretation": "Hypothesis: macro interpretation for disputed series should remain suspended (abstained) until an official statistical release reconciles units and figures.",
+        "label": "Pending Data Reconciliation Hypothesis",
+        "supporting_citation_ids": [
+          "cit_6261d53833079060",
+          "cit_8af0a334c905f95a",
+          "cit_cd385e996d4074f4"
+        ]
+      }
+    ],
+    "security_findings": [],
+    "series_group": "INTEGRATION_EDGE_CASES",
+    "surprises": [
+      {
+        "actual_figure_id": "fig_2178aab855041535",
+        "actual_value": "2.50",
+        "citation": {
+          "char_end": 60,
+          "char_start": 30,
+          "citation_id": "cit_b484999c71bb0206",
+          "document_sha256": "f7c0661f3e569a9db8bd9f2efc0fd5846e3c1433d6f1bebc70b4b0610b7808c3",
+          "published_at": "2025-04-17T12:15:00Z",
+          "quote": "deposit facility rate at 2.50%",
+          "release_id": "ECB_RATE_2025_04",
+          "source_id": "SYNTH_ECB",
+          "vintage_id": "v1_decision"
+        },
+        "consensus_id": "CONS_ECB_RATE_BPS",
+        "consensus_value": "2.25",
+        "converted_from_unit": "bps",
+        "direction": "above_consensus",
+        "reference_period": "2025-04",
+        "series_id": "ECB_DEPOSIT_RATE",
+        "surprise_id": "srp_0fe61510528eb483",
+        "surprise_value": "0.25",
+        "unit": "percent_rate"
+      }
+    ],
+    "verification_passed": true
+  },
+  "diagnostics": {
+    "counters": {
+      "abstentions_recorded": 2,
+      "conflicts_detected": 2,
+      "consensus_visible": 3,
+      "figures_canonical": 2,
+      "figures_extracted_raw": 4,
+      "policy_signals_extracted": 2,
+      "releases_gated_out": 0,
+      "releases_visible": 4,
+      "revisions_computed": 0,
+      "surprises_computed": 1,
+      "verification_passed": 1
+    },
+    "events": [
+      {
+        "as_of_utc": "2025-05-02T13:00:00Z",
+        "config_sha256": "8dbee4d83ad246666380ef53b9faf2b2d2c1b6d8ecdfb82588dcc000735fbc97",
+        "event": "run_started",
+        "level": "INFO",
+        "seq": 1,
+        "series_group": "INTEGRATION_EDGE_CASES"
+      },
+      {
+        "event": "publication_gate_applied",
+        "gated_out_count": 0,
+        "level": "INFO",
+        "seq": 2,
+        "visible_count": 4
+      },
+      {
+        "brief_id": "brf_ba7f7646437091e3",
+        "event": "verification_completed",
+        "level": "INFO",
+        "passed": true,
+        "seq": 3
+      }
+    ]
+  },
+  "metadata": {
+    "as_of_utc": "2025-05-02T13:00:00Z",
+    "config_sha256": "8dbee4d83ad246666380ef53b9faf2b2d2c1b6d8ecdfb82588dcc000735fbc97",
+    "config_version": "1.0.0",
+    "input_sha256": "1ed3083c49265b65610072f5a2d042ef819106c35df4787efbb9666e48a694cd",
+    "model_calls_used": 1,
+    "model_provider": "deterministic_mock",
+    "python_version": "3.9.6",
+    "run_id": "run_a4a9b1d64fcead74",
+    "schema_version": "1.0.0",
+    "seed": 42
+  }
+}

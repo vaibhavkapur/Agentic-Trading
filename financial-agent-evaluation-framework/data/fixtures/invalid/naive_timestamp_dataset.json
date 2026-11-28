@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "dataset_id": "invalid_naive_ts",
+  "dataset_version": "1.0.0",
+  "split": "dev",
+  "tasks": [
+    {
+      "task_id": "BAD_TS_001",
+      "version": "1.0.0",
+      "split": "dev",
+      "category": "financial_arithmetic",
+      "prompt": "Compute ACME revenue with a naive timestamp missing UTC offset.",
+      "as_of_utc": "2026-02-16T12:00:00",
+      "allowed_tools": ["get_filing_metric"]
+    }
+  ]
+}

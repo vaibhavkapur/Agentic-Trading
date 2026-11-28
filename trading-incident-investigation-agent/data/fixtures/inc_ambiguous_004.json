@@ -1,0 +1,221 @@
+{
+  "schema_version": "1.0.0",
+  "incident_id": "INC-AMB-004",
+  "title": "Elevated order latency with competing venue-throttling and OMS-GC-pause signals",
+  "environment": "synthetic",
+  "reported_at_utc": "2026-04-18T15:21:00Z",
+  "metadata": {
+    "scenario": "ambiguous_root_cause",
+    "synthetic_provenance": "M4 boundary scenario testing explicit uncertainty surfacing"
+  },
+  "traces": [
+    {
+      "span_id": "sp-amb-001",
+      "trace_id": "tr-amb-400",
+      "parent_span_id": null,
+      "service": "oms-core",
+      "operation": "RouteOrder",
+      "start_time_utc": "2026-04-18T15:20:01.000Z",
+      "duration_ms": 620.0,
+      "status": "ERROR",
+      "status_message": "stop-the-world GC pause delayed order dispatch by 590ms",
+      "attributes": {
+        "order.id": "ORD-SIM-4001",
+        "gc.pause_ms": 590.0
+      }
+    },
+    {
+      "span_id": "sp-amb-002",
+      "trace_id": "tr-amb-401",
+      "parent_span_id": null,
+      "service": "venue-adapter",
+      "operation": "SendVenueOrder",
+      "start_time_utc": "2026-04-18T15:20:01.050Z",
+      "duration_ms": 615.0,
+      "status": "ERROR",
+      "status_message": "exchange venue throttle backoff returned HTTP 429 / VENUE_THROTTLE",
+      "attributes": {
+        "order.id": "ORD-SIM-4002",
+        "venue": "SIMY"
+      }
+    },
+    {
+      "span_id": "sp-amb-003",
+      "trace_id": "tr-amb-402",
+      "parent_span_id": null,
+      "service": "oms-core",
+      "operation": "RouteOrder",
+      "start_time_utc": "2026-04-18T15:20:01.200Z",
+      "duration_ms": 8.0,
+      "status": "OK",
+      "status_message": null,
+      "attributes": {
+        "order.id": "ORD-SIM-4003"
+      }
+    },
+    {
+      "span_id": "sp-amb-004",
+      "trace_id": "tr-amb-403",
+      "parent_span_id": null,
+      "service": "venue-adapter",
+      "operation": "SendVenueOrder",
+      "start_time_utc": "2026-04-18T15:20:01.250Z",
+      "duration_ms": 9.5,
+      "status": "OK",
+      "status_message": null,
+      "attributes": {
+        "order.id": "ORD-SIM-4004"
+      }
+    }
+  ],
+  "logs": [
+    {
+      "log_id": "lg-amb-001",
+      "timestamp_utc": "2026-04-18T15:20:01.010Z",
+      "service": "oms-core",
+      "severity": "ERROR",
+      "message": "JVM GC pause exceeded 550ms during order routing batch",
+      "trace_id": "tr-amb-400",
+      "span_id": "sp-amb-001",
+      "order_id": "ORD-SIM-4001",
+      "attributes": {}
+    },
+    {
+      "log_id": "lg-amb-002",
+      "timestamp_utc": "2026-04-18T15:20:01.060Z",
+      "service": "venue-adapter",
+      "severity": "ERROR",
+      "message": "Venue SIMY responded with VENUE_THROTTLE rate backoff",
+      "trace_id": "tr-amb-401",
+      "span_id": "sp-amb-002",
+      "order_id": "ORD-SIM-4002",
+      "attributes": {}
+    }
+  ],
+  "oms_events": [
+    {
+      "event_id": "oms-amb-001",
+      "timestamp_utc": "2026-04-18T15:20:01.620Z",
+      "service": "oms-core",
+      "order_id": "ORD-SIM-4001",
+      "symbol": "SIMD",
+      "venue": "SIMY",
+      "event_type": "ORDER_TIMEOUT",
+      "latency_ms": 620.0,
+      "notional_usd": 30000.0,
+      "reject_code": "OMS_GC_STALL",
+      "trace_id": "tr-amb-400",
+      "message": "Order delayed beyond budget during oms-core GC pause"
+    },
+    {
+      "event_id": "oms-amb-002",
+      "timestamp_utc": "2026-04-18T15:20:01.665Z",
+      "service": "venue-adapter",
+      "order_id": "ORD-SIM-4002",
+      "symbol": "SIMD",
+      "venue": "SIMY",
+      "event_type": "THROTTLE_TRIGGERED",
+      "latency_ms": 615.0,
+      "notional_usd": 31000.0,
+      "reject_code": "VENUE_THROTTLE",
+      "trace_id": "tr-amb-401",
+      "message": "Order throttled by external venue adapter SIMY"
+    }
+  ],
+  "alerts": [
+    {
+      "alert_id": "al-amb-001",
+      "timestamp_utc": "2026-04-18T15:20:03.000Z",
+      "rule_id": "ALERT_OMS_GC_PAUSE",
+      "service": "oms-core",
+      "severity": "ERROR",
+      "title": "OMS GC Pause Spike",
+      "description": "Single GC pause exceeded 500ms on oms-core instance 2",
+      "metric_name": "gc_pause_ms",
+      "metric_value": 590.0,
+      "threshold_value": 250.0,
+      "unit": "ms",
+      "trace_id": "tr-amb-400",
+      "labels": {}
+    },
+    {
+      "alert_id": "al-amb-002",
+      "timestamp_utc": "2026-04-18T15:20:03.050Z",
+      "rule_id": "ALERT_VENUE_THROTTLE",
+      "service": "venue-adapter",
+      "severity": "ERROR",
+      "title": "Exchange Venue Throttle Backoff",
+      "description": "Venue SIMY returned throttle backoff responses",
+      "metric_name": "venue_throttle_count",
+      "metric_value": 12.0,
+      "threshold_value": 5.0,
+      "unit": "count",
+      "trace_id": "tr-amb-401",
+      "labels": {
+        "venue": "SIMY"
+      }
+    }
+  ],
+  "runbooks": [
+    {
+      "runbook_id": "RB-OMS-GC-006",
+      "version": "1.0.0",
+      "title": "OMS JVM Garbage Collection Pause",
+      "service": "oms-core",
+      "failure_mode": "internal_oms_gc_pause",
+      "symptoms": [
+        "GC pause",
+        "stop-the-world",
+        "RouteOrder",
+        "OMS_GC_STALL"
+      ],
+      "alert_rules": [
+        "ALERT_OMS_GC_PAUSE"
+      ],
+      "reject_codes": [
+        "OMS_GC_STALL"
+      ],
+      "diagnostic_checks": [
+        "Correlate GC safepoint timestamps across all oms-core replicas",
+        "Verify whether non-SIMY venues experienced identical latency spikes"
+      ],
+      "recommended_actions": [
+        "shift_traffic_to_standby_oms_sim"
+      ],
+      "expected_recovery_signals": [
+        "gc_pause_ms < 50ms"
+      ],
+      "notes": "Confirm single-venue vs multi-venue impact before failing over OMS."
+    },
+    {
+      "runbook_id": "RB-VENUE-THROTTLE-007",
+      "version": "1.0.0",
+      "title": "Exchange Venue Throttling",
+      "service": "venue-adapter",
+      "failure_mode": "exchange_venue_throttling",
+      "symptoms": [
+        "venue throttle",
+        "VENUE_THROTTLE",
+        "SendVenueOrder",
+        "HTTP 429"
+      ],
+      "alert_rules": [
+        "ALERT_VENUE_THROTTLE"
+      ],
+      "reject_codes": [
+        "VENUE_THROTTLE"
+      ],
+      "diagnostic_checks": [
+        "Inspect SIMY venue status feed and per-venue throttle counters",
+        "Compare latency across SIMX vs SIMY adapters"
+      ],
+      "recommended_actions": [
+        "enable_venue_pacing_backoff_sim"
+      ],
+      "expected_recovery_signals": [
+        "venue_throttle_count == 0"
+      ],
+      "notes": "If OMS GC pauses occur simultaneously, disambiguate before changing routing."
+    }
+  ]
+}

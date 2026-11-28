@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "financial-agent-evaluation-framework"
+version = "0.1.0"
+description = "Deterministic evaluation framework for measuring correctness, citation faithfulness, tool reliability, and adversarial resilience across financial agent tasks."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "Trading-Agentic Contributors" }
+]
+dependencies = [
+    "pydantic==2.14.4",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest==8.4.2",
+]
+
+[project.scripts]
+fin-eval = "fin_eval.cli:main"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-ra --strict-markers"
+markers = [
+    "unit: Deterministic unit tests for pure domain logic",
+    "integration: End-to-end mock runtime, failure injection, and runner scenarios",
+    "boundary: Boundary, stochastic variance, and invalid-input tests",
+    "reproducibility: Determinism and replay verification tests",
+    "operational: Configuration, diagnostics, and error-recovery tests",
+]

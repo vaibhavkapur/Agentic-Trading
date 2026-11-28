@@ -1,0 +1,30 @@
+name: Macro Intelligence Agent CI
+
+on:
+  push:
+    paths:
+      - "macro-intelligence-agent/**"
+      - ".github/workflows/macro-intelligence-agent.yml"
+  pull_request:
+    paths:
+      - "macro-intelligence-agent/**"
+      - ".github/workflows/macro-intelligence-agent.yml"
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.9", "3.11", "3.12"]
+    defaults:
+      run:
+        working-directory: macro-intelligence-agent
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Run unit, integration, security, and gold-set CI checks
+        run: bash scripts/ci_check.sh

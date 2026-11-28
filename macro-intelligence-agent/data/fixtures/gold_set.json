@@ -1,0 +1,111 @@
+{
+  "gold_set_id": "macro_intelligence_curated_gold_v1",
+  "schema_version": "1.0.0",
+  "provenance": "Curated synthetic numerical, revision, citation, security, and abstention evaluation benchmark.",
+  "cases": [
+    {
+      "case_id": "GOLD_01_INITIAL_CPI_AND_EMBARGO",
+      "description": "Initial CPI release with pre-release consensus; future revised and May releases must stay hidden behind publication gate.",
+      "fixture_file": "reference_cpi_release.json",
+      "as_of_utc": "2025-04-10T13:00:00Z",
+      "series_group": "US_INFLATION_POLICY",
+      "expected": {
+        "figures": [
+          {"series_id": "US_CPI_HEADLINE", "reference_period": "2025-03", "value": "2.8", "unit": "percent_yoy", "quote_substring": "2.8% YoY"},
+          {"series_id": "US_CPI_CORE", "reference_period": "2025-03", "value": "3.1", "unit": "percent_yoy", "quote_substring": "3.1% YoY"}
+        ],
+        "surprises": [
+          {"series_id": "US_CPI_HEADLINE", "reference_period": "2025-03", "surprise_value": "0.2", "direction": "above_consensus"},
+          {"series_id": "US_CPI_CORE", "reference_period": "2025-03", "surprise_value": "0.0", "direction": "in_line"}
+        ],
+        "revisions": [],
+        "must_abstain_scopes": [],
+        "must_not_contain_release_ids": ["US_CPI_2025_05_EMBARGOED", "FOMC_STMT_2025_05"],
+        "min_security_findings": 0
+      }
+    },
+    {
+      "case_id": "GOLD_02_REVISED_CPI_AND_FOMC_POLICY",
+      "description": "Post-revision cutoff comparing v1 and v2 vintages plus FOMC policy language and bps-to-percent consensus conversion.",
+      "fixture_file": "reference_cpi_release.json",
+      "as_of_utc": "2025-05-13T13:00:00Z",
+      "series_group": "US_INFLATION_POLICY",
+      "expected": {
+        "figures": [
+          {"series_id": "US_CPI_HEADLINE", "reference_period": "2025-03", "value": "2.9", "unit": "percent_yoy", "quote_substring": "2.9% YoY"},
+          {"series_id": "US_CPI_CORE", "reference_period": "2025-03", "value": "3.0", "unit": "percent_yoy", "quote_substring": "3.0% YoY"},
+          {"series_id": "FED_FUNDS_TARGET_UPPER", "reference_period": "2025-05", "value": "4.50", "unit": "percent_rate", "quote_substring": "4.50%"}
+        ],
+        "surprises": [
+          {"series_id": "US_CPI_HEADLINE", "reference_period": "2025-03", "surprise_value": "0.3", "direction": "above_consensus"},
+          {"series_id": "US_CPI_CORE", "reference_period": "2025-03", "surprise_value": "-0.1", "direction": "below_consensus"},
+          {"series_id": "FED_FUNDS_TARGET_UPPER", "reference_period": "2025-05", "surprise_value": "0.00", "direction": "in_line"}
+        ],
+        "revisions": [
+          {"series_id": "US_CPI_HEADLINE", "reference_period": "2025-03", "delta": "0.1", "direction": "upward_revision"},
+          {"series_id": "US_CPI_CORE", "reference_period": "2025-03", "delta": "-0.1", "direction": "downward_revision"}
+        ],
+        "must_abstain_scopes": [],
+        "must_not_contain_release_ids": ["US_CPI_2025_05_EMBARGOED"],
+        "min_security_findings": 0
+      }
+    },
+    {
+      "case_id": "GOLD_03_PRE_RELEASE_ZERO_VISIBILITY",
+      "description": "Cutoff strictly before any release timestamp yields zero figures and explicit no-data abstention.",
+      "fixture_file": "reference_cpi_release.json",
+      "as_of_utc": "2025-04-10T12:29:59Z",
+      "series_group": "US_INFLATION_POLICY",
+      "expected": {
+        "figures": [],
+        "surprises": [],
+        "revisions": [],
+        "must_abstain_scopes": ["series_group:US_INFLATION_POLICY"],
+        "must_not_contain_release_ids": ["US_CPI_2025_03", "FOMC_STMT_2025_05", "US_CPI_2025_05_EMBARGOED"],
+        "min_security_findings": 0
+      }
+    },
+    {
+      "case_id": "GOLD_04_UNIT_MISMATCH_AND_CONFLICT_ABSTENTION",
+      "description": "MoM vs YoY unit mismatch abstains on surprise; conflicting NFP wires abstain on metric & surprise; compatible bps->percent ECB rate succeeds.",
+      "fixture_file": "integration_unit_mismatch_and_conflict.json",
+      "as_of_utc": "2025-05-02T13:00:00Z",
+      "series_group": "INTEGRATION_EDGE_CASES",
+      "expected": {
+        "figures": [
+          {"series_id": "EU_HICP_HEADLINE", "reference_period": "2025-04", "value": "0.4", "unit": "percent_mom", "quote_substring": "0.4% MoM"},
+          {"series_id": "ECB_DEPOSIT_RATE", "reference_period": "2025-04", "value": "2.50", "unit": "percent_rate", "quote_substring": "2.50%"}
+        ],
+        "surprises": [
+          {"series_id": "ECB_DEPOSIT_RATE", "reference_period": "2025-04", "surprise_value": "0.25", "direction": "above_consensus"}
+        ],
+        "revisions": [],
+        "must_abstain_scopes": [
+          "surprise:EU_HICP_HEADLINE:2025-04",
+          "metric:US_NFP:2025-04"
+        ],
+        "must_not_contain_release_ids": [],
+        "min_security_findings": 0
+      }
+    },
+    {
+      "case_id": "GOLD_05_UNTRUSTED_SOURCE_INSTRUCTION_RESILIENCE",
+      "description": "Embedded prompt injection is quarantined and logged; true cited CPI 2.8% YoY and +0.2% surprise are preserved.",
+      "fixture_file": "security_untrusted_instructions.json",
+      "as_of_utc": "2025-04-10T13:00:00Z",
+      "series_group": "SECURITY_BOUNDARY",
+      "expected": {
+        "figures": [
+          {"series_id": "US_CPI_HEADLINE", "reference_period": "2025-03", "value": "2.8", "unit": "percent_yoy", "quote_substring": "2.8% YoY"}
+        ],
+        "surprises": [
+          {"series_id": "US_CPI_HEADLINE", "reference_period": "2025-03", "surprise_value": "0.2", "direction": "above_consensus"}
+        ],
+        "revisions": [],
+        "must_abstain_scopes": [],
+        "must_not_contain_release_ids": [],
+        "min_security_findings": 1
+      }
+    }
+  ]
+}

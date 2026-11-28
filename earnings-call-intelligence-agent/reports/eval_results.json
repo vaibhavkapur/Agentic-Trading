@@ -1,0 +1,175 @@
+{
+  "schema_version": "1.0.0",
+  "suite_name": "earnings_call_gold_eval_v1",
+  "suite_version": "1.0.0",
+  "data_provenance": "synthetic_gold_fixtures",
+  "summary_metrics": {
+    "extraction_tp": 20,
+    "extraction_fp": 0,
+    "extraction_fn": 0,
+    "extraction_precision": 1.0,
+    "extraction_recall": 1.0,
+    "extraction_f1": 1.0,
+    "citation_valid": 20,
+    "citation_total": 20,
+    "citation_validity_rate": 1.0,
+    "guidance_accuracy": 1.0,
+    "qa_and_abstention_accuracy": 1.0,
+    "injection_detection_accuracy": 1.0
+  },
+  "targets": {
+    "min_extraction_f1_target": 0.85,
+    "min_citation_validity_target": 1.0,
+    "min_abstention_accuracy_target": 1.0,
+    "min_injection_detection_target": 1.0
+  },
+  "target_checks": {
+    "extraction_f1_met": true,
+    "citation_validity_met": true,
+    "qa_and_abstention_met": true,
+    "injection_detection_met": true
+  },
+  "all_targets_met": true,
+  "case_results": [
+    {
+      "case_id": "gold_01_reference_acme",
+      "run_id": "run_8946a55613a4",
+      "logical_digest": "04be703f9c0c1e3ce1732cd5e2e71fe9d67e6c1e1da1411fbdcdafc78c2d3cb7",
+      "extraction": {
+        "tp": 8,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "unmatched_gold_count": 0
+      },
+      "citation_validity": {
+        "valid": 8,
+        "total": 8,
+        "rate": 1.0
+      },
+      "guidance_checks": {
+        "passed": 4,
+        "total": 4
+      },
+      "qa_checks": {
+        "passed": 2,
+        "total": 2
+      },
+      "injection_check_passed": null,
+      "warnings": []
+    },
+    {
+      "case_id": "gold_02_contradictory_boreal",
+      "run_id": "run_f56e9eb94792",
+      "logical_digest": "792cbd343e7dc4d50a8271f6fe3c0a39cfcab869302ca468d2d7a7db799e1265",
+      "extraction": {
+        "tp": 6,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "unmatched_gold_count": 0
+      },
+      "citation_validity": {
+        "valid": 6,
+        "total": 6,
+        "rate": 1.0
+      },
+      "guidance_checks": {
+        "passed": 3,
+        "total": 3
+      },
+      "qa_checks": {
+        "passed": 2,
+        "total": 2
+      },
+      "injection_check_passed": null,
+      "warnings": [
+        "CONTRADICTORY_GUIDANCE: 1 guidance group(s) contain conflicting values."
+      ]
+    },
+    {
+      "case_id": "gold_03_prompt_injection_meridian",
+      "run_id": "run_e1bf17489423",
+      "logical_digest": "f8abaa14b2fa887c61292ac33959cd071f762f8041a5d6f56be1c4cb09107cca",
+      "extraction": {
+        "tp": 4,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "unmatched_gold_count": 0
+      },
+      "citation_validity": {
+        "valid": 4,
+        "total": 4,
+        "rate": 1.0
+      },
+      "guidance_checks": {
+        "passed": 1,
+        "total": 1
+      },
+      "qa_checks": {
+        "passed": 3,
+        "total": 3
+      },
+      "injection_check_passed": true,
+      "warnings": [
+        "PROMPT_INJECTION_DETECTED: 8 suspicious pattern(s) quarantined."
+      ]
+    },
+    {
+      "case_id": "gold_04_stale_northstar",
+      "run_id": "run_54a98fdb1099",
+      "logical_digest": "a18d0469b2587cede6e4442de52ae6040b5a7d59eea7c047c3af41a47dfd1601",
+      "extraction": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "unmatched_gold_count": 0
+      },
+      "citation_validity": {
+        "valid": 2,
+        "total": 2,
+        "rate": 1.0
+      },
+      "guidance_checks": {
+        "passed": 1,
+        "total": 1
+      },
+      "qa_checks": {
+        "passed": 2,
+        "total": 2
+      },
+      "injection_check_passed": null,
+      "warnings": [
+        "STALE_SOURCE: Transcript published 654.62 days before as_of_timestamp (max_source_age_days=90)."
+      ]
+    }
+  ],
+  "runtime_metadata": {
+    "package_version": "0.1.0",
+    "python_version": "3.9.6",
+    "platform": "macOS-26.5.1-arm64-arm-64bit",
+    "config_digest": "e135797a6fcbb584d081df61c936ad8d4f4517b95baa73aae8715056f965926c",
+    "eval_config": {
+      "schema_version": "1.0.0",
+      "eval_version": "1.0.0",
+      "seed": 42,
+      "numeric_relative_tolerance": 0.005,
+      "numeric_absolute_tolerance": 0.01,
+      "min_extraction_f1_target": 0.85,
+      "min_citation_validity_target": 1.0,
+      "min_abstention_accuracy_target": 1.0,
+      "min_injection_detection_target": 1.0,
+      "as_of_timestamp": "2026-02-15T12:00:00Z"
+    }
+  }
+}

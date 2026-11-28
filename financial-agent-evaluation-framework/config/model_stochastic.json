@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0.0",
+  "config_id": "mock_stochastic_v1",
+  "version": "1.0.0",
+  "provider": "mock_stochastic",
+  "model_name": "stochastic-sim-v1",
+  "seed": 100,
+  "temperature": 0.4,
+  "max_tokens": 1024,
+  "budget_usd": 0.5,
+  "max_tool_calls": 10,
+  "max_latency_ms": 15000.0,
+  "input_cost_per_1k_tokens": 0.0015,
+  "output_cost_per_1k_tokens": 0.003,
+  "live_execution_enabled": false,
+  "external_network_allowed": false,
+  "agent_options": {
+    "arithmetic_error_prob": 0.18,
+    "citation_drop_prob": 0.12,
+    "latency_jitter_ms": 45.0
+  }
+}

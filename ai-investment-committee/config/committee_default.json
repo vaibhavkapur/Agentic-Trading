@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0.0",
+  "config_id": "committee-default-v1",
+  "seed": 42,
+  "adapter_mode": "deterministic_mock",
+  "allow_live_execution": false,
+  "strict_citation_mode": true,
+  "require_human_approval": true,
+  "agent_budgets": {
+    "bull": {
+      "max_tool_calls": 6,
+      "max_tokens": 1200,
+      "max_latency_ms": 1500,
+      "max_cost_usd": 0.05
+    },
+    "bear": {
+      "max_tool_calls": 6,
+      "max_tokens": 1200,
+      "max_latency_ms": 1500,
+      "max_cost_usd": 0.05
+    },
+    "portfolio": {
+      "max_tool_calls": 6,
+      "max_tokens": 1000,
+      "max_latency_ms": 1500,
+      "max_cost_usd": 0.04
+    },
+    "risk": {
+      "max_tool_calls": 8,
+      "max_tokens": 800,
+      "max_latency_ms": 1500,
+      "max_cost_usd": 0.03
+    }
+  }
+}

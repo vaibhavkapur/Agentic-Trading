@@ -1,0 +1,147 @@
+{
+  "description": "Independent hand-calculated expected oracle for reference_valid.json",
+  "as_of_timestamp": "2026-02-15T12:00:00Z",
+  "expected_source_freshness": {
+    "is_stale": false,
+    "max_age_days": 90
+  },
+  "expected_claim_count": 8,
+  "expected_claims": [
+    {
+      "metric_name": "revenue",
+      "claim_type": "REPORTED_METRIC",
+      "fiscal_period": "Q4_FY2025",
+      "accounting_basis": "UNSPECIFIED",
+      "normalized_unit": "USD_MILLIONS",
+      "normalized_low": 420.0,
+      "normalized_high": 420.0,
+      "segment_id": "seg_002"
+    },
+    {
+      "metric_name": "operating_margin",
+      "claim_type": "REPORTED_METRIC",
+      "fiscal_period": "Q4_FY2025",
+      "accounting_basis": "NON_GAAP",
+      "normalized_unit": "PERCENT",
+      "normalized_low": 24.5,
+      "normalized_high": 24.5,
+      "segment_id": "seg_002"
+    },
+    {
+      "metric_name": "revenue",
+      "claim_type": "FORWARD_GUIDANCE",
+      "fiscal_period": "FY2026",
+      "accounting_basis": "UNSPECIFIED",
+      "normalized_unit": "USD_MILLIONS",
+      "normalized_low": 1800.0,
+      "normalized_high": 1850.0,
+      "segment_id": "seg_002"
+    },
+    {
+      "metric_name": "eps",
+      "claim_type": "REPORTED_METRIC",
+      "fiscal_period": "Q4_FY2025",
+      "accounting_basis": "NON_GAAP",
+      "normalized_unit": "USD_PER_SHARE",
+      "normalized_low": 1.42,
+      "normalized_high": 1.42,
+      "segment_id": "seg_003"
+    },
+    {
+      "metric_name": "free_cash_flow",
+      "claim_type": "REPORTED_METRIC",
+      "fiscal_period": "Q4_FY2025",
+      "accounting_basis": "UNSPECIFIED",
+      "normalized_unit": "USD_MILLIONS",
+      "normalized_low": 96.0,
+      "normalized_high": 96.0,
+      "segment_id": "seg_003"
+    },
+    {
+      "metric_name": "revenue",
+      "claim_type": "FORWARD_GUIDANCE",
+      "fiscal_period": "Q1_FY2026",
+      "accounting_basis": "UNSPECIFIED",
+      "normalized_unit": "USD_MILLIONS",
+      "normalized_low": 430.0,
+      "normalized_high": 440.0,
+      "segment_id": "seg_003"
+    },
+    {
+      "metric_name": "operating_margin",
+      "claim_type": "FORWARD_GUIDANCE",
+      "fiscal_period": "FY2026",
+      "accounting_basis": "NON_GAAP",
+      "normalized_unit": "PERCENT",
+      "normalized_low": 25.0,
+      "normalized_high": 26.0,
+      "segment_id": "seg_003"
+    },
+    {
+      "metric_name": "eps",
+      "claim_type": "FORWARD_GUIDANCE",
+      "fiscal_period": "FY2026",
+      "accounting_basis": "NON_GAAP",
+      "normalized_unit": "USD_PER_SHARE",
+      "normalized_low": 5.8,
+      "normalized_high": 6.0,
+      "segment_id": "seg_003"
+    }
+  ],
+  "expected_guidance_comparisons": [
+    {
+      "metric_name": "revenue",
+      "fiscal_period": "FY2026",
+      "direction": "RAISED",
+      "prior_midpoint": 1725.0,
+      "current_midpoint": 1825.0,
+      "delta_midpoint": 100.0,
+      "contradiction_detected": false
+    },
+    {
+      "metric_name": "revenue",
+      "fiscal_period": "Q1_FY2026",
+      "direction": "INTRODUCED",
+      "prior_midpoint": null,
+      "current_midpoint": 435.0,
+      "delta_midpoint": null,
+      "contradiction_detected": false
+    },
+    {
+      "metric_name": "operating_margin",
+      "fiscal_period": "FY2026",
+      "direction": "REAFFIRMED",
+      "prior_midpoint": 25.5,
+      "current_midpoint": 25.5,
+      "delta_midpoint": 0.0,
+      "contradiction_detected": false,
+      "must_contain_flag": "HIGH_UNCERTAINTY_LANGUAGE"
+    },
+    {
+      "metric_name": "eps",
+      "fiscal_period": "FY2026",
+      "direction": "LOWERED",
+      "prior_midpoint": 6.2,
+      "current_midpoint": 5.9,
+      "delta_midpoint": -0.3,
+      "contradiction_detected": false
+    }
+  ],
+  "expected_questions": [
+    {
+      "question_id": "q_rev_fy26",
+      "abstained": false,
+      "must_cite_segment_id": "seg_002"
+    },
+    {
+      "question_id": "q_eps_q4",
+      "abstained": false,
+      "must_cite_segment_id": "seg_003"
+    },
+    {
+      "question_id": "q_churn_unanswerable",
+      "abstained": true,
+      "abstention_reason": "NO_SUPPORTING_EVIDENCE"
+    }
+  ]
+}

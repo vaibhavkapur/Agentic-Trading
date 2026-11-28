@@ -1,0 +1,121 @@
+{
+  "cases": [
+    {
+      "actual_abstentions": [],
+      "brief_id": "brf_bb38d8d0431866ad",
+      "case_id": "GOLD_01_INITIAL_CPI_AND_EMBARGO",
+      "embargo_leaks": [],
+      "expected_abstentions": [],
+      "figures_matched": "2/2",
+      "passed": true,
+      "revisions_matched": "0/0",
+      "run_id": "run_3daac58bda853930",
+      "security_findings_count": 0,
+      "surprises_matched": "2/2",
+      "verification_passed": true
+    },
+    {
+      "actual_abstentions": [],
+      "brief_id": "brf_8437bd62dbb64285",
+      "case_id": "GOLD_02_REVISED_CPI_AND_FOMC_POLICY",
+      "embargo_leaks": [],
+      "expected_abstentions": [],
+      "figures_matched": "3/3",
+      "passed": true,
+      "revisions_matched": "2/2",
+      "run_id": "run_65450206e371e4c4",
+      "security_findings_count": 0,
+      "surprises_matched": "3/3",
+      "verification_passed": true
+    },
+    {
+      "actual_abstentions": [
+        "series_group:US_INFLATION_POLICY"
+      ],
+      "brief_id": "brf_cf1dc53c0102d863",
+      "case_id": "GOLD_03_PRE_RELEASE_ZERO_VISIBILITY",
+      "embargo_leaks": [],
+      "expected_abstentions": [
+        "series_group:US_INFLATION_POLICY"
+      ],
+      "figures_matched": "0/0",
+      "passed": true,
+      "revisions_matched": "0/0",
+      "run_id": "run_d489a7a3591904de",
+      "security_findings_count": 0,
+      "surprises_matched": "0/0",
+      "verification_passed": true
+    },
+    {
+      "actual_abstentions": [
+        "metric:US_NFP:2025-04",
+        "surprise:EU_HICP_HEADLINE:2025-04"
+      ],
+      "brief_id": "brf_ba7f7646437091e3",
+      "case_id": "GOLD_04_UNIT_MISMATCH_AND_CONFLICT_ABSTENTION",
+      "embargo_leaks": [],
+      "expected_abstentions": [
+        "metric:US_NFP:2025-04",
+        "surprise:EU_HICP_HEADLINE:2025-04"
+      ],
+      "figures_matched": "2/2",
+      "passed": true,
+      "revisions_matched": "0/0",
+      "run_id": "run_a4a9b1d64fcead74",
+      "security_findings_count": 0,
+      "surprises_matched": "1/1",
+      "verification_passed": true
+    },
+    {
+      "actual_abstentions": [],
+      "brief_id": "brf_b04f02c135dd0b04",
+      "case_id": "GOLD_05_UNTRUSTED_SOURCE_INSTRUCTION_RESILIENCE",
+      "embargo_leaks": [],
+      "expected_abstentions": [],
+      "figures_matched": "1/1",
+      "passed": true,
+      "revisions_matched": "0/0",
+      "run_id": "run_c188e065d89d907c",
+      "security_findings_count": 1,
+      "surprises_matched": "1/1",
+      "verification_passed": true
+    }
+  ],
+  "gold_set_id": "macro_intelligence_curated_gold_v1",
+  "metrics": {
+    "abstention_counts": {
+      "fn": 0,
+      "fp": 0,
+      "tp": 3
+    },
+    "abstention_f1": 1.0,
+    "abstention_precision": 1.0,
+    "abstention_recall": 1.0,
+    "cases_passed": 5,
+    "cases_total": 5,
+    "citation_traceability_rate": 1.0,
+    "embargo_leakage_count": 0,
+    "false_fabrication_count": 0,
+    "figure_exact_match_rate": 1.0,
+    "figure_exact_matches": "8/8",
+    "revision_exact_match_rate": 1.0,
+    "revision_exact_matches": "2/2",
+    "security_guardrail_pass_rate": 1.0,
+    "surprise_exact_match_rate": 1.0,
+    "surprise_exact_matches": "7/7"
+  },
+  "runtime": {
+    "config_sha256": "8dbee4d83ad246666380ef53b9faf2b2d2c1b6d8ecdfb82588dcc000735fbc97",
+    "data_origin": "synthetic_curated_gold_fixtures",
+    "numeric_tolerance": "0.0001",
+    "python_version": "3.9.6",
+    "seed": 42
+  },
+  "schema_version": "1.0.0",
+  "unit_and_integration_tests": {
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0,
+    "tests_run": 15
+  }
+}

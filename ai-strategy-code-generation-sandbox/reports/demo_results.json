@@ -1,0 +1,306 @@
+{
+  "adversarial_scenarios": {
+    "filesystem_access_denial": {
+      "runtime_code": "SECURITY_DENIAL",
+      "runtime_status": "FAILED_SANDBOX"
+    },
+    "future_data_leakage_probe": {
+      "code": "FUTURE_DATA_LEAKAGE",
+      "status": "FAILED_LEAKAGE"
+    },
+    "infinite_loop": {
+      "code": "SANDBOX_TIMEOUT",
+      "status": "FAILED_SANDBOX",
+      "wall_time_sec": 0.406869
+    },
+    "malicious_dataset_instructions": {
+      "code": "MALICIOUS_INSTRUCTIONS_DETECTED",
+      "sandbox_invocations": 0,
+      "status": "FAILED_DATA_SAFETY"
+    },
+    "memory_abuse": {
+      "code": "RESOURCE_LIMIT_EXCEEDED",
+      "status": "FAILED_SANDBOX",
+      "wall_time_sec": 0.160116
+    },
+    "network_access_denial": {
+      "runtime_code": "SECURITY_DENIAL",
+      "runtime_status": "FAILED_SANDBOX",
+      "static_code": "STATIC_POLICY_VIOLATION",
+      "static_status": "FAILED_STATIC_POLICY"
+    }
+  },
+  "config": {
+    "allowed_imports": [
+      "math",
+      "statistics"
+    ],
+    "config_version": "1.0.0",
+    "default_budget": {
+      "allow_filesystem_write": false,
+      "allow_network": false,
+      "allow_subprocess": false,
+      "max_ast_nodes": 2000,
+      "max_code_bytes": 32768,
+      "max_cpu_time_sec": 1.0,
+      "max_memory_mb": 128,
+      "max_output_bytes": 65536,
+      "max_steps": 10000,
+      "max_wall_time_sec": 2.0
+    },
+    "governance": {
+      "allow_live_execution": false,
+      "require_all_checks_passed": true,
+      "require_human_review_for_promotion": true
+    },
+    "sandbox_backend": "subprocess_isolated",
+    "verification": {
+      "accounting_tolerance": 1e-06,
+      "determinism_repeats": 2,
+      "leakage_checkpoint_fractions": [
+        0.35,
+        0.7
+      ],
+      "leakage_future_shock_multiplier": 2.5,
+      "reference_equity_tolerance": 1e-06
+    }
+  },
+  "docker_available": false,
+  "generated_at": "2026-11-28T04:30:53.629967Z",
+  "governance": {
+    "promotion": {
+      "code_sha256": "14e172c49aa47947a99f2b9e04c8d30320366c7c52119f6a35986395ce4e5c09",
+      "decided_at": "2026-11-28T04:30:52.067996Z",
+      "output_sha256": "6b893d53800a2c3cacb47ccd7115c38814abf51c14eefe8e2214caebd7a2ce79",
+      "promoted": true,
+      "reason": "All validation gates passed and verified human review 'demo-review-001' approved.",
+      "review_id": "demo-review-001",
+      "reviewer": "research-lead-demo",
+      "stage": "PAPER_STAGING_APPROVED",
+      "trial_id": "trial-5a25ccc8126d-6b893d53"
+    },
+    "review": {
+      "code_sha256": "14e172c49aa47947a99f2b9e04c8d30320366c7c52119f6a35986395ce4e5c09",
+      "decision": "APPROVE",
+      "notes": "Demo review: verified reference oracle, leakage, determinism, and accounting hashes.",
+      "output_sha256": "6b893d53800a2c3cacb47ccd7115c38814abf51c14eefe8e2214caebd7a2ce79",
+      "review_id": "demo-review-001",
+      "reviewed_at": "2026-11-28T04:30:52.067666Z",
+      "reviewer": "research-lead-demo",
+      "trial_id": "trial-5a25ccc8126d-6b893d53"
+    },
+    "unreviewed_promotion_blocked": true
+  },
+  "provenance_note": "Observed measurements on synthetic offline fixtures; no live capital, market feeds, or real credentials.",
+  "reference_trial": {
+    "accounting": {
+      "ending_positions": {},
+      "final_cash": 101137.0006,
+      "final_equity": 101137.0006,
+      "initial_cash": 100000.0,
+      "max_accounting_identity_error": 0.0,
+      "max_drawdown_pct": 1.5884002066926792,
+      "max_observed_leverage": 0.22574815365888257,
+      "realized_pnl": 1158.0000000000014,
+      "rejected_order_count": 0,
+      "sharpe_ratio": 2.368239683283822,
+      "total_commission": 20.999399999999998,
+      "total_return_pct": 1.1370005999999993,
+      "total_slippage_cost": 41.99999999999875,
+      "trade_count": 2,
+      "turnover": 41998.799999999996,
+      "unrealized_pnl": 0.0
+    },
+    "checks": [
+      {
+        "code": "OK",
+        "details": {
+          "bar_count": 10,
+          "dataset_id": "synth-a-reference-v1",
+          "sha256": "94bc684aae7f332219180d7bf3e0a3b9c350338db8bc2b5fe59626545ccc90fb"
+        },
+        "message": "Dataset 'synth-a-reference-v1' (10 bars) passed integrity and untrusted-text screening.",
+        "name": "dataset_safety",
+        "passed": true
+      },
+      {
+        "code": "OK",
+        "details": {
+          "ast_node_count": 183,
+          "code_bytes": 739
+        },
+        "message": "Static policy passed (739 bytes, 183 AST nodes).",
+        "name": "static_policy",
+        "passed": true
+      },
+      {
+        "code": "OK",
+        "details": {
+          "exit_code": 0,
+          "isolation_capabilities": {
+            "clean_env": true,
+            "filesystem_disabled_in_worker": true,
+            "isolated_temp_cwd": true,
+            "network_disabled_in_worker": true,
+            "pep578_audit_hook_enabled": true,
+            "python_isolated_flag": true,
+            "rlimit_as_applied": false,
+            "rlimit_core_disabled": true,
+            "rlimit_cpu_applied": true,
+            "rlimit_nofile_applied": true,
+            "tracemalloc_enabled": true
+          },
+          "output_bytes": 1006,
+          "peak_traced_memory_bytes": 116102,
+          "steps_executed": 10,
+          "timed_out": false,
+          "wall_time_sec": 0.029883
+        },
+        "message": "Sandboxed execution succeeded in 0.030s (10 steps).",
+        "name": "sandbox_execution",
+        "passed": true
+      },
+      {
+        "code": "OK",
+        "details": {
+          "final_equity": 101137.0006,
+          "max_identity_error": 0.0,
+          "max_observed_leverage": 0.22574815365888257,
+          "steps": 10,
+          "trade_count": 2
+        },
+        "message": "Accounting reconciled across 10 steps (max identity error=0.00e+00, trades=2).",
+        "name": "accounting_invariants",
+        "passed": true
+      },
+      {
+        "code": "OK",
+        "details": {
+          "logical_digest": "6125c2e6f6942a2811a780b92e44e379282a58b445b4858e21d730a9ae450b76",
+          "runs": 2,
+          "seed": 42
+        },
+        "message": "Deterministic across 2 identical runs (seed=42, digest=6125c2e6f694).",
+        "name": "determinism",
+        "passed": true
+      },
+      {
+        "code": "OK",
+        "details": {
+          "checkpoints_tested": [
+            {
+              "checkpoint": 3,
+              "future_shock_match": true,
+              "prefix_digest": "210e130878aabaf46f1fe72749a263f9eb71c6a262b80f13882ed08d472c0ecd",
+              "prefix_truncation_match": true
+            },
+            {
+              "checkpoint": 7,
+              "future_shock_match": true,
+              "prefix_digest": "511ba28e6de2d5eaa180880363cf71a84e2b43cfc7946c071e91232d7750fff8",
+              "prefix_truncation_match": true
+            }
+          ]
+        },
+        "message": "No future-data leakage detected across 2 checkpoint(s) (future-shock + prefix-truncation invariant).",
+        "name": "future_data_leakage",
+        "passed": true
+      },
+      {
+        "code": "OK",
+        "details": {
+          "checked_fields": [
+            "ending_positions",
+            "final_cash",
+            "final_equity",
+            "initial_cash",
+            "realized_pnl",
+            "rejected_order_count",
+            "total_commission",
+            "total_return_pct",
+            "total_slippage_cost",
+            "trade_count",
+            "turnover",
+            "unrealized_pnl"
+          ],
+          "tolerance": 1e-06
+        },
+        "message": "Matched hand-calculated reference oracle across 12 metric(s) within tolerance 1.0e-06.",
+        "name": "reference_oracle",
+        "passed": true
+      }
+    ],
+    "code_sha256": "14e172c49aa47947a99f2b9e04c8d30320366c7c52119f6a35986395ce4e5c09",
+    "dataset_sha256": "94bc684aae7f332219180d7bf3e0a3b9c350338db8bc2b5fe59626545ccc90fb",
+    "input_bundle_sha256": "5a25ccc8126d864fa60310d9b7558fa59020e0f19798c59dd656070e2f0cb760",
+    "output_sha256": "6b893d53800a2c3cacb47ccd7115c38814abf51c14eefe8e2214caebd7a2ce79",
+    "reference_expected": {
+      "ending_positions": {},
+      "final_cash": 101137.0006,
+      "final_equity": 101137.0006,
+      "initial_cash": 100000.0,
+      "realized_pnl": 1158.0,
+      "rejected_order_count": 0,
+      "total_commission": 20.9994,
+      "total_return_pct": 1.1370006,
+      "total_slippage_cost": 42.0,
+      "trade_count": 2,
+      "turnover": 41998.8,
+      "unrealized_pnl": 0.0
+    },
+    "status": "PASSED",
+    "telemetry": {
+      "counters": {
+        "checks_failed": 0,
+        "checks_passed": 7,
+        "checks_run": 7,
+        "determinism_replays": 1,
+        "leakage_probes": 4,
+        "sandbox_invocations": 6
+      },
+      "isolation_capabilities": {
+        "clean_env": true,
+        "filesystem_disabled_in_worker": true,
+        "isolated_temp_cwd": true,
+        "network_disabled_in_worker": true,
+        "pep578_audit_hook_enabled": true,
+        "python_isolated_flag": true,
+        "rlimit_as_applied": false,
+        "rlimit_core_disabled": true,
+        "rlimit_cpu_applied": true,
+        "rlimit_nofile_applied": true,
+        "tracemalloc_enabled": true
+      },
+      "output_bytes": 1006,
+      "peak_traced_memory_bytes": 116102,
+      "primary_wall_time_sec": 0.029883,
+      "total_eval_sec": 0.186456
+    },
+    "trial_id": "trial-5a25ccc8126d-6b893d53"
+  },
+  "replay_verification": {
+    "code": "OK",
+    "details": {
+      "replayed_output_sha256": "6b893d53800a2c3cacb47ccd7115c38814abf51c14eefe8e2214caebd7a2ce79",
+      "replayed_trial_id": "trial-5a25ccc8126d-6b893d53",
+      "stored_output_sha256": "6b893d53800a2c3cacb47ccd7115c38814abf51c14eefe8e2214caebd7a2ce79",
+      "stored_trial_id": "trial-5a25ccc8126d-6b893d53"
+    },
+    "message": "Replay of 'trial-5a25ccc8126d-6b893d53' reproduced identical output hash 6b893d53800a.",
+    "name": "trial_replay",
+    "passed": true
+  },
+  "runtime_env": {
+    "executable_basename": "python",
+    "machine": "arm64",
+    "packages": {
+      "pydantic": "2.14.4",
+      "pytest": "8.4.2"
+    },
+    "platform": "macOS-26.5.1-arm64-arm-64bit",
+    "python_implementation": "CPython",
+    "python_version": "3.12.15",
+    "sandbox_backend": "subprocess_isolated"
+  },
+  "schema_version": "1.0.0"
+}

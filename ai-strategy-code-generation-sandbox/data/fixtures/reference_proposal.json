@@ -1,0 +1,9 @@
+{
+  "proposal_id": "prop-sma-ref-001",
+  "spec_id": "sma-crossover-reference-v1",
+  "author_type": "reference_oracle",
+  "model_id": null,
+  "rationale": "Simple causal moving-average crossover using only ctx.history(symbol) up to current bar.",
+  "created_at": "2026-01-15T00:00:00Z",
+  "code": "import statistics\n\ndef on_bar(ctx):\n    short_w = int(ctx.params['short_window'])\n    long_w = int(ctx.params['long_window'])\n    qty = float(ctx.params['order_qty'])\n    sym = 'SYNTH_A'\n    hist = ctx.history(sym, long_w)\n    if len(hist) < long_w:\n        return []\n    closes = [b.close for b in hist]\n    sma_short = statistics.fmean(closes[-short_w:])\n    sma_long = statistics.fmean(closes)\n    pos_qty = ctx.position_qty(sym)\n    if sma_short > sma_long and pos_qty == 0.0:\n        return [{'symbol': sym, 'side': 'BUY', 'quantity': qty, 'reason': 'sma_bullish_cross'}]\n    if sma_short < sma_long and pos_qty > 0.0:\n        return [{'symbol': sym, 'side': 'SELL', 'quantity': pos_qty, 'reason': 'sma_bearish_cross'}]\n    return []\n"
+}

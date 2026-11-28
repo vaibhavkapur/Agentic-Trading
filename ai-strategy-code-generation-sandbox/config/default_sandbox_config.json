@@ -1,0 +1,32 @@
+{
+  "config_version": "1.0.0",
+  "sandbox_backend": "subprocess_isolated",
+  "default_budget": {
+    "max_wall_time_sec": 2.0,
+    "max_cpu_time_sec": 1.0,
+    "max_memory_mb": 128,
+    "max_output_bytes": 65536,
+    "max_steps": 10000,
+    "max_code_bytes": 32768,
+    "max_ast_nodes": 2000,
+    "allow_network": false,
+    "allow_filesystem_write": false,
+    "allow_subprocess": false
+  },
+  "allowed_imports": [
+    "math",
+    "statistics"
+  ],
+  "verification": {
+    "accounting_tolerance": 1e-6,
+    "reference_equity_tolerance": 1e-6,
+    "determinism_repeats": 2,
+    "leakage_checkpoint_fractions": [0.35, 0.7],
+    "leakage_future_shock_multiplier": 2.5
+  },
+  "governance": {
+    "require_all_checks_passed": true,
+    "require_human_review_for_promotion": true,
+    "allow_live_execution": false
+  }
+}

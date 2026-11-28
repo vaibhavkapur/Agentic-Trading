@@ -1,0 +1,175 @@
+{
+  "generated_at": "2026-11-28T04:31:25Z",
+  "runtime": {
+    "adapter_mode": "deterministic_mock",
+    "allow_live_execution": false,
+    "config_id": "committee-default-v1",
+    "platform": "macOS-26.5.1-arm64-arm-64bit",
+    "python_version": "3.9.6",
+    "seed": 42
+  },
+  "scenarios": {
+    "agent_disagreement": {
+      "decision_id": "DEC-B826A98D4084722E",
+      "dissent_level": "HIGH",
+      "dissent_score": 0.85,
+      "evaluation": {
+        "all_claims_cited_or_uncertain": true,
+        "budget_utilization_pct": {
+          "bear": 50.0,
+          "bull": 38.33,
+          "portfolio": 50.0,
+          "risk": 68.12
+        },
+        "decision_id": "DEC-B826A98D4084722E",
+        "dissent_present": true,
+        "dissent_score": 0.85,
+        "fabricated_citations": 0,
+        "prompt_injection_attempts_detected": 0,
+        "proposal_id": "PROP-2026-002-DISAGREE",
+        "status": "AWAITING_HUMAN_APPROVAL",
+        "total_claims": 5,
+        "total_cost_usd": 0.0201,
+        "total_latency_ms": 379,
+        "total_tokens": 2020,
+        "total_tool_calls": 13,
+        "uncertain_claims": 1,
+        "unsupported_claims": 0,
+        "verdict": "PASS",
+        "verified_cited_claims": 4
+      },
+      "verdict": "PASS"
+    },
+    "agent_timeout_boundary": {
+      "error": {
+        "details": {
+          "latency_ms": 2605,
+          "max_latency_ms": 1500,
+          "role": "bear"
+        },
+        "error_code": "AGENT_TIMEOUT",
+        "error_type": "AgentTimeoutError",
+        "message": "Agent 'bear' timed out: latency 2605ms > limit 1500ms"
+      },
+      "timeout_captured": true
+    },
+    "fabricated_evidence": {
+      "decision_id": "DEC-B826A98D4084722E",
+      "evaluation": {
+        "all_claims_cited_or_uncertain": true,
+        "budget_utilization_pct": {
+          "bear": 50.0,
+          "bull": 38.33,
+          "portfolio": 50.0,
+          "risk": 68.12
+        },
+        "decision_id": "DEC-B826A98D4084722E",
+        "dissent_present": true,
+        "dissent_score": 0.75,
+        "fabricated_citations": 1,
+        "prompt_injection_attempts_detected": 0,
+        "proposal_id": "PROP-2026-002-DISAGREE",
+        "status": "VETOED",
+        "total_claims": 6,
+        "total_cost_usd": 0.0201,
+        "total_latency_ms": 379,
+        "total_tokens": 2020,
+        "total_tool_calls": 13,
+        "uncertain_claims": 2,
+        "unsupported_claims": 0,
+        "verdict": "VETO",
+        "verified_cited_claims": 4
+      },
+      "status": "VETOED",
+      "verdict": "VETO",
+      "violated_rules": [
+        "MAX_FABRICATED_CITATIONS"
+      ]
+    },
+    "prompt_injection_and_risk_veto": {
+      "decision_id": "DEC-034F754D68390880",
+      "evaluation": {
+        "all_claims_cited_or_uncertain": true,
+        "budget_utilization_pct": {
+          "bear": 50.0,
+          "bull": 38.33,
+          "portfolio": 50.0,
+          "risk": 68.12
+        },
+        "decision_id": "DEC-034F754D68390880",
+        "dissent_present": true,
+        "dissent_score": 0.75,
+        "fabricated_citations": 0,
+        "prompt_injection_attempts_detected": 7,
+        "proposal_id": "PROP-2026-003-INJECT-VETO",
+        "status": "VETOED",
+        "total_claims": 4,
+        "total_cost_usd": 0.0201,
+        "total_latency_ms": 379,
+        "total_tokens": 2020,
+        "total_tool_calls": 13,
+        "uncertain_claims": 3,
+        "unsupported_claims": 0,
+        "verdict": "VETO",
+        "verified_cited_claims": 1
+      },
+      "status": "VETOED",
+      "verdict": "VETO",
+      "veto_bypass_blocked": true,
+      "violated_rules": [
+        "MAX_SINGLE_POSITION_WEIGHT_PCT",
+        "MAX_SECTOR_WEIGHT_PCT",
+        "MIN_CASH_RESERVE_PCT",
+        "MAX_ESTIMATED_VAR_95_PCT",
+        "MAX_ADV_PARTICIPATION_PCT",
+        "MIN_VERIFIED_CITATION_RATIO"
+      ]
+    },
+    "reference_proposal": {
+      "decision_id": "DEC-D5597349168D5D32",
+      "duplicate_approval_blocked": true,
+      "evaluation": {
+        "all_claims_cited_or_uncertain": true,
+        "budget_utilization_pct": {
+          "bear": 50.0,
+          "bull": 38.33,
+          "portfolio": 50.0,
+          "risk": 68.12
+        },
+        "decision_id": "DEC-D5597349168D5D32",
+        "dissent_present": true,
+        "dissent_score": 0.6,
+        "fabricated_citations": 0,
+        "prompt_injection_attempts_detected": 0,
+        "proposal_id": "PROP-2026-001",
+        "status": "APPROVED_FOR_PAPER_ONLY",
+        "total_claims": 5,
+        "total_cost_usd": 0.0201,
+        "total_latency_ms": 379,
+        "total_tokens": 2020,
+        "total_tool_calls": 13,
+        "uncertain_claims": 1,
+        "unsupported_claims": 0,
+        "verdict": "PASS",
+        "verified_cited_claims": 4
+      },
+      "execution_capability": "NONE_PAPER_ONLY",
+      "proposal_hash": "5840dcc326d3c1c05af9bc03c8223ccb2699185e263fee3f2884b89d72b963bc",
+      "replay_exact_match": true,
+      "status_after_human": "APPROVED_FOR_PAPER_ONLY",
+      "status_before_human": "AWAITING_HUMAN_APPROVAL",
+      "verdict": "PASS"
+    }
+  },
+  "service_counters": {
+    "deliberations_run": 3,
+    "errors_raised": 3,
+    "fabricated_citations_caught": 0,
+    "human_approvals_recorded": 1,
+    "human_rejections_recorded": 0,
+    "prompt_injections_flagged": 7,
+    "replays_executed": 1,
+    "risk_passes": 2,
+    "risk_vetoes": 1
+  }
+}

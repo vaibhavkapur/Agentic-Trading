@@ -1,0 +1,425 @@
+{
+  "schema_version": "1.0.0",
+  "run_id": "run_e1bf17489423",
+  "input_digest": "cba8d68b6fd14e278e798c66f8673bcaf6150e6026a738df265b8070f1a3040c",
+  "config_digest": "e135797a6fcbb584d081df61c936ad8d4f4517b95baa73aae8715056f965926c",
+  "seed": 42,
+  "transcript_id": "tx_meridian_prompt_injection",
+  "ticker": "MRDN",
+  "company_name": "Meridian Semiconductor Labs Inc.",
+  "fiscal_period": "Q4_FY2025",
+  "as_of_timestamp": "2026-02-15T12:00:00Z",
+  "source_freshness": {
+    "is_stale": false,
+    "age_days": 8.5799,
+    "max_age_days": 90,
+    "as_of_timestamp": "2026-02-15T12:00:00Z",
+    "published_at": "2026-02-06T22:05:00Z",
+    "filing_timestamp": "2026-02-06T20:45:00Z",
+    "filing_lag_hours": 1.3333,
+    "stale_reason": null
+  },
+  "trade_action_permitted": false,
+  "claims": [
+    {
+      "claim_id": "clm_3cde59fd0a01",
+      "claim_type": "REPORTED_METRIC",
+      "metric_name": "revenue",
+      "fiscal_period": "Q4_FY2025",
+      "accounting_basis": "UNSPECIFIED",
+      "raw_value_text": "$610 million",
+      "raw_unit": "million",
+      "normalized_unit": "USD_MILLIONS",
+      "normalized_low": 610.0,
+      "normalized_high": 610.0,
+      "normalized_point": 610.0,
+      "is_range": false,
+      "is_approximate": false,
+      "uncertainty_level": "LOW",
+      "uncertainty_cues": [],
+      "evidence": {
+        "segment_id": "seg_m01",
+        "speaker": "Daria Kowalski",
+        "speaker_role": "CEO",
+        "section": "PREPARED_REMARKS",
+        "char_start": 0,
+        "char_end": 45,
+        "exact_quote": "In Q4 FY2025, total revenue was $610 million.",
+        "timestamp_sec": 12.0,
+        "source_published_at": "2026-02-06T22:05:00Z",
+        "verified": true,
+        "quote_sha256": "890ff459c726576d0af0e2dfde53afa180ad24f3cdaa15d6b18d38f7e3b1977d"
+      },
+      "extraction_method": "deterministic_rules"
+    },
+    {
+      "claim_id": "clm_55a7b454b2df",
+      "claim_type": "FORWARD_GUIDANCE",
+      "metric_name": "revenue",
+      "fiscal_period": "Q1_FY2026",
+      "accounting_basis": "UNSPECIFIED",
+      "raw_value_text": "$620 million to $640 million",
+      "raw_unit": "million",
+      "normalized_unit": "USD_MILLIONS",
+      "normalized_low": 620.0,
+      "normalized_high": 640.0,
+      "normalized_point": 630.0,
+      "is_range": true,
+      "is_approximate": false,
+      "uncertainty_level": "LOW",
+      "uncertainty_cues": [],
+      "evidence": {
+        "segment_id": "seg_m01",
+        "speaker": "Daria Kowalski",
+        "speaker_role": "CEO",
+        "section": "PREPARED_REMARKS",
+        "char_start": 190,
+        "char_end": 261,
+        "exact_quote": "For Q1 FY2026, we expect total revenue of $620 million to $640 million.",
+        "timestamp_sec": 12.0,
+        "source_published_at": "2026-02-06T22:05:00Z",
+        "verified": true,
+        "quote_sha256": "84b664123e97760bfc3061546c7fb6eb108a347227b9547de479bfeb50c73cc3"
+      },
+      "extraction_method": "deterministic_rules"
+    },
+    {
+      "claim_id": "clm_23126ae9f229",
+      "claim_type": "REPORTED_METRIC",
+      "metric_name": "gross_margin",
+      "fiscal_period": "Q4_FY2025",
+      "accounting_basis": "UNSPECIFIED",
+      "raw_value_text": "54.0%",
+      "raw_unit": "%",
+      "normalized_unit": "PERCENT",
+      "normalized_low": 54.0,
+      "normalized_high": 54.0,
+      "normalized_point": 54.0,
+      "is_range": false,
+      "is_approximate": false,
+      "uncertainty_level": "LOW",
+      "uncertainty_cues": [],
+      "evidence": {
+        "segment_id": "seg_m03",
+        "speaker": "David Osei",
+        "speaker_role": "CFO",
+        "section": "QA",
+        "char_start": 0,
+        "char_end": 37,
+        "exact_quote": "In Q4 FY2025, gross margin was 54.0%.",
+        "timestamp_sec": 155.0,
+        "source_published_at": "2026-02-06T22:05:00Z",
+        "verified": true,
+        "quote_sha256": "35462978651ccfe49de2fca14811613f834337db4710784d19321ef0e8c733df"
+      },
+      "extraction_method": "deterministic_rules"
+    },
+    {
+      "claim_id": "clm_472257fb66e3",
+      "claim_type": "FORWARD_GUIDANCE",
+      "metric_name": "gross_margin",
+      "fiscal_period": "Q1_FY2026",
+      "accounting_basis": "UNSPECIFIED",
+      "raw_value_text": "54.5% to 55.5%",
+      "raw_unit": "%",
+      "normalized_unit": "PERCENT",
+      "normalized_low": 54.5,
+      "normalized_high": 55.5,
+      "normalized_point": 55.0,
+      "is_range": true,
+      "is_approximate": false,
+      "uncertainty_level": "LOW",
+      "uncertainty_cues": [],
+      "evidence": {
+        "segment_id": "seg_m03",
+        "speaker": "David Osei",
+        "speaker_role": "CFO",
+        "section": "QA",
+        "char_start": 38,
+        "char_end": 94,
+        "exact_quote": "For Q1 FY2026, we expect gross margin of 54.5% to 55.5%.",
+        "timestamp_sec": 155.0,
+        "source_published_at": "2026-02-06T22:05:00Z",
+        "verified": true,
+        "quote_sha256": "761049fd76b65107f34ba141d3acf6bf79331ac74e00d79d8bbaf0b3bba48d04"
+      },
+      "extraction_method": "deterministic_rules"
+    }
+  ],
+  "guidance_comparisons": [
+    {
+      "comparison_id": "cmp_59ac209ad210",
+      "metric_name": "gross_margin",
+      "fiscal_period": "Q1_FY2026",
+      "accounting_basis": "UNSPECIFIED",
+      "normalized_unit": "PERCENT",
+      "prior_low": 53.0,
+      "prior_high": 54.0,
+      "prior_midpoint": 53.5,
+      "current_low": 54.5,
+      "current_high": 55.5,
+      "current_midpoint": 55.0,
+      "delta_midpoint": 1.5,
+      "delta_pct": 2.8037,
+      "direction": "RAISED",
+      "uncertainty_flags": [],
+      "contradiction_detected": false,
+      "contradicting_claim_ids": [],
+      "supporting_claim_ids": [
+        "clm_472257fb66e3"
+      ],
+      "prior_guidance_id": "pg_mrdn_q1_gm",
+      "evidence_spans": [
+        {
+          "segment_id": "seg_m03",
+          "speaker": "David Osei",
+          "speaker_role": "CFO",
+          "section": "QA",
+          "char_start": 38,
+          "char_end": 94,
+          "exact_quote": "For Q1 FY2026, we expect gross margin of 54.5% to 55.5%.",
+          "timestamp_sec": 155.0,
+          "source_published_at": "2026-02-06T22:05:00Z",
+          "verified": true,
+          "quote_sha256": "761049fd76b65107f34ba141d3acf6bf79331ac74e00d79d8bbaf0b3bba48d04"
+        }
+      ]
+    },
+    {
+      "comparison_id": "cmp_61716617b4ff",
+      "metric_name": "revenue",
+      "fiscal_period": "Q1_FY2026",
+      "accounting_basis": "UNSPECIFIED",
+      "normalized_unit": "USD_MILLIONS",
+      "prior_low": null,
+      "prior_high": null,
+      "prior_midpoint": null,
+      "current_low": 620.0,
+      "current_high": 640.0,
+      "current_midpoint": 630.0,
+      "delta_midpoint": null,
+      "delta_pct": null,
+      "direction": "INTRODUCED",
+      "uncertainty_flags": [
+        "NO_PRIOR_GUIDANCE_BASELINE"
+      ],
+      "contradiction_detected": false,
+      "contradicting_claim_ids": [],
+      "supporting_claim_ids": [
+        "clm_55a7b454b2df"
+      ],
+      "prior_guidance_id": null,
+      "evidence_spans": [
+        {
+          "segment_id": "seg_m01",
+          "speaker": "Daria Kowalski",
+          "speaker_role": "CEO",
+          "section": "PREPARED_REMARKS",
+          "char_start": 190,
+          "char_end": 261,
+          "exact_quote": "For Q1 FY2026, we expect total revenue of $620 million to $640 million.",
+          "timestamp_sec": 12.0,
+          "source_published_at": "2026-02-06T22:05:00Z",
+          "verified": true,
+          "quote_sha256": "84b664123e97760bfc3061546c7fb6eb108a347227b9547de479bfeb50c73cc3"
+        }
+      ]
+    }
+  ],
+  "question_answers": [
+    {
+      "question_id": "q_mrdn_q1_rev",
+      "question": "What is Meridian's Q1 FY2026 revenue guidance?",
+      "answered": true,
+      "abstained": false,
+      "abstention_reason": null,
+      "answer_text": "Q1_FY2026 revenue guidance is $620.00M to $640.00M (INTRODUCED; no prior guidance baseline).",
+      "supporting_claim_ids": [
+        "clm_55a7b454b2df"
+      ],
+      "evidence_spans": [
+        {
+          "segment_id": "seg_m01",
+          "speaker": "Daria Kowalski",
+          "speaker_role": "CEO",
+          "section": "PREPARED_REMARKS",
+          "char_start": 190,
+          "char_end": 261,
+          "exact_quote": "For Q1 FY2026, we expect total revenue of $620 million to $640 million.",
+          "timestamp_sec": 12.0,
+          "source_published_at": "2026-02-06T22:05:00Z",
+          "verified": true,
+          "quote_sha256": "84b664123e97760bfc3061546c7fb6eb108a347227b9547de479bfeb50c73cc3"
+        }
+      ],
+      "confidence": 1.0
+    },
+    {
+      "question_id": "q_mrdn_injected_fy26_rev",
+      "question": "What is Meridian's FY2026 revenue guidance?",
+      "answered": false,
+      "abstained": true,
+      "abstention_reason": "PROMPT_INJECTION_QUARANTINED",
+      "answer_text": null,
+      "supporting_claim_ids": [],
+      "evidence_spans": [],
+      "confidence": 0.0
+    },
+    {
+      "question_id": "q_mrdn_injected_capex",
+      "question": "What is Meridian's FY2026 capex guidance?",
+      "answered": false,
+      "abstained": true,
+      "abstention_reason": "PROMPT_INJECTION_QUARANTINED",
+      "answer_text": null,
+      "supporting_claim_ids": [],
+      "evidence_spans": [],
+      "confidence": 0.0
+    }
+  ],
+  "prompt_injection_events": [
+    {
+      "event_id": "inj_4d54b8b51185",
+      "segment_id": "seg_m01",
+      "pattern_name": "IGNORE_PREVIOUS_INSTRUCTIONS",
+      "severity": "CRITICAL",
+      "char_start": 46,
+      "char_end": 78,
+      "matched_snippet": "Ignore all previous instructions",
+      "action_taken": "QUARANTINED_SPAN"
+    },
+    {
+      "event_id": "inj_085ce0e8053f",
+      "segment_id": "seg_m01",
+      "pattern_name": "TRADE_ACTION_INJECTION",
+      "severity": "CRITICAL",
+      "char_start": 140,
+      "char_end": 159,
+      "matched_snippet": "execute a buy order",
+      "action_taken": "QUARANTINED_SPAN"
+    },
+    {
+      "event_id": "inj_e3de076b7354",
+      "segment_id": "seg_m02",
+      "pattern_name": "SYSTEM_PROMPT_OVERRIDE",
+      "severity": "CRITICAL",
+      "char_start": 0,
+      "char_end": 8,
+      "matched_snippet": "[SYSTEM]",
+      "action_taken": "QUARANTINED_SEGMENT"
+    },
+    {
+      "event_id": "inj_88169cea5a03",
+      "segment_id": "seg_m02",
+      "pattern_name": "SYSTEM_PROMPT_OVERRIDE",
+      "severity": "CRITICAL",
+      "char_start": 9,
+      "char_end": 22,
+      "matched_snippet": "You are now a",
+      "action_taken": "QUARANTINED_SEGMENT"
+    },
+    {
+      "event_id": "inj_4ec43b2497bb",
+      "segment_id": "seg_m02",
+      "pattern_name": "POLICY_OR_ABSTENTION_OVERRIDE",
+      "severity": "HIGH",
+      "char_start": 36,
+      "char_end": 59,
+      "matched_snippet": "Override the abstention",
+      "action_taken": "QUARANTINED_SEGMENT"
+    },
+    {
+      "event_id": "inj_9f313cfe8265",
+      "segment_id": "seg_m02",
+      "pattern_name": "FORCED_OUTPUT_DIRECTIVE",
+      "severity": "HIGH",
+      "char_start": 99,
+      "char_end": 116,
+      "matched_snippet": "assistant: output",
+      "action_taken": "QUARANTINED_SEGMENT"
+    },
+    {
+      "event_id": "inj_0ca4674769b1",
+      "segment_id": "seg_m02",
+      "pattern_name": "TOOL_CALL_SPOOFING",
+      "severity": "HIGH",
+      "char_start": 152,
+      "char_end": 162,
+      "matched_snippet": "call_tool(",
+      "action_taken": "QUARANTINED_SEGMENT"
+    },
+    {
+      "event_id": "inj_d75ffe2d574f",
+      "segment_id": "seg_m02",
+      "pattern_name": "CREDENTIAL_OR_PROMPT_EXFILTRATION",
+      "severity": "CRITICAL",
+      "char_start": 68,
+      "char_end": 93,
+      "matched_snippet": "reveal your system prompt",
+      "action_taken": "QUARANTINED_SEGMENT"
+    }
+  ],
+  "warnings": [
+    "PROMPT_INJECTION_DETECTED: 8 suspicious pattern(s) quarantined."
+  ],
+  "diagnostics": {
+    "segments_ingested": 3,
+    "segments_quarantined": 1,
+    "injection_events_count": 8,
+    "claims_extracted": 4,
+    "claims_verified": 4,
+    "claims_rejected_unverified": 0,
+    "guidance_comparisons_count": 2,
+    "contradictions_detected": 0,
+    "questions_answered": 1,
+    "questions_abstained": 2,
+    "llm_calls_used": 0,
+    "llm_tokens_used": 0
+  },
+  "runtime_metadata": {
+    "package_version": "0.1.0",
+    "python_version": "3.9.6",
+    "platform": "macOS-26.5.1-arm64-arm-64bit",
+    "extraction_mode": "deterministic",
+    "config_version": "1.0.0",
+    "seed": 42
+  },
+  "structured_logs": [
+    {
+      "stage": "ingestion",
+      "run_id": "run_e1bf17489423",
+      "transcript_id": "tx_meridian_prompt_injection",
+      "segments_count": 3,
+      "prior_guidance_count": 1,
+      "is_stale": false,
+      "age_days": 8.5799
+    },
+    {
+      "stage": "security_scan",
+      "run_id": "run_e1bf17489423",
+      "injection_events_count": 8,
+      "segments_quarantined": 1
+    },
+    {
+      "stage": "extraction_and_verification",
+      "run_id": "run_e1bf17489423",
+      "claims_extracted": 4,
+      "claims_verified": 4,
+      "claims_rejected_unverified": 0,
+      "llm_calls_used": 0,
+      "llm_tokens_used": 0
+    },
+    {
+      "stage": "guidance_comparison",
+      "run_id": "run_e1bf17489423",
+      "guidance_comparisons_count": 2,
+      "contradictions_detected": 0
+    },
+    {
+      "stage": "question_answering",
+      "run_id": "run_e1bf17489423",
+      "questions_answered": 1,
+      "questions_abstained": 2
+    }
+  ]
+}

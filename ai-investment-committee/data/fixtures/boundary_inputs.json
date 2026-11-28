@@ -1,0 +1,95 @@
+{
+  "description": "Boundary value fixtures testing exact policy thresholds",
+  "exact_policy_limits_proposal": {
+    "schema_version": "1.0.0",
+    "proposal_id": "PROP-2026-004-BOUNDARY",
+    "created_at": "2026-11-28T09:15:00Z",
+    "as_of": "2026-11-28T09:15:00Z",
+    "execution_mode": "PAPER",
+    "candidate_position": {
+      "ticker": "EDGE",
+      "sector": "Utilities",
+      "side": "BUY",
+      "quantity": 1000,
+      "limit_price_usd": 100.0,
+      "currency": "USD",
+      "horizon_days": 30,
+      "estimated_volatility_annual_pct": 15.0,
+      "average_daily_volume_shares": 20000,
+      "thesis_summary": "Exact-limit boundary test: 10.0% single position, 25.0% sector, 10.0% cash reserve, 5.0% ADV participation."
+    },
+    "portfolio_state": {
+      "portfolio_id": "PAPER-BOUNDARY-01",
+      "as_of": "2026-11-28T09:10:00Z",
+      "nav_usd": 1000000.0,
+      "cash_usd": 200000.0,
+      "current_estimated_var_95_pct": 2.0,
+      "holdings": [
+        {
+          "ticker": "UTIL",
+          "sector": "Utilities",
+          "quantity": 1500,
+          "market_price_usd": 100.0,
+          "market_value_usd": 150000.0,
+          "volatility_annual_pct": 14.0
+        },
+        {
+          "ticker": "HLTH",
+          "sector": "Healthcare",
+          "quantity": 3250,
+          "market_price_usd": 200.0,
+          "market_value_usd": 650000.0,
+          "volatility_annual_pct": 16.0
+        }
+      ]
+    },
+    "risk_policy": {
+      "schema_version": "1.0.0",
+      "policy_id": "risk-policy-paper-v1",
+      "max_single_position_weight_pct": 10.0,
+      "max_sector_weight_pct": 25.0,
+      "max_gross_exposure_pct": 100.0,
+      "min_cash_reserve_pct": 10.0,
+      "max_estimated_var_95_pct": 4.5,
+      "max_adv_participation_pct": 5.0,
+      "min_verified_citation_ratio": 0.5,
+      "max_fabricated_citations": 0,
+      "restricted_tickers": [],
+      "allow_live_execution": false
+    },
+    "research_briefs": [
+      {
+        "brief_id": "BRIEF-EDGE-01",
+        "title": "EDGE Regulated Tariff Synthetic Summary",
+        "source": "Synthetic Regulatory Filing",
+        "published_at": "2026-11-21T08:00:00Z",
+        "stance_hint": "bullish",
+        "snippets": [
+          {
+            "evidence_id": "EV-EDGE-001",
+            "text": "Approved rate base increased 6.0% for 2027 with inflation pass-through.",
+            "metric_name": "rate_base_growth_pct",
+            "metric_value": 6.0,
+            "unit": "pct"
+          }
+        ]
+      },
+      {
+        "brief_id": "BRIEF-EDGE-02",
+        "title": "EDGE Capex Sensitivity Synthetic Note",
+        "source": "Synthetic Independent Research",
+        "published_at": "2026-11-22T08:00:00Z",
+        "stance_hint": "bearish",
+        "snippets": [
+          {
+            "evidence_id": "EV-EDGE-002",
+            "text": "Planned grid modernization capex rises 9.0% next fiscal year.",
+            "metric_name": "capex_yoy_pct",
+            "metric_value": 9.0,
+            "unit": "pct"
+          }
+        ]
+      }
+    ]
+  }
+}

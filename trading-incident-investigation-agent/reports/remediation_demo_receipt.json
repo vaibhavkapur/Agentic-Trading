@@ -1,0 +1,45 @@
+{
+  "receipt_id": "RCPT-065c901d727d",
+  "incident_id": "INC-REF-001",
+  "remediation_id": "REM-INC-REF-001-01",
+  "action_id": "drain_and_recycle_gateway_pool",
+  "status": "EXECUTED_RECOVERED",
+  "approval_id": "APR-REF-001-DEMO",
+  "approver_id": "sre_lead_sim",
+  "executed_in_simulation": true,
+  "state_mutated": true,
+  "denial_reason": null,
+  "verification": {
+    "verified": true,
+    "seed": 42,
+    "checks": [
+      {
+        "metric_name": "gateway_pool_utilization_pct",
+        "before_value": 100.0,
+        "after_value": 39.285,
+        "threshold": 75.0,
+        "unit": "percent",
+        "passed": true
+      },
+      {
+        "metric_name": "p99_ack_latency_ms",
+        "before_value": 2450.0,
+        "after_value": 46.313,
+        "threshold": 150.0,
+        "unit": "ms",
+        "passed": true
+      },
+      {
+        "metric_name": "order_timeout_rate_pct",
+        "before_value": 14.2,
+        "after_value": 0.198,
+        "threshold": 0.5,
+        "unit": "percent",
+        "passed": true
+      }
+    ],
+    "summary": "Simulated recovery verified: all 3 post-remediation health checks passed.",
+    "rollback_recommended": false
+  },
+  "executed_at_utc": "2026-04-20T12:00:00Z"
+}

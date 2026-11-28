@@ -1,0 +1,275 @@
+{
+  "schema_version": "1.0.0",
+  "incident_id": "INC-REF-001",
+  "title": "Order-routing gateway connection pool exhaustion causing ACK timeouts",
+  "environment": "synthetic",
+  "reported_at_utc": "2026-04-15T14:32:00Z",
+  "metadata": {
+    "scenario": "reference_baseline",
+    "synthetic_provenance": "hand-crafted deterministic reference fixture for M1 oracle",
+    "desk": "equities_sim_desk"
+  },
+  "traces": [
+    {
+      "span_id": "sp-ref-001",
+      "trace_id": "tr-ref-100",
+      "parent_span_id": null,
+      "service": "order-router",
+      "operation": "SubmitOrder",
+      "start_time_utc": "2026-04-15T14:30:01.000Z",
+      "duration_ms": 2450.0,
+      "status": "ERROR",
+      "status_message": "downstream gateway timeout after 2400ms",
+      "attributes": {
+        "order.id": "ORD-SIM-9001",
+        "symbol": "SIMA",
+        "venue": "SIMX"
+      }
+    },
+    {
+      "span_id": "sp-ref-002",
+      "trace_id": "tr-ref-100",
+      "parent_span_id": "sp-ref-001",
+      "service": "risk-engine",
+      "operation": "PreTradeRiskCheck",
+      "start_time_utc": "2026-04-15T14:30:01.015Z",
+      "duration_ms": 12.4,
+      "status": "OK",
+      "status_message": null,
+      "attributes": {
+        "order.id": "ORD-SIM-9001",
+        "risk.passed": true
+      }
+    },
+    {
+      "span_id": "sp-ref-003",
+      "trace_id": "tr-ref-100",
+      "parent_span_id": "sp-ref-001",
+      "service": "fix-gateway",
+      "operation": "AcquirePoolConnection",
+      "start_time_utc": "2026-04-15T14:30:01.030Z",
+      "duration_ms": 2410.0,
+      "status": "ERROR",
+      "status_message": "connection pool exhausted: 64/64 active sockets waiting",
+      "attributes": {
+        "order.id": "ORD-SIM-9001",
+        "pool.active": 64,
+        "pool.max": 64,
+        "pool.wait_queue": 118
+      }
+    },
+    {
+      "span_id": "sp-ref-004",
+      "trace_id": "tr-ref-101",
+      "parent_span_id": null,
+      "service": "fix-gateway",
+      "operation": "AcquirePoolConnection",
+      "start_time_utc": "2026-04-15T14:30:04.200Z",
+      "duration_ms": 2505.0,
+      "status": "ERROR",
+      "status_message": "connection pool exhausted: 64/64 active sockets",
+      "attributes": {
+        "order.id": "ORD-SIM-9002",
+        "pool.active": 64,
+        "pool.max": 64
+      }
+    }
+  ],
+  "logs": [
+    {
+      "log_id": "lg-ref-001",
+      "timestamp_utc": "2026-04-15T14:30:01.028Z",
+      "service": "fix-gateway",
+      "severity": "WARNING",
+      "message": "FIX socket pool utilization reached 100% (64/64 active connections); queueing order ORD-SIM-9001",
+      "trace_id": "tr-ref-100",
+      "span_id": "sp-ref-003",
+      "order_id": "ORD-SIM-9001",
+      "attributes": {
+        "pool_name": "simx_fix_pool"
+      }
+    },
+    {
+      "log_id": "lg-ref-002",
+      "timestamp_utc": "2026-04-15T14:30:03.440Z",
+      "service": "fix-gateway",
+      "severity": "ERROR",
+      "message": "AcquirePoolConnection timed out after 2410ms due to connection pool exhaustion on simx_fix_pool",
+      "trace_id": "tr-ref-100",
+      "span_id": "sp-ref-003",
+      "order_id": "ORD-SIM-9001",
+      "attributes": {
+        "pool_name": "simx_fix_pool"
+      }
+    },
+    {
+      "log_id": "lg-ref-003",
+      "timestamp_utc": "2026-04-15T14:30:04.000Z",
+      "service": "risk-engine",
+      "severity": "INFO",
+      "message": "PreTradeRiskCheck health heartbeat nominal; p99 latency 14ms",
+      "trace_id": "tr-ref-100",
+      "span_id": "sp-ref-002",
+      "order_id": null,
+      "attributes": {}
+    }
+  ],
+  "oms_events": [
+    {
+      "event_id": "oms-ref-001",
+      "timestamp_utc": "2026-04-15T14:30:01.002Z",
+      "service": "oms-core",
+      "order_id": "ORD-SIM-9001",
+      "symbol": "SIMA",
+      "venue": "SIMX",
+      "event_type": "ORDER_NEW",
+      "latency_ms": 2.0,
+      "notional_usd": 25000.0,
+      "reject_code": null,
+      "trace_id": "tr-ref-100",
+      "message": "Accepted simulated order ORD-SIM-9001 for routing to fix-gateway"
+    },
+    {
+      "event_id": "oms-ref-002",
+      "timestamp_utc": "2026-04-15T14:30:03.455Z",
+      "service": "fix-gateway",
+      "order_id": "ORD-SIM-9001",
+      "symbol": "SIMA",
+      "venue": "SIMX",
+      "event_type": "ORDER_TIMEOUT",
+      "latency_ms": 2453.0,
+      "notional_usd": 25000.0,
+      "reject_code": "GW_POOL_EXHAUSTED",
+      "trace_id": "tr-ref-100",
+      "message": "Order ACK timeout because fix-gateway connection pool exhausted"
+    },
+    {
+      "event_id": "oms-ref-003",
+      "timestamp_utc": "2026-04-15T14:30:06.710Z",
+      "service": "fix-gateway",
+      "order_id": "ORD-SIM-9002",
+      "symbol": "SIMA",
+      "venue": "SIMX",
+      "event_type": "ORDER_TIMEOUT",
+      "latency_ms": 2510.0,
+      "notional_usd": 18000.0,
+      "reject_code": "GW_POOL_EXHAUSTED",
+      "trace_id": "tr-ref-101",
+      "message": "Order ACK timeout on fix-gateway due to exhausted socket pool"
+    }
+  ],
+  "alerts": [
+    {
+      "alert_id": "al-ref-001",
+      "timestamp_utc": "2026-04-15T14:30:05.000Z",
+      "rule_id": "ALERT_GW_POOL_EXHAUSTION",
+      "service": "fix-gateway",
+      "severity": "CRITICAL",
+      "title": "FIX Gateway Connection Pool Saturated",
+      "description": "fix-gateway active socket pool reached 100% capacity with elevated order ACK timeouts",
+      "metric_name": "gateway_pool_utilization_pct",
+      "metric_value": 100.0,
+      "threshold_value": 90.0,
+      "unit": "percent",
+      "trace_id": "tr-ref-100",
+      "labels": {
+        "venue": "SIMX",
+        "pool": "simx_fix_pool"
+      }
+    }
+  ],
+  "runbooks": [
+    {
+      "runbook_id": "RB-FIX-POOL-001",
+      "version": "1.2.0",
+      "title": "FIX Gateway Connection Pool Exhaustion",
+      "service": "fix-gateway",
+      "failure_mode": "gateway_connection_pool_exhaustion",
+      "symptoms": [
+        "connection pool exhausted",
+        "AcquirePoolConnection",
+        "socket pool utilization",
+        "order ACK timeout",
+        "wait_queue"
+      ],
+      "alert_rules": [
+        "ALERT_GW_POOL_EXHAUSTION",
+        "ALERT_ORDER_ACK_TIMEOUT"
+      ],
+      "reject_codes": [
+        "GW_POOL_EXHAUSTED"
+      ],
+      "diagnostic_checks": [
+        "Verify fix-gateway pool.active vs pool.max telemetry",
+        "Confirm risk-engine spans remain healthy to rule out upstream bottleneck"
+      ],
+      "recommended_actions": [
+        "drain_and_recycle_gateway_pool"
+      ],
+      "expected_recovery_signals": [
+        "gateway_pool_utilization_pct < 75%",
+        "p99_ack_latency_ms < 150ms",
+        "order_timeout_rate_pct < 0.5%"
+      ],
+      "notes": "Requires explicit operator approval before draining simulated gateway sockets."
+    },
+    {
+      "runbook_id": "RB-RISK-LAT-002",
+      "version": "1.0.0",
+      "title": "Pre-Trade Risk Engine Saturation",
+      "service": "risk-engine",
+      "failure_mode": "risk_engine_saturation",
+      "symptoms": [
+        "risk check failed",
+        "PreTradeRiskCheck timeout",
+        "risk engine queue depth"
+      ],
+      "alert_rules": [
+        "ALERT_RISK_ENGINE_LATENCY"
+      ],
+      "reject_codes": [
+        "RISK_TIMEOUT",
+        "RISK_LIMIT_BREACH"
+      ],
+      "diagnostic_checks": [
+        "Check PreTradeRiskCheck span durations and error status"
+      ],
+      "recommended_actions": [
+        "restart_risk_worker_pool_sim"
+      ],
+      "expected_recovery_signals": [
+        "risk_check_p99_ms < 25ms"
+      ],
+      "notes": "Verify risk spans actually failed before restarting workers."
+    },
+    {
+      "runbook_id": "RB-MD-STALE-003",
+      "version": "1.0.0",
+      "title": "Market Data Feed Stale Quotes",
+      "service": "market-data-feed",
+      "failure_mode": "market_data_feed_stale",
+      "symptoms": [
+        "feed disconnect",
+        "stale quote",
+        "sequence drop",
+        "md gap"
+      ],
+      "alert_rules": [
+        "ALERT_MD_STALE_FEED"
+      ],
+      "reject_codes": [
+        "STALE_PRICE_REJECT"
+      ],
+      "diagnostic_checks": [
+        "Inspect market-data-feed span latencies and venue multicast counters"
+      ],
+      "recommended_actions": [
+        "failover_market_data_secondary_sim"
+      ],
+      "expected_recovery_signals": [
+        "md_quote_age_ms < 50ms"
+      ],
+      "notes": "Confirm stale price rejects exist in OMS before failing over feed."
+    }
+  ]
+}

@@ -1,0 +1,201 @@
+{
+  "brief": {
+    "abstentions": [],
+    "as_of_utc": "2025-04-10T13:00:00Z",
+    "brief_id": "brf_bb38d8d0431866ad",
+    "citations_index": {
+      "cit_253a6e83abea177d": {
+        "char_end": 140,
+        "char_start": 84,
+        "citation_id": "cit_253a6e83abea177d",
+        "document_sha256": "3bcee850cffd23ed6875987202f43f0888b859953afaf3d16aa61e656034aa85",
+        "published_at": "2025-04-10T12:30:00Z",
+        "quote": "US Core CPI excluding food and energy increased 3.1% YoY",
+        "release_id": "US_CPI_2025_03",
+        "source_id": "SYNTH_BLS",
+        "vintage_id": "v1_initial"
+      },
+      "cit_96f86bfc38bf3854": {
+        "char_end": 76,
+        "char_start": 47,
+        "citation_id": "cit_96f86bfc38bf3854",
+        "document_sha256": "3bcee850cffd23ed6875987202f43f0888b859953afaf3d16aa61e656034aa85",
+        "published_at": "2025-04-10T12:30:00Z",
+        "quote": "US Headline CPI rose 2.8% YoY",
+        "release_id": "US_CPI_2025_03",
+        "source_id": "SYNTH_BLS",
+        "vintage_id": "v1_initial"
+      }
+    },
+    "conflicts": [],
+    "executive_summary": "As of 2025-04-10T13:00:00Z for US_INFLATION_POLICY: Verified latest figures: US_CPI_CORE (2025-03)=3.1 percent_yoy [cit_253a6e83abea177d], US_CPI_HEADLINE (2025-03)=2.8 percent_yoy [cit_96f86bfc38bf3854]. Consensus comparison: US_CPI_CORE in_line (+0.0 percent_yoy vs consensus 3.1), US_CPI_HEADLINE above_consensus (+0.2 percent_yoy vs consensus 2.6).",
+    "figures": [
+      {
+        "citation": {
+          "char_end": 140,
+          "char_start": 84,
+          "citation_id": "cit_253a6e83abea177d",
+          "document_sha256": "3bcee850cffd23ed6875987202f43f0888b859953afaf3d16aa61e656034aa85",
+          "published_at": "2025-04-10T12:30:00Z",
+          "quote": "US Core CPI excluding food and energy increased 3.1% YoY",
+          "release_id": "US_CPI_2025_03",
+          "source_id": "SYNTH_BLS",
+          "vintage_id": "v1_initial"
+        },
+        "extraction_method": "grounded_structured_metric",
+        "figure_id": "fig_0533b4e38bddf6d0",
+        "published_at": "2025-04-10T12:30:00Z",
+        "reference_period": "2025-03",
+        "release_id": "US_CPI_2025_03",
+        "series_id": "US_CPI_CORE",
+        "source_id": "SYNTH_BLS",
+        "unit": "percent_yoy",
+        "value": "3.1",
+        "vintage_id": "v1_initial"
+      },
+      {
+        "citation": {
+          "char_end": 76,
+          "char_start": 47,
+          "citation_id": "cit_96f86bfc38bf3854",
+          "document_sha256": "3bcee850cffd23ed6875987202f43f0888b859953afaf3d16aa61e656034aa85",
+          "published_at": "2025-04-10T12:30:00Z",
+          "quote": "US Headline CPI rose 2.8% YoY",
+          "release_id": "US_CPI_2025_03",
+          "source_id": "SYNTH_BLS",
+          "vintage_id": "v1_initial"
+        },
+        "extraction_method": "grounded_structured_metric",
+        "figure_id": "fig_ad53917d815bde4a",
+        "published_at": "2025-04-10T12:30:00Z",
+        "reference_period": "2025-03",
+        "release_id": "US_CPI_2025_03",
+        "series_id": "US_CPI_HEADLINE",
+        "source_id": "SYNTH_BLS",
+        "unit": "percent_yoy",
+        "value": "2.8",
+        "vintage_id": "v1_initial"
+      }
+    ],
+    "limitations_notice": "Research and educational prototype only. All macro interpretations are structured hypotheses grounded in archived synthetic/public releases as of the stated UTC cutoff, not predictions, market-impact forecasts, or trading recommendations.",
+    "policy_signals": [],
+    "revisions": [],
+    "scenarios": [
+      {
+        "condition": "If upside macro surprises, upward benchmark revisions, or elevated-inflation policy language persist across upcoming vintages.",
+        "confidence_note": "Qualitative hypothesis conditional on cited vintages; no market-impact estimate is made.",
+        "disclaimer": "Hypothesis only; not a forecast, market-impact estimate, or trade recommendation.",
+        "hypothesis_id": "hyp_ad30c55e6f7355ef",
+        "interpretation": "Hypothesis: policymakers may emphasize maintaining restrictive settings longer before adjusting rates; this reflects cited release language rather than a forecast.",
+        "label": "Policy Restraint Persistence Hypothesis",
+        "supporting_citation_ids": [
+          "cit_96f86bfc38bf3854"
+        ]
+      }
+    ],
+    "security_findings": [],
+    "series_group": "US_INFLATION_POLICY",
+    "surprises": [
+      {
+        "actual_figure_id": "fig_0533b4e38bddf6d0",
+        "actual_value": "3.1",
+        "citation": {
+          "char_end": 140,
+          "char_start": 84,
+          "citation_id": "cit_253a6e83abea177d",
+          "document_sha256": "3bcee850cffd23ed6875987202f43f0888b859953afaf3d16aa61e656034aa85",
+          "published_at": "2025-04-10T12:30:00Z",
+          "quote": "US Core CPI excluding food and energy increased 3.1% YoY",
+          "release_id": "US_CPI_2025_03",
+          "source_id": "SYNTH_BLS",
+          "vintage_id": "v1_initial"
+        },
+        "consensus_id": "CONS_US_CPI_CORE_2025_03",
+        "consensus_value": "3.1",
+        "converted_from_unit": null,
+        "direction": "in_line",
+        "reference_period": "2025-03",
+        "series_id": "US_CPI_CORE",
+        "surprise_id": "srp_c84e69bad9a11863",
+        "surprise_value": "0.0",
+        "unit": "percent_yoy"
+      },
+      {
+        "actual_figure_id": "fig_ad53917d815bde4a",
+        "actual_value": "2.8",
+        "citation": {
+          "char_end": 76,
+          "char_start": 47,
+          "citation_id": "cit_96f86bfc38bf3854",
+          "document_sha256": "3bcee850cffd23ed6875987202f43f0888b859953afaf3d16aa61e656034aa85",
+          "published_at": "2025-04-10T12:30:00Z",
+          "quote": "US Headline CPI rose 2.8% YoY",
+          "release_id": "US_CPI_2025_03",
+          "source_id": "SYNTH_BLS",
+          "vintage_id": "v1_initial"
+        },
+        "consensus_id": "CONS_US_CPI_HEADLINE_2025_03",
+        "consensus_value": "2.6",
+        "converted_from_unit": null,
+        "direction": "above_consensus",
+        "reference_period": "2025-03",
+        "series_id": "US_CPI_HEADLINE",
+        "surprise_id": "srp_f58d8dd6464474ac",
+        "surprise_value": "0.2",
+        "unit": "percent_yoy"
+      }
+    ],
+    "verification_passed": true
+  },
+  "diagnostics": {
+    "counters": {
+      "abstentions_recorded": 0,
+      "conflicts_detected": 0,
+      "consensus_visible": 2,
+      "figures_canonical": 2,
+      "figures_extracted_raw": 2,
+      "policy_signals_extracted": 0,
+      "releases_gated_out": 3,
+      "releases_visible": 1,
+      "revisions_computed": 0,
+      "surprises_computed": 2,
+      "verification_passed": 1
+    },
+    "events": [
+      {
+        "as_of_utc": "2025-04-10T13:00:00Z",
+        "config_sha256": "8dbee4d83ad246666380ef53b9faf2b2d2c1b6d8ecdfb82588dcc000735fbc97",
+        "event": "run_started",
+        "level": "INFO",
+        "seq": 1,
+        "series_group": "US_INFLATION_POLICY"
+      },
+      {
+        "event": "publication_gate_applied",
+        "gated_out_count": 3,
+        "level": "INFO",
+        "seq": 2,
+        "visible_count": 1
+      },
+      {
+        "brief_id": "brf_bb38d8d0431866ad",
+        "event": "verification_completed",
+        "level": "INFO",
+        "passed": true,
+        "seq": 3
+      }
+    ]
+  },
+  "metadata": {
+    "as_of_utc": "2025-04-10T13:00:00Z",
+    "config_sha256": "8dbee4d83ad246666380ef53b9faf2b2d2c1b6d8ecdfb82588dcc000735fbc97",
+    "config_version": "1.0.0",
+    "input_sha256": "bdaacbcfcee36920d7aef619867983db1449eb7040f89bd1badd5e25e4762c5e",
+    "model_calls_used": 1,
+    "model_provider": "deterministic_mock",
+    "python_version": "3.9.6",
+    "run_id": "run_3daac58bda853930",
+    "schema_version": "1.0.0",
+    "seed": 42
+  }
+}

@@ -1,0 +1,49 @@
+name: Financial Agent Evaluation Framework CI
+
+on:
+  push:
+    paths:
+      - "financial-agent-evaluation-framework/**"
+      - ".github/workflows/financial-agent-evaluation-framework.yml"
+  pull_request:
+    paths:
+      - "financial-agent-evaluation-framework/**"
+      - ".github/workflows/financial-agent-evaluation-framework.yml"
+  workflow_dispatch:
+
+jobs:
+  validate-and-test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: financial-agent-evaluation-framework
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install pinned dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements-lock.txt
+
+      - name: Validate canonical fixtures and configs
+        run: |
+          PYTHONPATH=src python -m fin_eval validate \
+            --dataset data/fixtures/gold_tasks_dev_v1.json \
+            --fixtures data/fixtures/mock_store_v1.json \
+            --config config/model_deterministic.json \
+            --faults config/faults_resilience.json
+
+      - name: Run unit, integration, boundary, reproducibility, and operational tests
+        run: |
+          PYTHONPATH=src pytest -v
+
+      - name: Verify reproducible demo and replay determinism
+        run: |
+          PYTHONPATH=src python scripts/run_demo.py

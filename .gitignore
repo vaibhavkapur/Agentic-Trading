@@ -1,6 +1,14 @@
 .venv/
 __pycache__/
-*.pyc
+*.py[cod]
+*$py.class
 .pytest_cache/
 .ruff_cache/
+.mypy_cache/
 .DS_Store
+*.egg-info/
+dist/
+build/
+*.db
+*.sqlite
+*.sqlite3

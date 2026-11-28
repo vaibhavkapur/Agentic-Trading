@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "policy_id": "risk-policy-paper-v1",
+  "max_single_position_weight_pct": 10.0,
+  "max_sector_weight_pct": 25.0,
+  "max_gross_exposure_pct": 100.0,
+  "min_cash_reserve_pct": 10.0,
+  "max_estimated_var_95_pct": 4.5,
+  "max_adv_participation_pct": 5.0,
+  "min_verified_citation_ratio": 0.5,
+  "max_fabricated_citations": 0,
+  "restricted_tickers": [
+    "RESTRICTED1",
+    "SANCTIONED"
+  ],
+  "allow_live_execution": false
+}

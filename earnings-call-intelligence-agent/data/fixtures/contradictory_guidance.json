@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.0.0",
+  "transcript_id": "tx_boreal_contradictory_fy2026",
+  "ticker": "BRRL",
+  "company_name": "Boreal Industrial Robotics Corp.",
+  "fiscal_period": "Q4 FY2025",
+  "call_timestamp": "2026-02-04T21:00:00Z",
+  "published_at": "2026-02-04T22:00:00Z",
+  "filing_timestamp": "2026-02-04T20:15:00Z",
+  "currency": "USD",
+  "language": "en",
+  "source_name": "synthetic_educational_fixture",
+  "source_license": "MIT-synthetic",
+  "segments": [
+    {
+      "segment_id": "seg_b01",
+      "speaker": "Henrik Solberg",
+      "speaker_role": "CEO",
+      "section": "PREPARED_REMARKS",
+      "text": "For full-year FY2026, we expect total revenue of $2.10 billion to $2.20 billion. For calendar year 2026, we target gross margin of 42.0% to 43.0%. GAAP operating margin for FY2026 is projected at 14.0% to 15.0%; non-GAAP operating margin for FY2026 is projected at 18.0% to 19.0%.",
+      "start_offset_sec": 25.0,
+      "end_offset_sec": 95.0
+    },
+    {
+      "segment_id": "seg_b02",
+      "speaker": "Clara Chen",
+      "speaker_role": "CFO",
+      "section": "QA",
+      "text": "To clarify during Q&A, given volatile European factory orders, we currently project FY2026 total revenue of $1,950 million to $2,020 million. In Q1 FY2026, we expect gross margin expansion of 150 bps.",
+      "start_offset_sec": 210.0,
+      "end_offset_sec": 265.0
+    }
+  ],
+  "prior_guidance": [
+    {
+      "guidance_id": "pg_brrl_fy26_rev",
+      "metric_name": "revenue",
+      "fiscal_period": "FY2026",
+      "accounting_basis": "UNSPECIFIED",
+      "value_low": 2050.0,
+      "value_high": 2150.0,
+      "unit": "usd_millions",
+      "source_ref": "Q3_FY2025_earnings_release",
+      "published_at": "2025-11-05T21:00:00Z"
+    },
+    {
+      "guidance_id": "pg_brrl_fy26_om_gaap",
+      "metric_name": "operating_margin",
+      "fiscal_period": "FY2026",
+      "accounting_basis": "GAAP",
+      "value_low": 13.5,
+      "value_high": 15.5,
+      "unit": "percent",
+      "source_ref": "Q3_FY2025_earnings_release",
+      "published_at": "2025-11-05T21:00:00Z"
+    },
+    {
+      "guidance_id": "pg_brrl_fy26_om_nongaap",
+      "metric_name": "operating_margin",
+      "fiscal_period": "FY2026",
+      "accounting_basis": "NON_GAAP",
+      "value_low": 18.0,
+      "value_high": 19.0,
+      "unit": "percent",
+      "source_ref": "Q3_FY2025_earnings_release",
+      "published_at": "2025-11-05T21:00:00Z"
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "q_brrl_rev_single",
+      "question": "What is Boreal's FY2026 revenue guidance?",
+      "metric_hint": "revenue",
+      "fiscal_period_hint": "FY2026"
+    },
+    {
+      "question_id": "q_brrl_rev_conflict",
+      "question": "Is there a contradiction in Boreal's FY2026 revenue guidance?",
+      "metric_hint": "revenue",
+      "fiscal_period_hint": "FY2026"
+    }
+  ]
+}

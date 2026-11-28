@@ -1,0 +1,455 @@
+{
+  "brief": {
+    "abstentions": [],
+    "as_of_utc": "2025-05-13T13:00:00Z",
+    "brief_id": "brf_8437bd62dbb64285",
+    "citations_index": {
+      "cit_0cb6b69ed2dffea1": {
+        "char_end": 401,
+        "char_start": 364,
+        "citation_id": "cit_0cb6b69ed2dffea1",
+        "document_sha256": "9d42bd9f3ef39f38080bd9fddd129a9874dab943054443788ca3c67c4df57c4c",
+        "published_at": "2025-05-07T18:00:00Z",
+        "quote": "prepared to maintain the target range",
+        "release_id": "FOMC_STMT_2025_05",
+        "source_id": "SYNTH_FED",
+        "vintage_id": "v1_statement"
+      },
+      "cit_0d2fa99c0c9fda51": {
+        "char_end": 86,
+        "char_start": 25,
+        "citation_id": "cit_0d2fa99c0c9fda51",
+        "document_sha256": "9d42bd9f3ef39f38080bd9fddd129a9874dab943054443788ca3c67c4df57c4c",
+        "published_at": "2025-05-07T18:00:00Z",
+        "quote": "maintain the target range for the federal funds rate at 4.50%",
+        "release_id": "FOMC_STMT_2025_05",
+        "source_id": "SYNTH_FED",
+        "vintage_id": "v1_statement"
+      },
+      "cit_253a6e83abea177d": {
+        "char_end": 140,
+        "char_start": 84,
+        "citation_id": "cit_253a6e83abea177d",
+        "document_sha256": "3bcee850cffd23ed6875987202f43f0888b859953afaf3d16aa61e656034aa85",
+        "published_at": "2025-04-10T12:30:00Z",
+        "quote": "US Core CPI excluding food and energy increased 3.1% YoY",
+        "release_id": "US_CPI_2025_03",
+        "source_id": "SYNTH_BLS",
+        "vintage_id": "v1_initial"
+      },
+      "cit_4cc69c82313bc391": {
+        "char_end": 297,
+        "char_start": 267,
+        "citation_id": "cit_4cc69c82313bc391",
+        "document_sha256": "9d42bd9f3ef39f38080bd9fddd129a9874dab943054443788ca3c67c4df57c4c",
+        "published_at": "2025-05-07T18:00:00Z",
+        "quote": "carefully assess incoming data",
+        "release_id": "FOMC_STMT_2025_05",
+        "source_id": "SYNTH_FED",
+        "vintage_id": "v1_statement"
+      },
+      "cit_96f86bfc38bf3854": {
+        "char_end": 76,
+        "char_start": 47,
+        "citation_id": "cit_96f86bfc38bf3854",
+        "document_sha256": "3bcee850cffd23ed6875987202f43f0888b859953afaf3d16aa61e656034aa85",
+        "published_at": "2025-04-10T12:30:00Z",
+        "quote": "US Headline CPI rose 2.8% YoY",
+        "release_id": "US_CPI_2025_03",
+        "source_id": "SYNTH_BLS",
+        "vintage_id": "v1_initial"
+      },
+      "cit_b4b0632899ba3d3b": {
+        "char_end": 180,
+        "char_start": 136,
+        "citation_id": "cit_b4b0632899ba3d3b",
+        "document_sha256": "65f052f3c76234bdb5ac67717779f6e736cdab0206919575ff8df3fc635f7478",
+        "published_at": "2025-05-13T12:30:00Z",
+        "quote": "US Core CPI was revised downward to 3.0% YoY",
+        "release_id": "US_CPI_2025_03",
+        "source_id": "SYNTH_BLS",
+        "vintage_id": "v2_revised"
+      },
+      "cit_de56eb2e65e8257b": {
+        "char_end": 128,
+        "char_start": 82,
+        "citation_id": "cit_de56eb2e65e8257b",
+        "document_sha256": "65f052f3c76234bdb5ac67717779f6e736cdab0206919575ff8df3fc635f7478",
+        "published_at": "2025-05-13T12:30:00Z",
+        "quote": "US Headline CPI was revised upward to 2.9% YoY",
+        "release_id": "US_CPI_2025_03",
+        "source_id": "SYNTH_BLS",
+        "vintage_id": "v2_revised"
+      },
+      "cit_f699546ac0736ce2": {
+        "char_end": 123,
+        "char_start": 88,
+        "citation_id": "cit_f699546ac0736ce2",
+        "document_sha256": "9d42bd9f3ef39f38080bd9fddd129a9874dab943054443788ca3c67c4df57c4c",
+        "published_at": "2025-05-07T18:00:00Z",
+        "quote": "Inflation remains somewhat elevated",
+        "release_id": "FOMC_STMT_2025_05",
+        "source_id": "SYNTH_FED",
+        "vintage_id": "v1_statement"
+      }
+    },
+    "conflicts": [],
+    "executive_summary": "As of 2025-05-13T13:00:00Z for US_INFLATION_POLICY: Verified latest figures: FED_FUNDS_TARGET_UPPER (2025-05)=4.50 percent_rate [cit_0d2fa99c0c9fda51], US_CPI_CORE (2025-03)=3.0 percent_yoy [cit_b4b0632899ba3d3b], US_CPI_HEADLINE (2025-03)=2.9 percent_yoy [cit_de56eb2e65e8257b]. Consensus comparison: FED_FUNDS_TARGET_UPPER in_line (+0.00 percent_rate vs consensus 4.50), US_CPI_CORE below_consensus (-0.1 percent_yoy vs consensus 3.1), US_CPI_HEADLINE above_consensus (+0.3 percent_yoy vs consensus 2.6). Vintage revisions: US_CPI_CORE (2025-03) downward_revision from 3.1 to 3.0 (-0.1 percent_yoy), US_CPI_HEADLINE (2025-03) upward_revision from 2.8 to 2.9 (+0.1 percent_yoy). Central bank communication cues (3 cited): data_dependent, hawkish.",
+    "figures": [
+      {
+        "citation": {
+          "char_end": 86,
+          "char_start": 25,
+          "citation_id": "cit_0d2fa99c0c9fda51",
+          "document_sha256": "9d42bd9f3ef39f38080bd9fddd129a9874dab943054443788ca3c67c4df57c4c",
+          "published_at": "2025-05-07T18:00:00Z",
+          "quote": "maintain the target range for the federal funds rate at 4.50%",
+          "release_id": "FOMC_STMT_2025_05",
+          "source_id": "SYNTH_FED",
+          "vintage_id": "v1_statement"
+        },
+        "extraction_method": "grounded_structured_metric",
+        "figure_id": "fig_f936876f25692a98",
+        "published_at": "2025-05-07T18:00:00Z",
+        "reference_period": "2025-05",
+        "release_id": "FOMC_STMT_2025_05",
+        "series_id": "FED_FUNDS_TARGET_UPPER",
+        "source_id": "SYNTH_FED",
+        "unit": "percent_rate",
+        "value": "4.50",
+        "vintage_id": "v1_statement"
+      },
+      {
+        "citation": {
+          "char_end": 180,
+          "char_start": 136,
+          "citation_id": "cit_b4b0632899ba3d3b",
+          "document_sha256": "65f052f3c76234bdb5ac67717779f6e736cdab0206919575ff8df3fc635f7478",
+          "published_at": "2025-05-13T12:30:00Z",
+          "quote": "US Core CPI was revised downward to 3.0% YoY",
+          "release_id": "US_CPI_2025_03",
+          "source_id": "SYNTH_BLS",
+          "vintage_id": "v2_revised"
+        },
+        "extraction_method": "grounded_structured_metric",
+        "figure_id": "fig_78a6bb0763a38076",
+        "published_at": "2025-05-13T12:30:00Z",
+        "reference_period": "2025-03",
+        "release_id": "US_CPI_2025_03",
+        "series_id": "US_CPI_CORE",
+        "source_id": "SYNTH_BLS",
+        "unit": "percent_yoy",
+        "value": "3.0",
+        "vintage_id": "v2_revised"
+      },
+      {
+        "citation": {
+          "char_end": 128,
+          "char_start": 82,
+          "citation_id": "cit_de56eb2e65e8257b",
+          "document_sha256": "65f052f3c76234bdb5ac67717779f6e736cdab0206919575ff8df3fc635f7478",
+          "published_at": "2025-05-13T12:30:00Z",
+          "quote": "US Headline CPI was revised upward to 2.9% YoY",
+          "release_id": "US_CPI_2025_03",
+          "source_id": "SYNTH_BLS",
+          "vintage_id": "v2_revised"
+        },
+        "extraction_method": "grounded_structured_metric",
+        "figure_id": "fig_e06c893a9d4a476e",
+        "published_at": "2025-05-13T12:30:00Z",
+        "reference_period": "2025-03",
+        "release_id": "US_CPI_2025_03",
+        "series_id": "US_CPI_HEADLINE",
+        "source_id": "SYNTH_BLS",
+        "unit": "percent_yoy",
+        "value": "2.9",
+        "vintage_id": "v2_revised"
+      }
+    ],
+    "limitations_notice": "Research and educational prototype only. All macro interpretations are structured hypotheses grounded in archived synthetic/public releases as of the stated UTC cutoff, not predictions, market-impact forecasts, or trading recommendations.",
+    "policy_signals": [
+      {
+        "citation": {
+          "char_end": 123,
+          "char_start": 88,
+          "citation_id": "cit_f699546ac0736ce2",
+          "document_sha256": "9d42bd9f3ef39f38080bd9fddd129a9874dab943054443788ca3c67c4df57c4c",
+          "published_at": "2025-05-07T18:00:00Z",
+          "quote": "Inflation remains somewhat elevated",
+          "release_id": "FOMC_STMT_2025_05",
+          "source_id": "SYNTH_FED",
+          "vintage_id": "v1_statement"
+        },
+        "matched_phrase": "Inflation remains somewhat elevated",
+        "release_id": "FOMC_STMT_2025_05",
+        "signal_id": "pol_2d6067b4f3a0833c",
+        "stance": "hawkish",
+        "topic": "inflation_persistence",
+        "vintage_id": "v1_statement"
+      },
+      {
+        "citation": {
+          "char_end": 297,
+          "char_start": 267,
+          "citation_id": "cit_4cc69c82313bc391",
+          "document_sha256": "9d42bd9f3ef39f38080bd9fddd129a9874dab943054443788ca3c67c4df57c4c",
+          "published_at": "2025-05-07T18:00:00Z",
+          "quote": "carefully assess incoming data",
+          "release_id": "FOMC_STMT_2025_05",
+          "source_id": "SYNTH_FED",
+          "vintage_id": "v1_statement"
+        },
+        "matched_phrase": "carefully assess incoming data",
+        "release_id": "FOMC_STMT_2025_05",
+        "signal_id": "pol_259f35bb5643861f",
+        "stance": "data_dependent",
+        "topic": "reaction_function",
+        "vintage_id": "v1_statement"
+      },
+      {
+        "citation": {
+          "char_end": 401,
+          "char_start": 364,
+          "citation_id": "cit_0cb6b69ed2dffea1",
+          "document_sha256": "9d42bd9f3ef39f38080bd9fddd129a9874dab943054443788ca3c67c4df57c4c",
+          "published_at": "2025-05-07T18:00:00Z",
+          "quote": "prepared to maintain the target range",
+          "release_id": "FOMC_STMT_2025_05",
+          "source_id": "SYNTH_FED",
+          "vintage_id": "v1_statement"
+        },
+        "matched_phrase": "prepared to maintain the target range",
+        "release_id": "FOMC_STMT_2025_05",
+        "signal_id": "pol_8a32d3c29756c206",
+        "stance": "hawkish",
+        "topic": "rate_path",
+        "vintage_id": "v1_statement"
+      }
+    ],
+    "revisions": [
+      {
+        "current_citation": {
+          "char_end": 180,
+          "char_start": 136,
+          "citation_id": "cit_b4b0632899ba3d3b",
+          "document_sha256": "65f052f3c76234bdb5ac67717779f6e736cdab0206919575ff8df3fc635f7478",
+          "published_at": "2025-05-13T12:30:00Z",
+          "quote": "US Core CPI was revised downward to 3.0% YoY",
+          "release_id": "US_CPI_2025_03",
+          "source_id": "SYNTH_BLS",
+          "vintage_id": "v2_revised"
+        },
+        "current_value": "3.0",
+        "current_vintage_id": "v2_revised",
+        "delta": "-0.1",
+        "direction": "downward_revision",
+        "prior_citation": {
+          "char_end": 140,
+          "char_start": 84,
+          "citation_id": "cit_253a6e83abea177d",
+          "document_sha256": "3bcee850cffd23ed6875987202f43f0888b859953afaf3d16aa61e656034aa85",
+          "published_at": "2025-04-10T12:30:00Z",
+          "quote": "US Core CPI excluding food and energy increased 3.1% YoY",
+          "release_id": "US_CPI_2025_03",
+          "source_id": "SYNTH_BLS",
+          "vintage_id": "v1_initial"
+        },
+        "prior_value": "3.1",
+        "prior_vintage_id": "v1_initial",
+        "reference_period": "2025-03",
+        "revision_id": "rev_e4b1b7cb1bdaa5d6",
+        "series_id": "US_CPI_CORE",
+        "unit": "percent_yoy"
+      },
+      {
+        "current_citation": {
+          "char_end": 128,
+          "char_start": 82,
+          "citation_id": "cit_de56eb2e65e8257b",
+          "document_sha256": "65f052f3c76234bdb5ac67717779f6e736cdab0206919575ff8df3fc635f7478",
+          "published_at": "2025-05-13T12:30:00Z",
+          "quote": "US Headline CPI was revised upward to 2.9% YoY",
+          "release_id": "US_CPI_2025_03",
+          "source_id": "SYNTH_BLS",
+          "vintage_id": "v2_revised"
+        },
+        "current_value": "2.9",
+        "current_vintage_id": "v2_revised",
+        "delta": "0.1",
+        "direction": "upward_revision",
+        "prior_citation": {
+          "char_end": 76,
+          "char_start": 47,
+          "citation_id": "cit_96f86bfc38bf3854",
+          "document_sha256": "3bcee850cffd23ed6875987202f43f0888b859953afaf3d16aa61e656034aa85",
+          "published_at": "2025-04-10T12:30:00Z",
+          "quote": "US Headline CPI rose 2.8% YoY",
+          "release_id": "US_CPI_2025_03",
+          "source_id": "SYNTH_BLS",
+          "vintage_id": "v1_initial"
+        },
+        "prior_value": "2.8",
+        "prior_vintage_id": "v1_initial",
+        "reference_period": "2025-03",
+        "revision_id": "rev_9234b02009ed364d",
+        "series_id": "US_CPI_HEADLINE",
+        "unit": "percent_yoy"
+      }
+    ],
+    "scenarios": [
+      {
+        "condition": "If upside macro surprises, upward benchmark revisions, or elevated-inflation policy language persist across upcoming vintages.",
+        "confidence_note": "Qualitative hypothesis conditional on cited vintages; no market-impact estimate is made.",
+        "disclaimer": "Hypothesis only; not a forecast, market-impact estimate, or trade recommendation.",
+        "hypothesis_id": "hyp_3adc55e26c2a765a",
+        "interpretation": "Hypothesis: policymakers may emphasize maintaining restrictive settings longer before adjusting rates; this reflects cited release language rather than a forecast.",
+        "label": "Policy Restraint Persistence Hypothesis",
+        "supporting_citation_ids": [
+          "cit_0cb6b69ed2dffea1",
+          "cit_de56eb2e65e8257b",
+          "cit_f699546ac0736ce2"
+        ]
+      },
+      {
+        "condition": "If downward core revisions or disinflation/data-dependent communication cues are reinforced by subsequent official releases.",
+        "confidence_note": "Qualitative hypothesis conditional on cited vintages; no market-impact estimate is made.",
+        "disclaimer": "Hypothesis only; not a forecast, market-impact estimate, or trade recommendation.",
+        "hypothesis_id": "hyp_bfccc80b1aa53538",
+        "interpretation": "Hypothesis: communication framing preserves optionality to calibrate policy meeting-by-meeting as incoming vintages clarify underlying momentum.",
+        "label": "Data-Dependent Normalization Hypothesis",
+        "supporting_citation_ids": [
+          "cit_4cc69c82313bc391",
+          "cit_b4b0632899ba3d3b"
+        ]
+      }
+    ],
+    "security_findings": [],
+    "series_group": "US_INFLATION_POLICY",
+    "surprises": [
+      {
+        "actual_figure_id": "fig_f936876f25692a98",
+        "actual_value": "4.50",
+        "citation": {
+          "char_end": 86,
+          "char_start": 25,
+          "citation_id": "cit_0d2fa99c0c9fda51",
+          "document_sha256": "9d42bd9f3ef39f38080bd9fddd129a9874dab943054443788ca3c67c4df57c4c",
+          "published_at": "2025-05-07T18:00:00Z",
+          "quote": "maintain the target range for the federal funds rate at 4.50%",
+          "release_id": "FOMC_STMT_2025_05",
+          "source_id": "SYNTH_FED",
+          "vintage_id": "v1_statement"
+        },
+        "consensus_id": "CONS_FED_FUNDS_2025_05",
+        "consensus_value": "4.50",
+        "converted_from_unit": "bps",
+        "direction": "in_line",
+        "reference_period": "2025-05",
+        "series_id": "FED_FUNDS_TARGET_UPPER",
+        "surprise_id": "srp_5f98a05cfc22e0cb",
+        "surprise_value": "0.00",
+        "unit": "percent_rate"
+      },
+      {
+        "actual_figure_id": "fig_78a6bb0763a38076",
+        "actual_value": "3.0",
+        "citation": {
+          "char_end": 180,
+          "char_start": 136,
+          "citation_id": "cit_b4b0632899ba3d3b",
+          "document_sha256": "65f052f3c76234bdb5ac67717779f6e736cdab0206919575ff8df3fc635f7478",
+          "published_at": "2025-05-13T12:30:00Z",
+          "quote": "US Core CPI was revised downward to 3.0% YoY",
+          "release_id": "US_CPI_2025_03",
+          "source_id": "SYNTH_BLS",
+          "vintage_id": "v2_revised"
+        },
+        "consensus_id": "CONS_US_CPI_CORE_2025_03",
+        "consensus_value": "3.1",
+        "converted_from_unit": null,
+        "direction": "below_consensus",
+        "reference_period": "2025-03",
+        "series_id": "US_CPI_CORE",
+        "surprise_id": "srp_1c9542205401f125",
+        "surprise_value": "-0.1",
+        "unit": "percent_yoy"
+      },
+      {
+        "actual_figure_id": "fig_e06c893a9d4a476e",
+        "actual_value": "2.9",
+        "citation": {
+          "char_end": 128,
+          "char_start": 82,
+          "citation_id": "cit_de56eb2e65e8257b",
+          "document_sha256": "65f052f3c76234bdb5ac67717779f6e736cdab0206919575ff8df3fc635f7478",
+          "published_at": "2025-05-13T12:30:00Z",
+          "quote": "US Headline CPI was revised upward to 2.9% YoY",
+          "release_id": "US_CPI_2025_03",
+          "source_id": "SYNTH_BLS",
+          "vintage_id": "v2_revised"
+        },
+        "consensus_id": "CONS_US_CPI_HEADLINE_2025_03",
+        "consensus_value": "2.6",
+        "converted_from_unit": null,
+        "direction": "above_consensus",
+        "reference_period": "2025-03",
+        "series_id": "US_CPI_HEADLINE",
+        "surprise_id": "srp_010633d9033a243c",
+        "surprise_value": "0.3",
+        "unit": "percent_yoy"
+      }
+    ],
+    "verification_passed": true
+  },
+  "diagnostics": {
+    "counters": {
+      "abstentions_recorded": 0,
+      "conflicts_detected": 0,
+      "consensus_visible": 3,
+      "figures_canonical": 3,
+      "figures_extracted_raw": 5,
+      "policy_signals_extracted": 3,
+      "releases_gated_out": 1,
+      "releases_visible": 3,
+      "revisions_computed": 2,
+      "surprises_computed": 3,
+      "verification_passed": 1
+    },
+    "events": [
+      {
+        "as_of_utc": "2025-05-13T13:00:00Z",
+        "config_sha256": "8dbee4d83ad246666380ef53b9faf2b2d2c1b6d8ecdfb82588dcc000735fbc97",
+        "event": "run_started",
+        "level": "INFO",
+        "seq": 1,
+        "series_group": "US_INFLATION_POLICY"
+      },
+      {
+        "event": "publication_gate_applied",
+        "gated_out_count": 1,
+        "level": "INFO",
+        "seq": 2,
+        "visible_count": 3
+      },
+      {
+        "brief_id": "brf_8437bd62dbb64285",
+        "event": "verification_completed",
+        "level": "INFO",
+        "passed": true,
+        "seq": 3
+      }
+    ]
+  },
+  "metadata": {
+    "as_of_utc": "2025-05-13T13:00:00Z",
+    "config_sha256": "8dbee4d83ad246666380ef53b9faf2b2d2c1b6d8ecdfb82588dcc000735fbc97",
+    "config_version": "1.0.0",
+    "input_sha256": "30fd86ae0f12e54bd01511175e474fdd89724c87c198ef9221ebfe4317ceb9f3",
+    "model_calls_used": 1,
+    "model_provider": "deterministic_mock",
+    "python_version": "3.9.6",
+    "run_id": "run_65450206e371e4c4",
+    "schema_version": "1.0.0",
+    "seed": 42
+  }
+}

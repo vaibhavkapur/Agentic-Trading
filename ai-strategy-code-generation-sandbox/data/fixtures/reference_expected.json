@@ -1,0 +1,14 @@
+{
+  "initial_cash": 100000.0,
+  "final_cash": 101137.0006,
+  "final_equity": 101137.0006,
+  "realized_pnl": 1158.0,
+  "unrealized_pnl": 0.0,
+  "total_commission": 20.9994,
+  "total_slippage_cost": 42.0,
+  "total_return_pct": 1.1370006,
+  "trade_count": 2,
+  "rejected_order_count": 0,
+  "turnover": 41998.8,
+  "ending_positions": {}
+}

@@ -1,0 +1,51 @@
+{
+  "full_evaluation_wall_ms": {
+    "max": 190.96,
+    "mean": 187.31,
+    "median": 189.63,
+    "samples": [
+      189.63,
+      190.93,
+      182.47,
+      182.56,
+      190.96
+    ]
+  },
+  "generated_at": "2026-11-28T04:30:53.629967Z",
+  "peak_traced_memory_bytes": {
+    "max": 116102,
+    "samples": [
+      116102,
+      116102,
+      116102,
+      116102,
+      116102
+    ]
+  },
+  "runs": 5,
+  "runtime_env": {
+    "executable_basename": "python",
+    "machine": "arm64",
+    "packages": {
+      "pydantic": "2.14.4",
+      "pytest": "8.4.2"
+    },
+    "platform": "macOS-26.5.1-arm64-arm-64bit",
+    "python_implementation": "CPython",
+    "python_version": "3.12.15",
+    "sandbox_backend": "subprocess_isolated"
+  },
+  "schema_version": "1.0.0",
+  "single_sandbox_exec_wall_ms": {
+    "max": 35.66,
+    "mean": 31.46,
+    "median": 30.59,
+    "samples": [
+      30.38,
+      30.59,
+      29.9,
+      30.78,
+      35.66
+    ]
+  }
+}

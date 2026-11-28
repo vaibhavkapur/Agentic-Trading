@@ -1,0 +1,182 @@
+{
+  "description": "Invalid and boundary transcript inputs for schema validation and error-propagation testing",
+  "cases": [
+    {
+      "case_name": "unsupported_schema_version",
+      "expected_error_code": "UNSUPPORTED_SCHEMA_VERSION",
+      "payload": {
+        "schema_version": "9.9.9",
+        "transcript_id": "tx_bad_schema",
+        "ticker": "BAD",
+        "company_name": "Bad Schema Co",
+        "fiscal_period": "Q4 FY2025",
+        "call_timestamp": "2026-01-29T21:00:00Z",
+        "published_at": "2026-01-29T22:00:00Z",
+        "filing_timestamp": "2026-01-29T20:00:00Z",
+        "currency": "USD",
+        "language": "en",
+        "source_name": "synthetic",
+        "source_license": "MIT",
+        "segments": [
+          {
+            "segment_id": "s1",
+            "speaker": "CEO",
+            "speaker_role": "CEO",
+            "section": "PREPARED_REMARKS",
+            "text": "Revenue was $100 million.",
+            "start_offset_sec": 0,
+            "end_offset_sec": 10
+          }
+        ]
+      }
+    },
+    {
+      "case_name": "naive_timestamp_rejected",
+      "expected_error_code": "NAIVE_TIMESTAMP",
+      "payload": {
+        "schema_version": "1.0.0",
+        "transcript_id": "tx_naive_ts",
+        "ticker": "BAD",
+        "company_name": "Bad Timestamp Co",
+        "fiscal_period": "Q4 FY2025",
+        "call_timestamp": "2026-01-29T21:00:00",
+        "published_at": "2026-01-29T22:00:00Z",
+        "filing_timestamp": "2026-01-29T20:00:00Z",
+        "currency": "USD",
+        "language": "en",
+        "source_name": "synthetic",
+        "source_license": "MIT",
+        "segments": [
+          {
+            "segment_id": "s1",
+            "speaker": "CEO",
+            "speaker_role": "CEO",
+            "section": "PREPARED_REMARKS",
+            "text": "Revenue was $100 million.",
+            "start_offset_sec": 0,
+            "end_offset_sec": 10
+          }
+        ]
+      }
+    },
+    {
+      "case_name": "published_before_call",
+      "expected_error_code": "INCONSISTENT_TIMESTAMPS",
+      "payload": {
+        "schema_version": "1.0.0",
+        "transcript_id": "tx_time_travel",
+        "ticker": "BAD",
+        "company_name": "Time Travel Co",
+        "fiscal_period": "Q4 FY2025",
+        "call_timestamp": "2026-01-29T22:00:00Z",
+        "published_at": "2026-01-29T21:00:00Z",
+        "filing_timestamp": "2026-01-29T20:00:00Z",
+        "currency": "USD",
+        "language": "en",
+        "source_name": "synthetic",
+        "source_license": "MIT",
+        "segments": [
+          {
+            "segment_id": "s1",
+            "speaker": "CEO",
+            "speaker_role": "CEO",
+            "section": "PREPARED_REMARKS",
+            "text": "Revenue was $100 million.",
+            "start_offset_sec": 0,
+            "end_offset_sec": 10
+          }
+        ]
+      }
+    },
+    {
+      "case_name": "unsupported_currency",
+      "expected_error_code": "UNSUPPORTED_CURRENCY",
+      "payload": {
+        "schema_version": "1.0.0",
+        "transcript_id": "tx_eur",
+        "ticker": "EURO",
+        "company_name": "Euro Corp",
+        "fiscal_period": "Q4 FY2025",
+        "call_timestamp": "2026-01-29T21:00:00Z",
+        "published_at": "2026-01-29T22:00:00Z",
+        "filing_timestamp": "2026-01-29T20:00:00Z",
+        "currency": "EUR",
+        "language": "en",
+        "source_name": "synthetic",
+        "source_license": "MIT",
+        "segments": [
+          {
+            "segment_id": "s1",
+            "speaker": "CEO",
+            "speaker_role": "CEO",
+            "section": "PREPARED_REMARKS",
+            "text": "Revenue was $100 million.",
+            "start_offset_sec": 0,
+            "end_offset_sec": 10
+          }
+        ]
+      }
+    },
+    {
+      "case_name": "empty_segments",
+      "expected_error_code": "EMPTY_SEGMENTS",
+      "payload": {
+        "schema_version": "1.0.0",
+        "transcript_id": "tx_empty",
+        "ticker": "EMPT",
+        "company_name": "Empty Co",
+        "fiscal_period": "Q4 FY2025",
+        "call_timestamp": "2026-01-29T21:00:00Z",
+        "published_at": "2026-01-29T22:00:00Z",
+        "filing_timestamp": "2026-01-29T20:00:00Z",
+        "currency": "USD",
+        "language": "en",
+        "source_name": "synthetic",
+        "source_license": "MIT",
+        "segments": []
+      }
+    },
+    {
+      "case_name": "reversed_prior_guidance_range",
+      "expected_error_code": "REVERSED_RANGE",
+      "payload": {
+        "schema_version": "1.0.0",
+        "transcript_id": "tx_rev_range",
+        "ticker": "REVR",
+        "company_name": "Reversed Co",
+        "fiscal_period": "Q4 FY2025",
+        "call_timestamp": "2026-01-29T21:00:00Z",
+        "published_at": "2026-01-29T22:00:00Z",
+        "filing_timestamp": "2026-01-29T20:00:00Z",
+        "currency": "USD",
+        "language": "en",
+        "source_name": "synthetic",
+        "source_license": "MIT",
+        "segments": [
+          {
+            "segment_id": "s1",
+            "speaker": "CEO",
+            "speaker_role": "CEO",
+            "section": "PREPARED_REMARKS",
+            "text": "Revenue was $100 million.",
+            "start_offset_sec": 0,
+            "end_offset_sec": 10
+          }
+        ],
+        "prior_guidance": [
+          {
+            "guidance_id": "pg_bad",
+            "metric_name": "revenue",
+            "fiscal_period": "FY2026",
+            "accounting_basis": "UNSPECIFIED",
+            "value_low": 500.0,
+            "value_high": 400.0,
+            "unit": "usd_millions",
+            "source_ref": "Q3",
+            "published_at": "2025-10-30T21:00:00Z"
+          }
+        ]
+      }
+    }
+  ]
+}

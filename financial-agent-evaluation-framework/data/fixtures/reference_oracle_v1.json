@@ -1,0 +1,23 @@
+{
+  "description": "Independent hand-calculated reference oracle fixture for M1 verification.",
+  "task_id": "FIN_ARITH_001",
+  "inputs": {
+    "revenue_usd_millions": 1250.0,
+    "operating_income_usd_millions": 312.5
+  },
+  "hand_calculation": {
+    "formula": "operating_margin_pct = (operating_income / revenue) * 100",
+    "steps": [
+      "312.5 / 1250.0 = 0.25 (exact)",
+      "0.25 * 100 = 25.00%"
+    ],
+    "equivalent_in_bps": 2500.0,
+    "equivalent_as_ratio": 0.25
+  },
+  "expected_evaluation": {
+    "passed": true,
+    "overall_score": 1.0,
+    "failure_types": [],
+    "receipt_verified": true
+  }
+}

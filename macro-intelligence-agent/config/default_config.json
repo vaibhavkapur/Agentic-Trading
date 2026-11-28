@@ -1,0 +1,26 @@
+{
+  "config_version": "1.0.0",
+  "schema_version": "1.0.0",
+  "seed": 42,
+  "numeric_tolerance": "0.0001",
+  "conflict_tolerance_ratio": "0.001",
+  "enable_unit_auto_conversion": true,
+  "strict_untrusted_instruction_mode": "quarantine",
+  "model_adapter": {
+    "provider": "deterministic_mock",
+    "max_calls_per_run": 4,
+    "max_output_tokens": 1200,
+    "allow_live_network": false
+  },
+  "brief_policy": {
+    "require_citation_for_all_figures": true,
+    "abstain_on_unresolved_conflict": true,
+    "abstain_on_unit_mismatch": true,
+    "abstain_on_missing_consensus_for_surprise": true,
+    "frame_as_hypotheses_only": true
+  },
+  "storage": {
+    "default_db_path": ":memory:",
+    "enable_run_replay_log": true
+  }
+}

@@ -1,0 +1,76 @@
+"""Trading Incident Investigation Agent public library interface."""
+
+from trading_incident_agent.agent import TradingIncidentAgent, render_report_markdown
+from trading_incident_agent.config import (
+    PACKAGE_VERSION,
+    build_runtime_metadata,
+    load_config,
+    load_incident_bundle,
+    validate_incident_bundle,
+)
+from trading_incident_agent.errors import (
+    AmbiguousRootCauseError,
+    ApprovalMismatchError,
+    ApprovalRequiredError,
+    BudgetExceededError,
+    ConfigurationError,
+    ForbiddenActionError,
+    IncidentAgentError,
+    InputValidationError,
+    UnauthorizedActionError,
+    UnsupportedSchemaError,
+)
+from trading_incident_agent.evaluator import evaluate_against_oracle
+from trading_incident_agent.models import (
+    SUPPORTED_SCHEMA_VERSION,
+    AgentConfig,
+    AlertEvent,
+    IncidentBundle,
+    IncidentReport,
+    LogEntry,
+    OmsEvent,
+    OperatorApproval,
+    OtelSpan,
+    RemediationProposal,
+    RemediationReceipt,
+    RemediationStatus,
+    Runbook,
+    VerdictStatus,
+)
+from trading_incident_agent.remediation import SimulatedTradingEnvironment
+
+__all__ = [
+    "PACKAGE_VERSION",
+    "SUPPORTED_SCHEMA_VERSION",
+    "AgentConfig",
+    "AlertEvent",
+    "AmbiguousRootCauseError",
+    "ApprovalMismatchError",
+    "ApprovalRequiredError",
+    "BudgetExceededError",
+    "ConfigurationError",
+    "ForbiddenActionError",
+    "IncidentAgentError",
+    "IncidentBundle",
+    "IncidentReport",
+    "InputValidationError",
+    "LogEntry",
+    "OmsEvent",
+    "OperatorApproval",
+    "OtelSpan",
+    "RemediationProposal",
+    "RemediationReceipt",
+    "RemediationStatus",
+    "Runbook",
+    "SimulatedTradingEnvironment",
+    "TradingIncidentAgent",
+    "UnauthorizedActionError",
+    "UnsupportedSchemaError",
+    "VerdictStatus",
+    "build_runtime_metadata",
+    "evaluate_against_oracle",
+    "load_config",
+    "load_incident_bundle",
+    "render_report_markdown",
+    "validate_incident_bundle",
+]

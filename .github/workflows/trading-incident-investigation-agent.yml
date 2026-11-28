@@ -1,0 +1,48 @@
+name: Trading Incident Investigation Agent CI
+
+on:
+  push:
+    paths:
+      - "trading-incident-investigation-agent/**"
+      - ".github/workflows/trading-incident-investigation-agent.yml"
+  pull_request:
+    paths:
+      - "trading-incident-investigation-agent/**"
+      - ".github/workflows/trading-incident-investigation-agent.yml"
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: trading-incident-investigation-agent
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install package and dev dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+
+      - name: Run unit, integration, security, and boundary test suite
+        run: pytest -v
+
+      - name: Run reference oracle evaluation
+        run: |
+          python -m trading_incident_agent.cli evaluate \
+            --fixtures-dir data/fixtures \
+            --config config/default.json \
+            --output-json /tmp/ci_eval_summary.json
+
+      - name: Verify read-only demo execution
+        run: |
+          python -m trading_incident_agent.cli demo \
+            --fixture data/fixtures/inc_ref_001_gateway_pool.json \
+            --config config/default.json

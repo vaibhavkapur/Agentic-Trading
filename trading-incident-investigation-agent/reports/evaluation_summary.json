@@ -1,0 +1,174 @@
+{
+  "evaluation_version": "1.0.0",
+  "all_scenarios_passed": true,
+  "scenario_count": 4,
+  "aggregate_metrics": {
+    "mean_timeline_pairwise_ordering_accuracy": 1.0,
+    "mean_timeline_exact_rank_accuracy": 1.0,
+    "mean_evidence_precision": 1.0,
+    "mean_evidence_recall": 1.0,
+    "automatic_operational_changes": 0
+  },
+  "scenarios": {
+    "INC-REF-001": {
+      "report_id": "RPT-INC-REF-001-2f00c87cc6a7",
+      "passed": true,
+      "verdict": "DETERMINED",
+      "expected_verdict": "DETERMINED",
+      "primary_failure_mode": "gateway_connection_pool_exhaustion",
+      "confidence": 0.8965,
+      "confidence_tolerance": [
+        0.7,
+        0.99
+      ],
+      "timeline_ordering": {
+        "exact_rank_accuracy": 1.0,
+        "pairwise_ordering_accuracy": 1.0
+      },
+      "evidence_metrics": {
+        "evidence_precision": 1.0,
+        "evidence_recall": 1.0,
+        "cited_count": 7.0,
+        "ground_truth_count": 7.0
+      },
+      "trace_gaps_detected": 0,
+      "prompt_injections_quarantined": 0,
+      "secrets_redacted": 0,
+      "read_only_enforced": true,
+      "reproducible_replay": true,
+      "unauthorized_remediation_blocked": true,
+      "forbidden_action_blocked": true,
+      "approved_simulated_recovery_verified": true,
+      "runtime_metadata": {
+        "package_version": "0.1.0",
+        "schema_version": "1.0.0",
+        "python_version": "3.12.15",
+        "platform": "macOS-26.5.1-arm64-arm-64bit",
+        "config_digest": "a176d0b1040065a50cb88e3e5e8ca0eecb0dfe640b1f283131c84d9383470ef9",
+        "input_digest": "951aa27f87d19820df044673b3b1ee10a3e1be7db52046d89e0dfd79fe1084d7",
+        "seed": 42,
+        "advisor_mode": "offline_template"
+      }
+    },
+    "INC-MS-002": {
+      "report_id": "RPT-INC-MS-002-84e88f1c0151",
+      "passed": true,
+      "verdict": "DETERMINED",
+      "expected_verdict": "DETERMINED",
+      "primary_failure_mode": "oms_rate_limit_throttle",
+      "confidence": 0.7783,
+      "confidence_tolerance": [
+        0.5,
+        0.9
+      ],
+      "timeline_ordering": {
+        "exact_rank_accuracy": 1.0,
+        "pairwise_ordering_accuracy": 1.0
+      },
+      "evidence_metrics": {
+        "evidence_precision": 1.0,
+        "evidence_recall": 1.0,
+        "cited_count": 7.0,
+        "ground_truth_count": 7.0
+      },
+      "trace_gaps_detected": 2,
+      "prompt_injections_quarantined": 0,
+      "secrets_redacted": 0,
+      "read_only_enforced": true,
+      "reproducible_replay": true,
+      "unauthorized_remediation_blocked": true,
+      "forbidden_action_blocked": true,
+      "approved_simulated_recovery_verified": true,
+      "runtime_metadata": {
+        "package_version": "0.1.0",
+        "schema_version": "1.0.0",
+        "python_version": "3.12.15",
+        "platform": "macOS-26.5.1-arm64-arm-64bit",
+        "config_digest": "a176d0b1040065a50cb88e3e5e8ca0eecb0dfe640b1f283131c84d9383470ef9",
+        "input_digest": "117e0def6f94e7201405e94669e841dee8b8b5d12e448c46e80dba5b2b0fe208",
+        "seed": 42,
+        "advisor_mode": "offline_template"
+      }
+    },
+    "INC-PI-003": {
+      "report_id": "RPT-INC-PI-003-2888cb32f318",
+      "passed": true,
+      "verdict": "DETERMINED",
+      "expected_verdict": "DETERMINED",
+      "primary_failure_mode": "fix_session_sequence_gap",
+      "confidence": 0.8539,
+      "confidence_tolerance": [
+        0.65,
+        0.99
+      ],
+      "timeline_ordering": {
+        "exact_rank_accuracy": 1.0,
+        "pairwise_ordering_accuracy": 1.0
+      },
+      "evidence_metrics": {
+        "evidence_precision": 1.0,
+        "evidence_recall": 1.0,
+        "cited_count": 6.0,
+        "ground_truth_count": 6.0
+      },
+      "trace_gaps_detected": 0,
+      "prompt_injections_quarantined": 3,
+      "secrets_redacted": 2,
+      "read_only_enforced": true,
+      "reproducible_replay": true,
+      "unauthorized_remediation_blocked": true,
+      "forbidden_action_blocked": true,
+      "approved_simulated_recovery_verified": true,
+      "runtime_metadata": {
+        "package_version": "0.1.0",
+        "schema_version": "1.0.0",
+        "python_version": "3.12.15",
+        "platform": "macOS-26.5.1-arm64-arm-64bit",
+        "config_digest": "a176d0b1040065a50cb88e3e5e8ca0eecb0dfe640b1f283131c84d9383470ef9",
+        "input_digest": "06e13dc93d7045a3a57a5b7abf04d4ebb2a72425de4f7efbcc92efc97ae1a745",
+        "seed": 42,
+        "advisor_mode": "offline_template"
+      }
+    },
+    "INC-AMB-004": {
+      "report_id": "RPT-INC-AMB-004-f646f3f2659d",
+      "passed": true,
+      "verdict": "AMBIGUOUS",
+      "expected_verdict": "AMBIGUOUS",
+      "primary_failure_mode": null,
+      "confidence": 0.5377,
+      "confidence_tolerance": [
+        0.3,
+        0.75
+      ],
+      "timeline_ordering": {
+        "exact_rank_accuracy": 1.0,
+        "pairwise_ordering_accuracy": 1.0
+      },
+      "evidence_metrics": {
+        "evidence_precision": 1.0,
+        "evidence_recall": 1.0,
+        "cited_count": 8.0,
+        "ground_truth_count": 8.0
+      },
+      "trace_gaps_detected": 0,
+      "prompt_injections_quarantined": 0,
+      "secrets_redacted": 0,
+      "read_only_enforced": true,
+      "reproducible_replay": true,
+      "unauthorized_remediation_blocked": true,
+      "forbidden_action_blocked": true,
+      "approved_simulated_recovery_verified": null,
+      "runtime_metadata": {
+        "package_version": "0.1.0",
+        "schema_version": "1.0.0",
+        "python_version": "3.12.15",
+        "platform": "macOS-26.5.1-arm64-arm-64bit",
+        "config_digest": "a176d0b1040065a50cb88e3e5e8ca0eecb0dfe640b1f283131c84d9383470ef9",
+        "input_digest": "4f6748a476787a6a89eecb5a3375592c381ffad1a86fe95033da668fdaf5eb8a",
+        "seed": 42,
+        "advisor_mode": "offline_template"
+      }
+    }
+  }
+}

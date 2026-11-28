@@ -1,0 +1,96 @@
+{
+  "all_metrics_within_tolerance": true,
+  "decision_id": "DEC-D5597349168D5D32",
+  "invariants_match": true,
+  "metric_comparison": {
+    "adv_participation_pct": {
+      "abs_diff": 0.0,
+      "actual": 0.2,
+      "expected": 0.2,
+      "tolerance": 0.005,
+      "within_tolerance": true
+    },
+    "incremental_var_95_pct": {
+      "abs_diff": 0.0,
+      "actual": 0.114,
+      "expected": 0.114,
+      "tolerance": 0.005,
+      "within_tolerance": true
+    },
+    "pro_forma_cash_reserve_pct": {
+      "abs_diff": 0.0,
+      "actual": 15.0,
+      "expected": 15.0,
+      "tolerance": 0.005,
+      "within_tolerance": true
+    },
+    "pro_forma_cash_usd": {
+      "abs_diff": 0.0,
+      "actual": 150000.0,
+      "expected": 150000.0,
+      "tolerance": 0.01,
+      "within_tolerance": true
+    },
+    "pro_forma_estimated_var_95_pct": {
+      "abs_diff": 0.0,
+      "actual": 2.514,
+      "expected": 2.514,
+      "tolerance": 0.005,
+      "within_tolerance": true
+    },
+    "pro_forma_gross_exposure_pct": {
+      "abs_diff": 0.0,
+      "actual": 85.0,
+      "expected": 85.0,
+      "tolerance": 0.005,
+      "within_tolerance": true
+    },
+    "pro_forma_gross_exposure_usd": {
+      "abs_diff": 0.0,
+      "actual": 850000.0,
+      "expected": 850000.0,
+      "tolerance": 0.01,
+      "within_tolerance": true
+    },
+    "pro_forma_sector_value_usd": {
+      "abs_diff": 0.0,
+      "actual": 170000.0,
+      "expected": 170000.0,
+      "tolerance": 0.01,
+      "within_tolerance": true
+    },
+    "pro_forma_sector_weight_pct": {
+      "abs_diff": 0.0,
+      "actual": 17.0,
+      "expected": 17.0,
+      "tolerance": 0.005,
+      "within_tolerance": true
+    },
+    "pro_forma_ticker_value_usd": {
+      "abs_diff": 0.0,
+      "actual": 70000.0,
+      "expected": 70000.0,
+      "tolerance": 0.01,
+      "within_tolerance": true
+    },
+    "pro_forma_ticker_weight_pct": {
+      "abs_diff": 0.0,
+      "actual": 7.0,
+      "expected": 7.0,
+      "tolerance": 0.005,
+      "within_tolerance": true
+    },
+    "trade_notional_usd": {
+      "abs_diff": 0.0,
+      "actual": 50000.0,
+      "expected": 50000.0,
+      "tolerance": 0.01,
+      "within_tolerance": true
+    }
+  },
+  "passed": true,
+  "proposal_id": "PROP-2026-001",
+  "status_match": true,
+  "verdict_match": true,
+  "violated_rules_match": true
+}

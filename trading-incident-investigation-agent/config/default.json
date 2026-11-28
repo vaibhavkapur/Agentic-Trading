@@ -1,0 +1,25 @@
+{
+  "config_version": "1.0.0",
+  "seed": 42,
+  "read_only_default": true,
+  "ambiguity_margin": 0.12,
+  "min_root_cause_confidence": 0.45,
+  "missing_span_confidence_penalty": 0.12,
+  "single_modality_confidence_cap": 0.52,
+  "log_only_weight_multiplier": 0.35,
+  "max_retrieved_runbooks": 5,
+  "max_hypotheses": 5,
+  "allowed_approver_roles": [
+    "oncall_sre",
+    "trading_ops_lead",
+    "incident_commander"
+  ],
+  "approval_ttl_seconds": 900,
+  "budgets": {
+    "max_tool_calls": 25,
+    "max_steps": 15,
+    "max_llm_calls": 1,
+    "max_prompt_chars": 8000
+  },
+  "advisor_mode": "offline_template"
+}
